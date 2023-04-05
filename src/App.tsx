@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom' 
 
 import Nav from "./Components/Nav"
@@ -8,6 +7,7 @@ import AparmentDetails from './Components/ApartmentDetails'
 import Region from './Components/Region'
 import Contact from './Components/Contact'
 import NoPage from './Components/NoPage'
+import Footer from './Components/Footer'
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
             <Route path="/contact" element={<Contact/>}></Route>
             <Route path="*" element={<NoPage/>}></Route>
       </Routes>
+      <Footer/>
     </div>
   )
 }
