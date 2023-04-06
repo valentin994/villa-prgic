@@ -12,14 +12,13 @@ function AparmentDetails() {
     const today = new Date()
     const tomorrow = today.getDate() + 1
     const [date, setDate] = useState([today, tomorrow])
-
     return (
         <div className="container">
-           <p className="text-3xl text-center font-bold py-4">{name}</p>
+           <p className="text-3xl text-center font-light py-4">{name}</p>
             <p className="text-l text-center">{detail}</p>
             <img src={PoolImage} />
             <ul className="p-4">
-                {features.map((feature: string[]) => <li key={feature}>{feature}</li>)}
+                {features.map((feature: string[]) => <li key={features}>{feature}</li>)}
             </ul>
             <Calendar onChange={setDate} selectRange={true} />
         </div>

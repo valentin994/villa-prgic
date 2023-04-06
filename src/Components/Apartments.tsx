@@ -5,17 +5,17 @@ function Apartments() {
     
     interface iApartmentList extends Array<iApartment>{}
     const apartmentDetails: iApartmentList = [
-        { name: "Apt 1", detail: "A three bedroom apartment for six people.", features: ["Kitchen", "Pool", "Coffee Maker"], price: 200 },
-        { name: "Apt 2", detail: "A two bedroom apartment for four people.", features: ["Kitchen", "Pool", "Coffee Maker"], price: 200 },
-        { name: "Apt 3", detail: "A one bedroom apartment for two people.", features: ["Kitchen", "Pool", "Coffee Maker"], price: 200 },
+        { name: "Poolside Retreat", detail: "A three bedroom apartment for six people.", features: ["Kitchen", "Pool", "Coffee Maker"], price: 200 },
+        { name: "Poolside Paradise", detail: "A two bedroom apartment for four people.", features: ["Kitchen", "Pool", "Coffee Maker"], price: 200 },
+        { name: "Aqua Bliss", detail: "A one bedroom apartment for two people.", features: ["Kitchen", "Pool", "Coffee Maker"], price: 200 },
     ]
 
  
     return (
         <div>
-            <p className="text-center text-xl pt-8">Every apartment has access to the pool, a fully functional kitchen.</p>
+           <p className="text-center my-8 text-xl font-light text-piction-secondary">Every apartment has access to the pool, a fully functional kitchen and grill.</p>
             {apartmentDetails.map((apartment: iApartment) =>        
-            <AparmentCard key={apartment.name} {...apartment} />)}
+            <AparmentCard key={apartment.name} {...apartment} />)} 
         </div>
            )
 }
