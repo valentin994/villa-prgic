@@ -6,8 +6,8 @@ import account from "../assets/account.svg"
 function Home() {
     return (
         <div className="text-primary">
-            <div className="">
-                <img className="object-cover max-w-full h-auto" src={heroPicture} alt="Pool picture"/>
+            <div className="flex w-full justify-center items-center border-2">
+                    <img className="object-cover max-w-full h-auto" src={heroPicture} alt="Pool picture"/>
             </div>
             <div className="container flex items-center justify-center py-4">
                 <p className="text-4xl py-4 px-8 text-center font-light">Uzivajte u odmoru s nama</p> 
