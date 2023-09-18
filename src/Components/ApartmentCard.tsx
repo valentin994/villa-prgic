@@ -1,5 +1,6 @@
 import { iApartment } from "../interfaces";
 import { Link } from "react-router-dom";
+// @ts-ignore
 import { ReactComponent as BedSvg } from "../assets/bed_svg.svg";
 
 function AparmentCard({ name, detail, features, price }: iApartment) {
