@@ -12,7 +12,7 @@ function Nav() {
             Villa Prgic
           </span>
         </Link>
-        <div className="p-4 sm:max-md:hidden">
+        <div className="p-4 hidden md:max-[4200px]:block">
           <ul className="flex">
             <li className="px-2 hover:text-gray-100">
               <Link to="/">Home</Link>
