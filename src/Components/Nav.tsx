@@ -7,7 +7,7 @@ function Nav() {
   return (
     <nav className="border-gray-200 text-white bg-secondary">
       <div className="flex flex-wrap items-center justify-between mx-auto w-full ">
-        <Link to="/" className="flex items-center p-4">
+        <Link to="/villa-prgic" className="flex items-center p-4">
           <span className="self-center text-xl font-light whitespace-nowrap">
             Villa Prgic
           </span>
@@ -15,7 +15,7 @@ function Nav() {
         <div className="p-4 hidden md:max-[4200px]:block">
           <ul className="flex">
             <li className="px-2 hover:text-gray-100">
-              <Link to="/">Home</Link>
+              <Link to="/villa-prgic">Home</Link>
             </li>
             <li className="px-2 hover:text-gray-100">
               <Link to="/apartments">Apartments</Link>
@@ -59,7 +59,7 @@ function Nav() {
             <ul className="flex flex-col rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent">
               <li>
                 <Link
-                  to="/"
+                  to="/villa-prgic"
                   onClick={() => setIsMenuOpen(false)}
                   className="block py-2 pl-3 pr-4 rounded md:bg-transparent md:text-blue-700 md:p-0"
                 >
