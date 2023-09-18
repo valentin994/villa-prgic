@@ -18,13 +18,13 @@ function Nav() {
               <Link to="/villa-prgic">Home</Link>
             </li>
             <li className="px-2 hover:text-gray-100">
-              <Link to="/apartments">Apartments</Link>
+              <Link to="/villa-prgic/apartments">Apartments</Link>
             </li>
             <li className="px-2 hover:text-gray-100">
-              <Link to="/region">Region</Link>
+              <Link to="/villa-prgic/region">Region</Link>
             </li>
             <li className="px-2 hover:text-gray-100">
-              <Link to="/contact">Contact</Link>
+              <Link to="/villa-prgic/contact">Contact</Link>
             </li>
           </ul>
         </div>
@@ -68,7 +68,7 @@ function Nav() {
               </li>
               <li>
                 <Link
-                  to="/apartments"
+                  to="/villa-prgic/apartments"
                   onClick={() => setIsMenuOpen(false)}
                   className="block py-2 pl-3 pr-4 rounded md:bg-transparent md:text-blue-700 md:p-0"
                 >
@@ -77,7 +77,7 @@ function Nav() {
               </li>
               <li>
                 <Link
-                  to="/region"
+                  to="/villa-prgic/region"
                   onClick={() => setIsMenuOpen(false)}
                   className="block py-2 pl-3 pr-4 rounded md:bg-transparent md:text-blue-700 md:p-0"
                 >
@@ -86,7 +86,7 @@ function Nav() {
               </li>
               <li>
                 <Link
-                  to="/contact"
+                  to="/villa-prgic/contact"
                   onClick={() => setIsMenuOpen(false)}
                   className="block py-2 pl-3 pr-4 rounded md:bg-transparent md:text-blue-700 md:p-0"
                 >
