@@ -2,8 +2,6 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom"
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import { Carousel } from "react-responsive-carousel"
-import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 import PoolImage from "../assets/IMG_3368.jpg"
 
 function AparmentDetails() {
