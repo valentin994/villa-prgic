@@ -32,7 +32,7 @@ function Nav() {
           data-collapse-toggle="navbar-solid-bg"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           type="button"
-          className="inline-flex items-center p-4 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          className="inline-flex items-center p-4 ml-3 text-sm text-gray-500 rounded-lg md:hidden"
           aria-controls="navbar-solid-bg"
           aria-expanded="false"
         >
