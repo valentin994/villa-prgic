@@ -14,11 +14,11 @@ function App() {
     <div className="App">
       <Nav />
       <Routes>
-            <Route path="/" element={<Home/>}></Route>
-            <Route path="/apartments" element={<Apartments/>}></Route>
-            <Route path="/apartments/:apartmentName" element={<AparmentDetails/>}></Route>
-            <Route path="/region" element={<Region/>}></Route>
-            <Route path="/contact" element={<Contact/>}></Route>
+            <Route path="/villa-prgic/" element={<Home/>}></Route>
+            <Route path="/villa-prgic/apartments" element={<Apartments/>}></Route>
+            <Route path="/villa-prgic/apartments/:apartmentName" element={<AparmentDetails/>}></Route>
+            <Route path="/villa-prgic/region" element={<Region/>}></Route>
+            <Route path="/villa-prgic/contact" element={<Contact/>}></Route>
             <Route path="*" element={<NoPage/>}></Route>
       </Routes>
       <Footer/>

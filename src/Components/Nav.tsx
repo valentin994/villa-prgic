@@ -5,7 +5,7 @@ function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="border-gray-200 text-white rounded bg-secondary">
+    <nav className="border-gray-200 text-white bg-secondary">
       <div className="flex flex-wrap items-center justify-between mx-auto w-full ">
         <Link to="/" className="flex items-center p-4">
           <span className="self-center text-xl font-light whitespace-nowrap">
