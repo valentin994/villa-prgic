@@ -3,26 +3,32 @@ import { Link } from "react-router-dom";
 // @ts-ignore
 import { ReactComponent as BedSvg } from "../assets/bed_svg.svg";
 
-function AparmentCard({ name, detail, features, price }: iApartment) {
+function AparmentCard({ name, detail, features, price, summary, number_of_beds }: iApartment) {
   return (
     <div>
       <Link
         to={name}
         state={{ name, detail, features, price }}
-        className="flex flex-col my-8 py-4 items-center bg-white border border-gray-200 bg-gray-100 hover:bg-gray-100"
+        className="flex flex-col my-8 py-4 px-8 items-center bg-white bg-gray-100 hover:bg-gray-200"
       >
-        <div className="flex flex-col justify-between p-4 leading-normal">
+        <div className="flex flex-col justify-between p-4 leading-normal w-full">
           <div className="flex flex-row justify-between">
-            <h5 className="mb-2 text-2xl font-light text-secondary tracking-tight text-primary">
+            <h5 className="mb-2 text-2xl font-light text-secondary tracking-tight text-primary ">
               {name}
             </h5>
             <div className="flex flex-row">
-              <BedSvg className="w-6 m-2" />
-              <BedSvg className="w-6 m-2" />
-              <BedSvg className="w-6 m-2" />
+              {
+                [
+                  ...Array(number_of_beds),
+                ].map((value: undefined, index: number) => (
+                    <BedSvg id={index + 1} key={index} className="w-6 m-2" />
+                ))
+
+              }
             </div>
           </div>
           <p className="mb-3 font-normal text-piction-blue">{detail}</p>
+          <p className="font-thin hidden md:max-[4200px]:block">{summary}</p>
         </div>
       </Link>
     </div>
