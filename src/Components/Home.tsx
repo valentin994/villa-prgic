@@ -34,8 +34,8 @@ function Home() {
       </div>
       <div className="flex flex-wrap items-center justify-around bg-gray-100">
         <div className="container text-center p-8">
-          <p className="text-4xl w-full text-center font-light p-4">About Us</p>
-          <p className="text-secondary p-4">
+          <p className="text-4xl w-full text-center font-light p-2">About Us</p>
+          <p className="text-secondary p-6">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
