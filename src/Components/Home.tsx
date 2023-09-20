@@ -20,7 +20,7 @@ function Home() {
       </div>
       <div className="flex flex-wrap items-center justify-around p-4 w-full">
         <div className="container w-full text-center">
-          <Link to="/apartments">
+          <Link to="/villa-prgic/apartments">
             <button className="bg-secondary hover:bg-black text-white text-xl py-4 px-6 rounded-full">
               Book Now
             </button>
