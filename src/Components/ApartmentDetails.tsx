@@ -4,8 +4,8 @@ import LocationSvg from "../assets/location.svg";
 import BathroomSvg from "../assets/bathroom.svg";
 import WifiSvg from "../assets/wifi.svg";
 import KitchenSvg from "../assets/kitchen.svg";
-import BedSvg from "../assets/bed.svg"
-import PoolSvg from "../assets/pool.svg"
+import BedSvg from "../assets/bed.svg";
+import PoolSvg from "../assets/pool.svg";
 
 function AparmentDetails() {
   const { state } = useLocation();
@@ -37,27 +37,30 @@ function AparmentDetails() {
                   <li className="font-thin p-2 text-center">Kula Kamerlengo</li>
                   <li className="font-thin p-2 text-center">Park Fortin</li>
                 </ul>
-
-                  <div className="flex justify-center p-2">
-                      <img
-                          className="p-2 w-12"
-                          src={BathroomSvg}
-                          alt="Bathroom image"
-                      />
-                      <p className="text-lg font-bold p-2">Bathroom</p>
-                  </div>
-                  <ul>
-                      <li className="font-thin p-2 text-center">toaletni papir</li>
-                      <li className="font-thin p-2 text-center">ručnici</li>
-                      <li className="font-thin p-2 text-center">kada ili tuš kabina</li>
-                      <li className="font-thin p-2 text-center">vlastita kupaonica</li>
-                      <li className="font-thin p-2 text-center">WC</li>
-                      <li className="font-thin p-2 text-center">besplatan toaletni pribor</li>
-                      <li className="font-thin p-2 text-center">sušilo za kosu</li>
-                      <li className="font-thin p-2 text-center">tuš kabina </li>
-                  </ul>
-
-
+                <div className="flex justify-center p-2">
+                  <img
+                    className="p-2 w-12"
+                    src={BathroomSvg}
+                    alt="Bathroom image"
+                  />
+                  <p className="text-lg font-bold p-2">Bathroom</p>
+                </div>
+                <ul>
+                  <li className="font-thin p-2 text-center">toaletni papir</li>
+                  <li className="font-thin p-2 text-center">ručnici</li>
+                  <li className="font-thin p-2 text-center">
+                    kada ili tuš kabina
+                  </li>
+                  <li className="font-thin p-2 text-center">
+                    vlastita kupaonica
+                  </li>
+                  <li className="font-thin p-2 text-center">WC</li>
+                  <li className="font-thin p-2 text-center">
+                    besplatan toaletni pribor
+                  </li>
+                  <li className="font-thin p-2 text-center">sušilo za kosu</li>
+                  <li className="font-thin p-2 text-center">tuš kabina </li>
+                </ul>
               </div>
               <div>
                 <div className="flex justify-center p-2">
@@ -68,46 +71,37 @@ function AparmentDetails() {
                   Wifi is available and free on the whole estate
                 </p>
 
-                  <div className="flex justify-center p-2">
-                      <img
-                          className="p-2 w-12"
-                          src={PoolSvg}
-                          alt="Pool image"
-                      />
-                      <p className="text-lg font-bold p-2">Pool</p>
-                  </div>
-                  <ul>
-                      <li className="font-thin p-2 text-center">From 09-20</li>
-                      <li className="font-thin p-2 text-center">No age restrictions</li>
-                  </ul>
-
-                  <div className="flex justify-center p-2">
-                      <img
-                          className="p-2 w-12"
-                          src={BedSvg}
-                          alt="Bed image"
-                      />
-                      <p className="text-lg font-bold p-2">Bedroom</p>
-                  </div>
-                  <ul>
-                      <li className="font-thin p-2 text-center">posteljina</li>
-                      <li className="font-thin p-2 text-center">garderoba ili ormar </li>
-                  </ul>
-
-                  <div className="flex justify-center p-2">
-                      <img
-                          className="p-2 w-12"
-                          src={BedSvg}
-                          alt="Bed image"
-                      />
-                      <p className="text-lg font-bold p-2">Bedroom</p>
-                  </div>
-                  <ul>
-                      <li className="font-thin p-2 text-center">posteljina</li>
-                      <li className="font-thin p-2 text-center">garderoba ili ormar </li>
-                  </ul>
+                <div className="flex justify-center p-2">
+                  <img className="p-2 w-12" src={PoolSvg} alt="Pool image" />
+                  <p className="text-lg font-bold p-2">Pool</p>
+                </div>
+                <ul>
+                  <li className="font-thin p-2 text-center">From 09-20</li>
+                  <li className="font-thin p-2 text-center">
+                    No age restrictions
+                  </li>
+                </ul>
+                <div className="flex justify-center p-2">
+                  <img className="p-2 w-12" src={BedSvg} alt="Bed image" />
+                  <p className="text-lg font-bold p-2">Bedroom</p>
+                </div>
+                <ul>
+                  <li className="font-thin p-2 text-center">posteljina</li>
+                  <li className="font-thin p-2 text-center">
+                    garderoba ili ormar{" "}
+                  </li>
+                </ul>
+                <div className="flex justify-center p-2">
+                  <img className="p-2 w-12" src={BedSvg} alt="Bed image" />
+                  <p className="text-lg font-bold p-2">Bedroom</p>
+                </div>
+                <ul>
+                  <li className="font-thin p-2 text-center">posteljina</li>
+                  <li className="font-thin p-2 text-center">
+                    garderoba ili ormar{" "}
+                  </li>
+                </ul>
               </div>
-
               <div>
                 <div className="flex justify-center p-2">
                   <img
@@ -142,12 +136,6 @@ function AparmentDetails() {
                   <li className="font-thin p-2 text-center">čajna kuhinja </li>
                 </ul>
               </div>
-                <div>
-                </div>
-
-
-                <div>
-                </div>
             </div>
           </div>
         </div>
