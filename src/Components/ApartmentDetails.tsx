@@ -1,5 +1,4 @@
 import { useLocation } from "react-router-dom";
-import "react-calendar/dist/Calendar.css";
 import LocationSvg from "../assets/location.svg";
 import BathroomSvg from "../assets/bathroom.svg";
 import WifiSvg from "../assets/wifi.svg";
