@@ -10,7 +10,7 @@ function Home() {
         <img
           className="object-cover max-w-full h-auto"
           src={heroPicture}
-          alt="Pool picture"
+          alt="Pool"
         />
       </div>
       <div className="flex items-center justify-center p-8">
@@ -29,8 +29,8 @@ function Home() {
       </div>
       <div className="flex flex-wrap items-center justify-evenly w-full p-8 mt-8">
         <p className="text-4xl w-full text-center font-light">Your Hosts</p>
-        <img className="w-16 py-8 my-8" src={account} />
-        <img className="w-16 py-8 my-8" src={account} />
+        <img className="w-16 py-8 my-8" alt="Account" src={account} />
+        <img className="w-16 py-8 my-8" alt="Account" src={account} />
       </div>
       <div className="flex flex-wrap items-center justify-around bg-gray-100">
         <div className="container text-center p-8">

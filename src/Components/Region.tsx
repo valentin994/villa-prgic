@@ -25,7 +25,7 @@ function Region() {
         </p>
         <img
           src={KanicaImage}
-          alt="Image of Kanica"
+          alt="Kanica"
           className="object-cover max-w-full h-auto p-4"
         />
         <p className="text-primary text-2xl p-4">Rogoznica</p>
@@ -41,7 +41,7 @@ function Region() {
         </p>
         <img
           src={RogoznicaImage}
-          alt="Image of Rogoznica"
+          alt="Rogoznica"
           className="object-cover max-w-full h-auto p-4"
         />
         <p className="text-primary text-2xl p-4">Trogir</p>
@@ -63,7 +63,7 @@ function Region() {
         </p>
         <img
           src={TrogirImage}
-          alt="Image of Trogir"
+          alt="Trogir"
           className="object-cover max-w-full h-auto p-4"
         />
         <p className="text-primary text-2xl p-4">Split</p>
@@ -87,7 +87,7 @@ function Region() {
         </p>
         <img
           src={SplitImage}
-          alt="Image of Split"
+          alt="Split"
           className="object-cover max-w-full h-auto p-4"
         />
       </div>

@@ -9,7 +9,7 @@ import PoolSvg from "../assets/pool.svg";
 
 function AparmentDetails() {
   const { state } = useLocation();
-  const { name, detail, features, price } = state;
+  const { name, detail } = state;
   return (
     <div className="flex justify-center align-middle w-full">
       <div className="container w-full">
@@ -20,7 +20,7 @@ function AparmentDetails() {
             <div className="grid grid-cols-1 md:grid-cols-3 p-4">
               <div className="">
                 <div className="flex justify-center p-2">
-                  <img className="p-2" src={LocationSvg} alt="Location image" />
+                  <img className="p-2" src={LocationSvg} alt="Location" />
                   <p className="text-lg font-bold p-2">Near by</p>
                 </div>
                 <ul>
@@ -41,7 +41,7 @@ function AparmentDetails() {
                   <img
                     className="p-2 w-12"
                     src={BathroomSvg}
-                    alt="Bathroom image"
+                    alt="Bathroom "
                   />
                   <p className="text-lg font-bold p-2">Bathroom</p>
                 </div>
@@ -64,7 +64,7 @@ function AparmentDetails() {
               </div>
               <div>
                 <div className="flex justify-center p-2">
-                  <img className="p-2 w-12" src={WifiSvg} alt="Wifi image" />
+                  <img className="p-2 w-12" src={WifiSvg} alt="Wifi " />
                   <p className="text-lg font-bold p-2">Wifi</p>
                 </div>
                 <p className="font-thin text-center">
@@ -72,7 +72,7 @@ function AparmentDetails() {
                 </p>
 
                 <div className="flex justify-center p-2">
-                  <img className="p-2 w-12" src={PoolSvg} alt="Pool image" />
+                  <img className="p-2 w-12" src={PoolSvg} alt="Pool " />
                   <p className="text-lg font-bold p-2">Pool</p>
                 </div>
                 <ul>
@@ -82,7 +82,7 @@ function AparmentDetails() {
                   </li>
                 </ul>
                 <div className="flex justify-center p-2">
-                  <img className="p-2 w-12" src={BedSvg} alt="Bed image" />
+                  <img className="p-2 w-12" src={BedSvg} alt="Bed " />
                   <p className="text-lg font-bold p-2">Bedroom</p>
                 </div>
                 <ul>
@@ -92,7 +92,7 @@ function AparmentDetails() {
                   </li>
                 </ul>
                 <div className="flex justify-center p-2">
-                  <img className="p-2 w-12" src={BedSvg} alt="Bed image" />
+                  <img className="p-2 w-12" src={BedSvg} alt="Bed " />
                   <p className="text-lg font-bold p-2">Bedroom</p>
                 </div>
                 <ul>
@@ -107,7 +107,7 @@ function AparmentDetails() {
                   <img
                     className="p-2 w-12"
                     src={KitchenSvg}
-                    alt="Kitchen image"
+                    alt="Kitchen "
                   />
                   <p className="text-lg font-bold p-2">Kitchen</p>
                 </div>

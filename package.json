@@ -12,7 +12,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,jsx, tsx, ts}": "eslint --fix"
+    "*.{js,jsx,tsx,ts}": "eslint --fix"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.3",
