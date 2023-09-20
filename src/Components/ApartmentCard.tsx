@@ -3,7 +3,14 @@ import { Link } from "react-router-dom";
 // @ts-ignore
 import { ReactComponent as BedSvg } from "../assets/bed_svg.svg";
 
-function AparmentCard({ name, detail, features, price, summary, number_of_beds }: iApartment) {
+function AparmentCard({
+  name,
+  detail,
+  features,
+  price,
+  summary,
+  number_of_beds,
+}: iApartment) {
   return (
     <div>
       <Link
@@ -17,14 +24,11 @@ function AparmentCard({ name, detail, features, price, summary, number_of_beds }
               {name}
             </h5>
             <div className="flex flex-row">
-              {
-                [
-                  ...Array(number_of_beds),
-                ].map((value: undefined, index: number) => (
-                    <BedSvg id={index + 1} key={index} className="w-6 m-2" />
-                ))
-
-              }
+              {[...Array(number_of_beds)].map(
+                (value: undefined, index: number) => (
+                  <BedSvg id={index + 1} key={index} className="w-6 m-2" />
+                ),
+              )}
             </div>
           </div>
           <p className="mb-3 font-normal text-piction-blue">{detail}</p>
