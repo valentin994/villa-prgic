@@ -7,8 +7,8 @@ function Region() {
     <div className="flex items-center justify-center p-8">
       <div className="container">
         <p className="text-secondary text-3xl text-center p-4">Region</p>
-        <p className="text-primary text-2xl p-4">Kanica</p>
-        <p className="text-primary p-4">
+        <p className="text-primary text-2xl p-4 text-piction-blue">Kanica</p>
+        <p className="text-primary p-4 text-secondary">
           Kanica je turističko naselje smješteno u istoimenoj uvali udaljeno od
           Rogoznice 4,2 km. Mjesto je idealno za miran, tih i ugodan odmor ali i
           za sve one koji žele osjetiti toplu atmosferu privatnog smještaja.
@@ -28,8 +28,8 @@ function Region() {
           alt="Kanica"
           className="object-cover max-w-full h-auto p-4"
         />
-        <p className="text-primary text-2xl p-4">Rogoznica</p>
-        <p className="text-primary p-4">
+        <p className="text-primary text-2xl p-4 text-piction-blue">Rogoznica</p>
+        <p className="text-primary p-4 text-secondary">
           Najjužnije turističko središte- Rogoznica, sa susjednim mjestom
           Ražanj, te s 54 km prekrasne razvedene obale, posebno je poznato po
           nautičkom, obalnom i pomorskom turizmu. Malo, mirno i relativno mlado
@@ -44,8 +44,8 @@ function Region() {
           alt="Rogoznica"
           className="object-cover max-w-full h-auto p-4"
         />
-        <p className="text-primary text-2xl p-4">Trogir</p>
-        <p className="text-primary p-4">
+        <p className="text-primary text-2xl p-4 text-piction-blue">Trogir</p>
+        <p className="text-primary p-4 text-secondary">
           Zahvaljujući svojem geografskom položaju Trogir je od pamtivijeka bio
           idealno mjesto za život. S prirodno zaštićenom lukom, brojnim izvorima
           pitke vode, plodnim tlom u zaleđu grada te s kamenom iz lokalnih
@@ -66,8 +66,8 @@ function Region() {
           alt="Trogir"
           className="object-cover max-w-full h-auto p-4"
         />
-        <p className="text-primary text-2xl p-4">Split</p>
-        <p className="text-primary p-4">
+        <p className="text-primary text-2xl p-4 text-piction-blue">Split</p>
+        <p className="text-primary p-4 text-secondary">
           Punih 17 stoljeća traje priča o Splitu, još otkako je rimski car
           Dioklecijan odlučio baš na tom poluotoku blizu velikog rimskog grada
           Salone izgraditi palaču u kojoj bi u miru proveo posljednje godine
