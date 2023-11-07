@@ -8,7 +8,7 @@ function Region() {
       <div className="container">
         <p className="text-secondary text-3xl text-center p-4">Region</p>
         <div className="grid grid-cols-3 border border-gray-50 rounded shadow my-8">
-          <div className="">
+          <div className="col-span-2">
             <p className="text-primary text-2xl p-4">Kanica</p>
             <p className="text-primary p-4">
               Kanica je turističko naselje smješteno u istoimenoj uvali udaljeno
@@ -29,16 +29,16 @@ function Region() {
           <img
             src={KanicaImage}
             alt="Kanica"
-            className="object-cover max-w-full h-auto col-span-2"
+            className="object-cover max-w-full h-auto"
           />
         </div>
         <div className="grid grid-cols-3 border-1 border-gray shadow my-16">
           <img
             src={RogoznicaImage}
             alt="Rogoznica"
-            className="object-cover max-w-full h-auto col-span-2"
+            className="object-cover max-w-full h-auto"
           />
-          <div className="">
+          <div className="col-span-2">
             <p className="text-primary text-2xl p-4 text-piction-blue">
               Rogoznica
             </p>
@@ -83,30 +83,24 @@ function Region() {
             className="object-cover max-w-full h-auto"
           />
         </div>
-        <p className="text-primary text-2xl p-4 text-piction-blue">Split</p>
-        <p className="text-primary p-4 text-secondary">
-          Punih 17 stoljeća traje priča o Splitu, još otkako je rimski car
-          Dioklecijan odlučio baš na tom poluotoku blizu velikog rimskog grada
-          Salone izgraditi palaču u kojoj bi u miru proveo posljednje godine
-          svoga života. U tih 1700 godina Palača je polako postajala i postala
-          grad, koji danas mami bogatom tradicijom, veličanstvenom poviješću,
-          ljepotom prirodne i kulturne baštine. Dioklecijanova palača i cijela
-          povijesna jezgra Splita na spisku su svjetske baštine UNESCO - a još
-          od 1979., i to ne samo zbog izvanredne očuvanosti same Palače, nego
-          bar jednako zbog toga što Palača i njezin grad (ili grad i njegova
-          Palača, kako vam drago) i dalje žive punim životom. U toj strukturi
-          vidljivi su i još uvijek živi svi povijesni slojevi od starog Rima,
-          preko srednjeg vijeka do danas. Šetnjom kroz drevni grad moguće je
-          putovati kroz vrijeme, promatrati vrhunske primjere antičke
-          arhitekture poput Peristila, srednjovjekovne romaničke crkvice i
-          gotičke palače, renesansne portale plemićkih kuća, barokne fasade, sve
-          do moderne arhitekture izvanredno uklopljene u bogatu baštinu.
-        </p>
-        <img
-          src={SplitImage}
-          alt="Split"
-          className="object-cover max-w-full h-auto p-4"
-        />
+        <div className="grid grid-cols-3 border-1 border-gray shadow my-16">
+          <img
+              src={SplitImage}
+              alt="Split"
+              className="object-cover max-w-full h-auto"
+          />
+          <div className="col-span-2">
+            <p className="text-primary text-2xl p-4 text-piction-blue">Split</p>
+            <p className="text-primary p-4 text-secondary">
+              Punih 17 stoljeća traje priča o Splitu, još otkako je rimski car
+              Dioklecijan odlučio baš na tom poluotoku blizu velikog rimskog grada
+              Salone izgraditi palaču u kojoj bi u miru proveo posljednje godine
+              svoga života. U tih 1700 godina Palača je polako postajala i postala
+              grad, koji danas mami bogatom tradicijom, veličanstvenom poviješću,
+              ljepotom prirodne i kulturne baštine.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
