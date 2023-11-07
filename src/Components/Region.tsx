@@ -104,8 +104,7 @@ function Region() {
         </div>
        </div>
 
-        <div className="flex flex-col align-middle justify-center w-full items-center">
-
+        <div className="flex flex-col align-middle justify-center w-full items-center md:hidden">
         <div className="max-w-sm rounded overflow-hidden shadow-lg my-10">
           <img className="w-full" src={KanicaImage} alt="Sunset in the mountains" />
             <div className="px-6 py-4">
