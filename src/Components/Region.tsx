@@ -7,6 +7,7 @@ function Region() {
     <div className="flex items-center justify-center p-8">
       <div className="container">
         <p className="text-secondary text-3xl text-center p-4">Region</p>
+        <div className="hidden md:block">
         <div className="grid grid-cols-3 border border-gray-50 rounded shadow my-8">
           <div className="col-span-2">
             <p className="text-primary text-2xl p-4">Kanica</p>
@@ -101,6 +102,49 @@ function Region() {
             </p>
           </div>
         </div>
+       </div>
+
+        <div className="flex flex-col align-middle justify-center w-full items-center">
+
+        <div className="max-w-sm rounded overflow-hidden shadow-lg my-10">
+          <img className="w-full" src={KanicaImage} alt="Sunset in the mountains" />
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2">Kanica</div>
+              <p className="text-gray-700 text-base">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+              </p>
+            </div>
+        </div>
+          <div className="max-w-sm rounded overflow-hidden shadow-lg my-10">
+            <img className="w-full" src={RogoznicaImage} alt="Sunset in the mountains" />
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2">Rogoznica</div>
+              <p className="text-gray-700 text-base">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+              </p>
+            </div>
+          </div>
+          <div className="max-w-sm rounded overflow-hidden shadow-lg my-10">
+            <img className="w-full" src={TrogirImage} alt="Sunset in the mountains" />
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2">Trogir</div>
+              <p className="text-gray-700 text-base">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+              </p>
+            </div>
+          </div>
+          <div className="max-w-sm rounded overflow-hidden shadow-lg my-10">
+            <img className="w-full" src={SplitImage} alt="Sunset in the mountains" />
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2">Split</div>
+              <p className="text-gray-700 text-base">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </div>
   );
