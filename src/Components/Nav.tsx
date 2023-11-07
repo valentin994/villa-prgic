@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setIsMenuOpen((prevState) => !prevState)
+  }
+
   return (
     <nav className="border-gray-200 text-white bg-secondary">
       <div className="flex flex-wrap items-center justify-between mx-auto w-full ">
@@ -28,75 +32,82 @@ function Nav() {
             </li>
           </ul>
         </div>
-        <button
-          data-collapse-toggle="navbar-solid-bg"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          type="button"
-          className="inline-flex items-center p-4 ml-3 text-sm text-gray-500 rounded-lg md:hidden"
-          aria-controls="navbar-solid-bg"
-          aria-expanded="false"
+        <div
+          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden"
         >
-          <span className="sr-only">Open main menu</span>
-          <svg
-            className="w-6 h-6"
-            aria-hidden="true"
-            fill="white"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clipRule="evenodd"
-            ></path>
-          </svg>
-        </button>
-        {isMenuOpen && (
           <div
-            className={`w-full md:block md:w-auto bg-gray-100 text-primary`}
-            id="navbar-solid-bg"
+              className="flex md:hidden w-full items-center justify-end"
+              onClick={toggleMenu}
           >
-            <ul className="flex flex-col rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent">
-              <li>
-                <Link
-                  to="/villa-prgic"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block py-2 pl-3 pr-4 rounded md:bg-transparent md:text-blue-700 md:p-0"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/villa-prgic/apartments"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block py-2 pl-3 pr-4 rounded md:bg-transparent md:text-blue-700 md:p-0"
-                >
-                  Apartments
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/villa-prgic/region"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block py-2 pl-3 pr-4 rounded md:bg-transparent md:text-blue-700 md:p-0"
-                >
-                  Region
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/villa-prgic/contact"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block py-2 pl-3 pr-4 rounded md:bg-transparent md:text-blue-700 md:p-0"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
+            <div className="group flex h-20 w-20 cursor-pointer items-center justify-center rounded-3xl p-2">
+              <div className="space-y-2">
+            <span
+                className={`block h-1 w-10 origin-center rounded-full bg-white transition-transform ease-in-out ${
+                    isMenuOpen ? "translate-y-1.5 rotate-45" : ""
+                }`}
+            ></span>
+                <span
+                    className={`block h-1 origin-center rounded-full bg-white transition-transform ease-in-out ${
+                        isMenuOpen ? "w-10 -translate-y-1.5 -rotate-45" : "w-8"
+                    }`}
+                ></span>
+              </div>
+            </div>
           </div>
-        )}
+        </div>
       </div>
+      <nav
+          className={`fixed flex top-0 left-0 w-full p-10 z-10 h-screen pt-24 bg-gray-900 text-white bg-opacity-100 transform delay-100 transition-all duration-300 ${
+              isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full"
+          }`}
+      >
+        <ul className="flex flex-col items-center w-full justify-center align-middle text-center">
+          <li className="text-2xl p-4">
+            <Link
+                to="/villa-prgic"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                }}
+            >
+              Home
+            </Link>
+          </li>
+          <li className="text-2xl p-4">
+            <Link
+                to="/villa-prgic/apartments"
+                className="nav-link"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                }}
+            >
+              Apartments
+            </Link>
+          </li>
+          <li className="text-2xl p-4">
+            <Link
+                to="/villa-prgic/region"
+                className="nav-link"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                }}
+            >
+              Region
+            </Link>
+          </li>
+          <li className="text-2xl p-4">
+            <Link
+                to="/villa-prgic/contact"
+                className="nav-link"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                }}
+            >
+              Contact
+            </Link>
+          </li>
+
+        </ul>
+      </nav>
     </nav>
   );
 }
