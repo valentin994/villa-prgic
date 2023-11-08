@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Nav() {
@@ -7,6 +7,13 @@ function Nav() {
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState)
   }
+
+  useEffect(() => {
+      document.body.style.overflow = 'unset';
+      if(isMenuOpen){
+        document.body.style.overflow = 'hidden';
+      }
+    }, [isMenuOpen])
 
   return (
     <nav className="border-gray-200 text-white bg-secondary">
@@ -104,7 +111,6 @@ function Nav() {
               Contact
             </Link>
           </li>
-
         </ul>
       </nav>
     </nav>
