@@ -32,29 +32,28 @@ function Nav() {
             </li>
           </ul>
         </div>
-        <div
-          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden"
-        >
-          <div
-              className="flex md:hidden w-full items-center justify-end"
+          <button
+              className="md:hidden m-4 flex top-0 right-0 z-20 relative w-10 h-10 text-white focus:outline-none"
               onClick={toggleMenu}
           >
-            <div className="group flex h-20 w-20 cursor-pointer items-center justify-center rounded-3xl p-2">
-              <div className="space-y-2">
-            <span
-                className={`block h-1 w-10 origin-center rounded-full bg-white transition-transform ease-in-out ${
-                    isMenuOpen ? "translate-y-1.5 rotate-45" : ""
-                }`}
-            ></span>
-                <span
-                    className={`block h-1 origin-center rounded-full bg-white transition-transform ease-in-out ${
-                        isMenuOpen ? "w-10 -translate-y-1.5 -rotate-45" : "w-8"
-                    }`}
-                ></span>
+              <div className="absolute w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
+    <span
+        className={`absolute h-0.5 w-5 bg-white transform transition duration-300 ease-in-out ${
+            isMenuOpen ? "rotate-45 delay-200" : "-translate-y-1.5"
+        }`}
+    ></span>
+                  <span
+                      className={`absolute h-0.5 bg-white transform transition-all duration-200 ease-in-out ${
+                          isMenuOpen ? "w-0 opacity-50" : "w-5 delay-200 opacity-100"
+                      }`}
+                  ></span>
+                  <span
+                      className={`absolute h-0.5 w-5 bg-white transform transition duration-300 ease-in-out ${
+                          isMenuOpen ? "-rotate-45 delay-200" : "translate-y-1.5"
+                      }`}
+                  ></span>
               </div>
-            </div>
-          </div>
-        </div>
+          </button>
       </div>
       <nav
           className={`fixed flex top-0 left-0 w-full p-10 z-10 h-screen pt-24 bg-gray-900 text-white bg-opacity-100 transform delay-100 transition-all duration-300 ${
