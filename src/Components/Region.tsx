@@ -10,6 +10,11 @@ function Region() {
   const [ref3, inView3] = useInView()
   const [ref4, inView4] = useInView()
 
+  const [ref5, inView5] = useInView()
+  const [ref6, inView6] = useInView()
+  const [ref7, inView7] = useInView()
+  const [ref8, inView8] = useInView()
+
   return (
     <div className="flex items-center justify-center p-8">
       <div className="container">
@@ -112,7 +117,7 @@ function Region() {
        </div>
 
         <div className="flex flex-col align-middle justify-center w-full items-center md:hidden">
-        <div ref={ref} className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
+        <div ref={ref5} className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView5 ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
           <img className="w-full" src={KanicaImage} alt="Sunset in the mountains" />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Kanica</div>
@@ -121,7 +126,7 @@ function Region() {
               </p>
             </div>
         </div>
-          <div ref={ref2} className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView2 ? "opacity-100" : "delay-300 opacity-20 -translate-x-10"}`}>
+          <div ref={ref6} className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView6 ? "opacity-100" : "delay-300 opacity-20 -translate-x-10"}`}>
             <img className="w-full" src={RogoznicaImage} alt="Sunset in the mountains" />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Rogoznica</div>
@@ -130,7 +135,7 @@ function Region() {
               </p>
             </div>
           </div>
-          <div ref={ref3} className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView3 ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
+          <div ref={ref7} className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView7 ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
             <img className="w-full" src={TrogirImage} alt="Sunset in the mountains" />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Trogir</div>
@@ -139,7 +144,7 @@ function Region() {
               </p>
             </div>
           </div>
-          <div ref={ref4} className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView4 ? "opacity-100" : "delay-300 opacity-20 -translate-x-10"}`}>
+          <div ref={ref8} className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView8 ? "opacity-100" : "delay-300 opacity-20 -translate-x-10"}`}>
             <img className="w-full" src={SplitImage} alt="Sunset in the mountains" />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Split</div>
