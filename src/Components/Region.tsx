@@ -20,7 +20,7 @@ function Region() {
       <div className="container">
         <p className="text-secondary text-3xl text-center p-4">Region</p>
         <div className="hidden md:block">
-        <div ref={ref} className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-200 ease-in-out ${inView ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
+        <div ref={ref} className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-300 ease-in-out ${inView ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
           <div className="col-span-2">
             <p className="text-piction-blue text-2xl p-4">Kanica</p>
             <p className="text-primary p-4">
@@ -45,7 +45,7 @@ function Region() {
             className="object-cover max-w-full h-auto"
           />
         </div>
-        <div ref={ref2} className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-200 ease-in-out ${inView2 ? "opacity-100" : "delay-300 opacity-20 -translate-x-10"}`}>
+        <div ref={ref2} className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-300 ease-in-out ${inView2 ? "opacity-100" : "delay-300 opacity-20 -translate-x-10"}`}>
           <img
             src={RogoznicaImage}
             alt="Rogoznica"
@@ -67,7 +67,7 @@ function Region() {
             </p>
           </div>
         </div>
-        <div ref={ref3} className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-200 ease-in-out ${inView3 ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
+        <div ref={ref3} className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-300 ease-in-out ${inView3 ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
           <div className="col-span-2">
             <p className="text-primary text-2xl p-4 text-piction-blue">
               Trogir
@@ -96,7 +96,7 @@ function Region() {
             className="object-cover max-w-full h-auto"
           />
         </div>
-        <div ref={ref4} className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-200 ease-in-out ${inView4 ? "opacity-100" : "delay-300 opacity-20 -translate-x-10"}`}>
+        <div ref={ref4} className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-300 ease-in-out ${inView4 ? "opacity-100" : "delay-300 opacity-20 -translate-x-10"}`}>
           <img
               src={SplitImage}
               alt="Split"
