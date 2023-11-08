@@ -1,7 +1,10 @@
+import { useInView } from "react-intersection-observer";
+
 function Contact() {
+  const [ref, inView] = useInView()
   return (
     <section className="bg-white">
-      <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+      <div ref={ref} className={`py-8 lg:py-16 px-4 mx-auto max-w-screen-md transform transition-all duration-300 ease-in-out ${inView ? "opacity-100" : "delay-300 opacity-20 translate-y-10"}`}>
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-piction-blue">
           Contact Us
         </h2>
