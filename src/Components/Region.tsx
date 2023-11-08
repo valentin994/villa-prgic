@@ -2,15 +2,22 @@ import KanicaImage from "../assets/kanica.jpg";
 import RogoznicaImage from "../assets/Rogoznica.jpg";
 import TrogirImage from "../assets/trogir.jpg";
 import SplitImage from "../assets/split.jpg";
+import { useInView } from "react-intersection-observer";
+
 function Region() {
+  const [ref, inView] = useInView()
+  const [ref2, inView2] = useInView()
+  const [ref3, inView3] = useInView()
+  const [ref4, inView4] = useInView()
+
   return (
     <div className="flex items-center justify-center p-8">
       <div className="container">
         <p className="text-secondary text-3xl text-center p-4">Region</p>
         <div className="hidden md:block">
-        <div className="grid grid-cols-3 border border-gray-50 rounded shadow my-8">
+        <div ref={ref} className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-200 ease-in-out ${inView ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
           <div className="col-span-2">
-            <p className="text-primary text-2xl p-4">Kanica</p>
+            <p className="text-piction-blue text-2xl p-4">Kanica</p>
             <p className="text-primary p-4">
               Kanica je turističko naselje smješteno u istoimenoj uvali udaljeno
               od Rogoznice 4,2 km. Mjesto je idealno za miran, tih i ugodan
@@ -33,7 +40,7 @@ function Region() {
             className="object-cover max-w-full h-auto"
           />
         </div>
-        <div className="grid grid-cols-3 border-1 border-gray shadow my-16">
+        <div ref={ref2} className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-200 ease-in-out ${inView2 ? "opacity-100" : "delay-300 opacity-20 -translate-x-10"}`}>
           <img
             src={RogoznicaImage}
             alt="Rogoznica"
@@ -55,7 +62,7 @@ function Region() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-3 border-1 border-gray shadow my-16">
+        <div ref={ref3} className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-200 ease-in-out ${inView3 ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
           <div className="col-span-2">
             <p className="text-primary text-2xl p-4 text-piction-blue">
               Trogir
@@ -84,7 +91,7 @@ function Region() {
             className="object-cover max-w-full h-auto"
           />
         </div>
-        <div className="grid grid-cols-3 border-1 border-gray shadow my-16">
+        <div ref={ref4} className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-200 ease-in-out ${inView4 ? "opacity-100" : "delay-300 opacity-20 -translate-x-10"}`}>
           <img
               src={SplitImage}
               alt="Split"
@@ -105,7 +112,7 @@ function Region() {
        </div>
 
         <div className="flex flex-col align-middle justify-center w-full items-center md:hidden">
-        <div className="max-w-sm rounded overflow-hidden shadow-lg my-10">
+        <div ref={ref} className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
           <img className="w-full" src={KanicaImage} alt="Sunset in the mountains" />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Kanica</div>
@@ -114,7 +121,7 @@ function Region() {
               </p>
             </div>
         </div>
-          <div className="max-w-sm rounded overflow-hidden shadow-lg my-10">
+          <div ref={ref2} className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView2 ? "opacity-100" : "delay-300 opacity-20 -translate-x-10"}`}>
             <img className="w-full" src={RogoznicaImage} alt="Sunset in the mountains" />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Rogoznica</div>
@@ -123,7 +130,7 @@ function Region() {
               </p>
             </div>
           </div>
-          <div className="max-w-sm rounded overflow-hidden shadow-lg my-10">
+          <div ref={ref3} className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView3 ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
             <img className="w-full" src={TrogirImage} alt="Sunset in the mountains" />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Trogir</div>
@@ -132,7 +139,7 @@ function Region() {
               </p>
             </div>
           </div>
-          <div className="max-w-sm rounded overflow-hidden shadow-lg my-10">
+          <div ref={ref4} className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView4 ? "opacity-100" : "delay-300 opacity-20 -translate-x-10"}`}>
             <img className="w-full" src={SplitImage} alt="Sunset in the mountains" />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">Split</div>
