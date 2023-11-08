@@ -2,6 +2,7 @@ import { iApartment } from "../interfaces";
 import { Link } from "react-router-dom";
 // @ts-ignore
 import { ReactComponent as BedSvg } from "../assets/bed_svg.svg";
+import { useInView } from "react-intersection-observer";
 
 function AparmentCard({
   name,
@@ -11,8 +12,9 @@ function AparmentCard({
   summary,
   number_of_beds,
 }: iApartment) {
+  const [ref, inView] = useInView()
   return (
-    <div>
+    <div ref={ref} className={`transform transition-all duration-300 ease-in-out ${inView ? "opacity-100" : "delay-300 opacity-20 translate-y-10"}`}>
       <Link
         to={name}
         state={{ name, detail, features, price }}
