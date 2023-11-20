@@ -22,7 +22,7 @@ function Region() {
         <div className="hidden md:block">
         <div ref={ref} className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-300 ease-in-out ${inView ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
           <div className="col-span-2">
-            <p className="text-piction-blue text-2xl p-4">Kanica</p>
+            <p className="text-2xl p-4">Kanica</p>
             <p className="text-primary p-4">
               Kanica je turističko naselje smješteno u istoimenoj uvali udaljeno
               od Rogoznice 4,2 km. Mjesto je idealno za miran, tih i ugodan
@@ -52,7 +52,7 @@ function Region() {
             className="object-cover max-w-full h-auto"
           />
           <div className="col-span-2">
-            <p className="text-primary text-2xl p-4 text-piction-blue">
+            <p className="text-primary text-2xl p-4">
               Rogoznica
             </p>
             <p className="text-primary p-4 text-secondary">
@@ -69,7 +69,7 @@ function Region() {
         </div>
         <div ref={ref3} className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-300 ease-in-out ${inView3 ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
           <div className="col-span-2">
-            <p className="text-primary text-2xl p-4 text-piction-blue">
+            <p className="text-primary text-2xl p-4">
               Trogir
             </p>
             <p className="text-primary p-4 text-secondary">
@@ -103,7 +103,7 @@ function Region() {
               className="object-cover max-w-full h-auto"
           />
           <div className="col-span-2">
-            <p className="text-primary text-2xl p-4 text-piction-blue">Split</p>
+            <p className="text-primary text-2xl p-4">Split</p>
             <p className="text-primary p-4 text-secondary">
               Punih 17 stoljeća traje priča o Splitu, još otkako je rimski car
               Dioklecijan odlučio baš na tom poluotoku blizu velikog rimskog grada

@@ -11,7 +11,7 @@ import Footer from './Components/Footer'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-background-col">
       <Nav />
       <Routes>
             <Route path="/villa-prgic/" element={<Home/>}></Route>

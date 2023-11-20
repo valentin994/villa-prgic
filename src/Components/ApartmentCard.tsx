@@ -33,7 +33,7 @@ function AparmentCard({
               )}
             </div>
           </div>
-          <p className="mb-3 font-normal text-piction-blue">{detail}</p>
+          <p className="mb-3 font-normal">{detail}</p>
           <p className="font-thin hidden md:max-[4200px]:block">{summary}</p>
         </div>
       </Link>
