@@ -22,7 +22,7 @@ function AparmentCard({
       >
         <div className="flex flex-col justify-between p-4 leading-normal w-full">
           <div className="flex flex-row justify-between">
-            <h5 className="mb-2 text-2xl font-light text-secondary tracking-tight text-primary ">
+            <h5 className="mb-2 text-2xl font-light text-secondary tracking-tight text-text-col ">
               {name}
             </h5>
             <div className="flex flex-row">

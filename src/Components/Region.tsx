@@ -23,7 +23,7 @@ function Region() {
         <div ref={ref} className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-300 ease-in-out ${inView ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
           <div className="col-span-2">
             <p className="text-2xl p-4">Kanica</p>
-            <p className="text-primary p-4">
+            <p className="text-text-col p-4">
               Kanica je turističko naselje smješteno u istoimenoj uvali udaljeno
               od Rogoznice 4,2 km. Mjesto je idealno za miran, tih i ugodan
               odmor ali i za sve one koji žele osjetiti toplu atmosferu
@@ -52,10 +52,10 @@ function Region() {
             className="object-cover max-w-full h-auto"
           />
           <div className="col-span-2">
-            <p className="text-primary text-2xl p-4">
+            <p className="text-text-col text-2xl p-4">
               Rogoznica
             </p>
-            <p className="text-primary p-4 text-secondary">
+            <p className="text-text-col p-4 text-secondary">
               Najjužnije turističko središte- Rogoznica, sa susjednim mjestom
               Ražanj, te s 54 km prekrasne razvedene obale, posebno je poznato
               po nautičkom, obalnom i pomorskom turizmu. Malo, mirno i relativno
@@ -69,10 +69,10 @@ function Region() {
         </div>
         <div ref={ref3} className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-300 ease-in-out ${inView3 ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
           <div className="col-span-2">
-            <p className="text-primary text-2xl p-4">
+            <p className="text-text-col text-2xl p-4">
               Trogir
             </p>
-            <p className="text-primary p-4 text-secondary">
+            <p className="text-text-col p-4 text-secondary">
               Zahvaljujući svojem geografskom položaju Trogir je od pamtivijeka
               bio idealno mjesto za život. S prirodno zaštićenom lukom, brojnim
               izvorima pitke vode, plodnim tlom u zaleđu grada te s kamenom iz
@@ -103,8 +103,8 @@ function Region() {
               className="object-cover max-w-full h-auto"
           />
           <div className="col-span-2">
-            <p className="text-primary text-2xl p-4">Split</p>
-            <p className="text-primary p-4 text-secondary">
+            <p className="text-text-col text-2xl p-4">Split</p>
+            <p className="text-text-col p-4 text-secondary">
               Punih 17 stoljeća traje priča o Splitu, još otkako je rimski car
               Dioklecijan odlučio baš na tom poluotoku blizu velikog rimskog grada
               Salone izgraditi palaču u kojoj bi u miru proveo posljednje godine
