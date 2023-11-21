@@ -16,25 +16,25 @@ function Nav() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="border-gray-200 text-white bg-secondary">
+    <nav className="text-background-col bg-secondary px-4 py-2">
       <div className="flex flex-wrap items-center justify-between mx-auto w-full ">
         <Link to="/villa-prgic" className="flex items-center p-4">
           <span className="self-center text-xl font-light whitespace-nowrap">
             Villa Prgic
           </span>
         </Link>
-        <div className="p-4 hidden md:max-[4200px]:block">
+        <div className="p-4 hidden md:max-[4200px]:block text-lg">
           <ul className="flex">
-            <li className="px-2 hover:text-gray-100">
+            <li className="px-2 hover:text-gray-200">
               <Link to="/villa-prgic">Home</Link>
             </li>
-            <li className="px-2 hover:text-gray-100">
+            <li className="px-2 hover:text-gray-200">
               <Link to="/villa-prgic/apartments">Apartments</Link>
             </li>
-            <li className="px-2 hover:text-gray-100">
+            <li className="px-2 hover:text-gray-200">
               <Link to="/villa-prgic/region">Region</Link>
             </li>
-            <li className="px-2 hover:text-gray-100">
+            <li className="px-2 hover:text-gray-200">
               <Link to="/villa-prgic/contact">Contact</Link>
             </li>
           </ul>
