@@ -22,7 +22,7 @@ function Region() {
         <div className="hidden md:block">
         <div ref={ref} className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-300 ease-in-out ${inView ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
           <div className="col-span-2">
-            <p className="text-2xl p-4">Kanica</p>
+            <p className="text-2xl p-4 text-secondary">Kanica</p>
             <p className="text-text-col p-4">
               Kanica je turističko naselje smješteno u istoimenoj uvali udaljeno
               od Rogoznice 4,2 km. Mjesto je idealno za miran, tih i ugodan
@@ -52,10 +52,10 @@ function Region() {
             className="object-cover max-w-full h-auto"
           />
           <div className="col-span-2">
-            <p className="text-text-col text-2xl p-4">
+            <p className="text-2xl p-4 text-secondary">
               Rogoznica
             </p>
-            <p className="text-text-col p-4 text-secondary">
+            <p className="text-text-col p-4 text-text-col">
               Najjužnije turističko središte- Rogoznica, sa susjednim mjestom
               Ražanj, te s 54 km prekrasne razvedene obale, posebno je poznato
               po nautičkom, obalnom i pomorskom turizmu. Malo, mirno i relativno
@@ -69,10 +69,10 @@ function Region() {
         </div>
         <div ref={ref3} className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-300 ease-in-out ${inView3 ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
           <div className="col-span-2">
-            <p className="text-text-col text-2xl p-4">
+            <p className="text-2xl p-4 text-secondary">
               Trogir
             </p>
-            <p className="text-text-col p-4 text-secondary">
+            <p className="text-text-col p-4 text-text-col">
               Zahvaljujući svojem geografskom položaju Trogir je od pamtivijeka
               bio idealno mjesto za život. S prirodno zaštićenom lukom, brojnim
               izvorima pitke vode, plodnim tlom u zaleđu grada te s kamenom iz
@@ -103,8 +103,8 @@ function Region() {
               className="object-cover max-w-full h-auto"
           />
           <div className="col-span-2">
-            <p className="text-text-col text-2xl p-4">Split</p>
-            <p className="text-text-col p-4 text-secondary">
+            <p className="text-2xl p-4 text-secondary">Split</p>
+            <p className="text-text-col p-4 text-text-col">
               Punih 17 stoljeća traje priča o Splitu, još otkako je rimski car
               Dioklecijan odlučio baš na tom poluotoku blizu velikog rimskog grada
               Salone izgraditi palaču u kojoj bi u miru proveo posljednje godine
@@ -120,7 +120,7 @@ function Region() {
         <div ref={ref5} className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView5 ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
           <img className="w-full" src={KanicaImage} alt="Sunset in the mountains" />
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Kanica</div>
+              <div className="font-bold text-xl mb-2 text-secondary">Kanica</div>
               <p className="text-gray-700 text-base">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
               </p>
@@ -129,7 +129,7 @@ function Region() {
           <div ref={ref6} className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView6 ? "opacity-100" : "delay-300 opacity-20 -translate-x-10"}`}>
             <img className="w-full" src={RogoznicaImage} alt="Sunset in the mountains" />
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Rogoznica</div>
+              <div className="font-bold text-xl mb-2 text-secondary">Rogoznica</div>
               <p className="text-gray-700 text-base">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
               </p>
@@ -138,7 +138,7 @@ function Region() {
           <div ref={ref7} className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView7 ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}>
             <img className="w-full" src={TrogirImage} alt="Sunset in the mountains" />
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Trogir</div>
+              <div className="font-bold text-xl mb-2 text-secondary">Trogir</div>
               <p className="text-gray-700 text-base">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
               </p>
@@ -147,7 +147,7 @@ function Region() {
           <div ref={ref8} className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView8 ? "opacity-100" : "delay-300 opacity-20 -translate-x-10"}`}>
             <img className="w-full" src={SplitImage} alt="Sunset in the mountains" />
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Split</div>
+              <div className="font-bold text-xl mb-2 text-secondary">Split</div>
               <p className="text-gray-700 text-base">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
               </p>

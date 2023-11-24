@@ -13,7 +13,7 @@ function AparmentDetails() {
     <div className="flex justify-center align-middle w-full">
       <div className="container w-full">
         <div className="p-4">
-          <p className="text-3xl text-center font-light py-4">{name}</p>
+          <p className="text-3xl text-secondary text-center font-light py-4">{name}</p>
           <p className="text-l text-center">{detail}</p>
           <div>
             <div className="grid grid-cols-1 md:grid-cols-3 p-4">

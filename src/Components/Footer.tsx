@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div className="flex bg-secondary text-background-col font-thin justify-between py-14 px-8 text-sm">
+    <div className="flex bg-secondary text-background-col font-thin justify-between py-14 px-8 text-sm md:text-base">
         <div>
           <p>Villa Prgic</p>
           <p>Adresa: Kanica 21390-12</p>
           <p>e-mail: info@prgic.com</p>
           <p>Mobitel: 00385999999</p>
         </div>
-        <div className="text-sm">
+        <div className="text-sm md:text-base">
            <ul>
                <li className="hover:underline">
                     <Link to="/villa-prgic">Home</Link>
