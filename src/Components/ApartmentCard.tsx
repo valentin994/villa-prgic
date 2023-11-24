@@ -20,9 +20,9 @@ function AparmentCard({
         state={{ name, detail, features, price }}
         className="flex flex-col my-8 py-4 px-8 items-center bg-white bg-gray-100 hover:bg-gray-200"
       >
-        <div className="flex flex-col justify-between p-4 leading-normal w-full">
+        <div className="flex flex-col justify-between p-4 py-8 leading-normal w-full">
           <div className="flex flex-row justify-between">
-            <h5 className="mb-2 text-2xl font-light text-secondary tracking-tight text-text-col ">
+            <h5 className="mb-2 text-2xl font-light text-text-col tracking-tight text-text-col ">
               {name}
             </h5>
             <div className="flex flex-row">
@@ -33,8 +33,8 @@ function AparmentCard({
               )}
             </div>
           </div>
-          <p className="mb-3 font-normal">{detail}</p>
-          <p className="font-thin hidden md:max-[4200px]:block">{summary}</p>
+          <p className="mb-4 text-secondary">{detail}</p>
+          <p className="hidden md:max-[4200px]:block">{summary}</p>
         </div>
       </Link>
     </div>

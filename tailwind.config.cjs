@@ -5,12 +5,16 @@ module.exports = {
         "./src/**/*.{js,ts,jsx,tsx}"
     ],
   theme: {
+        fontFamily:{
+            "sans": ['Helvetica', 'Arial', 'sans-serif']
+        },
     extend: {
         colors: {
-            "primary": "#5d2c09",
+            "primary": "#1010f4",
             "secondary": "#003459",
             "background-col": "#f9fafb",
-            "text-col": "#0e1416"
+            "text-col": "#0e1416",
+            "accent": "#f97f06"
         }
     },
   },

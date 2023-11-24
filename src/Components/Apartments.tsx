@@ -35,7 +35,7 @@ function Apartments() {
 
   return (
     <div>
-      <p className="text-center my-8 text-xl font-light text-primary">
+      <p className="text-center p-4 my-8 text-xl font-light text-secondary">
         Every apartment has access to the pool, a fully functional kitchen and
         grill.
       </p>
