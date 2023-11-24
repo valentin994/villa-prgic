@@ -1,4 +1,6 @@
 import { useInView } from "react-intersection-observer";
+import {faFacebook, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 function Contact() {
   const [ref, inView] = useInView()
@@ -50,10 +52,14 @@ function Contact() {
           </button>
         </form>
       </div>
-      <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-xl">
+      <p className="font-light text-center text-gray-500 sm:text-xl">
         We'll try to answer ass soon as possible, you can also contact us on
         facebook, mobile or whatsapp
       </p>
+      <div className="flex justify-center p-8">
+        <FontAwesomeIcon className="text-3xl p-2 text-secondary" icon={faWhatsapp} />
+        <FontAwesomeIcon className="text-3xl p-2 text-secondary" icon={faFacebook} />
+      </div>
     </section>
   );
 }

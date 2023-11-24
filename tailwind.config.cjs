@@ -6,7 +6,7 @@ module.exports = {
     ],
   theme: {
         fontFamily:{
-            "sans": ['Helvetica', 'Arial', 'sans-serif']
+            "sans": ['Ubuntu', 'Helvetica', 'Arial', 'sans-serif']
         },
     extend: {
         colors: {
