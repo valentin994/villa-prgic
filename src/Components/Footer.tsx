@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div className="flex bg-secondary text-background-col font-thin justify-between py-14 px-8 text-sm md:text-base">
+    <div className="flex bg-secondary text-background-col font-thin justify-between p-14 text-sm md:text-base">
         <div>
           <p>Villa Prgic</p>
           <p>Adresa: Kanica 21390-12</p>

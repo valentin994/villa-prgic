@@ -153,11 +153,7 @@ function Region() {
               </p>
             </div>
           </div>
-
-
-
         </div>
-
       </div>
     </div>
   );
