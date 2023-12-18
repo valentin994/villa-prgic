@@ -26,16 +26,16 @@ function Nav() {
         <div className="p-4 hidden md:max-[4200px]:block text-lg">
           <ul className="flex">
             <li className="px-2 hover:text-gray-200">
-              <Link to="/villa-prgic">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li className="px-2 hover:text-gray-200">
-              <Link to="/villa-prgic/apartments">Apartments</Link>
+              <Link to="/apartments">Apartments</Link>
             </li>
             <li className="px-2 hover:text-gray-200">
-              <Link to="/villa-prgic/region">Region</Link>
+              <Link to="/region">Region</Link>
             </li>
             <li className="px-2 hover:text-gray-200">
-              <Link to="/villa-prgic/contact">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>
@@ -72,7 +72,7 @@ function Nav() {
         <ul className="flex flex-col items-center w-full justify-center align-middle text-center">
           <li className="text-2xl p-4">
             <Link
-              to="/villa-prgic"
+              to="/"
               onClick={() => {
                 setIsMenuOpen(false);
               }}
@@ -82,7 +82,7 @@ function Nav() {
           </li>
           <li className="text-2xl p-4">
             <Link
-              to="/villa-prgic/apartments"
+              to="/apartments"
               className="nav-link"
               onClick={() => {
                 setIsMenuOpen(false);
@@ -93,7 +93,7 @@ function Nav() {
           </li>
           <li className="text-2xl p-4">
             <Link
-              to="/villa-prgic/region"
+              to="/region"
               className="nav-link"
               onClick={() => {
                 setIsMenuOpen(false);
@@ -104,7 +104,7 @@ function Nav() {
           </li>
           <li className="text-2xl p-4">
             <Link
-              to="/villa-prgic/contact"
+              to="/contact"
               className="nav-link"
               onClick={() => {
                 setIsMenuOpen(false);
