@@ -18,7 +18,7 @@ function Nav() {
   return (
     <nav className="text-background-col bg-secondary px-4 py-2">
       <div className="flex flex-wrap items-center justify-between mx-auto w-full ">
-        <Link to="/villa-prgic" className="flex items-center p-4">
+        <Link to="/" className="flex items-center p-4">
           <span className="self-center text-xl font-light whitespace-nowrap">
             Villa Prgic
           </span>
