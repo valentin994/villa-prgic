@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faFacebook, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 function Footer() {
   return (
-    <div className="text-secondary rounded-[40px] py-8 px-4 mx-2 mb-2 font-thin text-sm md:text-base">
+    <div className="text-gray-700 bg-gray-200 -mt-2 font-thin text-sm md:text-base">
+    <div className="py-8 px-4 mx-2 ">
         <div className="flex justify-between">
             <div>
               <p className="p-1">Villa Prgic</p>
@@ -28,6 +29,7 @@ function Footer() {
                </ul>
             </div>
         </div>
+    </div>
     </div>
   );
 }

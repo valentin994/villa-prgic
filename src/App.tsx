@@ -11,7 +11,7 @@ import Footer from './Components/Footer'
 
 function App() {
   return (
-    <div className="App bg-blue-200/75 flex flex-col">
+    <div className="App flex flex-col bg-blue-100">
         <div className="absolute w-full mt-2 px-2">
             <Nav />
         </div>
