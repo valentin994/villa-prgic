@@ -34,10 +34,15 @@ function Apartments() {
   ];
 
   return (
-    <div>
-      <p className="text-center p-4 my-8 text-xl font-light text-secondary">
-        Every apartment has access to the pool, a fully functional kitchen and
-        grill.
+    <div className="pt-24 rounded-[40px] bg-[url(https://woop14abphufecql.public.blob.vercel-storage.com/apartments-FZ3rsKJMYR9dq9IkFJugsYMk1TilBf.jpg)] mx-2 my-2">
+      <h1 className="pt-4 px-4 md:px-10 text-xl text-gray-200 md:text-3xl font-bold">
+        Welcome
+      </h1>
+      <p className="px-4 md:px-10 font-semibold text-gray-100">
+        Our charming house offers three comfortable apartments, each
+        thoughtfully designed to feel like home. Whether you’re looking for a
+        one-bedroom retreat or more space to share, you’ll find an apartment
+        that fits your needs.
       </p>
       {apartmentDetails.map((apartment: iApartment) => (
         <AparmentCard key={apartment.name} {...apartment} />

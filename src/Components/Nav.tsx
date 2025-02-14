@@ -1,11 +1,22 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t, i18n } = useTranslation();
 
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
+  };
+
+  type Language = {
+    nativeName: String;
+  };
+  const lngs: Record<string, Language> = {
+    en: { nativeName: "EN" },
+    de: { nativeName: "DE" },
+    hr: { nativeName: "HR" },
   };
 
   useEffect(() => {
@@ -17,26 +28,67 @@ function Nav() {
 
   return (
     <nav className="text-blue-500 bg-gray-100 px-4 py-2 rounded-full mt-3 mx-3">
-      <div className="flex font-extrabold flex-wrap items-center justify-between mx-auto w-full ">
-        <Link to="/" className="flex items-center p-4">
+      <div className="flex font-thin flex-wrap items-center justify-between mx-auto w-full ">
+        <NavLink to="/" className="flex items-center p-4">
           <span className="self-center text-xl whitespace-nowrap">
             Villa Prgic
           </span>
-        </Link>
-        <div className="p-4 hidden md:max-[4200px]:block text-lg">
+        </NavLink>
+        <div className="p-4 hidden md:max-[4200px]:block">
           <ul className="flex">
             <li className="px-2 hover:text-blue-600">
-              <Link to="/">Home</Link>
+              <NavLink
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "text-blue-600 font-bold" : ""
+                }
+                to="/"
+              >
+                HOME
+              </NavLink>
             </li>
             <li className="px-2 hover:text-blue-600">
-              <Link to="/apartments">Apartments</Link>
+              <NavLink
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "text-blue-600 font-bold" : ""
+                }
+                to="/apartments"
+              >
+                APARTMANI
+              </NavLink>
             </li>
             <li className="px-2 hover:text-blue-600">
-              <Link to="/region">Region</Link>
+              <NavLink
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "text-blue-600 font-bold" : ""
+                }
+                to="/region"
+              >
+                REGIJA
+              </NavLink>
             </li>
             <li className="px-2 hover:text-blue-600">
-              <Link to="/contact">Contact</Link>
+              <NavLink
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "text-blue-600 font-bold" : ""
+                }
+                to="/contact"
+              >
+                CONTACT
+              </NavLink>
             </li>
+          </ul>
+        </div>
+        <div className="pr-4">
+          <ul className="flex gap-2">
+            {Object.keys(lngs).map((lng) => (
+              <li
+                key={lng}
+                onClick={() => i18n.changeLanguage(lng)}
+                className={i18n.resolvedLanguage === lng ? "text-blue-600 cursor-pointer font-bold" : "cursor-pointer"}
+              >
+                {lngs[lng].nativeName}
+              </li>
+            ))}
           </ul>
         </div>
         <button
@@ -46,7 +98,9 @@ function Nav() {
           <div className="absolute w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
             <span
               className={`absolute h-0.5 w-5 transform transition duration-300 ease-in-out ${
-                isMenuOpen ? "rotate-45 bg-gray-100 delay-200" : "bg-blue-500 -translate-y-1.5"
+                isMenuOpen
+                  ? "rotate-45 bg-gray-100 delay-200"
+                  : "bg-blue-500 -translate-y-1.5"
               }`}
             ></span>
             <span
@@ -56,7 +110,9 @@ function Nav() {
             ></span>
             <span
               className={`absolute h-0.5 w-5 transform transition duration-300 ease-in-out ${
-                isMenuOpen ? "-rotate-45 bg-gray-100 delay-200" : "bg-blue-500 translate-y-1.5"
+                isMenuOpen
+                  ? "-rotate-45 bg-gray-100 delay-200"
+                  : "bg-blue-500 translate-y-1.5"
               }`}
             ></span>
           </div>
@@ -71,17 +127,17 @@ function Nav() {
       >
         <ul className="flex flex-col items-center w-full justify-center align-middle text-center">
           <li className="text-2xl p-4">
-            <Link
+            <NavLink
               to="/"
               onClick={() => {
                 setIsMenuOpen(false);
               }}
             >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li className="text-2xl p-4">
-            <Link
+            <NavLink
               to="/apartments"
               className="nav-link"
               onClick={() => {
@@ -89,10 +145,10 @@ function Nav() {
               }}
             >
               Apartments
-            </Link>
+            </NavLink>
           </li>
           <li className="text-2xl p-4">
-            <Link
+            <NavLink
               to="/region"
               className="nav-link"
               onClick={() => {
@@ -100,10 +156,10 @@ function Nav() {
               }}
             >
               Region
-            </Link>
+            </NavLink>
           </li>
           <li className="text-2xl p-4">
-            <Link
+            <NavLink
               to="/contact"
               className="nav-link"
               onClick={() => {
@@ -111,7 +167,7 @@ function Nav() {
               }}
             >
               Contact
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

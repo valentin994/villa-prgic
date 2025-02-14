@@ -1,12 +1,15 @@
 import { useInView } from "react-intersection-observer";
-import {faFacebook, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faFacebook, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Contact() {
-  const [ref, inView] = useInView()
+  const [ref, inView] = useInView();
   return (
     <section className="bg-white">
-      <div ref={ref} className={`py-8 lg:py-16 px-4 mx-auto max-w-screen-md transform transition-all duration-300 ease-in-out ${inView ? "opacity-100" : "delay-300 opacity-20 translate-y-10"}`}>
+      <div
+        ref={ref}
+        className={`py-8 lg:py-16 px-4 mx-auto max-w-screen-md transform transition-all duration-300 ease-in-out ${inView ? "opacity-100" : "delay-300 opacity-20 translate-y-10"}`}
+      >
         <h2 className="mb-4 text-4xl tracking-tight text-center text-secondary">
           Contact Us
         </h2>
@@ -57,8 +60,14 @@ function Contact() {
         facebook, mobile or whatsapp
       </p>
       <div className="flex justify-center p-8">
-        <FontAwesomeIcon className="text-3xl p-2 text-secondary" icon={faWhatsapp} />
-        <FontAwesomeIcon className="text-3xl p-2 text-secondary" icon={faFacebook} />
+        <FontAwesomeIcon
+          className="text-3xl p-2 text-secondary"
+          icon={faWhatsapp}
+        />
+        <FontAwesomeIcon
+          className="text-3xl p-2 text-secondary"
+          icon={faFacebook}
+        />
       </div>
     </section>
   );

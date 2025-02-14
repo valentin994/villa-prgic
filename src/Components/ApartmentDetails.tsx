@@ -13,7 +13,9 @@ function AparmentDetails() {
     <div className="flex justify-center align-middle w-full">
       <div className="container w-full">
         <div className="p-4">
-          <p className="text-3xl text-secondary text-center font-light py-4">{name}</p>
+          <p className="text-3xl text-secondary text-center font-light py-4">
+            {name}
+          </p>
           <p className="text-l text-center">{detail}</p>
           <div>
             <div className="grid grid-cols-1 md:grid-cols-3 p-4">
@@ -37,11 +39,7 @@ function AparmentDetails() {
                   <li className="font-thin p-2 text-center">Park Fortin</li>
                 </ul>
                 <div className="flex justify-center p-2">
-                  <img
-                    className="p-2 w-12"
-                    src={BathroomSvg}
-                    alt="Bathroom "
-                  />
+                  <img className="p-2 w-12" src={BathroomSvg} alt="Bathroom " />
                   <p className="text-lg font-bold p-2">Bathroom</p>
                 </div>
                 <ul>
@@ -103,11 +101,7 @@ function AparmentDetails() {
               </div>
               <div>
                 <div className="flex justify-center p-2">
-                  <img
-                    className="p-2 w-12"
-                    src={KitchenSvg}
-                    alt="Kitchen "
-                  />
+                  <img className="p-2 w-12" src={KitchenSvg} alt="Kitchen " />
                   <p className="text-lg font-bold p-2">Kitchen</p>
                 </div>
                 <ul>
