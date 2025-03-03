@@ -10,13 +10,33 @@ function AparmentDetails() {
   const { state } = useLocation();
   const { name, detail } = state;
   return (
-    <div className="flex justify-center align-middle w-full">
-      <div className="container w-full">
-        <div className="p-4">
-          <p className="text-3xl text-secondary text-center font-light py-4">{name}</p>
-          <p className="text-l text-center">{detail}</p>
+    <div className="flex justify-center align-middle w-full px-2 pt-2 mb-3">
+      <div className="container pt-24 w-full bg-blue-200 rounded-[40px]">
+        <div className="px-2">
+            <div className="bg-blue-500 rounded-[40px] py-4 mb-2">
+              <p className="text-3xl text-gray-50 text-center font-bold">
+                {name}
+              </p>
+              <p className="text-lg text-gray-100 text-center">{detail}</p>
+            </div>
+          <div className="grid grid-cols-4 gap-1">
+            <div className="col-span-2">
+                <img className="rounded-[20px]" alt="Apt" src="https://woop14abphufecql.public.blob.vercel-storage.com/apartments-FZ3rsKJMYR9dq9IkFJugsYMk1TilBf.jpg" />
+            </div>
+            <div>
+                <div className="">
+                    <img className="rounded-[20px]" alt="Apt" src="https://woop14abphufecql.public.blob.vercel-storage.com/apartments-FZ3rsKJMYR9dq9IkFJugsYMk1TilBf.jpg" />
+                </div>
+                <div className="mt-1">
+                    <img className="rounded-[20px]" alt="Apt" src="https://woop14abphufecql.public.blob.vercel-storage.com/apartments-FZ3rsKJMYR9dq9IkFJugsYMk1TilBf.jpg" />
+                </div>
+            </div>
+            <div className="bg-gray-600">
+                <img className="rounded-[20px]" alt="Apt" src="https://woop14abphufecql.public.blob.vercel-storage.com/apartments-FZ3rsKJMYR9dq9IkFJugsYMk1TilBf.jpg" />
+            </div>
+          </div>
           <div>
-            <div className="grid grid-cols-1 md:grid-cols-3 p-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 p-4 bg-gray-100 rounded-[40px] my-2">
               <div className="">
                 <div className="flex justify-center p-2">
                   <img className="p-2" src={LocationSvg} alt="Location" />
@@ -37,11 +57,7 @@ function AparmentDetails() {
                   <li className="font-thin p-2 text-center">Park Fortin</li>
                 </ul>
                 <div className="flex justify-center p-2">
-                  <img
-                    className="p-2 w-12"
-                    src={BathroomSvg}
-                    alt="Bathroom "
-                  />
+                  <img className="p-2 w-12" src={BathroomSvg} alt="Bathroom " />
                   <p className="text-lg font-bold p-2">Bathroom</p>
                 </div>
                 <ul>
@@ -103,11 +119,7 @@ function AparmentDetails() {
               </div>
               <div>
                 <div className="flex justify-center p-2">
-                  <img
-                    className="p-2 w-12"
-                    src={KitchenSvg}
-                    alt="Kitchen "
-                  />
+                  <img className="p-2 w-12" src={KitchenSvg} alt="Kitchen " />
                   <p className="text-lg font-bold p-2">Kitchen</p>
                 </div>
                 <ul>
