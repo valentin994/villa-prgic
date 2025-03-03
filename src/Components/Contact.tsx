@@ -5,19 +5,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Contact() {
   const [ref, inView] = useInView();
   return (
-    <section className="bg-white">
+    <section className="pt-28 mt-2 mx-2 rounded-[40px] mb-4 bg-blue-200">
       <div
         ref={ref}
-        className={`py-8 lg:py-16 px-4 mx-auto max-w-screen-md transform transition-all duration-300 ease-in-out ${inView ? "opacity-100" : "delay-300 opacity-20 translate-y-10"}`}
+        className={`bg-gray-50 py-6 mb-2 rounded-[40px] px-8 mx-auto max-w-screen-md transform transition-all duration-300 ease-in-out ${inView ? "opacity-100" : "delay-300 opacity-20 translate-y-10"}`}
       >
-        <h2 className="mb-4 text-4xl tracking-tight text-center text-secondary">
+        <h2 className="mb-4 text-4xl tracking-tight text-center text-blue-500 font-bold">
           Contact Us
         </h2>
         <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-xl">
           Interested in booking our accomodation, send us a message and check
           when it's free.
         </p>
-        <form action="#" className="space-y-8">
+        <form action="#" className="space-y-4">
           <div>
             <label
               htmlFor="email"
@@ -49,23 +49,23 @@ function Contact() {
           </div>
           <button
             type="submit"
-            className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-secondary sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
+            className="py-3 px-5 text-sm font-medium text-center text-gray-50 rounded-lg bg-blue-500 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
           >
             Send message
           </button>
         </form>
       </div>
-      <p className="font-light text-center text-gray-500 sm:text-xl">
+      <p className="font-bold px-4 pt-4 text-center text-gray-600 sm:text-xl">
         We'll try to answer ass soon as possible, you can also contact us on
         facebook, mobile or whatsapp
       </p>
-      <div className="flex justify-center p-8">
+      <div className="flex justify-center px-8 pb-4">
         <FontAwesomeIcon
-          className="text-3xl p-2 text-secondary"
+          className="text-3xl p-2 text-blue-500"
           icon={faWhatsapp}
         />
         <FontAwesomeIcon
-          className="text-3xl p-2 text-secondary"
+          className="text-3xl p-2 text-blue-500"
           icon={faFacebook}
         />
       </div>
