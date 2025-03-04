@@ -16,198 +16,48 @@ function Region() {
   const [ref8, inView8] = useInView();
 
   return (
-    <div className="flex items-center justify-center p-8">
-      <div className="container">
-        <p className="text-secondary text-3xl text-center p-4">Region</p>
-        <div className="hidden md:block">
-          <div
-            ref={ref}
-            className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-300 ease-in-out ${inView ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}
-          >
-            <div className="col-span-2">
-              <p className="text-2xl p-4 text-secondary">Kanica</p>
-              <p className="text-text-col p-4">
-                Kanica je turističko naselje smješteno u istoimenoj uvali
-                udaljeno od Rogoznice 4,2 km. Mjesto je idealno za miran, tih i
-                ugodan odmor ali i za sve one koji žele osjetiti toplu atmosferu
-                privatnog smještaja. Kanica za goste željne nešto aktivnijeg
-                odmora nudi ronjenje, surfanje ,ribolov , skijanje na vodi ,
-                ujedno je pogodna za pješačenje i vožnju biciklom. Blizina mora
-                i puno skrivenih uvala i plaža su joj dodatni atributi. Plaže su
-                pješčane,všljunčane i stjenovite s betoniranim kupalištem pred
-                kućama. Želite li savršeno mjesto za odmor sa vašom obitelji i
-                prijateljima i kućnim ljubimcima, sve pogodnosti ćete pronaći u
-                Kanici čiji mještani nude smještaj u apartmanima i sobama s
-                gostoprimstvom koji će učiniti Vaš odmor još ugodnijim.
-                Dobrodošli Kanica. Smještaj u Kanici.
-              </p>
+    <div className="pt-24 bg-blue-50 mt-2 mb-3 mx-2 rounded-[40px]">
+        <div className="flex md:px-48 pb-2 gap-14 pt-8">
+            <div className="w-1/2">
+              <h1 className="text-3xl text-blue-500 font-bold">Discover Split: The Heart of the Dalmatian Coast</h1>
+              <p className="pt-1 text-gray-600">Nestled on Croatia’s stunning Dalmatian coast, Split is a city where ancient history meets modern Mediterranean life. As the country’s second-largest city, it boasts a perfect blend of culture, history, and vibrant seaside charm. With its UNESCO-listed Old Town, crystal-clear Adriatic waters, and lively atmosphere, Split is a must-visit destination.</p>
+              <h2 className="pt-2 text-2xl text-blue-600 font-bold">Top Attractions in Split</h2>
+              <p className="text-lg font-semibold text-blue-500 pt-1">Diocletian’s Palace 🏛️</p>
+              <p className="text-gray-600">The centerpiece of Split, Diocletian’s Palace, was built in the 4th century by the Roman Emperor Diocletian. Today, this massive ancient structure forms the heart of the Old Town, with narrow alleys, charming cafés, and historic landmarks hidden within its walls. </p>
+              <p className="text-lg font-semibold text-blue-500 pt-1">Riva Promenade 🌊</p>
+              <p className="text-gray-600">The centerpiece of Split, Diocletian’s Palace, was built in the 4th century by the Roman Emperor Diocletian. Today, this massive ancient structure forms the heart of the Old Town, with narrow alleys, charming cafés, and historic landmarks hidden within its walls. </p>
+              <p className="text-lg font-semibold text-blue-500 pt-1">Marjan Hill 🌿</p>
+              <p className="text-gray-600">The centerpiece of Split, Diocletian’s Palace, was built in the 4th century by the Roman Emperor Diocletian. Today, this massive ancient structure forms the heart of the Old Town, with narrow alleys, charming cafés, and historic landmarks hidden within its walls. </p>
+              <p className="text-lg font-semibold text-blue-500 pt-1">Bacvice Beach 🏖️</p>
+              <p className="text-gray-600">The centerpiece of Split, Diocletian’s Palace, was built in the 4th century by the Roman Emperor Diocletian. Today, this massive ancient structure forms the heart of the Old Town, with narrow alleys, charming cafés, and historic landmarks hidden within its walls. </p>
+              <p className="text-lg font-semibold text-blue-500 pt-1">Mestrovic Gallery 🎨</p>
+              <p className="text-gray-600">The centerpiece of Split, Diocletian’s Palace, was built in the 4th century by the Roman Emperor Diocletian. Today, this massive ancient structure forms the heart of the Old Town, with narrow alleys, charming cafés, and historic landmarks hidden within its walls. </p>
             </div>
-            <img
-              src={KanicaImage}
-              alt="Kanica"
-              className="object-cover max-w-full h-auto"
-            />
-          </div>
-          <div
-            ref={ref2}
-            className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-300 ease-in-out ${inView2 ? "opacity-100" : "delay-300 opacity-20 -translate-x-10"}`}
-          >
-            <img
-              src={RogoznicaImage}
-              alt="Rogoznica"
-              className="object-cover max-w-full h-auto"
-            />
-            <div className="col-span-2">
-              <p className="text-2xl p-4 text-secondary">Rogoznica</p>
-              <p className="text-text-col p-4 text-text-col">
-                Najjužnije turističko središte- Rogoznica, sa susjednim mjestom
-                Ražanj, te s 54 km prekrasne razvedene obale, posebno je poznato
-                po nautičkom, obalnom i pomorskom turizmu. Malo, mirno i
-                relativno mlado naselje okruženo prekrasnim morskim krajolikom i
-                otvorenim morem koje oduzima dah, izgrađeno je na ruševinama
-                živopisnih antičkih i srednjovjekovnih naselja. O Rogoznici
-                postoji i nekoliko mističnih i fascinantnih legendi koje
-                istraživača željnog putovanja povezuju s primamljivim zovom
-                čarobnih i dalekih mjesta.
-              </p>
+            <div className="flex flex-col justify-center w-1/2">
+              <img className="rounded-[40px]" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Split_080620-133710-IMG_0968x.jpg/1920px-Split_080620-133710-IMG_0968x.jpg" />
             </div>
-          </div>
-          <div
-            ref={ref3}
-            className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-300 ease-in-out ${inView3 ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}
-          >
-            <div className="col-span-2">
-              <p className="text-2xl p-4 text-secondary">Trogir</p>
-              <p className="text-text-col p-4 text-text-col">
-                Zahvaljujući svojem geografskom položaju Trogir je od
-                pamtivijeka bio idealno mjesto za život. S prirodno zaštićenom
-                lukom, brojnim izvorima pitke vode, plodnim tlom u zaleđu grada
-                te s kamenom iz lokalnih kamenoloma Trogir je neprekinuto
-                nastanjen već više od 3600 godina. Ovaj nadahnjujući
-                mediteranski grad još je od vremena starih Grka privlačio brojne
-                majstore koji su ovdje živjeli i stvarali. Razni umjetnici ovdje
-                su pronašli inspiraciju i ostavili brojne tragove svojeg
-                djelovanja. Trogir je grad majstora, grad koji nas polako, ali
-                uvjerljivo, uvlači u začarani labirint ljepote, u uske kamene
-                uličice sazdane od žutoga glatkog kamena, toplih boja
-                poslijepodnevnog sunca. Ovaj je grad majstora svoju priču
-                započeo portalom Majstora Radovana, Muscardellom, Alešijem,
-                Firentincem, Duknovićem i Blažom Jurjevom Trogiraninom. Ti
-                majstori označili su prekretnicu u povijesti Trogira, smjestivši
-                ga u sam svjetski umjetnički vrh.
-              </p>
+        </div>
+        <div className="flex md:px-48 pb-8 gap-14 pt-8">
+            <div className="flex flex-col justify-center w-1/2">
+              <img className="rounded-[40px]" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Split_080620-133710-IMG_0968x.jpg/1920px-Split_080620-133710-IMG_0968x.jpg" />
             </div>
-            <img
-              src={TrogirImage}
-              alt="Trogir"
-              className="object-cover max-w-full h-auto"
-            />
-          </div>
-          <div
-            ref={ref4}
-            className={`grid grid-cols-3 border-1 border-gray shadow my-16 transform transition-all duration-300 ease-in-out ${inView4 ? "opacity-100" : "delay-300 opacity-20 -translate-x-10"}`}
-          >
-            <img
-              src={SplitImage}
-              alt="Split"
-              className="object-cover max-w-full h-auto"
-            />
-            <div className="col-span-2">
-              <p className="text-2xl p-4 text-secondary">Split</p>
-              <p className="text-text-col p-4 text-text-col">
-                Punih 17 stoljeća traje priča o Splitu, još otkako je rimski car
-                Dioklecijan odlučio baš na tom poluotoku blizu velikog rimskog
-                grada Salone izgraditi palaču u kojoj bi u miru proveo
-                posljednje godine svoga života. U tih 1700 godina Palača je
-                polako postajala i postala grad, koji danas mami bogatom
-                tradicijom, veličanstvenom poviješću, ljepotom prirodne i
-                kulturne baštine.
-              </p>
+            <div className="w-1/2">
+              <h1 className="text-3xl text-blue-500 font-bold">Rogoznica: A Hidden Gem on the Dalmatian Coast</h1>
+              <p className="pt-1 text-gray-600">Located between Split and Šibenik, Rogoznica is a charming seaside town known for its pristine beaches, crystal-clear waters, and a laid-back Mediterranean vibe. Unlike larger tourist hotspots, Rogoznica offers a peaceful retreat with stunning natural beauty, traditional Dalmatian charm, and plenty of activities for visitors.</p>
+              <h2 className="pt-2 text-2xl text-blue-600 font-bold">Top Attractions in Rogoznica</h2>
+              <p className="text-lg font-semibold text-blue-500 pt-1">Marina Frapa ⛵</p>
+              <p className="text-gray-600">One of the most beautiful marinas in the Adriatic, Marina Frapa is the heart of Rogoznica’s social and nightlife scene. It’s a top destination for yachters and visitors looking to enjoy waterfront restaurants, bars, and luxury amenities.</p>
+              <p className="text-lg font-semibold text-blue-500 pt-1">Dragon’s Eye Lake (Zmajevo Oko) 🌊</p>
+              <p className="text-gray-600">This natural saltwater lake is surrounded by cliffs and filled with legends. Locals say the lake has mysterious properties, and its waters change color due to unique biological activity. It’s a great spot for swimming and cliff diving.</p>
+              <p className="text-lg font-semibold text-blue-500 pt-1">Rogoznica Old Town 🏡</p>
+              <p className="text-gray-600">Strolling through Rogoznica’s old stone streets, you’ll find charming houses, cozy cafés, and a traditional Dalmatian atmosphere. The town retains its fishing village feel, offering a glimpse into authentic Croatian coastal life.</p>
+              <p className="text-lg font-semibold text-blue-500 pt-1">Promenade & Beaches 🏖️</p>
+              <p className="text-gray-600">The town boasts a beautiful seaside promenade, perfect for sunset walks, lined with bars and restaurants. Nearby, you'll find stunning pebble and rocky beaches like Šepurina Beach and Miline Beach, known for their crystal-clear waters and family-friendly environment.</p>
+              <p className="text-lg font-semibold text-blue-500 pt-1">Cape Planka 🌅</p>
+              <p className="text-gray-600">The southernmost point of Rogoznica, Cape Planka, is where winds and sea currents collide, creating dramatic waves and stunning views. It’s a historical place, mentioned in ancient maritime records.</p>
             </div>
-          </div>
         </div>
 
-        <div className="flex flex-col align-middle justify-center w-full items-center md:hidden">
-          <div
-            ref={ref5}
-            className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView5 ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}
-          >
-            <img
-              className="w-full"
-              src={KanicaImage}
-              alt="Sunset in the mountains"
-            />
-            <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2 text-secondary">
-                Kanica
-              </div>
-              <p className="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
-              </p>
-            </div>
-          </div>
-          <div
-            ref={ref6}
-            className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView6 ? "opacity-100" : "delay-300 opacity-20 -translate-x-10"}`}
-          >
-            <img
-              className="w-full"
-              src={RogoznicaImage}
-              alt="Sunset in the mountains"
-            />
-            <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2 text-secondary">
-                Rogoznica
-              </div>
-              <p className="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
-              </p>
-            </div>
-          </div>
-          <div
-            ref={ref7}
-            className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView7 ? "opacity-100" : "delay-300 opacity-20 translate-x-10"}`}
-          >
-            <img
-              className="w-full"
-              src={TrogirImage}
-              alt="Sunset in the mountains"
-            />
-            <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2 text-secondary">
-                Trogir
-              </div>
-              <p className="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
-              </p>
-            </div>
-          </div>
-          <div
-            ref={ref8}
-            className={`max-w-sm rounded overflow-hidden shadow-lg my-10 transform transition-all duration-300 ease-in-out ${inView8 ? "opacity-100" : "delay-300 opacity-20 -translate-x-10"}`}
-          >
-            <img
-              className="w-full"
-              src={SplitImage}
-              alt="Sunset in the mountains"
-            />
-            <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2 text-secondary">Split</div>
-              <p className="text-gray-700 text-base">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                exercitationem praesentium nihil.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
