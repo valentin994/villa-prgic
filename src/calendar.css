@@ -6,6 +6,10 @@
   border-radius: 16px !important;
 }
 
+.rdrDefinedRangesWrapper{
+  display: none;
+}
+
 @media (max-width: 768px) {
   .rdrCalendarWrapper {
     font-size: 13px !important; /* Adjust font size for mobile */

@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "../calendar.css";
 
 function AparmentDetails() {
@@ -31,16 +31,23 @@ function AparmentDetails() {
     "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_008-FgcHZNMSTNIIUGMQIr4OuUbqIAl8U8.jpg",
   ];
 
-  const GridImageList = ({ gridList }) => {
-    return gridList.map((item: string | undefined) => (
-      <div>
-        <img
-          className="h-full max-w-full rounded-xl"
-          src={item}
-          alt="Apartment"
-        />
-      </div>
-    ));
+  type GridImageListProps = {
+    gridList: string[];
+  };
+  const GridImageList: React.FC<GridImageListProps> = ({ gridList }) => {
+    return (
+      <>
+        {gridList.map((item, index) => (
+          <div key={index}>
+            <img
+              className="h-full max-w-full rounded-xl"
+              src={item}
+              alt="Apartment"
+            />
+          </div>
+        ))}
+      </>
+    );
   };
 
   const [showImage, setShowImages] = useState(false);
@@ -51,12 +58,6 @@ function AparmentDetails() {
       key: "selection",
     },
   ]);
-
-  useEffect(() => {
-    document.getElementsByClassName(
-      "rdrDefinedRangesWrapper",
-    )[0].style.display = "none";
-  }, []);
 
   return (
     <div className="flex justify-center align-middle w-full px-2 pt-2 mb-3">
