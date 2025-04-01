@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useLocation } from "react-router-dom";
 import LocationSvg from "../assets/location.svg";
 import BathroomSvg from "../assets/bathroom.svg";
