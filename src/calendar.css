@@ -1,0 +1,25 @@
+/* Increase calendar size */
+.rdrCalendarWrapper {
+  font-size: 16px !important; /* Adjust font size for mobile */
+  width: 100% !important;
+  max-width: 100% !important;
+  border-radius: 16px !important;
+}
+
+@media (max-width: 768px) {
+  .rdrCalendarWrapper {
+    font-size: 13px !important; /* Adjust font size for mobile */
+  }
+}
+
+/* Make the selected range color more visible */
+.rdrDaySelected span,
+.rdrDayStartPreview span,
+.rdrDayEndPreview span {
+  background-color: #4f46e5 !important; /* Customize selection color */
+}
+
+/* Remove unnecessary input fields */
+.rdrDateDisplayWrapper {
+  display: none !important;
+}

@@ -1,12 +1,15 @@
 import { iApartment } from "../interfaces";
 import AparmentCard from "./ApartmentCard";
+import { useTranslation } from "react-i18next";
 
 function Apartments() {
+  const { t } = useTranslation();
   interface iApartmentList extends Array<iApartment> {}
   const apartmentDetails: iApartmentList = [
     {
-      name: "Poolside Retreat",
-      detail: "A three bedroom apartment for six people.",
+      name: t("apartman") + " 1",
+      link: "apartment_1",
+      detail: t("apartments.a1Info"),
       features: ["Kitchen", "Pool", "Coffee Maker"],
       price: 200,
       summary:
@@ -14,8 +17,9 @@ function Apartments() {
       number_of_beds: 3,
     },
     {
-      name: "Poolside Paradise",
-      detail: "A two bedroom apartment for four people.",
+      name: t("apartman") + " 2",
+      link: "apartment_2",
+      detail: t("apartments.a2Info"),
       features: ["Kitchen", "Pool", "Coffee Maker"],
       price: 200,
       summary:
@@ -23,8 +27,9 @@ function Apartments() {
       number_of_beds: 2,
     },
     {
-      name: "Aqua Bliss",
-      detail: "A one bedroom apartment for two people.",
+      name: t("apartman") + " 3",
+      link: "apartment_3",
+      detail: t("apartments.a3Info"),
       features: ["Kitchen", "Pool", "Coffee Maker"],
       price: 200,
       summary:
@@ -35,17 +40,14 @@ function Apartments() {
 
   return (
     <div className="pt-24 rounded-[40px] bg-[url(https://woop14abphufecql.public.blob.vercel-storage.com/apartments-FZ3rsKJMYR9dq9IkFJugsYMk1TilBf.jpg)] mx-2 my-2 mb-3">
-      <h1 className="pt-4 px-4 md:px-10 text-xl text-gray-200 md:text-3xl font-bold">
-        Welcome
+      <h1 className="pt-4 px-8 md:px-10 text-gray-200 text-2xl md:text-3xl font-extrabold">
+        {t("apartments.welcome")}
       </h1>
-      <p className="px-4 md:px-10 font-semibold text-gray-100">
-        Our charming house offers three comfortable apartments, each
-        thoughtfully designed to feel like home. Whether you’re looking for a
-        one-bedroom retreat or more space to share, you’ll find an apartment
-        that fits your needs.
+      <p className="px-8 pt-4 md:px-10 font-semibold text-gray-100">
+        {t("apartments.welcomeInfo")}
       </p>
       {apartmentDetails.map((apartment: iApartment) => (
-        <AparmentCard key={apartment.name} {...apartment} />
+        <AparmentCard key={apartment.link} {...apartment} />
       ))}
     </div>
   );

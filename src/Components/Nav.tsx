@@ -30,7 +30,7 @@ function Nav() {
     <nav className="text-blue-500 bg-gray-100 px-4 py-2 rounded-full mt-3 mx-3">
       <div className="flex font-thin flex-wrap items-center justify-between mx-auto w-full ">
         <NavLink to="/" className="flex items-center p-4">
-          <span className="self-center text-xl whitespace-nowrap">
+          <span className="self-center text-xl font-lavishly  whitespace-nowrap">
             Villa Prgic
           </span>
         </NavLink>
@@ -39,7 +39,11 @@ function Nav() {
             <li className="px-2 hover:text-blue-600">
               <NavLink
                 className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "text-blue-600 font-bold" : ""
+                  isPending
+                    ? "pending"
+                    : isActive
+                      ? "text-blue-600 font-bold"
+                      : ""
                 }
                 to="/"
               >
@@ -49,7 +53,11 @@ function Nav() {
             <li className="px-2 hover:text-blue-600">
               <NavLink
                 className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "text-blue-600 font-bold" : ""
+                  isPending
+                    ? "pending"
+                    : isActive
+                      ? "text-blue-600 font-bold"
+                      : ""
                 }
                 to="/apartments"
               >
@@ -59,7 +67,11 @@ function Nav() {
             <li className="px-2 hover:text-blue-600">
               <NavLink
                 className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "text-blue-600 font-bold" : ""
+                  isPending
+                    ? "pending"
+                    : isActive
+                      ? "text-blue-600 font-bold"
+                      : ""
                 }
                 to="/region"
               >
@@ -69,7 +81,11 @@ function Nav() {
             <li className="px-2 hover:text-blue-600">
               <NavLink
                 className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "text-blue-600 font-bold" : ""
+                  isPending
+                    ? "pending"
+                    : isActive
+                      ? "text-blue-600 font-bold"
+                      : ""
                 }
                 to="/contact"
               >
@@ -84,7 +100,11 @@ function Nav() {
               <li
                 key={lng}
                 onClick={() => i18n.changeLanguage(lng)}
-                className={i18n.resolvedLanguage === lng ? "text-blue-600 cursor-pointer font-bold" : "cursor-pointer"}
+                className={
+                  i18n.resolvedLanguage === lng
+                    ? "text-blue-600 cursor-pointer font-bold"
+                    : "cursor-pointer"
+                }
               >
                 {lngs[lng].nativeName}
               </li>

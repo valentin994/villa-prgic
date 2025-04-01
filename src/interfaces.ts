@@ -1,5 +1,6 @@
 interface iApartment {
   name: string;
+  link: string;
   detail: string;
   features: string[];
   price: number;

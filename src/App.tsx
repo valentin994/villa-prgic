@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/apartments" element={<Apartments />}></Route>
         <Route
-          path="/apartments/:apartmentName"
+          path="/apartments/:apartmentLink"
           element={<AparmentDetails />}
         ></Route>
         <Route path="/region" element={<Region />}></Route>
