@@ -51,7 +51,7 @@ function AparmentDetails() {
     );
   };
 
-  const [showImage, setShowImages] = useState(false);
+  const [showImage, setShowImages] = useState(true);
   const [range, setRange] = useState([
     {
       startDate: new Date(),
@@ -75,7 +75,7 @@ function AparmentDetails() {
               <div className="grid md:grid-cols-2 gap-2">
                 <div className="">
                   <img
-                    className="h-full max-w-full rounded-xl"
+                    className="h-auto w-full md:h-full md:max-w-full rounded-xl"
                     src="https://woop14abphufecql.public.blob.vercel-storage.com/apartments-FZ3rsKJMYR9dq9IkFJugsYMk1TilBf.jpg"
                     alt=""
                   />
@@ -130,7 +130,18 @@ function AparmentDetails() {
               </div>
             </div>
           </div>
-          <div className="flex justify-center md:justify-end pt-2">
+          <div className="flex flex-col md:flex-row justify-center md:justify-between gap-2 pt-2">
+            <div className="flex flex-col bg-gray-50 px-4 rounded-xl py-4 w-full">
+              <label for="ime" className="text-gray-700">
+                Ime
+              </label>
+              <input
+                type="text"
+                id="ime"
+                name="ime"
+                className="border-0 border-b-2 px-0 text-gray-600 focus:ring-0"
+              />
+            </div>
             <DateRangePicker
               ranges={range}
               onChange={(item) => setRange([item.selection])}
@@ -143,7 +154,7 @@ function AparmentDetails() {
             />
           </div>
           <div>
-            <div className="grid grid-cols-1 md:grid-cols-3 p-4 bg-gray-100 rounded-[40px] my-2">
+            <div className="grid grid-cols-1 md:grid-cols-3 p-4 bg-gray-50 rounded-[40px] my-2">
               <div className="">
                 <div className="flex justify-center p-2">
                   <img className="p-2" src={LocationSvg} alt="Location" />
