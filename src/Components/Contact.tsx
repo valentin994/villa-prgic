@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Contact() {
   const [ref, inView] = useInView();
   return (
-    <section className="pt-28 mt-2 mx-2 min-h-screen flex flex-col justify-center rounded-[40px] mb-4 bg-blue-200">
+    <section className="pt-28 mt-2 px-2 mx-2 min-h-screen flex flex-col justify-center rounded-[40px] mb-4 bg-blue-200">
       <div
         ref={ref}
         className={`bg-gray-50 py-6 mb-2 rounded-[40px] px-8 mx-auto max-w-screen-md transform transition-all duration-300 ease-in-out ${inView ? "opacity-100" : "delay-300 opacity-20 translate-y-10"}`}

@@ -85,7 +85,7 @@ function AparmentDetails() {
 
   return (
     <div className="flex justify-center align-middle w-full px-1 md:px-2 pt-1 md:pt-2 mb-3">
-      <div className="container pt-28 md:pt-24 w-full bg-blue-200 rounded-lg">
+      <div className="pt-28 md:pt-24 w-full bg-blue-200 rounded-lg">
         <div className="px-2">
           <div className="bg-blue-500 rounded-[40px] py-4 mb-2">
             <p className="text-xl md:text-3xl text-gray-50 text-center font-bold">
@@ -138,7 +138,7 @@ function AparmentDetails() {
                 </button>
               </div>
               <div
-                className={`pt-2 hidden md:grid md:grid-cols-2 gap-2 overflow-hidden transition-all ease-in duration-500 ${showImage ? "max-h-0" : "max-h-svh"}`}
+                className={`pt-2 hidden md:grid md:grid-cols-2 gap-2 overflow-hidden transition-all ease-in duration-500 ${showImage ? "max-h-0" : "max-h-svh pb-2"}`}
               >
                 <div className="hidden md:grid gap-2 grid-cols-2">
                   <GridImageList gridList={secondGridImageList} />
@@ -156,7 +156,7 @@ function AparmentDetails() {
           <div className="flex pt-2 md:pt-0 flex-col md:flex-row justify-center md:justify-between gap-2">
             <form
               onSubmit={sendEmail}
-              className="flex flex-col bg-white px-8 rounded-xl py-14 md:py-0 w-full justify-center md:max-w-[500px]"
+              className="flex flex-col bg-white px-8 rounded-xl py-14 md:py-0 w-full justify-center"
             >
               <label for="name" className="text-gray-700 font-bold">
                 Ime
@@ -211,6 +211,7 @@ function AparmentDetails() {
           Please enter a valid date!
         </div>
       )}
+
             <DateRangePicker
               ranges={range}
               onChange={(item) => setRange([item.selection])}
