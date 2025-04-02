@@ -36,6 +36,8 @@ function AparmentDetails() {
     gridList: string[];
   };
 
+  const [showPopUp, setShowPopUp] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -49,6 +51,10 @@ function AparmentDetails() {
 
   function sendEmail(e) {
     console.log(formData);
+    if(range.length < 2){
+        setShowPopUp(true);
+        setTimeout(() => setShowPopUp(false), 2000);
+    }
     console.log(range[0]);
     e.preventDefault();
   }
@@ -191,7 +197,7 @@ function AparmentDetails() {
                 className="border rounded-md"
                 rows={3}
               />
-              <div className="pt-2">
+              <div className="pt-4">
                 <button
                   type="submit"
                   className="py-3 px-5 text-sm font-medium text-center text-gray-50 rounded-lg bg-blue-500 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
@@ -200,6 +206,11 @@ function AparmentDetails() {
                 </button>
               </div>
             </form>
+{showPopUp && (
+        <div className="fixed top-4 left-1/2 -translate-x-1/2 bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg transition-opacity duration-300">
+          Please enter a valid date!
+        </div>
+      )}
             <DateRangePicker
               ranges={range}
               onChange={(item) => setRange([item.selection])}
@@ -212,7 +223,7 @@ function AparmentDetails() {
             />
           </div>
           <div>
-            <div className="grid grid-cols-1 md:grid-cols-3 p-4 bg-gray-50 rounded-lg my-2">
+            <div className="grid grid-cols-1 md:grid-cols-3 p-4 bg-white rounded-lg my-2">
               <div className="">
                 <div className="flex justify-center p-2">
                   <img className="p-2" src={LocationSvg} alt="Location" />
