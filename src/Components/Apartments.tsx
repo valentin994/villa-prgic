@@ -39,7 +39,7 @@ function Apartments() {
   ];
 
   return (
-    <div className="pt-24 rounded-[40px] bg-[url(https://woop14abphufecql.public.blob.vercel-storage.com/apartments-FZ3rsKJMYR9dq9IkFJugsYMk1TilBf.jpg)] mx-2 my-2 mb-3">
+    <div className="pt-24 min-h-screen bg-cover bg-no-repeat rounded-lg bg-[url(https://woop14abphufecql.public.blob.vercel-storage.com/apartments-FZ3rsKJMYR9dq9IkFJugsYMk1TilBf.jpg)] mx-2 my-2 mb-3">
       <h1 className="pt-4 px-8 md:px-10 text-gray-200 text-2xl md:text-3xl font-extrabold">
         {t("apartments.welcome")}
       </h1>

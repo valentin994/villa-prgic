@@ -35,6 +35,23 @@ function AparmentDetails() {
   type GridImageListProps = {
     gridList: string[];
   };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  function sendEmail(e) {
+    console.log(formData);
+    console.log(range[0]);
+    e.preventDefault();
+  }
   const GridImageList: React.FC<GridImageListProps> = ({ gridList }) => {
     return (
       <>
@@ -61,8 +78,8 @@ function AparmentDetails() {
   ]);
 
   return (
-    <div className="flex justify-center align-middle w-full px-2 pt-2 mb-3">
-      <div className="container pt-28 md:pt-24 w-full bg-blue-200 rounded-[40px]">
+    <div className="flex justify-center align-middle w-full px-1 md:px-2 pt-1 md:pt-2 mb-3">
+      <div className="container pt-28 md:pt-24 w-full bg-blue-200 rounded-lg">
         <div className="px-2">
           <div className="bg-blue-500 rounded-[40px] py-4 mb-2">
             <p className="text-xl md:text-3xl text-gray-50 text-center font-bold">
@@ -130,18 +147,59 @@ function AparmentDetails() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row justify-center md:justify-between gap-2 pt-2">
-            <div className="flex flex-col bg-gray-50 px-4 rounded-xl py-4 w-full">
-              <label for="ime" className="text-gray-700">
+          <div className="flex pt-2 md:pt-0 flex-col md:flex-row justify-center md:justify-between gap-2">
+            <form
+              onSubmit={sendEmail}
+              className="flex flex-col bg-white px-8 rounded-xl py-14 md:py-0 w-full justify-center md:max-w-[500px]"
+            >
+              <label for="name" className="text-gray-700 font-bold">
                 Ime
               </label>
               <input
                 type="text"
-                id="ime"
-                name="ime"
-                className="border-0 border-b-2 px-0 text-gray-600 focus:ring-0"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                className="border-0 border-b-2 rounded-md px-0 text-gray-600 focus:ring-0"
               />
-            </div>
+
+              <label
+                for="email"
+                className="pt-2 md:pt-8 text-gray-700 font-bold"
+              >
+                email
+              </label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="border-0 border-b-2 rounded-md px-0 text-gray-600 focus:ring-0"
+              />
+              <label
+                for="message"
+                className="pt-2 md:pt-8 text-gray-700 font-bold"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                className="border rounded-md"
+                rows={3}
+              />
+              <div className="pt-2">
+                <button
+                  type="submit"
+                  className="py-3 px-5 text-sm font-medium text-center text-gray-50 rounded-lg bg-blue-500 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
+                >
+                  Send message
+                </button>
+              </div>
+            </form>
             <DateRangePicker
               ranges={range}
               onChange={(item) => setRange([item.selection])}
@@ -154,7 +212,7 @@ function AparmentDetails() {
             />
           </div>
           <div>
-            <div className="grid grid-cols-1 md:grid-cols-3 p-4 bg-gray-50 rounded-[40px] my-2">
+            <div className="grid grid-cols-1 md:grid-cols-3 p-4 bg-gray-50 rounded-lg my-2">
               <div className="">
                 <div className="flex justify-center p-2">
                   <img className="p-2" src={LocationSvg} alt="Location" />
@@ -165,7 +223,7 @@ function AparmentDetails() {
                 <ul>
                   {t("apartments.details.near", { returnObjects: true }).map(
                     (item: string, index: number) => (
-                      <li className="font-thin p-2 text-center" key={index}>
+                      <li className="p-2 text-center" key={index}>
                         {item}
                       </li>
                     ),
@@ -181,7 +239,7 @@ function AparmentDetails() {
                   {t("apartments.details.bathroom", {
                     returnObjects: true,
                   }).map((item: string, index: number) => (
-                    <li className="font-thin p-2 text-center" key={index}>
+                    <li className="p-2 text-center" key={index}>
                       {item}
                     </li>
                   ))}
@@ -192,16 +250,14 @@ function AparmentDetails() {
                   <img className="p-2 w-12" src={WifiSvg} alt="Wifi " />
                   <p className="text-lg font-bold p-2">Wifi</p>
                 </div>
-                <p className="font-thin text-center">
-                  {t("apartments.details.wifi")}
-                </p>
+                <p className="text-center">{t("apartments.details.wifi")}</p>
 
                 <div className="flex justify-center p-2">
                   <img className="p-2 w-12" src={PoolSvg} alt="Pool " />
                   <p className="text-lg font-bold p-2">Pool</p>
                 </div>
                 <ul>
-                  <li className="font-thin p-2 text-center">09-20</li>
+                  <li className="p-2 text-center">09-20</li>
                 </ul>
                 <div className="flex justify-center p-2">
                   <img className="p-2 w-12" src={BedSvg} alt="Bed " />
@@ -213,7 +269,7 @@ function AparmentDetails() {
                   {t("apartments.details.bedroomInfo", {
                     returnObjects: true,
                   }).map((item: string, index: number) => (
-                    <li className="font-thin p-2 text-center" key={index}>
+                    <li className="p-2 text-center" key={index}>
                       {item}
                     </li>
                   ))}
@@ -230,7 +286,7 @@ function AparmentDetails() {
                   {t("apartments.details.kitchenInfo", {
                     returnObjects: true,
                   }).map((item: string, index: number) => (
-                    <li className="font-thin p-2 text-center" key={index}>
+                    <li className="p-2 text-center" key={index}>
                       {item}
                     </li>
                   ))}

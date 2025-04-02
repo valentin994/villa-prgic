@@ -12,7 +12,7 @@ import Footer from "./Components/Footer";
 function App() {
   return (
     <div className="App flex flex-col bg-blue-100">
-      <div className="absolute w-full mt-2 px-2">
+      <div className="absolute w-full mt-2 px-1 md:px-2">
         <Nav />
       </div>
       <Routes>
