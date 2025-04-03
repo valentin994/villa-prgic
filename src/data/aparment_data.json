@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Apartman 1",
+    "link": "apartment_1",
+    "detail": "A three bedroom apartment for six people.",
+    "features": ["Kitchen", "Pool", "Coffee Maker"],
+    "price": 200,
+    "imageLink": "https://woop14abphufecql.public.blob.vercel-storage.com/apartman_1-WCXsNwvMXYQIV9fQv7DrebUUm27i7Z.jpg",
+    "summary": "This spacious 3-bedroom apartment offers comfortable living with a well-equipped kitchen, a private balcony for outdoor relaxation, and access to a refreshing pool for leisure. Additionally, it includes a modern bathroom for convenience, making it an ideal choice for those seeking a comfortable and enjoyable living space.",
+    "number_of_beds": 3,
+    "firstImage": "https://woop14abphufecql.public.blob.vercel-storage.com/apartments-FZ3rsKJMYR9dq9IkFJugsYMk1TilBf.jpg",
+    "firstGridImageList": [
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_001-yAbXV6SbPhdCJXtoNsQGTA7F4qhtwY.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_002-QBcwrJTBjdChHH8ddDyjtmpWRoI3Rq.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_003-Jey2TPxkZHlXCVahFbWr15KUVkPRdP.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_004-CiTAmS9Tqa41fxHiJX7CE2uREfheti.jpg"
+    ],
+    "secondImage": "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_013-QRkIFIk4lODf5QULMtILkmo04DNtlD.jpg",
+    "secondGridImageList": [
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_005-lWWUaM5qgJZrnpRoldPXKNDemj0LI6.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_006-C2HtAOmry489U5FXxVpYCGjRzctIVA.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_007-M20spfDKkVPTDbd8Ixsd3tlOJHl4pm.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_008-FgcHZNMSTNIIUGMQIr4OuUbqIAl8U8.jpg"
+    ]
+  },
+  {
+    "name": "Apartman 2",
+    "link": "apartment_2",
+    "detail": "A two bedroom apartment for four people.",
+    "features": ["Kitchen", "Pool", "Coffee Maker"],
+    "price": 200,
+    "imageLink": "https://woop14abphufecql.public.blob.vercel-storage.com/rooms-np3C9gmuZJsbyyTP35YwyR7KO9luvy.jpg",
+    "summary": "This inviting two-bedroom apartment provides a cozy living space with a functional kitchen, a private balcony for outdoor enjoyment, and access to a communal pool for recreation. With two comfortable bedrooms, it's perfect for a small family or roommates seeking a convenient and comfortable place to call home.",
+    "number_of_beds": 2,
+    "firstImage": "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_006%281%29-loa3Mtwsg0Algdr5HxRQSTLOp7lpVp.jpg",
+    "firstGridImageList": [
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_005-JbctP0D64Dj7OQQoTHobXBBaupSLkM.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_009-RyLilykdOLklYvLeZr5AoFP8kZfvAx.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_010-0BO9Ty5xMcFGar5tJLM07EXL9ldwxd.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_011-Rd9cMQvS82GDmUGQmr5QE17ifRBJgn.jpg"
+    ],
+    "secondImage": "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_017-Wnv5o1alxSCkVvUSDb7ihlTUEa6Mpj.jpg",
+    "secondGridImageList": [
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_014-fOoig61GMR60FPC1ywrdljzEkt9Z4e.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_013-xsWZn9ai3BwiQBnkBrPX2W64ufSYeh.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_018-gvioVDV1ADjxFZAJvcgDQeo9rZD8SN.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_020-xxzUcPMG4l40V05vFbWEY25XdzkJnE.jpg"
+    ]
+  },
+  {
+    "name": "Apartman 3",
+    "link": "apartment_3",
+    "detail": "A one bedroom apartment for two people.",
+    "features": ["Kitchen", "Pool", "Coffee Maker"],
+    "price": 200,
+    "imageLink": "https://woop14abphufecql.public.blob.vercel-storage.com/apartman_3-T2Zpas2OxGzLth8cMrgCpGFwTKxoCS.jpg",
+    "summary": "This charming one-bedroom apartment offers a cozy living environment with a well-appointed kitchen, a private balcony for personal relaxation, and access to communal amenities like a pool. Ideal for singles or couples, it provides a convenient and comfortable living space for those looking for a smaller, more intimate home.",
+    "number_of_beds": 1,
+    "firstImage": "https://woop14abphufecql.public.blob.vercel-storage.com/apartments-FZ3rsKJMYR9dq9IkFJugsYMk1TilBf.jpg",
+    "firstGridImageList": [
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_001-yAbXV6SbPhdCJXtoNsQGTA7F4qhtwY.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_002-QBcwrJTBjdChHH8ddDyjtmpWRoI3Rq.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_003-Jey2TPxkZHlXCVahFbWr15KUVkPRdP.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_004-CiTAmS9Tqa41fxHiJX7CE2uREfheti.jpg"
+    ],
+    "secondImage": "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_013-QRkIFIk4lODf5QULMtILkmo04DNtlD.jpg",
+    "secondGridImageList": [
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_005-lWWUaM5qgJZrnpRoldPXKNDemj0LI6.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_006-C2HtAOmry489U5FXxVpYCGjRzctIVA.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_007-M20spfDKkVPTDbd8Ixsd3tlOJHl4pm.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_008-FgcHZNMSTNIIUGMQIr4OuUbqIAl8U8.jpg"
+    ]
+  }
+]

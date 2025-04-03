@@ -8,6 +8,7 @@ import Region from "./Components/Region";
 import Contact from "./Components/Contact";
 import NoPage from "./Components/NoPage";
 import Footer from "./Components/Footer";
+import Impressum from "./Components/Impressum";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         ></Route>
         <Route path="/region" element={<Region />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/impressum" element={<Impressum />}></Route>
         <Route path="*" element={<NoPage />}></Route>
       </Routes>
       <div className="mt-2">

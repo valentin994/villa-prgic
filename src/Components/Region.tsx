@@ -86,6 +86,8 @@ function Region() {
           />
         </div>
       </div>
+
+      <hr className="h-4 mx-auto mt-10 mb-2 bg-white w-4" />
       <div className="flex flex-col md:flex-row md:px-48 pb-8 gap-14 pt-8">
         <div className="hidden md:flex flex-col justify-center w-1/2">
           <img

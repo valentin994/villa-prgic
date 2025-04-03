@@ -119,7 +119,7 @@ function Footer() {
           </div>
           <ul className="flex pt-2 md:pt-4 text-sm md:justify-center md:text-md gap-2 md:gap-8">
             <li className="hover:underline">
-              <NavLink to="/">IMPRESSUM</NavLink>
+              <NavLink to="/impressum">IMPRESSUM</NavLink>
             </li>
             <li className="hover:underline">
               <NavLink to="/">F.A.Q.</NavLink>

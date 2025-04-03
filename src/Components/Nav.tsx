@@ -95,7 +95,7 @@ function Nav() {
           </ul>
         </div>
         <div className="pr-4">
-          <ul className="flex gap-2">
+          <ul className="md:flex gap-2 hidden">
             {Object.keys(lngs).map((lng) => (
               <li
                 key={lng}
@@ -189,6 +189,22 @@ function Nav() {
               Contact
             </NavLink>
           </li>
+          <hr className="h-1 mt-8 w-2/3 mx-auto bg-white" />
+          <ul className="flex pt-4 gap-8">
+            {Object.keys(lngs).map((lng) => (
+              <li
+                key={lng}
+                onClick={() => i18n.changeLanguage(lng)}
+                className={
+                  i18n.resolvedLanguage === lng
+                    ? "text-gray-50 text-xl cursor-pointer font-bold"
+                    : "cursor-pointer text-gray-50"
+                }
+              >
+                {lngs[lng].nativeName}
+              </li>
+            ))}
+          </ul>
         </ul>
       </nav>
     </nav>

@@ -2,48 +2,50 @@ import { iApartment } from "../interfaces";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
+import apartmentData from "../data/aparment_data.json";
 
 function Home() {
   const { t } = useTranslation();
-  const [ref, inView] = useInView();
-  const [ref2, inView2] = useInView();
-  const [ref3, inView3] = useInView();
-  const [ref4, inView4] = useInView();
 
-  interface iApartmentList extends Array<iApartment> {}
-  const apartmentDetails: iApartmentList = [
-    {
-      name: "Apartman 1",
-      link: "apartment_1",
-      detail: "A three bedroom apartment for six people.",
-      features: ["Kitchen", "Pool", "Coffee Maker"],
-      price: 200,
-      summary:
-        "This spacious 3-bedroom apartment offers comfortable living with a well-equipped kitchen, a private balcony for outdoor relaxation, and access to a refreshing pool for leisure. Additionally, it includes a modern bathroom for convenience, making it an ideal choice for those seeking a comfortable and enjoyable living space.",
-      number_of_beds: 3,
-    },
-    {
-      name: "Apartman 2",
-      link: "apartment_2",
-      detail: "A two bedroom apartment for four people.",
-      features: ["Kitchen", "Pool", "Coffee Maker"],
-      price: 200,
-      summary:
-        "This inviting two-bedroom apartment provides a cozy living space with a functional kitchen, a private balcony for outdoor enjoyment, and access to a communal pool for recreation. With two comfortable bedrooms, it's perfect for a small family or roommates seeking a convenient and comfortable place to call home.",
-      number_of_beds: 2,
-    },
-    {
-      name: "Apartman 3",
-      link: "apartment_3",
-      detail: "A one bedroom apartment for two people.",
-      features: ["Kitchen", "Pool", "Coffee Maker"],
-      price: 200,
-      summary:
-        "This charming one-bedroom apartment offers a cozy living environment with a well-appointed kitchen, a private balcony for personal relaxation, and access to communal amenities like a pool. Ideal for singles or couples, it provides a convenient and comfortable living space for those looking for a smaller, more intimate home.",
-      number_of_beds: 1,
-    },
-  ];
-
+  const [apartmentDetails, setApartments] = useState<iApartment>(
+    apartmentData as iApartment,
+  );
+  useEffect(() => {
+    console.log(apartmentDetails);
+  }, []);
+  const HomeApartmentCard = ({
+    apartment,
+    index,
+  }: {
+    apartment: iApartment;
+    index: number;
+  }) => {
+    return (
+      <Link
+        to={`/apartments/${apartment.link}`}
+        state={{
+          name: apartment.name,
+          detail: apartment.detail,
+          features: apartment.features,
+          price: apartment.price,
+          firstImage: apartment.firstImage,
+          firstGridImageList: apartment.firstGridImageList,
+          secondImage: apartment.secondImage,
+          secondGridImageList: apartment.secondGridImageList,
+        }}
+      >
+        <div className="bg-gray-100 rounded-[40px] w-64 py-2 px-2 mx-auto">
+          <div
+            className={`h-40 rounded-[30px] w-full bg-blue-500 bg-[url(${apartment.imageLink})] bg-cover`}
+          ></div>
+          <h1 className="text-xl py-2 font-bold px-4 text-gray-600 text-center">
+            {t("apartman")} {index + 1}
+          </h1>
+        </div>
+      </Link>
+    );
+  };
   return (
     <div>
       <div className="flex mx-2 mt-2 flex-col flex-grow ">
@@ -52,38 +54,13 @@ function Home() {
             <h1 className="text-center">{t("hero.part1")}</h1>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 md:flex-row flex-col md:pt-20 lg:pt-40 pb-2 gap-8">
-            <Link
-              to="/apartments/apartment_1"
-              state={{
-                name: apartmentDetails[0].name,
-                detail: apartmentDetails[0].detail,
-                features: apartmentDetails[0].features,
-                price: apartmentDetails[0].price,
-              }}
-            >
-              <div className="bg-gray-100 rounded-[40px] w-64 py-2 px-2 mx-auto">
-                <div className="h-40 rounded-[30px] w-full bg-blue-500 bg-[url(https://woop14abphufecql.public.blob.vercel-storage.com/apartman_1-WCXsNwvMXYQIV9fQv7DrebUUm27i7Z.jpg)] bg-cover"></div>
-                <h1 className="text-xl py-2 font-bold px-4 text-gray-600 text-center">
-                  {t("apartman")} 1
-                </h1>
-              </div>
-            </Link>
-            <Link to="/region">
-              <div className="bg-gray-100 rounded-[40px] w-64 py-2 px-2 mx-auto">
-                <div className="h-40 rounded-[30px] w-full bg-blue-500 bg-[url(https://woop14abphufecql.public.blob.vercel-storage.com/rooms-np3C9gmuZJsbyyTP35YwyR7KO9luvy.jpg)] bg-cover"></div>
-                <h1 className="text-xl py-2 font-bold px-4 text-gray-600 text-center">
-                  {t("apartman")} 2
-                </h1>
-              </div>
-            </Link>
-            <Link to="/apartments">
-              <div className="bg-gray-100 rounded-[40px] w-64 py-2 px-2 mx-auto">
-                <div className="h-40 rounded-[30px] w-full bg-blue-500 bg-[url(https://woop14abphufecql.public.blob.vercel-storage.com/apartman_3-T2Zpas2OxGzLth8cMrgCpGFwTKxoCS.jpg)] bg-cover"></div>
-                <h1 className="text-xl py-2 font-bold px-4 text-gray-600 text-center">
-                  {t("apartman")} 3
-                </h1>
-              </div>
-            </Link>
+            {apartmentDetails.map((apartment: iApartment, index) => (
+              <HomeApartmentCard
+                key={index}
+                apartment={apartment}
+                index={index}
+              />
+            ))}
             <Link to="/region">
               <div className="bg-gray-100 rounded-[40px] w-64 py-2 px-2 mx-auto">
                 <div className="h-40 rounded-[30px] w-full bg-blue-500 bg-[url(https://woop14abphufecql.public.blob.vercel-storage.com/kanica-RTfANLcRw8Nqg18PiQZk905sZ1pVl4.jpg)] bg-cover"></div>

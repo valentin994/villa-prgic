@@ -17,20 +17,14 @@ import "../calendar.css";
 function AparmentDetails() {
   const { t } = useTranslation();
   const { state } = useLocation();
-  const { name, detail } = state;
-
-  const firstGridImageList = [
-    "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_001-yAbXV6SbPhdCJXtoNsQGTA7F4qhtwY.jpg",
-    "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_002-QBcwrJTBjdChHH8ddDyjtmpWRoI3Rq.jpg",
-    "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_003-Jey2TPxkZHlXCVahFbWr15KUVkPRdP.jpg",
-    "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_004-CiTAmS9Tqa41fxHiJX7CE2uREfheti.jpg",
-  ];
-  const secondGridImageList = [
-    "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_005-lWWUaM5qgJZrnpRoldPXKNDemj0LI6.jpg",
-    "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_006-C2HtAOmry489U5FXxVpYCGjRzctIVA.jpg",
-    "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_007-M20spfDKkVPTDbd8Ixsd3tlOJHl4pm.jpg",
-    "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_008-FgcHZNMSTNIIUGMQIr4OuUbqIAl8U8.jpg",
-  ];
+  const {
+    name,
+    detail,
+    firstImage,
+    firstGridImageList,
+    secondImage,
+    secondGridImageList,
+  } = state;
 
   type GridImageListProps = {
     gridList: string[];
@@ -40,6 +34,8 @@ function AparmentDetails() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    console.log(firstImage);
     setFormData({ ...formData, [name]: value });
   };
 
@@ -51,9 +47,9 @@ function AparmentDetails() {
 
   function sendEmail(e) {
     console.log(formData);
-    if(range.length < 2){
-        setShowPopUp(true);
-        setTimeout(() => setShowPopUp(false), 2000);
+    if (range.length < 2) {
+      setShowPopUp(true);
+      setTimeout(() => setShowPopUp(false), 2000);
     }
     console.log(range[0]);
     e.preventDefault();
@@ -99,7 +95,7 @@ function AparmentDetails() {
                 <div className="">
                   <img
                     className="h-auto w-full md:h-full md:max-w-full rounded-xl"
-                    src="https://woop14abphufecql.public.blob.vercel-storage.com/apartments-FZ3rsKJMYR9dq9IkFJugsYMk1TilBf.jpg"
+                    src={firstImage}
                     alt=""
                   />
                 </div>
@@ -110,7 +106,7 @@ function AparmentDetails() {
               <div className="flex justify-center overflow-hidden">
                 <button
                   onClick={() => setShowImages(!showImage)}
-                  className={` bg-blue-500 hidden md:block shadow-xl animate-bounce text-gray-50 w-8 p-2  rounded-full absolute font-bold -bottom-4 text-xs transition-all duration-300 ease-in`}
+                  className={`bg-blue-500 hidden md:block shadow-xl animate-bounce text-gray-50 w-8 p-2  rounded-full absolute font-bold -bottom-4 text-xs transition-all duration-300 ease-in`}
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -206,11 +202,11 @@ function AparmentDetails() {
                 </button>
               </div>
             </form>
-{showPopUp && (
-        <div className="fixed top-4 left-1/2 -translate-x-1/2 bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg transition-opacity duration-300">
-          Please enter a valid date!
-        </div>
-      )}
+            {showPopUp && (
+              <div className="fixed top-4 left-1/2 -translate-x-1/2 bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg transition-opacity duration-300">
+                Please enter a valid date!
+              </div>
+            )}
 
             <DateRangePicker
               ranges={range}

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ReactComponent as BedSvg } from "../assets/bed_svg.svg";
 import { useInView } from "react-intersection-observer";
 
-function AparmentCard({
+function ApartmentCard({
   name,
   link,
   detail,
@@ -12,6 +12,10 @@ function AparmentCard({
   price,
   summary,
   number_of_beds,
+  firstImage,
+  firstGridImageList,
+  secondImage,
+  secondGridImageList,
 }: iApartment) {
   const [ref, inView] = useInView();
   return (
@@ -21,7 +25,16 @@ function AparmentCard({
     >
       <Link
         to={link}
-        state={{ name, detail, features, price }}
+        state={{
+          name,
+          detail,
+          features,
+          price,
+          firstImage,
+          firstGridImageList,
+          secondImage,
+          secondGridImageList,
+        }}
         className="flex flex-col rounded-3xl my-8 py-4 px-2 items-center bg-gradient-to-r from-blue-50 to-gray-100 hover:bg-gray-50"
       >
         <div className="flex flex-col justify-between p-4 py-8 leading-normal w-full">
@@ -54,4 +67,4 @@ function AparmentCard({
   );
 }
 
-export default AparmentCard;
+export default ApartmentCard;
