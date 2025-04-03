@@ -60,7 +60,7 @@ function AparmentDetails() {
         {gridList.map((item, index) => (
           <div key={index}>
             <img
-              className="h-full max-w-full rounded-xl"
+              className="h-full max-w-full rounded-3xl"
               src={item}
               alt="Apartment"
             />
@@ -81,7 +81,7 @@ function AparmentDetails() {
 
   return (
     <div className="flex justify-center align-middle w-full px-1 md:px-2 pt-1 md:pt-2 mb-3">
-      <div className="pt-28 md:pt-24 w-full bg-blue-200 rounded-lg">
+      <div className="pt-28 md:pt-24 w-full bg-blue-200 rounded-3xl">
         <div className="px-2">
           <div className="bg-blue-500 rounded-[40px] py-4 mb-2">
             <p className="text-xl md:text-3xl text-gray-50 text-center font-bold">
@@ -94,7 +94,7 @@ function AparmentDetails() {
               <div className="grid md:grid-cols-2 gap-2">
                 <div className="">
                   <img
-                    className="h-auto w-full md:h-full md:max-w-full rounded-xl"
+                    className="h-auto w-full md:h-full md:max-w-full rounded-3xl"
                     src={firstImage}
                     alt=""
                   />
@@ -220,7 +220,7 @@ function AparmentDetails() {
             />
           </div>
           <div>
-            <div className="grid grid-cols-1 md:grid-cols-3 p-4 bg-white rounded-lg my-2">
+            <div className="grid text-gray-600 grid-cols-1 md:grid-cols-3 p-4 bg-white rounded-3xl my-2">
               <div className="">
                 <div className="flex justify-center p-2">
                   <img className="p-2" src={LocationSvg} alt="Location" />
@@ -231,7 +231,7 @@ function AparmentDetails() {
                 <ul>
                   {t("apartments.details.near", { returnObjects: true }).map(
                     (item: string, index: number) => (
-                      <li className="p-2 text-center" key={index}>
+                      <li className="p-2 font-medium text-center" key={index}>
                         {item}
                       </li>
                     ),
@@ -247,7 +247,7 @@ function AparmentDetails() {
                   {t("apartments.details.bathroom", {
                     returnObjects: true,
                   }).map((item: string, index: number) => (
-                    <li className="p-2 text-center" key={index}>
+                    <li className="p-2 font-medium text-center" key={index}>
                       {item}
                     </li>
                   ))}
@@ -265,7 +265,7 @@ function AparmentDetails() {
                   <p className="text-lg font-bold p-2">Pool</p>
                 </div>
                 <ul>
-                  <li className="p-2 text-center">09-20</li>
+                  <li className="p-2 font-medium text-center">09-20</li>
                 </ul>
                 <div className="flex justify-center p-2">
                   <img className="p-2 w-12" src={BedSvg} alt="Bed " />
@@ -277,7 +277,7 @@ function AparmentDetails() {
                   {t("apartments.details.bedroomInfo", {
                     returnObjects: true,
                   }).map((item: string, index: number) => (
-                    <li className="p-2 text-center" key={index}>
+                    <li className="p-2 font-medium text-center" key={index}>
                       {item}
                     </li>
                   ))}
@@ -294,7 +294,7 @@ function AparmentDetails() {
                   {t("apartments.details.kitchenInfo", {
                     returnObjects: true,
                   }).map((item: string, index: number) => (
-                    <li className="p-2 text-center" key={index}>
+                    <li className="p-2 font-medium text-center" key={index}>
                       {item}
                     </li>
                   ))}
