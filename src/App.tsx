@@ -13,7 +13,7 @@ import Impressum from "./Components/Impressum";
 function App() {
   return (
     <div className="App flex flex-col bg-blue-100">
-      <div className="absolute w-full mt-2 px-1 md:px-2">
+      <div className="absolute w-full md:mt-2 px-1 md:px-2">
         <Nav />
       </div>
       <Routes>

@@ -80,7 +80,7 @@ function AparmentDetails() {
   ]);
 
   return (
-    <div className="flex justify-center align-middle w-full px-1 md:px-2 pt-1 md:pt-2 mb-3">
+    <div className="flex justify-center align-middle w-full px-1 md:px-2 md:pt-2 mb-3">
       <div className="pt-28 md:pt-24 w-full bg-blue-200 rounded-3xl">
         <div className="px-2">
           <div className="bg-blue-500 rounded-[40px] py-4 mb-2">

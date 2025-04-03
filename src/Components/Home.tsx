@@ -1,6 +1,5 @@
 import { iApartment } from "../interfaces";
 import { Link } from "react-router-dom";
-import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import apartmentData from "../data/aparment_data.json";
@@ -48,7 +47,7 @@ function Home() {
   };
   return (
     <div>
-      <div className="flex mx-2 mt-2 flex-col flex-grow ">
+      <div className="flex md:mx-2 mx-1 md:mt-2 flex-col flex-grow ">
         <div className="flex flex-col md:px-10 lg:flex-row gap-8 pb-40 justify-center md:justify-between rounded-[40px] flex-grow bg-cover bg-[url(https://woop14abphufecql.public.blob.vercel-storage.com/hero-CfC2com90lIhkxLsRTg4oN28Z1VXpE.jpg)] bg-gray-300 bg-blend-multiply">
           <div className="flex flex-col justify-center w-full lg:max-w-[520px] font-extrabold text-gray-50 pt-40 text-4xl px-2 md:text-5xl lg:text-8xl">
             <h1 className="text-center">{t("hero.part1")}</h1>

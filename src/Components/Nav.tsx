@@ -27,7 +27,7 @@ function Nav() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="text-blue-500 bg-gray-100 px-4 py-2 rounded-full mt-3 mx-3">
+    <nav className="text-blue-500 bg-gray-100 px-4 py-2 rounded-full mt-2 md:mt-3 mx-3">
       <div className="flex font-thin flex-wrap items-center justify-between mx-auto w-full ">
         <NavLink to="/" className="flex items-center p-4">
           <span className="self-center text-xl font-lavishly  whitespace-nowrap">

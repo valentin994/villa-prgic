@@ -16,7 +16,7 @@ function Region() {
   const [ref8, inView8] = useInView();
 
   return (
-    <div className="pt-24 bg-blue-200 mt-2 mb-3 mx-2 rounded-[40px]">
+    <div className="pt-24 bg-blue-200 md:mt-2 mb-3 mx-1 md:mx-2 rounded-[40px]">
       <div className="flex flex-col md:flex-row md:px-48 pb-2 gap-14 pt-8">
         <div className="px-4 md:w-1/2">
           <h1 className="text-3xl text-blue-500 font-bold">
