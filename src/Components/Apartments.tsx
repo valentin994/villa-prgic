@@ -6,8 +6,8 @@ import apartmentData from "../data/aparment_data.json";
 
 function Apartments() {
   const { t } = useTranslation();
-  const [apartmentDetails, setApartments] = useState<iApartment>(
-    apartmentData as iApartment,
+  const [apartmentDetails, setApartments] = useState<iApartment[]>(
+    apartmentData as iApartment[],
   );
   useEffect(() => {
     console.log(apartmentDetails);

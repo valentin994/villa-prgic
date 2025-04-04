@@ -7,8 +7,8 @@ import apartmentData from "../data/aparment_data.json";
 function Home() {
   const { t } = useTranslation();
 
-  const [apartmentDetails, setApartments] = useState<iApartment>(
-    apartmentData as iApartment,
+  const [apartmentDetails, setApartments] = useState<iApartment[]>(
+    apartmentData as iApartment[],
   );
   useEffect(() => {
     console.log(apartmentDetails);
@@ -53,7 +53,7 @@ function Home() {
             <h1 className="text-center">{t("hero.part1")}</h1>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 md:flex-row flex-col md:pt-20 lg:pt-40 pb-2 gap-8">
-            {apartmentDetails.map((apartment: iApartment, index) => (
+            {apartmentDetails.map((apartment: iApartment, index: number) => (
               <HomeApartmentCard
                 key={index}
                 apartment={apartment}
