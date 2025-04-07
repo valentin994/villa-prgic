@@ -11,12 +11,14 @@ import { useTranslation } from "react-i18next";
 
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../calendar.css";
 
 function AparmentDetails() {
   const { t } = useTranslation();
   const { state } = useLocation();
+  const [dateRange, setDateRange] = useState([]);
+
   const {
     name,
     detail,
@@ -29,6 +31,28 @@ function AparmentDetails() {
   type GridImageListProps = {
     gridList: string[];
   };
+
+  function getDatesInRange(start: string, end: string): Date[] {
+    const dates = [];
+    const current = new Date(start);
+    const endDate = new Date(end);
+
+    while (current <= endDate) {
+      dates.push(new Date(current));
+      current.setDate(current.getDate() + 1);
+    }
+
+    return dates;
+  }
+  const disabledDates = dateRange.flatMap((range) =>
+    getDatesInRange(range.start_date, range.end_date),
+  );
+
+  useEffect(() => {
+    fetch("http://localhost:3000/get_dates")
+      .then((response) => response.json())
+      .then((data) => setDateRange([...data]));
+  }, []);
 
   const [showPopUp, setShowPopUp] = useState(false);
 
@@ -209,6 +233,7 @@ function AparmentDetails() {
             )}
 
             <DateRangePicker
+              disabledDates={disabledDates}
               ranges={range}
               onChange={(item) => setRange([item.selection])}
               staticRanges={[]}
@@ -217,6 +242,7 @@ function AparmentDetails() {
               showSelectionPreview={true}
               months={1}
               direction="horizontal"
+              minDate={new Date()}
             />
           </div>
           <div>

@@ -1,7 +1,7 @@
 import { iApartment } from "../interfaces";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import apartmentData from "../data/aparment_data.json";
 
 function Home() {
@@ -10,9 +10,7 @@ function Home() {
   const [apartmentDetails, setApartments] = useState<iApartment[]>(
     apartmentData as iApartment[],
   );
-  useEffect(() => {
-    console.log(apartmentDetails);
-  }, []);
+
   const HomeApartmentCard = ({
     apartment,
     index,
@@ -27,6 +25,7 @@ function Home() {
           name: apartment.name,
           detail: apartment.detail,
           features: apartment.features,
+          imageLink: apartment.imageLink,
           price: apartment.price,
           firstImage: apartment.firstImage,
           firstGridImageList: apartment.firstGridImageList,
