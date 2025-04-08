@@ -112,7 +112,7 @@ function Nav() {
           </ul>
         </div>
         <button
-          className="md:hidden m-4 flex top-0 right-0 z-20 relative w-10 h-10 text-white focus:outline-none"
+          className="md:hidden m-4 flex top-0 right-0 z-30 relative w-10 h-10 text-white focus:outline-none"
           onClick={toggleMenu}
         >
           <div className="absolute w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
@@ -139,7 +139,7 @@ function Nav() {
         </button>
       </div>
       <nav
-        className={`fixed flex top-0 left-0 w-full p-10 z-10 h-screen pt-24 bg-blue-500 text-white bg-opacity-100 transform delay-100 transition-all duration-300 ${
+        className={`fixed flex top-0 left-0 w-full p-10 z-20 h-screen pt-24 bg-blue-500 text-white bg-opacity-100 transform delay-100 transition-all duration-300 ${
           isMenuOpen
             ? "opacity-100 translate-x-0"
             : "opacity-0 -translate-x-full"
