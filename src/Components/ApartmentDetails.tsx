@@ -11,13 +11,15 @@ import { useTranslation } from "react-i18next";
 
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../calendar.css";
+import emailjs from "@emailjs/browser";
 
 function AparmentDetails() {
   const { t } = useTranslation();
   const { state } = useLocation();
   const [dateRange, setDateRange] = useState([]);
+  const form = useRef();
 
   const {
     name,
@@ -88,12 +90,43 @@ function AparmentDetails() {
   });
 
   function sendEmail(e) {
-    console.log(formData);
-    if (range.length < 2) {
+    if (
+      range[0].startDate.getDate() === range[0].endDate.getDate() &&
+      range[0].startDate.getMonth() === range[0].endDate.getMonth()
+    ) {
       setShowPopUp(true);
       setTimeout(() => setShowPopUp(false), 2000);
+      e.preventDefault();
+      return;
     }
-    console.log(range[0]);
+    console.log({
+      name: formData.name,
+      time: new Date().getDate(),
+      title: name,
+      startDate: `${range[0].startDate.getDate()}-${range[0].startDate.getMonth()}`,
+      endDate: `${range[0].endDate.getDate()}-${range[0].endDate.getMonth()}`,
+      email: formData.email,
+      message: formData.message,
+    });
+    emailjs.init({ publicKey: "WdsWSiOZO0oOhp7nl" });
+    emailjs
+      .send("service_daxmzoo", "template_l03vwdg", {
+        name: formData.name,
+        time: new Date().getDate(),
+        title: name,
+        startDate: `${range[0].startDate.getDate()}-${range[0].startDate.getMonth()}`,
+        endDate: `${range[0].endDate.getDate()}-${range[0].endDate.getMonth()}`,
+        email: formData.email,
+        message: formData.message,
+      })
+      .then(
+        () => {
+          console.log("Success");
+        },
+        (error) => {
+          console.log(error);
+        },
+      );
     e.preventDefault();
   }
   const GridImageList: React.FC<GridImageListProps> = ({ gridList }) => {
@@ -287,6 +320,7 @@ function AparmentDetails() {
               <input
                 type="email"
                 name="email"
+                id="email"
                 value={formData.email}
                 onChange={handleChange}
                 className="border-0 border-b-2 rounded-md px-0 text-gray-600 focus:ring-0"
