@@ -192,7 +192,7 @@ function AparmentDetails() {
               </button>
               <div className="grid md:grid-cols-2 gap-2 overflow-hidden rounded-2xl">
                 <div
-                  className="flex transition-transform duration-500 ease-in-out h-full"
+                  className="flex md:hidden transition-transform duration-500 ease-in-out h-full"
                   style={{ transform: `translateX(-${imageIndex * 100}%)` }}
                 >
                   {allImages.map((img, i) => (
