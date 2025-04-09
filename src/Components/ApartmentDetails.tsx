@@ -49,11 +49,10 @@ function AparmentDetails() {
   );
 
   useEffect(() => {
-    fetch(`/api/get_dates`)
+    fetch(`/api/get_dates?id=${name.split(" ")[1]}`)
       .then((response) => response.json())
       .then((data) => setDateRange([...data]));
-      console.log(dateRange)
-  }, [name, dateRange]);
+  }, [name]);
 
   const [showPopUp, setShowPopUp] = useState(false);
 

@@ -1,7 +1,5 @@
 export default async function handler(req: any, res: any) {
-  console.log(req);
-  // const { id } = req.query;
-  const id = 1;
+  const { id } = req.query;
   const apikey = process.env.REACT_APP_API_KEY;
   const url = process.env.REACT_APP_API_URL;
   console.log(apikey);
