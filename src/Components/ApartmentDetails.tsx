@@ -19,7 +19,6 @@ function AparmentDetails() {
   const { t } = useTranslation();
   const { state } = useLocation();
   const [dateRange, setDateRange] = useState([]);
-  const form = useRef();
 
   const {
     name,
@@ -103,8 +102,8 @@ function AparmentDetails() {
       name: formData.name,
       time: new Date().getDate(),
       title: name,
-      startDate: `${range[0].startDate.getDate()}-${range[0].startDate.getMonth()}`,
-      endDate: `${range[0].endDate.getDate()}-${range[0].endDate.getMonth()}`,
+      startDate: `${range[0].startDate.getDate()}-${range[0].startDate.getMonth()}-${range[0].startDate.getFullYear()}`,
+      endDate: `${range[0].endDate.getDate()}-${range[0].endDate.getMonth()}-${range[0].endDate.getFullYear()}`,
       email: formData.email,
       message: formData.message,
     });
