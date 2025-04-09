@@ -49,7 +49,7 @@ function AparmentDetails() {
   );
 
   useEffect(() => {
-    fetch(`/api/get_dates/${name.split(" ")[1]}`)
+    fetch(`/api/get_dates`)
       .then((response) => response.json())
       .then((data) => setDateRange([...data]));
       console.log(dateRange)
