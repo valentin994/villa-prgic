@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 function Footer() {
   return (
     <div className="-mt-6 text-sm py-2 px-1 md:px-2">
-      <div className="flex flex-col md:flex-row rounded-3xl justify-center md:justify-between py-8 px-8 md:px-20 bg-blue-500 gap-4 md:gap-8 text-gray-50 text-base font-thin">
+      <div className="flex flex-col md:flex-row rounded-3xl justify-center md:justify-between py-8 px-8 md:px-20 bg-blue-600 gap-4 md:gap-8 text-gray-50 text-base font-thin">
         <div className="flex flex-col justify-center">
           <NavLink to={"/"} className="text-3xl md:text-3xl font-lux">
             Villa Prgic

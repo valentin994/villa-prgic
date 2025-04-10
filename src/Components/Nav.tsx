@@ -20,6 +20,7 @@ function Nav() {
   };
 
   const navLinks = ["/", "/apartments", "/region", "/contact"];
+  const navigationLinks = t("navigation", { returnObjects: true }) as string[];
 
   useEffect(() => {
     document.body.style.overflow = "unset";
@@ -38,27 +39,25 @@ function Nav() {
         </NavLink>
         <div className="p-4 hidden md:max-[4200px]:block">
           <ul className="flex">
-            {t("navigation", { returnObjects: true }).map(
-              (link: string, index: number) => (
-                <li
-                  key={index}
-                  className="px-2 uppercase font-normal hover:text-blue-600"
+            {navigationLinks.map((link: string, index: number) => (
+              <li
+                key={index}
+                className="px-2 uppercase font-normal hover:text-blue-600"
+              >
+                <NavLink
+                  className={({ isActive, isPending }) =>
+                    isPending
+                      ? "pending"
+                      : isActive
+                        ? "text-blue-600 font-bold"
+                        : ""
+                  }
+                  to={navLinks[index]}
                 >
-                  <NavLink
-                    className={({ isActive, isPending }) =>
-                      isPending
-                        ? "pending"
-                        : isActive
-                          ? "text-blue-600 font-bold"
-                          : ""
-                    }
-                    to={navLinks[index]}
-                  >
-                    {link}
-                  </NavLink>
-                </li>
-              ),
-            )}
+                  {link}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="pr-4">
