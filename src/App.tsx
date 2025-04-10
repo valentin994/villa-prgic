@@ -1,6 +1,6 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-import Nav from "./Components/Nav";
+import Nav from "./UI/Nav";
 import Home from "./Components/Home";
 import Apartments from "./Components/Apartments";
 import AparmentDetails from "./Components/ApartmentDetails";

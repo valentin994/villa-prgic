@@ -112,49 +112,18 @@ function Nav() {
         }`}
       >
         <ul className="flex flex-col items-center w-full justify-center align-middle text-center">
-          <li className="text-2xl p-4">
-            <NavLink
-              to="/"
-              onClick={() => {
-                setIsMenuOpen(false);
-              }}
-            >
-              Home
-            </NavLink>
-          </li>
-          <li className="text-2xl p-4">
-            <NavLink
-              to="/apartments"
-              className="nav-link"
-              onClick={() => {
-                setIsMenuOpen(false);
-              }}
-            >
-              Apartments
-            </NavLink>
-          </li>
-          <li className="text-2xl p-4">
-            <NavLink
-              to="/region"
-              className="nav-link"
-              onClick={() => {
-                setIsMenuOpen(false);
-              }}
-            >
-              Region
-            </NavLink>
-          </li>
-          <li className="text-2xl p-4">
-            <NavLink
-              to="/contact"
-              className="nav-link"
-              onClick={() => {
-                setIsMenuOpen(false);
-              }}
-            >
-              Contact
-            </NavLink>
-          </li>
+          {navigationLinks.map((link: string, index: number) => (
+            <li className="text-2xl p-4">
+              <NavLink
+                to={navLinks[index]}
+                onClick={() => {
+                  setIsMenuOpen(false);
+                }}
+              >
+                {link}
+              </NavLink>
+            </li>
+          ))}
           <hr className="h-1 mt-8 w-2/3 mx-auto bg-white" />
           <ul className="flex pt-4 gap-8">
             {Object.keys(lngs).map((lng) => (
