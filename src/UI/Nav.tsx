@@ -30,7 +30,7 @@ function Nav() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="text-blue-500 bg-gray-100 px-4  rounded-full mt-2 md:mt-3 mx-3">
+    <nav className="text-blue-600  z-40 bg-gray-100 px-4 tracking-widest rounded-full mt-2 md:mt-3 mx-3">
       <div className="flex flex-wrap items-center justify-between mx-auto w-full ">
         <NavLink to="/" className="flex items-center p-4">
           <span className="self-center text-3xl font-lux whitespace-nowrap">
@@ -38,19 +38,12 @@ function Nav() {
           </span>
         </NavLink>
         <div className="p-4 hidden md:max-[4200px]:block">
-          <ul className="flex">
+          <ul className="flex text-blue-600">
             {navigationLinks.map((link: string, index: number) => (
-              <li
-                key={index}
-                className="px-2 uppercase font-normal hover:text-blue-600"
-              >
+              <li key={index} className="px-2  uppercase font-extrabold">
                 <NavLink
                   className={({ isActive, isPending }) =>
-                    isPending
-                      ? "pending"
-                      : isActive
-                        ? "text-blue-600 font-bold"
-                        : ""
+                    isPending ? "pending" : isActive ? "drop-shadow-md" : ""
                   }
                   to={navLinks[index]}
                 >
@@ -86,11 +79,11 @@ function Nav() {
               className={`absolute h-0.5 w-5 transform transition duration-300 ease-in-out ${
                 isMenuOpen
                   ? "rotate-45 bg-gray-100 delay-200"
-                  : "bg-blue-500 -translate-y-1.5"
+                  : "bg-blue-600 -translate-y-1.5"
               }`}
             ></span>
             <span
-              className={`absolute h-0.5 bg-blue-500 transform transition-all duration-200 ease-in-out ${
+              className={`absolute h-0.5 bg-blue-600 transform transition-all duration-200 ease-in-out ${
                 isMenuOpen ? "w-0 opacity-50" : "w-5 delay-200 opacity-100"
               }`}
             ></span>
@@ -98,22 +91,22 @@ function Nav() {
               className={`absolute h-0.5 w-5 transform transition duration-300 ease-in-out ${
                 isMenuOpen
                   ? "-rotate-45 bg-gray-100 delay-200"
-                  : "bg-blue-500 translate-y-1.5"
+                  : "bg-blue-600 translate-y-1.5"
               }`}
             ></span>
           </div>
         </button>
       </div>
       <nav
-        className={`fixed flex top-0 left-0 w-full p-10 z-20 h-screen pt-24 bg-blue-500 text-white bg-opacity-100 transform delay-100 transition-all duration-300 ${
+        className={`fixed flex top-0 left-0 w-full p-10 z-20 h-screen pt-24 bg-blue-600 text-white bg-opacity-100 transform delay-100 transition-all duration-300 ${
           isMenuOpen
             ? "opacity-100 translate-x-0"
             : "opacity-0 -translate-x-full"
         }`}
       >
-        <ul className="flex flex-col items-center w-full justify-center align-middle text-center">
+        <ul className="flex flex-col uppercase items-center w-full justify-center align-middle text-center">
           {navigationLinks.map((link: string, index: number) => (
-            <li className="text-2xl p-4">
+            <li key={index} className="text-2xl p-4 font-bold">
               <NavLink
                 to={navLinks[index]}
                 onClick={() => {
