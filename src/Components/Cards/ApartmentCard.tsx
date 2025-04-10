@@ -1,8 +1,7 @@
-import { iApartment } from "../interfaces";
+import { iApartment } from "../../interfaces";
 import { Link } from "react-router-dom";
-// @ts-ignore
-import { ReactComponent as BedSvg } from "../assets/bed_svg.svg";
 import { useInView } from "react-intersection-observer";
+import { useTranslation } from "react-i18next";
 
 function ApartmentCard({
   name,
@@ -16,8 +15,11 @@ function ApartmentCard({
   firstGridImageList,
   secondImage,
   secondGridImageList,
+  index,
 }: iApartment) {
   const [ref, inView] = useInView();
+  const { t } = useTranslation();
+
   return (
     <div
       ref={ref}
@@ -35,17 +37,27 @@ function ApartmentCard({
           secondImage,
           secondGridImageList,
         }}
-        className="flex flex-col rounded-3xl my-8 py-4 px-2 items-center bg-gradient-to-r from-blue-50 to-gray-100 hover:bg-gray-50"
+        className="flex flex-col shadow rounded-3xl my-8 py-4 px-2 items-center bg-gradient-to-r from-blue-50 to-gray-100 hover:bg-gray-50"
       >
         <div className="flex flex-col justify-between p-4 py-8 leading-normal w-full">
           <div className="flex flex-row justify-between">
             <h5 className="mb-2 text-2xl font-extrabold tracking-tight text-gray-600 ">
-              {name}
+              {t("apartman")} {index + 1}
             </h5>
             <div className="hidden md:flex md:flex-row">
               {[...Array(number_of_beds)].map(
                 (value: undefined, index: number) => (
-                  <BedSvg id={index + 1} key={index} className="w-6 m-2" />
+                  <div key={index} id={value} className="w-6 h-full">
+                    <svg
+                      height="24"
+                      width="24"
+                      viewBox="0 0 24 24"
+                      fill="black"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M20 9.557V3h-2v2H6V3H4v6.557C2.81 10.25 2 11.525 2 13v4a1 1 0 0 0 1 1h1v4h2v-4h12v4h2v-4h1a1 1 0 0 0 1-1v-4c0-1.475-.811-2.75-2-3.443zM18 7v2h-5V7h5zM6 7h5v2H6V7zm14 9H4v-3c0-1.103.897-2 2-2h12c1.103 0 2 .897 2 2v3z" />
+                    </svg>
+                  </div>
                 ),
               )}
             </div>
@@ -57,7 +69,18 @@ function ApartmentCard({
           <div className="flex md:hidden">
             {[...Array(number_of_beds)].map(
               (value: undefined, index: number) => (
-                <BedSvg id={index + 1} key={index} className="w-6 mr-2" />
+                <svg
+                  id={value}
+                  key={index}
+                  className=""
+                  height="24"
+                  width="24"
+                  viewBox="0 0 24 24"
+                  fill="black"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M20 9.557V3h-2v2H6V3H4v6.557C2.81 10.25 2 11.525 2 13v4a1 1 0 0 0 1 1h1v4h2v-4h12v4h2v-4h1a1 1 0 0 0 1-1v-4c0-1.475-.811-2.75-2-3.443zM18 7v2h-5V7h5zM6 7h5v2H6V7zm14 9H4v-3c0-1.103.897-2 2-2h12c1.103 0 2 .897 2 2v3z" />
+                </svg>
               ),
             )}
           </div>

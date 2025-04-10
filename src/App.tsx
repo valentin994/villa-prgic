@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Nav from "./UI/Nav";
 import Home from "./UI/Home";
-import Apartments from "./Components/Apartments";
+import Apartments from "./UI/Apartments";
 import AparmentDetails from "./Components/ApartmentDetails";
 import Region from "./Components/Region";
 import Contact from "./Components/Contact";

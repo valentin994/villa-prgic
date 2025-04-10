@@ -184,7 +184,7 @@ i18n
               "Mirjana je vaša gostoljubiva domaćica, koja se brine da svaki detalj njezinih apartmana uz more odiše toplinom i udobnošću. Voli upoznavati nove ljude i ponosna je što stvara opuštajuće utočište za svoje goste. S Mirjanom ćete se osjećati kao kod kuće uz more!",
           },
           apartments: {
-            welcome: "Dobrodosli",
+            welcome: "Dobrodošli",
             welcomeInfo:
               "Naša šarmantna kuća nudi tri udobna apartmana, svaki pažljivo dizajniran da se osjećate kao kod kuće. Bilo da tražite jednosobno utočište ili više prostora za dijeljenje, pronaći ćete apartman koji odgovara vašim potrebama.",
             a1Info: "Apartman sa 3 spavace sobe za sestero ljudi",
