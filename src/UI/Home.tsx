@@ -13,7 +13,7 @@ function Home() {
       <div className="flex -mt-20 mx-1 md:-mt-18 flex-col flex-grow ">
         <div className="flex flex-col md:px-10 lg:flex-row gap-8 pb-40 justify-center md:justify-between rounded-[40px] flex-grow bg-cover bg-[url(https://woop14abphufecql.public.blob.vercel-storage.com/hero-CfC2com90lIhkxLsRTg4oN28Z1VXpE.jpg)] bg-gray-300 bg-blend-multiply">
           <div className="flex flex-col justify-center w-full lg:max-w-[520px] pt-40 pb-20">
-            <h1 className="text-center text-4xl px-2 md:text-5xl lg:text-8xl font-extrabold font-roboto text-gray-50">
+            <h1 className="text-center text-6xl px-2 md:text-5xl lg:text-8xl font-extrabold font-roboto text-gray-50">
               {t("hero.part1")}
             </h1>
           </div>
