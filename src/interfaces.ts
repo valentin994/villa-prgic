@@ -6,9 +6,7 @@ interface iApartment {
   detail: string;
   features: string[];
   price: number;
-  summary: string;
   imageLink: string;
-  number_of_beds: number;
   firstImage: string;
   firstGridImageList: string[];
   secondImage: string;

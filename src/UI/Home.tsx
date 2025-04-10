@@ -33,7 +33,7 @@ function Home() {
         </div>
       </div>
       <div className="py-4 px-1 mb-8 -mt-28">
-        <div className="flex flex-col rounded-b-[40px] bg-white border shadow md:flex-row gap-4 pt-28 pb-8 md:px-24">
+        <div className="flex flex-col md:flex-row gap-4 pt-28 pb-8 md:px-24">
           <div className="rounded-xl py-4 px-8 w-full">
             <h1 className="text-blue-500 text-center font-bold text-4xl">
               Ante

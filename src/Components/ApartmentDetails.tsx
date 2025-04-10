@@ -154,10 +154,10 @@ function AparmentDetails() {
   ]);
 
   return (
-    <div className="flex justify-center align-middle w-full px-1 md:px-2 md:pt-2 mb-3">
-      <div className="pt-28 md:pt-24 w-full bg-blue-200 rounded-3xl">
-        <div className="px-2">
-          <div className="bg-blue-500 rounded-[40px] py-4 mb-2">
+    <div className="flex -mt-20 justify-center align-middle w-full px-1 md:px-1 mb-3">
+      <div className=" w-full  rounded-3xl">
+        <div className="">
+          <div className=" pt-28 md:pt-24 bg-blue-600 rounded-[40px] py-4 mb-2">
             <p className="text-xl md:text-3xl text-gray-50 text-center font-bold">
               {name}
             </p>

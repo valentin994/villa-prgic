@@ -55,7 +55,7 @@ function ApartmentCard({
           </div>
           <p className="mb-4 text-blue-600">{apartment.detail}</p>
           <p className="hidden text-gray-700 font-semibold md:max-[4200px]:block">
-            {apartment.summary}
+            {t("summary")[index]}
           </p>
           <div className="flex md:hidden">
             {[...Array(3-index)].map(
