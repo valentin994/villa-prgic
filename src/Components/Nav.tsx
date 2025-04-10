@@ -19,6 +19,8 @@ function Nav() {
     hr: { nativeName: "HR" },
   };
 
+  const navLinks = ["/", "/apartments", "/region", "/contact"];
+
   useEffect(() => {
     document.body.style.overflow = "unset";
     if (isMenuOpen) {
@@ -27,71 +29,36 @@ function Nav() {
   }, [isMenuOpen]);
 
   return (
-    <nav className="text-blue-500 bg-gray-100 px-4 py-2 rounded-full mt-2 md:mt-3 mx-3">
-      <div className="flex font-thin flex-wrap items-center justify-between mx-auto w-full ">
+    <nav className="text-blue-500 bg-gray-100 px-4  rounded-full mt-2 md:mt-3 mx-3">
+      <div className="flex flex-wrap items-center justify-between mx-auto w-full ">
         <NavLink to="/" className="flex items-center p-4">
-          <span className="self-center text-xl font-lavishly  whitespace-nowrap">
+          <span className="self-center text-3xl font-lux whitespace-nowrap">
             Villa Prgic
           </span>
         </NavLink>
         <div className="p-4 hidden md:max-[4200px]:block">
           <ul className="flex">
-            <li className="px-2 hover:text-blue-600">
-              <NavLink
-                className={({ isActive, isPending }) =>
-                  isPending
-                    ? "pending"
-                    : isActive
-                      ? "text-blue-600 font-bold"
-                      : ""
-                }
-                to="/"
-              >
-                HOME
-              </NavLink>
-            </li>
-            <li className="px-2 hover:text-blue-600">
-              <NavLink
-                className={({ isActive, isPending }) =>
-                  isPending
-                    ? "pending"
-                    : isActive
-                      ? "text-blue-600 font-bold"
-                      : ""
-                }
-                to="/apartments"
-              >
-                APARTMANI
-              </NavLink>
-            </li>
-            <li className="px-2 hover:text-blue-600">
-              <NavLink
-                className={({ isActive, isPending }) =>
-                  isPending
-                    ? "pending"
-                    : isActive
-                      ? "text-blue-600 font-bold"
-                      : ""
-                }
-                to="/region"
-              >
-                REGIJA
-              </NavLink>
-            </li>
-            <li className="px-2 hover:text-blue-600">
-              <NavLink
-                className={({ isActive, isPending }) =>
-                  isPending
-                    ? "pending"
-                    : isActive
-                      ? "text-blue-600 font-bold"
-                      : ""
-                }
-                to="/contact"
-              >
-                CONTACT
-              </NavLink>
-            </li>
+            {t("navigation", { returnObjects: true }).map(
+              (link: string, index: number) => (
+                <li
+                  key={index}
+                  className="px-2 uppercase font-normal hover:text-blue-600"
+                >
+                  <NavLink
+                    className={({ isActive, isPending }) =>
+                      isPending
+                        ? "pending"
+                        : isActive
+                          ? "text-blue-600 font-bold"
+                          : ""
+                    }
+                    to={navLinks[index]}
+                  >
+                    {link}
+                  </NavLink>
+                </li>
+              ),
+            )}
           </ul>
         </div>
         <div className="pr-4">

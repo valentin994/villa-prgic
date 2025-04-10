@@ -14,6 +14,7 @@ i18n
     resources: {
       en: {
         translation: {
+          navigation: ["home", "apartments", "region", "contact"],
           hero: {
             part1: "Find your ideal stay",
             part2: "Ideal stay",
@@ -86,6 +87,7 @@ i18n
       },
       de: {
         translation: {
+          navigation: ["startseite", "wohnungen", "region", "kontakt"],
           hero: {
             part1: "Finden Sie Ihren idealen Aufenthalt",
             part2: "idealen Aufenthalt",
@@ -158,6 +160,7 @@ i18n
       },
       hr: {
         translation: {
+          navigation: ["početna", "apartmani", "regija", "kontakt"],
           hero: {
             part1: "Za vas odmor iz snova",
             part2: "idealni smjestaj",

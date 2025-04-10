@@ -1,23 +1,12 @@
 import { NavLink } from "react-router-dom";
-
-import { useTranslation } from "react-i18next";
 function Footer() {
-  type Language = {
-    nativeName: String;
-  };
-  const { t, i18n } = useTranslation();
-  const lngs: Record<string, Language> = {
-    en: { nativeName: "EN" },
-    de: { nativeName: "DE" },
-    hr: { nativeName: "HR" },
-  };
   return (
     <div className="-mt-6 text-sm py-2 px-1 md:px-2">
       <div className="flex flex-col md:flex-row rounded-3xl justify-center md:justify-between py-8 px-8 md:px-20 bg-blue-500 gap-4 md:gap-8 text-gray-50 text-base font-thin">
         <div className="flex flex-col justify-center">
-          <h1 className="text-xl md:text-3xl font-lavishly font-bold">
+          <NavLink to={"/"} className="text-3xl md:text-3xl font-lux">
             Villa Prgic
-          </h1>
+          </NavLink>
         </div>
         <div className="flex flex-col justify-center">
           <div className="flex md:justify-center gap-2 ">

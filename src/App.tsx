@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import Nav from "./Components/Nav";
 import Home from "./Components/Home";
@@ -12,7 +12,7 @@ import Impressum from "./Components/Impressum";
 
 function App() {
   return (
-    <div className="App flex flex-col bg-blue-100">
+    <div className="App flex flex-col bg-gray-50">
       <div className="absolute w-full md:mt-2 px-1 md:px-2">
         <Nav />
       </div>
