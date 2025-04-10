@@ -4,19 +4,9 @@ import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
 
 function ApartmentCard({
-  name,
-  link,
-  detail,
-  features,
-  price,
-  summary,
-  number_of_beds,
-  firstImage,
-  firstGridImageList,
-  secondImage,
-  secondGridImageList,
-  index,
-}: iApartment) {
+    apartment,
+    index
+}: {apartment: iApartment, index:  number}) {
   const [ref, inView] = useInView();
   const { t } = useTranslation();
 
@@ -26,18 +16,19 @@ function ApartmentCard({
       className={`transform px-2 md:px-4 transition-all duration-300 ease-in-out ${inView ? "opacity-100" : "delay-300 opacity-20 translate-y-10"}`}
     >
       <Link
-        to={link}
+        to={apartment.link}
         state={{
-          name,
-          detail,
-          features,
-          price,
-          firstImage,
-          firstGridImageList,
-          secondImage,
-          secondGridImageList,
+        name: apartment.name,
+        detail: apartment.detail,
+        features: apartment.features,
+        imageLink: apartment.imageLink,
+        price: apartment.price,
+        firstImage: apartment.firstImage,
+        firstGridImageList: apartment.firstGridImageList,
+        secondImage: apartment.secondImage,
+        secondGridImageList: apartment.secondGridImageList,
         }}
-        className="flex flex-col shadow rounded-3xl my-8 py-4 px-2 items-center bg-gradient-to-r from-blue-50 to-gray-100 hover:bg-gray-50"
+        className="flex flex-col shadow border rounded-3xl my-8 py-4 px-2 items-center bg-gradient-to-r from-blue-50 to-gray-100 hover:bg-gray-50"
       >
         <div className="flex flex-col justify-between p-4 py-8 leading-normal w-full">
           <div className="flex flex-row justify-between">
@@ -45,7 +36,7 @@ function ApartmentCard({
               {t("apartman")} {index + 1}
             </h5>
             <div className="hidden md:flex md:flex-row">
-              {[...Array(number_of_beds)].map(
+              {[...Array(3-index)].map(
                 (value: undefined, index: number) => (
                   <div key={index} id={value} className="w-6 h-full">
                     <svg
@@ -62,12 +53,12 @@ function ApartmentCard({
               )}
             </div>
           </div>
-          <p className="mb-4 text-blue-600">{detail}</p>
+          <p className="mb-4 text-blue-600">{apartment.detail}</p>
           <p className="hidden text-gray-700 font-semibold md:max-[4200px]:block">
-            {summary}
+            {apartment.summary}
           </p>
           <div className="flex md:hidden">
-            {[...Array(number_of_beds)].map(
+            {[...Array(3-index)].map(
               (value: undefined, index: number) => (
                 <svg
                   id={value}

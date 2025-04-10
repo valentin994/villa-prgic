@@ -20,7 +20,7 @@ function Apartments() {
       <div className="-mt-8">
         <div className="pt-8 pb-1 md:pb-4 shadow rounded-br-[40px] rounded-bl-[40px]">
           {apartmentDetails.map((apartment: iApartment, index: number) => (
-            <ApartmentCard key={apartment.link} {...{ ...apartment, index }} />
+            <ApartmentCard key={apartment.link} apartment={apartment} index={index} />
           ))}
         </div>
       </div>
