@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Contact() {
   const [ref, inView] = useInView();
   return (
-    <section className="pt-28 md:mt-2 px-2 mx-1 md:mx-2 min-h-screen flex flex-col justify-center rounded-[40px] mb-4 bg-blue-200">
+    <section className="px-2 mx-1 min-h-screen flex flex-col pt-8 rounded-[40px] mb-4">
       <div
         ref={ref}
         className={`bg-gray-50 py-6 mb-2 rounded-[40px] px-8 mx-auto max-w-screen-md transform transition-all duration-300 ease-in-out ${inView ? "opacity-100" : "delay-300 opacity-20 translate-y-10"}`}
@@ -68,6 +68,9 @@ function Contact() {
           className="text-3xl p-2 text-blue-500"
           icon={faFacebook}
         />
+      </div>
+      <div className="mb-8">
+        <iframe width="100%" height="400" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2894.33288389299!2d16.00102337624065!3d43.49539076262299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133517bf5dacedd5%3A0x56b213f83599aa72!2sApartmani%20Prgi%C4%87!5e0!3m2!1shr!2shr!4v1744375535033!5m2!1shr!2shr" style={{border: "none"}} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
   );

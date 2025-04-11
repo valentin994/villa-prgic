@@ -1,6 +1,9 @@
 function Region() {
   return (
-    <div className="md:mt-2 mb-3 mx-1 md:mx-2 rounded-[40px]">
+    <div className="md:-mt-20 mb-16 mx-1 rounded-[40px]">
+    <div className="bg-blue-600 pt-20 rounded-[40px]">
+    <h1 className="text-3xl text-white pt-12 pb-8 text-center">Discover Croatia</h1>
+    </div>
       <div className="flex flex-col md:flex-row md:px-48 pb-2 gap-14 pt-8">
         <div className="px-4 md:w-1/2">
           <h1 className="text-3xl text-blue-500 font-bold">
