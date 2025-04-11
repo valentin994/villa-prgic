@@ -64,18 +64,20 @@ function ImageGallery({ imageUrls }: { imageUrls: string[] }) {
           </g>
         </svg>
       </button>
-      <div
-        className="flex md:hidden transition-transform duration-500 ease-in-out h-full"
-        style={{ transform: `translateX(-${imageIndex * 100}%)` }}
-      >
-        {imageUrls.map((img: string, index) => (
-          <img
-            key={index}
-            src={img}
-            alt={`Slide ${index}`}
-            className="w-full flex-shrink-0 px-1 object-cover h-full rounded-2xl"
-          />
-        ))}
+      <div className="grid overflow-hidden">
+        <div
+          className="flex  transition-transform duration-500 ease-in-out h-full"
+          style={{ transform: `translateX(-${imageIndex * 100}%)` }}
+        >
+          {imageUrls.map((img: string, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`Slide ${index}`}
+              className="w-full flex-shrink-0 px-1 object-cover h-full rounded-2xl"
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

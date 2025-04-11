@@ -33,31 +33,30 @@ function ImageGalleryDesktop({
             </div>
           ))}
         </div>
-
       </div>
 
-        <div
-          className={`pt-2 md:grid md:grid-cols-2 gap-2 overflow-hidden transition-all ease-in duration-500 ${showImage ? "max-h-0" : "max-h-svh"}`}
-        >
-          <div className="hidden md:grid gap-2 grid-cols-2">
-              {secondImageList.map((image, index) => (
-                <div key={index}>
-                  <img
-                    className="w-full shadow-xl border flex-shrink-0 object-cover h-full rounded-2xl transform transition-all ease-in duration-200 brightness-90 hover:brightness-100 cursor-pointer"
-                    src={image}
-                    alt="Slide ${index}"
-                  />
-                </div>
-              ))}
-          </div>
-          <div className="">
-            <img
-              className="h-full max-w-full shadow-xl border rounded-xl transform transition-all ease-in duration-200 brightness-90 hover:brightness-100 cursor-pointer"
-              src={secondLargeImage}
-              alt=""
-            />
-          </div>
+      <div
+        className={`pt-2 md:grid md:grid-cols-2 gap-2 overflow-hidden transition-all ease-in duration-500 ${showImage ? "max-h-0" : "max-h-svh"}`}
+      >
+        <div className="hidden md:grid gap-2 grid-cols-2">
+          {secondImageList.map((image, index) => (
+            <div key={index}>
+              <img
+                className="w-full shadow-xl border flex-shrink-0 object-cover h-full rounded-2xl transform transition-all ease-in duration-200 brightness-90 hover:brightness-100 cursor-pointer"
+                src={image}
+                alt="Slide ${index}"
+              />
+            </div>
+          ))}
         </div>
+        <div className="">
+          <img
+            className="h-full max-w-full shadow-xl border rounded-xl transform transition-all ease-in duration-200 brightness-90 hover:brightness-100 cursor-pointer"
+            src={secondLargeImage}
+            alt=""
+          />
+        </div>
+      </div>
       <div className="flex justify-center w-full">
         <button
           onClick={() => setShowImages(!showImage)}

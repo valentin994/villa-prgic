@@ -16,6 +16,7 @@ import { useEffect, useState } from "react";
 import "../calendar.css";
 import emailjs from "@emailjs/browser";
 import ImageGalleryDesktop from "../Components/ImageGalleryDesktop";
+import FormTemplate from "../Components/FormTemplate";
 
 function AparmentDetails() {
   const { t } = useTranslation();
@@ -115,7 +116,7 @@ function AparmentDetails() {
 
   return (
     <div className="flex -mt-20 justify-center align-middle w-full px-1 md:px-1 mb-3">
-      <div className=" w-full  rounded-3xl">
+      <div className=" w-full rounded-3xl">
         <div className="">
           <div className="pt-24 bg-blue-600 rounded-[40px] py-4 mb-2">
             <p className="text-3xl md:text-3xl text-gray-50 text-center font-extrabold">
@@ -126,91 +127,54 @@ function AparmentDetails() {
             </p>
           </div>
           <div>
-            <div className=" md:px-48">
-                <ImageGallery imageUrls={allImages} />
-                <ImageGalleryDesktop
-                  firstLargeImage={firstImage}
-                  firstImageList={firstGridImageList}
-                  secondLargeImage={secondImage}
-                  secondImageList={secondGridImageList}
-                />
+            <div className="">
+              <ImageGallery imageUrls={allImages} />
+              <ImageGalleryDesktop
+                firstLargeImage={firstImage}
+                firstImageList={firstGridImageList}
+                secondLargeImage={secondImage}
+                secondImageList={secondGridImageList}
+              />
             </div>
           </div>
-          <div className="flex pt-2 md:pt-0 flex-col md:flex-row justify-center md:justify-between gap-2">
-            <form
-              onSubmit={sendEmail}
-              className="flex flex-col bg-white px-8 rounded-xl py-14 md:py-0 w-full justify-center"
-            >
-              <label htmlFor="name" className="text-gray-700 font-bold">
-                Ime
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="border-0 border-b-2 rounded-md px-0 text-gray-600 focus:ring-0"
-              />
-
-              <label
-                htmlFor="email"
-                className="pt-2 md:pt-8 text-gray-700 font-bold"
-              >
-                email
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="border-0 border-b-2 rounded-md px-0 text-gray-600 focus:ring-0"
-              />
-              <label
-                htmlFor="message"
-                className="pt-2 md:pt-8 text-gray-700 font-bold"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                className="border rounded-md"
-                rows={3}
-              />
-              <div className="pt-4">
-                <button
-                  type="submit"
-                  className="py-3 px-5 text-sm font-medium text-center text-gray-50 rounded-lg bg-blue-500 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300"
-                >
-                  Send message
-                </button>
-              </div>
-            </form>
+          <div className="flex px-1 pt-2 md:pt-0 flex-col md:flex-row justify-center md:justify-between gap-2">
             {showPopUp && (
               <div className="fixed top-4 left-1/2 -translate-x-1/2 bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg transition-opacity duration-300">
                 Please enter a valid date!
               </div>
             )}
-
-            <DateRangePicker
-              disabledDates={disabledDates}
-              ranges={range}
-              onChange={(item) => setRange([item.selection])}
-              staticRanges={[]}
-              moveRangeOnFirstSelection={false}
-              showDateDisplay={false}
-              showSelectionPreview={true}
-              months={1}
-              direction="horizontal"
-              minDate={new Date()}
-            />
+            <div className="md:hidden">
+              <DateRangePicker
+                disabledDates={disabledDates}
+                ranges={range}
+                onChange={(item) => setRange([item.selection])}
+                staticRanges={[]}
+                moveRangeOnFirstSelection={false}
+                showDateDisplay={false}
+                showSelectionPreview={true}
+                months={1}
+                direction="horizontal"
+                minDate={new Date()}
+              />
+            </div>
+            <FormTemplate range={range} />
+            <div className="hidden md:block">
+              <DateRangePicker
+                disabledDates={disabledDates}
+                ranges={range}
+                onChange={(item) => setRange([item.selection])}
+                staticRanges={[]}
+                moveRangeOnFirstSelection={false}
+                showDateDisplay={false}
+                showSelectionPreview={true}
+                months={2}
+                direction="horizontal"
+                minDate={new Date()}
+              />
+            </div>
           </div>
-          <div>
-            <div className="grid text-gray-600 grid-cols-1 md:grid-cols-3 p-4 bg-white rounded-3xl my-2">
+          <div className="px-1 my-8">
+            <div className="grid shadow text-gray-600 grid-cols-1 md:grid-cols-3 p-4 bg-white rounded-3xl my-2">
               <div className="">
                 <div className="flex justify-center p-2">
                   <img className="p-2" src={LocationSvg} alt="Location" />
