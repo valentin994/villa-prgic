@@ -15,6 +15,16 @@ i18n
       en: {
         translation: {
           navigation: ["home", "apartments", "region", "contact"],
+          desc: [
+            "A three bedroom apartment for six people",
+            "A two bedroom apartment for four people",
+            "A one bedroom apartment for two people",
+          ],
+          summary: [
+            "This spacious 3-bedroom apartment offers comfortable living with a well-equipped kitchen, a private balcony for outdoor relaxation, and access to a refreshing pool for leisure. Additionally, it includes a modern bathroom for convenience, making it an ideal choice for those seeking a comfortable and enjoyable living space.",
+            "This inviting two-bedroom apartment provides a cozy living space with a functional kitchen, a private balcony for outdoor enjoyment, and access to a communal pool for recreation. With two comfortable bedrooms, it's perfect for a small family or roommates seeking a convenient and comfortable place to call home.",
+            "This charming one-bedroom apartment offers a cozy living environment with a well-appointed kitchen, a private balcony for personal relaxation, and access to communal amenities like a pool. Ideal for singles or couples, it provides a convenient and comfortable living space for those looking for a smaller, more intimate home.",
+          ],
           hero: {
             part1: "Find your ideal stay",
             part2: "Ideal stay",
@@ -88,6 +98,16 @@ i18n
       de: {
         translation: {
           navigation: ["startseite", "wohnungen", "region", "kontakt"],
+          desc: [
+            "Eine Drei-Zimmer-Wohnung für sechs Personen",
+            "Eine Zwei-Zimmer-Wohnung für vier Personen",
+            "Eine Ein-Zimmer-Wohnung für zwei Personen",
+          ],
+          summary: [
+            "Diese geräumige 3-Zimmer-Wohnung bietet komfortables Wohnen mit einer gut ausgestatteten Küche, einem privaten Balkon zur Entspannung im Freien und Zugang zu einem erfrischenden Pool zur Freizeitgestaltung. Zusätzlich verfügt sie über ein modernes Badezimmer für Bequemlichkeit – ideal für alle, die ein angenehmes und komfortables Zuhause suchen.",
+            "Diese einladende Zwei-Zimmer-Wohnung bietet einen gemütlichen Wohnraum mit einer funktionalen Küche, einem privaten Balkon zum Genießen im Freien und Zugang zu einem Gemeinschaftspool zur Erholung. Mit zwei komfortablen Schlafzimmern ist sie perfekt für eine kleine Familie oder Mitbewohner geeignet, die ein praktisches und bequemes Zuhause suchen.",
+            "Diese charmante Ein-Zimmer-Wohnung bietet ein gemütliches Wohnumfeld mit einer gut ausgestatteten Küche, einem privaten Balkon zur persönlichen Entspannung und Zugang zu gemeinschaftlichen Annehmlichkeiten wie einem Pool. Ideal für Singles oder Paare, bietet sie ein praktisches und komfortables Zuhause für alle, die ein kleineres, intimeres Heim suchen.",
+          ],
           hero: {
             part1: "Finden Sie Ihren idealen Aufenthalt",
             part2: "idealen Aufenthalt",
@@ -161,6 +181,16 @@ i18n
       hr: {
         translation: {
           navigation: ["početna", "apartmani", "regija", "kontakt"],
+          desc: [
+            "Trosoban apartman za šest osoba",
+            "Dvosoban apartman za četiri osobe",
+            "Jednosoban apartman za dvije osobe",
+          ],
+          summary: [
+            "Ovaj prostrani trosobni stan nudi udoban život s dobro opremljenom kuhinjom, privatnim balkonom za opuštanje na otvorenom i pristupom osvježavajućem bazenu za razonodu. Također uključuje moderno kupatilo za dodatnu udobnost, što ga čini idealnim izborom za one koji traže ugodan i udoban dom.",
+            "Ovaj ugodan dvosobni stan pruža topao životni prostor s funkcionalnom kuhinjom, privatnim balkonom za uživanje na otvorenom i pristupom zajedničkom bazenu za rekreaciju. S dvije udobne spavaće sobe, savršen je za manju obitelj ili cimere koji traže praktičan i ugodan dom.",
+            "Ovaj šarmantni jednosobni stan nudi ugodno životno okruženje s dobro opremljenom kuhinjom, privatnim balkonom za osobno opuštanje i pristupom zajedničkim sadržajima poput bazena. Idealan za samce ili parove, pruža praktičan i udoban životni prostor za one koji traže manji i intimniji dom.",
+          ],
           hero: {
             part1: "Za vas odmor iz snova",
             part2: "idealni smjestaj",

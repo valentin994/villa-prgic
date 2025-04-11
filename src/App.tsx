@@ -3,13 +3,13 @@ import { Routes, Route } from "react-router-dom";
 import Nav from "./UI/Nav";
 import Home from "./UI/Home";
 import Apartments from "./UI/Apartments";
-import AparmentDetails from "./Components/ApartmentDetails";
-import Region from "./Components/Region";
-import Contact from "./Components/Contact";
+import AparmentDetails from "./UI/ApartmentDetails";
+import Region from "./UI/Region";
+import Contact from "./UI/Contact";
 import NoPage from "./UI/NoPage";
 import Footer from "./UI/Footer";
 import Faq from "./UI/Faq";
-import Impressum from "./Components/Impressum";
+import Impressum from "./UI/Impressum";
 
 function App() {
   return (
