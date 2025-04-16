@@ -60,17 +60,33 @@ function Contact() {
         facebook, mobile or whatsapp
       </p>
       <div className="flex justify-center px-8 pb-4">
-        <FontAwesomeIcon
-          className="text-3xl p-2 text-blue-500"
-          icon={faWhatsapp}
-        />
-        <FontAwesomeIcon
-          className="text-3xl p-2 text-blue-500"
-          icon={faFacebook}
-        />
+        <a target="_blank" rel="noreferrer" href="https://wa.me/00385958203771">
+          <FontAwesomeIcon
+            className="text-3xl p-2 text-blue-500"
+            icon={faWhatsapp}
+          />
+        </a>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.facebook.com/villaprgic"
+        >
+          <FontAwesomeIcon
+            className="text-3xl p-2 text-blue-500"
+            icon={faFacebook}
+          />
+        </a>
       </div>
       <div className="mb-8">
-        <iframe width="100%" height="400" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2894.33288389299!2d16.00102337624065!3d43.49539076262299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133517bf5dacedd5%3A0x56b213f83599aa72!2sApartmani%20Prgi%C4%87!5e0!3m2!1shr!2shr!4v1744375535033!5m2!1shr!2shr" style={{border: "none"}} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          title="Villa Prgic on the map"
+          width="100%"
+          height="400"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2894.33288389299!2d16.00102337624065!3d43.49539076262299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133517bf5dacedd5%3A0x56b213f83599aa72!2sApartmani%20Prgi%C4%87!5e0!3m2!1shr!2shr!4v1744375535033!5m2!1shr!2shr"
+          style={{ border: "none" }}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </section>
   );
