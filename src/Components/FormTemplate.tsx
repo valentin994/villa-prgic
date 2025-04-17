@@ -6,7 +6,7 @@ function FormTemplate({ range }: { range: any[] }) {
   let endDate = `${range[0].endDate.getDate()}/${range[0].endDate.getMonth()}/${range[0].endDate.getFullYear()}`;
 
   return (
-    <div className="bg-blue-600 shadow rounded-[40px] mt-3  px-12 py-14 text-gray-50 flex flex-col gap-4 w-full">
+    <div className="bg-blue-600 shadow rounded-[40px]   px-12 py-14 text-gray-50 flex flex-col gap-4 w-full">
       <div className="font-bold md:hidden">
         <h1 className="text-3xl">{t("cta.part1")}</h1>
         <h1 className="text-3xl">{t("cta.part2")}</h1>
@@ -47,16 +47,22 @@ function FormTemplate({ range }: { range: any[] }) {
       </div>
       <div className="flex flex-col gap-2">
         <p className="text-sm">Message</p>
-        <div className="">
+        <div className="md:flex gap-4">
           <textarea
             rows={3}
             className="bg-transparent w-full border-b-2 focus:border-b-white text-xl placeholder:text-xl placeholder:text-gray-400 focus:outline-none"
             placeholder="Hello, we are interested..."
             datatype="email"
           />
+
+          <div className="bg-gray-50 whitespace-nowrap my-auto text-blue-600 hidden rounded-xl md:inline text-2xl">
+            <button className="py-4 px-3  font-semibold">
+              {t("cta.sendI")}
+            </button>
+          </div>
         </div>
       </div>
-      <div className="text-2xl text-center md:hidden bg-gray-200 text-blue-500  rounded-xl my-auto ">
+      <div className="text-2xl text-center md:hidden bg-gray-50 text-blue-500  rounded-xl my-auto ">
         <button className=" py-4 px-2 md:px-6 md:py-8 font-semibold">
           {t("cta.sendI")}
         </button>

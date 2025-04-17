@@ -143,7 +143,7 @@ function AparmentDetails() {
                 Please enter a valid date!
               </div>
             )}
-            <div className="md:hidden">
+            <div className="md:hidden flex justify-center">
               <DateRangePicker
                 disabledDates={disabledDates}
                 ranges={range}
@@ -173,7 +173,7 @@ function AparmentDetails() {
               />
             </div>
           </div>
-          <div className="px-1 my-8">
+          <div className="px-1 mb-4 md:my-8">
             <div className="grid shadow text-gray-600 grid-cols-1 md:grid-cols-3 p-4 bg-white rounded-3xl my-2">
               <div className="">
                 <div className="flex justify-center p-2">

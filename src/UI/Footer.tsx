@@ -130,9 +130,6 @@ function Footer() {
             <li className="hover:underline">
               <NavLink to="/impressum">IMPRESSUM</NavLink>
             </li>
-            <li className="hover:underline">
-              <NavLink to="/faq">F.A.Q.</NavLink>
-            </li>
           </ul>
         </div>
 

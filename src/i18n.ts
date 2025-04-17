@@ -93,6 +93,47 @@ i18n
               ],
             },
           },
+          region: {
+            heading: "Discover Croatia",
+            dSplit: "Discover Split: The Heart of the Dalmatian Coast",
+            splitInfo:
+              "Nestled on Croatia’s stunning Dalmatian coast, Split is a city where ancient history meets modern Mediterranean life. As the country’s second-largest city, it boasts a perfect blend of culture, history, and vibrant seaside charm. With its UNESCO-listed Old Town, crystal-clear Adriatic waters, and lively atmosphere, Split is a must-visit destination. Top Attractions in Split",
+            attractions: "Top attractions in Split",
+            dPalace: "Diocletian’s Palace 🏛️",
+            dPalaceInfo:
+              "The centerpiece of Split, Diocletian’s Palace, was built in the 4th century by the Roman Emperor Diocletian. Today, this massive ancient structure forms the heart of the Old Town, with narrow alleys, charming cafés, and historic landmarks hidden within its walls.",
+            riva: "Riva Promenade 🌊",
+            rivaInfo:
+              "The centerpiece of Split, Diocletian’s Palace, was built in the 4th century by the Roman Emperor Diocletian. Today, this massive ancient structure forms the heart of the Old Town, with narrow alleys, charming cafés, and historic landmarks hidden within its walls.",
+            marjan: "Marjan Hill 🌿",
+            marjanInfo:
+              "The centerpiece of Split, Diocletian’s Palace, was built in the 4th century by the Roman Emperor Diocletian. Today, this massive ancient structure forms the heart of the Old Town, with narrow alleys, charming cafés, and historic landmarks hidden within its walls.",
+            bacvice: "Bacvice Beach 🏖️",
+            bacviceInfo:
+              "The centerpiece of Split, Diocletian’s Palace, was built in the 4th century by the Roman Emperor Diocletian. Today, this massive ancient structure forms the heart of the Old Town, with narrow alleys, charming cafés, and historic landmarks hidden within its walls.",
+            mestrovic: "Mestrovic Gallery 🎨",
+            mestrovicInfo:
+              "The centerpiece of Split, Diocletian’s Palace, was built in the 4th century by the Roman Emperor Diocletian. Today, this massive ancient structure forms the heart of the Old Town, with narrow alleys, charming cafés, and historic landmarks hidden within its walls.",
+            rogoznica: "Rogoznica: A Hidden Gem on the Dalmatian Coast",
+            rogoznicaInfo:
+              "Located between Split and Šibenik, Rogoznica is a charming seaside town known for its pristine beaches, crystal-clear waters, and a laid-back Mediterranean vibe. Unlike larger tourist hotspots, Rogoznica offers a peaceful retreat with stunning natural beauty, traditional Dalmatian charm, and plenty of activities for visitors.",
+            rAttractions: "Top Attractions in Rogoznica",
+            marina: "Marina Frapa ⛵",
+            marinaInfo:
+              "One of the most beautiful marinas in the Adriatic, Marina Frapa is the heart of Rogoznica’s social and nightlife scene. It’s a top destination for yachters and visitors looking to enjoy waterfront restaurants, bars, and luxury amenities.",
+            dragon: "Dragon’s Eye Lake (Zmajevo Oko) 🌊",
+            dragonInfo:
+              "This natural saltwater lake is surrounded by cliffs and filled with legends. Locals say the lake has mysterious properties, and its waters change color due to unique biological activity. It’s a great spot for swimming and cliff diving.",
+            oldTown: "Rogoznica Old Town 🏡",
+            oldTownInfo:
+              "Strolling through Rogoznica’s old stone streets, you’ll find charming houses, cozy cafés, and a traditional Dalmatian atmosphere. The town retains its fishing village feel, offering a glimpse into authentic Croatian coastal life.",
+            promenada: "Promenade & Beaches 🏖️",
+            promenadaInfo:
+              "The town boasts a beautiful seaside promenade, perfect for sunset walks, lined with bars and restaurants. Nearby, you'll find stunning pebble and rocky beaches like Šepurina Beach and Miline Beach, known for their crystal-clear waters and family-friendly environment.",
+            planka: "Cape Planka 🌅",
+            plankaInfo:
+              "The southernmost point of Rogoznica, Cape Planka, is where winds and sea currents collide, creating dramatic waves and stunning views. It’s a historical place, mentioned in ancient maritime records.",
+          },
         },
       },
       de: {
@@ -176,6 +217,48 @@ i18n
               ],
             },
           },
+          region: {
+            heading: "Entdecke Kroatien",
+            dSplit: "Entdecke Split: Das Herz der dalmatinischen Küste",
+            splitInfo:
+              "Eingebettet an Kroatiens atemberaubender dalmatinischer Küste ist Split eine Stadt, in der antike Geschichte auf modernes mediterranes Leben trifft. Als zweitgrößte Stadt des Landes bietet sie eine perfekte Mischung aus Kultur, Geschichte und lebendigem Küstencharme. Mit ihrer zum UNESCO-Weltkulturerbe gehörenden Altstadt, dem kristallklaren Adriatischen Meer und ihrer lebhaften Atmosphäre ist Split ein absolutes Muss für jeden Besucher.",
+            attractions: "Top-Sehenswürdigkeiten in Split",
+            dPalace: "Diokletianspalast 🏛️",
+            dPalaceInfo:
+              "Das Herzstück von Split ist der Diokletianspalast, der im 4. Jahrhundert vom römischen Kaiser Diokletian erbaut wurde. Heute bildet dieser riesige antike Bau das Zentrum der Altstadt, mit engen Gassen, charmanten Cafés und historischen Sehenswürdigkeiten, die sich in seinen Mauern verbergen.",
+            riva: "Riva-Promenade 🌊",
+            rivaInfo:
+              "Ein lebendiger Treffpunkt direkt am Meer – die Riva ist ideal zum Flanieren, Leute beobachten oder einfach einen Kaffee mit Aussicht zu genießen.",
+            marjan: "Marjan-Hügel 🌿",
+            marjanInfo:
+              "Ein grünes Paradies mit Wanderwegen, atemberaubender Aussicht über die Stadt und versteckten Buchten – perfekt für Naturliebhaber.",
+            bacvice: "Strand Bačvice 🏖️",
+            bacviceInfo:
+              "Ein beliebter Stadtstrand, bekannt für seinen feinen Sand, das klare Wasser und das traditionelle Ballspiel „Picigin“.",
+            mestrovic: "Mestrovic-Galerie 🎨",
+            mestrovicInfo:
+              "Ein Museum, das dem berühmten kroatischen Bildhauer Ivan Meštrović gewidmet ist, mit eindrucksvollen Kunstwerken und herrlichem Blick auf die Küste.",
+            rogoznica:
+              "Rogoznica: Ein verstecktes Juwel an der dalmatinischen Küste",
+            rogoznicaInfo:
+              "Zwischen Split und Šibenik gelegen, ist Rogoznica ein charmantes Küstenstädtchen, bekannt für seine unberührten Strände, kristallklares Wasser und entspannte mediterrane Atmosphäre. Im Gegensatz zu größeren Touristenzielen bietet Rogoznica einen ruhigen Rückzugsort mit natürlicher Schönheit, traditionellem dalmatinischen Flair und vielen Aktivitäten für Besucher.",
+            rAttractions: "Top-Sehenswürdigkeiten in Rogoznica",
+            marina: "Marina Frapa ⛵",
+            marinaInfo:
+              "Eine der schönsten Marinas an der Adria – das Herz des Nachtlebens von Rogoznica mit Restaurants, Bars und luxuriösen Annehmlichkeiten direkt am Wasser.",
+            dragon: "Drachenaugensee (Zmajevo Oko) 🌊",
+            dragonInfo:
+              "Ein natürlicher Salzwassersee mit mysteriösen Legenden. Das Wasser ändert seine Farbe – perfekt zum Schwimmen und Klippenspringen.",
+            oldTown: "Altstadt Rogoznica 🏡",
+            oldTownInfo:
+              "Spazieren Sie durch enge Gassen mit traditionellen Steinhäusern, Cafés und dalmatinischer Authentizität.",
+            promenada: "Promenade & Strände 🏖️",
+            promenadaInfo:
+              "Wunderschöne Küstenpromenade für romantische Spaziergänge, mit nahegelegenen Stränden wie Šepurina und Miline, ideal für Familien.",
+            planka: "Kap Planka 🌅",
+            plankaInfo:
+              "Der südlichste Punkt von Rogoznica, bekannt für seine dramatischen Wellen und geschichtliche Bedeutung in alten Seefahrtsberichten.",
+          },
         },
       },
       hr: {
@@ -258,6 +341,48 @@ i18n
                 "Hladnjak",
               ],
             },
+          },
+
+          region: {
+            heading: "Otkrijte Hrvatsku",
+            dSplit: "Otkrijte Split: Srce Dalmacije",
+            splitInfo:
+              "Smješten na zadivljujućoj dalmatinskoj obali, Split je grad u kojem se drevna povijest susreće s modernim mediteranskim životom. Kao drugi najveći grad u Hrvatskoj, nudi savršen spoj kulture, povijesti i živahnog obalnog šarma. S povijesnom jezgrom pod zaštitom UNESCO-a, kristalno čistim Jadranskim morem i živopisnom atmosferom, Split je destinacija koju morate posjetiti.",
+            attractions: "Najpoznatije atrakcije u Splitu",
+            dPalace: "Dioklecijanova palača 🏛️",
+            dPalaceInfo:
+              "Središte Splita čini Dioklecijanova palača, izgrađena u 4. stoljeću od strane rimskog cara Dioklecijana. Danas ovaj golemi antički kompleks čini srce stare gradske jezgre, s uskim uličicama, šarmantnim kafićima i povijesnim znamenitostima skrivenim unutar zidina.",
+            riva: "Riva – gradska šetnica 🌊",
+            rivaInfo:
+              "Živahno mjesto uz more idealno za šetnju, kavu i promatranje prolaznika uz predivan pogled na more.",
+            marjan: "Brdo Marjan 🌿",
+            marjanInfo:
+              "Zeleni raj s brojnim stazama za šetnju i biciklizam te nevjerojatnim pogledom na grad i more – omiljeno mjesto za bijeg u prirodu.",
+            bacvice: "Plaža Bačvice 🏖️",
+            bacviceInfo:
+              "Najpoznatija gradska plaža s plićakom i finim pijeskom, savršena za kupanje i igru „picigin“.",
+            mestrovic: "Galerija Meštrović 🎨",
+            mestrovicInfo:
+              "Muzej posvećen slavnom hrvatskom kiparu Ivanu Meštroviću, s impresivnim djelima i pogledom na more.",
+            rogoznica: "Rogoznica: Skriveni dragulj Dalmacije",
+            rogoznicaInfo:
+              "Smještena između Splita i Šibenika, Rogoznica je šarmantni obalni gradić poznat po netaknutim plažama, kristalno čistom moru i opuštenoj mediteranskoj atmosferi. Za razliku od većih turističkih središta, Rogoznica nudi mirno utočište s prirodnim ljepotama, tradicionalnim dalmatinskim ugođajem i mnoštvom aktivnosti za posjetitelje.",
+            rAttractions: "Najpoznatije atrakcije u Rogoznici",
+            marina: "Marina Frapa ⛵",
+            marinaInfo:
+              "Jedna od najljepših marina na Jadranu – središte društvenog i noćnog života Rogoznice, s restoranima, barovima i luksuznim sadržajima.",
+            dragon: "Zmajevo Oko 🌊",
+            dragonInfo:
+              "Prirodno slano jezero okruženo stijenama, puno legendi. Voda mijenja boju, a jezero je popularno za kupanje i skakanje.",
+            oldTown: "Stari grad Rogoznica 🏡",
+            oldTownInfo:
+              "Šetnja kamenim ulicama starog grada otkriva šarmantne kuće, kafiće i autentičan dalmatinski duh.",
+            promenada: "Šetnica i plaže 🏖️",
+            promenadaInfo:
+              "Prekrasna šetnica uz more idealna za zalaske sunca. U blizini se nalaze plaže poput Šepurine i Miline, poznate po kristalno čistom moru.",
+            planka: "Rt Planka 🌅",
+            plankaInfo:
+              "Najjužnija točka Rogoznice, gdje se susreću vjetrovi i morski struje. Mjesto s bogatom pomorskom poviješću i spektakularnim pogledima.",
           },
         },
       },

@@ -12,6 +12,7 @@
 
 @media (max-width: 768px) {
   .rdrCalendarWrapper {
+    border-width: 2px;
     font-size: 13px !important; /* Adjust font size for mobile */
   }
 }
