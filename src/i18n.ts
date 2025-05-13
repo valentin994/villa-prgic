@@ -154,7 +154,7 @@ i18n
             part2: "idealen Aufenthalt",
           },
           apartman: "Wohnung",
-          istrazi: "Erkunden",
+          istrazi: "Erkunde",
           cta: {
             part1: "vollständiger Name",
             part2: "idealen",

@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 function Footer() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const navLinks = ["/", "/apartments", "/region", "/contact"];
   const navigationLinks = t("navigation", { returnObjects: true }) as string[];

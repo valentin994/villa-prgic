@@ -36,7 +36,7 @@ function ImageGalleryDesktop({
       </div>
 
       <div
-        className={`pt-2 md:grid md:grid-cols-2 gap-2 overflow-hidden transition-all ease-in duration-500 ${showImage ? "max-h-0" : "max-h-svh"}`}
+        className={`pt-2 md:grid md:grid-cols-2 gap-2 overflow-hidden transition-all ease-in duration-500 ${showImage ? "max-h-0" : "max-h-svh pb-2"}`}
       >
         <div className="hidden md:grid gap-2 grid-cols-2">
           {secondImageList.map((image, index) => (
@@ -49,7 +49,7 @@ function ImageGalleryDesktop({
             </div>
           ))}
         </div>
-        <div className="">
+        <div>
           <img
             className="h-full max-w-full shadow-xl border rounded-xl transform transition-all ease-in duration-200 brightness-90 hover:brightness-100 cursor-pointer"
             src={secondLargeImage}
@@ -60,7 +60,7 @@ function ImageGalleryDesktop({
       <div className="flex justify-center w-full">
         <button
           onClick={() => setShowImages(!showImage)}
-          className={`px-4 hidden md:block shadow brightness-90 hover:brightness-100 text-gray-600 font-bold absolute bottom-5 bg-white rounded-xl transition-all duration-300 ease-in`}
+          className={`${showImage ? "md:block absolute" : "hidden"} px-4  shadow brightness-90 hover:brightness-100 text-gray-600 font-bold  bottom-5 bg-white rounded-xl transition-all duration-300 ease-in`}
         >
           Show More Images
         </button>
