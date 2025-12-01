@@ -11,13 +11,13 @@ i18n
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
-    resources: {
+resources: {
       en: {
         translation: {
           navigation: ["home", "apartments", "region", "contact"],
           desc: [
+            "A one bedroom apartment for two plus two people",
             "A three bedroom apartment for six people",
-            "A two bedroom apartment for four people",
             "A one bedroom apartment for two people",
           ],
           summary: [
@@ -51,8 +51,8 @@ i18n
             welcome: "Welcome",
             welcomeInfo:
               "Our charming house offers three comfortable apartments, each thoughtfully designed to feel like home. Whether you’re looking for a one-bedroom retreat or more space to share, you’ll find an apartment that fits your needs.",
-            a1Info: "A three bedroom apartment for six people.",
-            a2Info: "A two bedroom apartment for four people.",
+            a1Info: "A one bedroom apartment for two plus two people.",
+            a2Info: "A three bedroom apartment for six people.",
             a3Info: "A one bedroom apartment for two people.",
             details: {
               nearby: "Nearby",
@@ -99,7 +99,7 @@ i18n
             splitInfo:
               "Nestled on Croatia’s stunning Dalmatian coast, Split is a city where ancient history meets modern Mediterranean life. As the country’s second-largest city, it boasts a perfect blend of culture, history, and vibrant seaside charm. With its UNESCO-listed Old Town, crystal-clear Adriatic waters, and lively atmosphere, Split is a must-visit destination. Top Attractions in Split",
             attractions: "Top attractions in Split",
-            dPalace: "Diocletian’s Palace 🏛️",
+            dPalace: "Diocletian’s Palace 🏛",
             dPalaceInfo:
               "The centerpiece of Split, Diocletian’s Palace, was built in the 4th century by the Roman Emperor Diocletian. Today, this massive ancient structure forms the heart of the Old Town, with narrow alleys, charming cafés, and historic landmarks hidden within its walls.",
             riva: "Riva Promenade 🌊",
@@ -108,7 +108,7 @@ i18n
             marjan: "Marjan Hill 🌿",
             marjanInfo:
               "The centerpiece of Split, Diocletian’s Palace, was built in the 4th century by the Roman Emperor Diocletian. Today, this massive ancient structure forms the heart of the Old Town, with narrow alleys, charming cafés, and historic landmarks hidden within its walls.",
-            bacvice: "Bacvice Beach 🏖️",
+            bacvice: "Bacvice Beach 🏖",
             bacviceInfo:
               "The centerpiece of Split, Diocletian’s Palace, was built in the 4th century by the Roman Emperor Diocletian. Today, this massive ancient structure forms the heart of the Old Town, with narrow alleys, charming cafés, and historic landmarks hidden within its walls.",
             mestrovic: "Mestrovic Gallery 🎨",
@@ -127,7 +127,7 @@ i18n
             oldTown: "Rogoznica Old Town 🏡",
             oldTownInfo:
               "Strolling through Rogoznica’s old stone streets, you’ll find charming houses, cozy cafés, and a traditional Dalmatian atmosphere. The town retains its fishing village feel, offering a glimpse into authentic Croatian coastal life.",
-            promenada: "Promenade & Beaches 🏖️",
+            promenada: "Promenade & Beaches 🏖",
             promenadaInfo:
               "The town boasts a beautiful seaside promenade, perfect for sunset walks, lined with bars and restaurants. Nearby, you'll find stunning pebble and rocky beaches like Šepurina Beach and Miline Beach, known for their crystal-clear waters and family-friendly environment.",
             planka: "Cape Planka 🌅",
@@ -138,22 +138,22 @@ i18n
       },
       de: {
         translation: {
-          navigation: ["startseite", "wohnungen", "region", "kontakt"],
+          navigation: ["startseite", "apartments", "region", "kontakt"],
           desc: [
-            "Eine Drei-Zimmer-Wohnung für sechs Personen",
-            "Eine Zwei-Zimmer-Wohnung für vier Personen",
-            "Eine Ein-Zimmer-Wohnung für zwei Personen",
+            "Eine Zwei-Zimmer-Apartment für zwei plus zwei Personen",
+            "Eine Drei-Zimmer-Apartment für sechs Personen",
+            "Eine Ein-Zimmer-Apartment für zwei Personen",
           ],
           summary: [
-            "Diese geräumige 3-Zimmer-Wohnung bietet komfortables Wohnen mit einer gut ausgestatteten Küche, einem privaten Balkon zur Entspannung im Freien und Zugang zu einem erfrischenden Pool zur Freizeitgestaltung. Zusätzlich verfügt sie über ein modernes Badezimmer für Bequemlichkeit – ideal für alle, die ein angenehmes und komfortables Zuhause suchen.",
-            "Diese einladende Zwei-Zimmer-Wohnung bietet einen gemütlichen Wohnraum mit einer funktionalen Küche, einem privaten Balkon zum Genießen im Freien und Zugang zu einem Gemeinschaftspool zur Erholung. Mit zwei komfortablen Schlafzimmern ist sie perfekt für eine kleine Familie oder Mitbewohner geeignet, die ein praktisches und bequemes Zuhause suchen.",
-            "Diese charmante Ein-Zimmer-Wohnung bietet ein gemütliches Wohnumfeld mit einer gut ausgestatteten Küche, einem privaten Balkon zur persönlichen Entspannung und Zugang zu gemeinschaftlichen Annehmlichkeiten wie einem Pool. Ideal für Singles oder Paare, bietet sie ein praktisches und komfortables Zuhause für alle, die ein kleineres, intimeres Heim suchen.",
+            "Diese einladende ein-Zimmer-Apartment bietet einen gemütlichen Wohnraum mit einer funktionalen Küche, einem privaten Balkon zum Genießen im Freien und Zugang zu einem Gemeinschaftspool zur Erholung. Mit eine komfortablen Schlafzimmern ist sie perfekt für eine kleine Familie mit 2 Kindern bis 12 Jahre, die ein praktisches und bequemes Zuhause suchen.",
+            "Diese geräumige drei-Zimmer-Apartment bietet komfortables Wohnen mit einer gut ausgestatteten Küche, einem privaten Balkon zur Entspannung im Freien und Zugang zu einem erfrischenden Pool zur Freizeitgestaltung. Zusätzlich verfügt sie über ein modernes Badezimmer für Bequemlichkeit – ideal für alle, die ein angenehmes und komfortables Zuhause suchen.",
+            "Diese charmante ein-Zimmer-Apartment bietet ein gemütliches Wohnumfeld mit einer gut ausgestatteten Küche, einem privaten Balkon zur persönlichen Entspannung und Zugang zu gemeinschaftlichen Annehmlichkeiten wie einem Pool. Ideal für Singles oder Paare, bietet sie ein praktisches und komfortables Zuhause für alle, die ein kleineres, intimeres Heim suchen.",
           ],
           hero: {
             part1: "Finden Sie Ihren idealen Aufenthalt",
             part2: "idealen Aufenthalt",
           },
-          apartman: "Wohnung",
+          apartman: "Apartment",
           istrazi: "Erkunde",
           cta: {
             part1: "vollständiger Name",
@@ -175,8 +175,8 @@ i18n
             welcome: "Willkommen",
             welcomeInfo:
               "Unser charmantes Haus bietet drei komfortable Apartments, die alle mit viel Liebe zum Detail gestaltet wurden, damit Sie sich wie zu Hause fühlen. Ob Sie eine Einzimmer-Oase oder mehr Platz zum Teilen suchen – hier finden Sie die passende Unterkunft für Ihre Bedürfnisse.",
-            a1Info: "Ein Apartment mit drei Schlafzimmern für sechs Personen.",
-            a2Info: "Ein Apartment mit zwei Schlafzimmern für vier Personen",
+            a1Info: "Ein Apartment mit ein Schlafzimmern für zwei plus zwei Personen.",
+            a2Info: "Ein Apartment mit drei Schlafzimmern für sechs Personen",
             a3Info: "Ein Apartment mit einem Schlafzimmern für zwei Personen",
             details: {
               nearby: "In der Nähe",
@@ -223,7 +223,7 @@ i18n
             splitInfo:
               "Eingebettet an Kroatiens atemberaubender dalmatinischer Küste ist Split eine Stadt, in der antike Geschichte auf modernes mediterranes Leben trifft. Als zweitgrößte Stadt des Landes bietet sie eine perfekte Mischung aus Kultur, Geschichte und lebendigem Küstencharme. Mit ihrer zum UNESCO-Weltkulturerbe gehörenden Altstadt, dem kristallklaren Adriatischen Meer und ihrer lebhaften Atmosphäre ist Split ein absolutes Muss für jeden Besucher.",
             attractions: "Top-Sehenswürdigkeiten in Split",
-            dPalace: "Diokletianspalast 🏛️",
+            dPalace: "Diokletianspalast 🏛",
             dPalaceInfo:
               "Das Herzstück von Split ist der Diokletianspalast, der im 4. Jahrhundert vom römischen Kaiser Diokletian erbaut wurde. Heute bildet dieser riesige antike Bau das Zentrum der Altstadt, mit engen Gassen, charmanten Cafés und historischen Sehenswürdigkeiten, die sich in seinen Mauern verbergen.",
             riva: "Riva-Promenade 🌊",
@@ -232,7 +232,7 @@ i18n
             marjan: "Marjan-Hügel 🌿",
             marjanInfo:
               "Ein grünes Paradies mit Wanderwegen, atemberaubender Aussicht über die Stadt und versteckten Buchten – perfekt für Naturliebhaber.",
-            bacvice: "Strand Bačvice 🏖️",
+            bacvice: "Strand Bačvice 🏖",
             bacviceInfo:
               "Ein beliebter Stadtstrand, bekannt für seinen feinen Sand, das klare Wasser und das traditionelle Ballspiel „Picigin“.",
             mestrovic: "Mestrovic-Galerie 🎨",
@@ -252,7 +252,7 @@ i18n
             oldTown: "Altstadt Rogoznica 🏡",
             oldTownInfo:
               "Spazieren Sie durch enge Gassen mit traditionellen Steinhäusern, Cafés und dalmatinischer Authentizität.",
-            promenada: "Promenade & Strände 🏖️",
+            promenada: "Promenade & Strände 🏖",
             promenadaInfo:
               "Wunderschöne Küstenpromenade für romantische Spaziergänge, mit nahegelegenen Stränden wie Šepurina und Miline, ideal für Familien.",
             planka: "Kap Planka 🌅",
@@ -265,32 +265,32 @@ i18n
         translation: {
           navigation: ["početna", "apartmani", "regija", "kontakt"],
           desc: [
+            "Jednosoban apartman za dvije plus dvije osobe",
             "Trosoban apartman za šest osoba",
-            "Dvosoban apartman za četiri osobe",
             "Jednosoban apartman za dvije osobe",
           ],
           summary: [
-            "Ovaj prostrani trosobni stan nudi udoban život s dobro opremljenom kuhinjom, privatnim balkonom za opuštanje na otvorenom i pristupom osvježavajućem bazenu za razonodu. Također uključuje moderno kupatilo za dodatnu udobnost, što ga čini idealnim izborom za one koji traže ugodan i udoban dom.",
-            "Ovaj ugodan dvosobni stan pruža topao životni prostor s funkcionalnom kuhinjom, privatnim balkonom za uživanje na otvorenom i pristupom zajedničkom bazenu za rekreaciju. S dvije udobne spavaće sobe, savršen je za manju obitelj ili cimere koji traže praktičan i ugodan dom.",
+            "Ovaj ugodan jednosobni stan pruža topao životni prostor s funkcionalnom kuhinjom, privatnim balkonom za uživanje na otvorenom i pristupom zajedničkom bazenu za rekreaciju. S jednom udobnom spavaćom sobom, savršen je za manju obitelj sa dvoje djece do 12 godina, koji traže praktičan i ugodan dom.",
+            "Ovaj prostrani trosobni stan nudi udoban život za šest osoba s dobro opremljenom kuhinjom, privatnim balkonom za opuštanje na otvorenom i pristupom osvježavajućem bazenu za razonodu. Također uključuje moderno kupatilo za dodatnu udobnost, što ga čini idealnim izborom za one koji traže ugodan i udoban dom.",
             "Ovaj šarmantni jednosobni stan nudi ugodno životno okruženje s dobro opremljenom kuhinjom, privatnim balkonom za osobno opuštanje i pristupom zajedničkim sadržajima poput bazena. Idealan za samce ili parove, pruža praktičan i udoban životni prostor za one koji traže manji i intimniji dom.",
           ],
           hero: {
-            part1: "Za vas odmor iz snova",
-            part2: "idealni smjestaj",
+            part1: "Za vaš odmor iz snova",
+            part2: "idealni smještaj",
           },
           apartman: "Apartman",
-          istrazi: "Istrazi",
+          istrazi: "Istraži",
           cta: {
             part1: "Rezervirajte sada",
-            part2: "vas idealni",
-            part3: "smjestaj",
+            part2: "vaš idealni",
+            part3: "smještaj",
             dateA: "Puno ime",
             dateD: "Datum odlaska",
-            sendI: "Posalji upit",
+            sendI: "Pošalji upit",
           },
           hosts: {
-            your: "Vasi",
-            hosts: "Domacini",
+            your: "Vaši",
+            hosts: "Domaćini",
             anteInfo:
               "Ante je vaš ljubazan domaćin, strastven u dijeljenju ljepote svojih apartmana uz more. Kao lokalni zaljubljenik u ribolov, uvijek rado dijeli savjete ili priče o životu uz more. Ante je predan tome da vaš boravak bude ugodan i nezaboravan!",
             mirjanaInfo:
@@ -300,9 +300,9 @@ i18n
             welcome: "Dobrodošli",
             welcomeInfo:
               "Naša šarmantna kuća nudi tri udobna apartmana, svaki pažljivo dizajniran da se osjećate kao kod kuće. Bilo da tražite jednosobno utočište ili više prostora za dijeljenje, pronaći ćete apartman koji odgovara vašim potrebama.",
-            a1Info: "Apartman sa 3 spavace sobe za sestero ljudi",
-            a2Info: "Apartman sa dvije spavace sobe za cetvero ljudi",
-            a3Info: "Apartman sa jednom spavacom sobom za dvoje ljudi",
+            a1Info: "Apartman sa 3 spavaće sobe za šest osoba",
+            a2Info: "Apartman sa jednom spavaćom sobom za dvije plus dvije osobe",
+            a3Info: "Apartman sa jednom spavaćom sobom za dvoje ljudi",
             details: {
               nearby: "U blizini",
               near: [
@@ -324,7 +324,7 @@ i18n
                 "Sušilo za kosu",
               ],
               wifi: "Wifi je dostupan i besplatan na cijelom imanju",
-              bedroom: "Spavaca soba",
+              bedroom: "Spavaća soba",
               bedroomInfo: ["Posteljina", "Ormar"],
               kitchen: "Kuhinja",
               kitchenInfo: [
@@ -332,7 +332,7 @@ i18n
                 "Aparat za kavu",
                 "Sredstvo za čišćenje",
                 "Toster",
-                "Ploče za kuhanje",
+                "Ploča za kuhanje",
                 "Pećnica",
                 "Kuhinjski pribor",
                 "Kuhalo za vodu",
@@ -349,7 +349,7 @@ i18n
             splitInfo:
               "Smješten na zadivljujućoj dalmatinskoj obali, Split je grad u kojem se drevna povijest susreće s modernim mediteranskim životom. Kao drugi najveći grad u Hrvatskoj, nudi savršen spoj kulture, povijesti i živahnog obalnog šarma. S povijesnom jezgrom pod zaštitom UNESCO-a, kristalno čistim Jadranskim morem i živopisnom atmosferom, Split je destinacija koju morate posjetiti.",
             attractions: "Najpoznatije atrakcije u Splitu",
-            dPalace: "Dioklecijanova palača 🏛️",
+            dPalace: "Dioklecijanova palača 🏛",
             dPalaceInfo:
               "Središte Splita čini Dioklecijanova palača, izgrađena u 4. stoljeću od strane rimskog cara Dioklecijana. Danas ovaj golemi antički kompleks čini srce stare gradske jezgre, s uskim uličicama, šarmantnim kafićima i povijesnim znamenitostima skrivenim unutar zidina.",
             riva: "Riva – gradska šetnica 🌊",
@@ -358,7 +358,7 @@ i18n
             marjan: "Brdo Marjan 🌿",
             marjanInfo:
               "Zeleni raj s brojnim stazama za šetnju i biciklizam te nevjerojatnim pogledom na grad i more – omiljeno mjesto za bijeg u prirodu.",
-            bacvice: "Plaža Bačvice 🏖️",
+            bacvice: "Plaža Bačvice 🏖",
             bacviceInfo:
               "Najpoznatija gradska plaža s plićakom i finim pijeskom, savršena za kupanje i igru „picigin“.",
             mestrovic: "Galerija Meštrović 🎨",
@@ -377,7 +377,7 @@ i18n
             oldTown: "Stari grad Rogoznica 🏡",
             oldTownInfo:
               "Šetnja kamenim ulicama starog grada otkriva šarmantne kuće, kafiće i autentičan dalmatinski duh.",
-            promenada: "Šetnica i plaže 🏖️",
+            promenada: "Šetnica i plaže 🏖",
             promenadaInfo:
               "Prekrasna šetnica uz more idealna za zalaske sunca. U blizini se nalaze plaže poput Šepurine i Miline, poznate po kristalno čistom moru.",
             planka: "Rt Planka 🌅",
@@ -386,7 +386,7 @@ i18n
           },
         },
       },
-    },
+    }
   });
 
 export default i18n;

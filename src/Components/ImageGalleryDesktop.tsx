@@ -28,7 +28,7 @@ function ImageGalleryDesktop({
               <img
                 className="w-full shadow-xl border flex-shrink-0 object-cover h-full rounded-2xl transform transition-all ease-in duration-200 brightness-90 hover:brightness-100 cursor-pointer"
                 src={image}
-                alt="Slide ${index}"
+                alt={`Slide ${index}`}
               />
             </div>
           ))}
@@ -44,7 +44,7 @@ function ImageGalleryDesktop({
               <img
                 className="w-full shadow-xl border flex-shrink-0 object-cover h-full rounded-2xl transform transition-all ease-in duration-200 brightness-90 hover:brightness-100 cursor-pointer"
                 src={image}
-                alt="Slide ${index}"
+                alt={`Slide ${index}`}
               />
             </div>
           ))}
@@ -57,7 +57,7 @@ function ImageGalleryDesktop({
           />
         </div>
       </div>
-      <div className="flex justify-center w-full">
+      <div className="hidden md:flex justify-center w-full">
         <button
           onClick={() => setShowImages(!showImage)}
           className={`${showImage ? "md:block absolute" : "hidden"} px-4  shadow brightness-90 hover:brightness-100 text-gray-600 font-bold  bottom-5 bg-white rounded-xl transition-all duration-300 ease-in`}
