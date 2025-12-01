@@ -1,19 +1,19 @@
 import { useTranslation } from "react-i18next";
-
+//TODO: Send email
 function FormTemplate({ range }: { range: any[] }) {
   const { t } = useTranslation();
   let startDate = `${range[0].startDate.getDate()}/${range[0].startDate.getMonth()}/${range[0].startDate.getFullYear()}`;
   let endDate = `${range[0].endDate.getDate()}/${range[0].endDate.getMonth()}/${range[0].endDate.getFullYear()}`;
 
   return (
-    <div className="bg-blue-600 shadow rounded-[40px]   px-12 py-14 text-gray-50 flex flex-col gap-4 w-full">
+    <div className="bg-blue-600 shadow rounded-[40px] px-12 py-14 text-gray-50 flex flex-col justify-between gap-4 w-full">
       <div className="font-bold md:hidden">
         <h1 className="text-3xl">{t("cta.part1")}</h1>
         <h1 className="text-3xl">{t("cta.part2")}</h1>
         <h1 className="text-3xl underline">{t("cta.part3")}.</h1>
       </div>
       <div className="flex flex-col md:flex-row gap-4">
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 w-full">
           <p className="text-sm">
             {t("cta.dateA")} <span className="text-red-500">*</span>
           </p>
@@ -25,7 +25,7 @@ function FormTemplate({ range }: { range: any[] }) {
             />
           </div>
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 w-full">
           <p className="text-sm">
             email <span className="text-red-500">*</span>
           </p>

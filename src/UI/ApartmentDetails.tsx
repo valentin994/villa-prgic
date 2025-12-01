@@ -157,6 +157,7 @@ function AparmentDetails() {
                 minDate={new Date()}
               />
             </div>
+            <div className="flex gap-8 justify-center w-full md:pt-8 md:px-8">
             <FormTemplate range={range} />
             <div className="hidden md:block">
               <DateRangePicker
@@ -167,10 +168,11 @@ function AparmentDetails() {
                 moveRangeOnFirstSelection={false}
                 showDateDisplay={false}
                 showSelectionPreview={true}
-                months={2}
+                months={1}
                 direction="horizontal"
                 minDate={new Date()}
               />
+            </div>
             </div>
           </div>
           <div className="px-1 mb-4 md:my-8">
