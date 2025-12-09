@@ -343,6 +343,7 @@ resources: {
             },
           },
 
+
           region: {
             heading: "Otkrijte Hrvatsku",
             dSplit: "Otkrijte Split: Srce Dalmacije",
