@@ -1,147 +1,265 @@
-import { NavLink } from "react-router-dom";
+// Components/Footer.tsx
+import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Facebook,
+  Instagram,
+  MessageCircle,
+  Calendar,
+  Shield,
+  Star,
+  ChevronRight,
+  Heart
+} from "lucide-react";
 
 function Footer() {
   const { t } = useTranslation();
+  const currentYear = new Date().getFullYear();
 
-  const navLinks = ["/", "/apartments", "/region", "/contact"];
-  const navigationLinks = t("navigation", { returnObjects: true }) as string[];
+  const quickLinks = [
+    { path: "/", label: "Home" },
+    { path: "/apartments", label: "Apartments" },
+    { path: "/region", label: "Explore Region" },
+    { path: "/contact", label: "Contact" }
+  ];
+
+  const legalLinks = [
+    { path: "/impressum", label: "Impressum" },
+    { path: "/privacy", label: "Privacy Policy" },
+    { path: "/terms", label: "Terms & Conditions" }
+  ];
+
+  const socialLinks = [
+    { 
+      icon: Facebook, 
+      href: "https://www.facebook.com/villaprgic",
+      label: "Facebook",
+      color: "hover:bg-blue-600"
+    },
+    { 
+      icon: Instagram, 
+      href: "https://instagram.com/villaprgic",
+      label: "Instagram",
+      color: "hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-600"
+    },
+    { 
+      icon: MessageCircle, 
+      href: "https://wa.me/00385958203771",
+      label: "WhatsApp",
+      color: "hover:bg-green-600"
+    }
+  ];
 
   return (
-    <div className="-mt-6 text-sm py-2 px-1 md:px-2  bg-blue-600">
-      <div className="flex flex-col md:flex-row rounded-3xl justify-center md:justify-between py-8 px-8 md:px-20 gap-4 md:gap-8 text-gray-50 text-base">
-        <div className="flex flex-col justify-center">
-          <NavLink to={"/"} className="text-3xl md:text-3xl font-lux">
-            Villa Prgic
-          </NavLink>
-        </div>
-        <div className="flex flex-col justify-center">
-          <div className="flex md:justify-center gap-2 ">
-            <div className="w-5">
-              <svg
-                fill="#ffffff"
-                viewBox="0 0 32 32"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  {" "}
-                  <path d="M16.114-0.011c-6.559 0-12.114 5.587-12.114 12.204 0 6.93 6.439 14.017 10.77 18.998 0.017 0.020 0.717 0.797 1.579 0.797h0.076c0.863 0 1.558-0.777 1.575-0.797 4.064-4.672 10-12.377 10-18.998 0-6.618-4.333-12.204-11.886-12.204zM16.515 29.849c-0.035 0.035-0.086 0.074-0.131 0.107-0.046-0.032-0.096-0.072-0.133-0.107l-0.523-0.602c-4.106-4.71-9.729-11.161-9.729-17.055 0-5.532 4.632-10.205 10.114-10.205 6.829 0 9.886 5.125 9.886 10.205 0 4.474-3.192 10.416-9.485 17.657zM16.035 6.044c-3.313 0-6 2.686-6 6s2.687 6 6 6 6-2.687 6-6-2.686-6-6-6zM16.035 16.044c-2.206 0-4.046-1.838-4.046-4.044s1.794-4 4-4c2.207 0 4 1.794 4 4 0.001 2.206-1.747 4.044-3.954 4.044z"></path>{" "}
-                </g>
-              </svg>
+    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+      {/* Newsletter Section */}
+      <div className="border-b border-gray-700">
+        <div className="max-w-7xl mx-auto px-6 py-12">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+            <div>
+              <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
+              <p className="text-gray-400">Get exclusive offers and travel tips</p>
             </div>
-            <p className="text-sm md:text-md">Kanica 44, 10294, Primosten</p>
-          </div>
-          <div className="flex md:justify-center gap-4 pt-2">
-            <div className="flex gap-2">
-              <div className="w-5 ">
-                <svg
-                  fill="#ffffff"
-                  version="1.1"
-                  id="Layer_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  enableBackground="new 0 0 512 512"
-                >
-                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    {" "}
-                    <path d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256S397.391,0,256,0z M256,472 c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z"></path>{" "}
-                    <path d="M327.125,383.969c5.703,0.016,56.875-37.828,56.875-42.656s-57.266-40.906-62.219-40.906s-21.578,19.938-26.062,22.156 c-4.5,2.219-32.5,1.422-63.703-29.781c-31.219-31.188-41.875-67.109-41.875-72.75s26.031-23.062,26.75-27.156 S182.578,128,176.891,128S128,180.5,128,184.875s3.953,60.656,75.219,131.906S321.422,383.938,327.125,383.969z"></path>{" "}
-                  </g>
-                </svg>
-              </div>
-              <a
-                href="https://wa.me/00385958203771"
-                rel="noreferrer"
-                target="_blank"
+            <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+              <input
+                type="email"
+                placeholder="Your email address"
+                className="px-6 py-3 bg-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-1 lg:w-80"
+              />
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-200"
               >
-                098123456
-              </a>
-            </div>
-            <a
-              href="https://www.facebook.com/villaprgic"
-              rel="noreferrer"
-              target="_blank"
-              className="w-6"
-            >
-              <svg
-                fill="#ffffff"
-                viewBox="0 0 32 32"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path d="M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004 9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z"></path>
-                </g>
-              </svg>
-            </a>
-            <div className="w-6">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  {" "}
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
-                    fill="#ffffff"
-                  ></path>{" "}
-                  <path
-                    d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
-                    fill="#ffffff"
-                  ></path>{" "}
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
-                    fill="#ffffff"
-                  ></path>{" "}
-                </g>
-              </svg>
+                Subscribe
+              </motion.button>
             </div>
           </div>
-          <ul className="flex pt-2 md:pt-4 text-sm md:justify-center md:text-md gap-2 md:gap-8">
-            <li className="hover:underline">
-              <NavLink to="/impressum">IMPRESSUM</NavLink>
-            </li>
-          </ul>
         </div>
-
-        <ul className="hidden md:block justify-center tracking-widest gap-2 text-sm md:text-md">
-          {navigationLinks.map((link: string, index: number) => (
-            <li key={index} className="uppercase hover:text-gray-200">
-              <NavLink to={navLinks[index]}>{link}</NavLink>
-            </li>
-          ))}
-        </ul>
       </div>
-    </div>
+
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Company Info */}
+          <div>
+            <Link to="/" className="inline-block mb-6">
+              <div className="flex items-center space-x-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">V</span>
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold">Villa Prgić</h2>
+                  <p className="text-xs text-gray-400">Your home in Croatia</p>
+                </div>
+              </div>
+            </Link>
+            <p className="text-gray-400 mb-6">
+              Experience the perfect blend of comfort and Croatian coastal charm at our beautiful apartments in Kanica.
+            </p>
+            
+            {/* Trust Badges */}
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-1">
+                <Star className="w-4 h-4 text-yellow-500 fill-current" />
+                <span className="text-sm font-semibold">4.9</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <Shield className="w-4 h-4 text-green-500" />
+                <span className="text-sm text-gray-400">Verified</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <Calendar className="w-4 h-4 text-blue-500" />
+                <span className="text-sm text-gray-400">Since 2015</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
+            <ul className="space-y-3">
+              {quickLinks.map((link) => (
+                <li key={link.path}>
+                  <NavLink
+                    to={link.path}
+                    className={({ isActive }) =>
+                      `flex items-center space-x-2 text-gray-400 hover:text-white transition-colors ${
+                        isActive ? 'text-blue-400' : ''
+                      }`
+                    }
+                  >
+                    <ChevronRight className="w-4 h-4" />
+                    <span>{link.label}</span>
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
+            <ul className="space-y-4">
+              <li>
+                <a 
+                  href="https://maps.google.com/?q=Kanica+44,+10294,+Primosten"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start space-x-3 text-gray-400 hover:text-white transition-colors"
+                >
+                  <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                  <span>
+                    Kanica 44<br />
+                    10294 Primošten<br />
+                    Croatia
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="tel:+385958203771"
+                  className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors"
+                >
+                  <Phone className="w-5 h-5" />
+                  <span>+385 95 820 3771</span>
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="mailto:info@villaprgic.com"
+                  className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors"
+                >
+                  <Mail className="w-5 h-5" />
+                  <span>info@villaprgic.com</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Social & Legal */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Follow Us</h3>
+            
+            {/* Social Icons */}
+            <div className="flex space-x-3 mb-8">
+              {socialLinks.map((social) => (
+                <motion.a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className={`w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200 ${social.color}`}
+                  aria-label={social.label}
+                >
+                  <social.icon className="w-5 h-5" />
+                </motion.a>
+              ))}
+            </div>
+
+            {/* Legal Links */}
+            <div>
+              <h4 className="text-sm font-semibold text-gray-500 mb-3">Legal</h4>
+              <ul className="space-y-2">
+                {legalLinks.map((link) => (
+                  <li key={link.path}>
+                    <NavLink
+                      to={link.path}
+                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                    >
+                      {link.label}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-700">
+        <div className="max-w-7xl mx-auto px-6 py-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-gray-400 text-center md:text-left">
+              © {currentYear} Villa Prgić. All rights reserved.
+            </p>
+            
+            {/* Language Selector */}
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2 text-sm">
+                <span className="text-gray-500">Language:</span>
+                <select className="bg-transparent text-gray-400 focus:outline-none cursor-pointer hover:text-white transition-colors">
+                  <option value="en">English</option>
+                  <option value="hr">Hrvatski</option>
+                  <option value="de">Deutsch</option>
+                </select>
+              </div>
+              
+              <div className="flex items-center space-x-2 text-sm text-gray-400">
+                <span>Made with</span>
+                <Heart className="w-4 h-4 text-red-500 fill-current animate-pulse" />
+                <span>in Croatia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Decorative Wave Top */}
+      <div className="absolute top-0 left-0 right-0 pointer-events-none">
+        <svg className="w-full h-8 fill-gray-50" viewBox="0 0 1440 48" preserveAspectRatio="none">
+          <path d="M0,0L60,5.3C120,11,240,21,360,21.3C480,21,600,11,720,8C840,5,960,11,1080,16C1200,21,1320,27,1380,29.3L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z" />
+        </svg>
+      </div>
+    </footer>
   );
 }
+
 export default Footer;
