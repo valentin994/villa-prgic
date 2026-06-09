@@ -74,7 +74,7 @@ function ImageGallery({ imageUrls }: { imageUrls: string[] }) {
               key={index}
               src={img}
               alt={`Slide ${index}`}
-              className="w-full flex-shrink-0 px-1 object-cover h-full rounded-2xl"
+              className="w-full flex-shrink-0 object-cover h-full"
             />
           ))}
         </div>
