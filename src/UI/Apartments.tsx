@@ -94,12 +94,12 @@ const ApartmentCard = ({
                   <h3 className="text-2xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                     {apartment.name}
                   </h3>
-                  <p className="text-gray-600 mb-4">{apartment.detail}</p>
+                  <p className="text-gray-600 mb-4">{t(`apartments.a${apartment.link.replace('apartment_', '')}Info`)}</p>
                 </div>
                 <div className="text-right">
-                  <span className="text-sm text-gray-500">From</span>
+                  <span className="text-sm text-gray-500">{t("apartments.from")}</span>
                   <p className="text-2xl font-bold text-gray-900">€{apartment.price}</p>
-                  <span className="text-sm text-gray-500">/night</span>
+                  <span className="text-sm text-gray-500">{t("booking.perNight")}</span>
                 </div>
               </div>
               
@@ -107,11 +107,11 @@ const ApartmentCard = ({
               <div className="flex flex-wrap gap-4 mb-4">
                 <div className="flex items-center space-x-2 text-gray-600">
                   <Users className="w-5 h-5" />
-                  <span>{capacity} guests</span>
+                  <span>{capacity} {t("booking.guests")}</span>
                 </div>
                 <div className="flex items-center space-x-2 text-gray-600">
                   <BedDouble className="w-5 h-5" />
-                  <span>{bedrooms} {bedrooms === 1 ? 'bedroom' : 'bedrooms'}</span>
+                  <span>{bedrooms} {bedrooms === 1 ? t("booking.bedroom") : t("booking.bedrooms")}</span>
                 </div>
                 {apartment.features?.map((feature: string) => {
                   const Icon = featureIcons[feature];
@@ -128,7 +128,7 @@ const ApartmentCard = ({
                 className="inline-flex items-center space-x-2 text-blue-600 font-medium"
                 whileHover={{ x: 5 }}
               >
-                <span>View Details</span>
+                <span>{t("apartments.viewDetails")}</span>
                 <ArrowRight className="w-4 h-4" />
               </motion.div>
             </div>
@@ -164,9 +164,9 @@ const ApartmentCard = ({
 
           {/* Price Badge */}
           <div className="absolute top-4 right-4 px-3 py-1.5 bg-white/95 backdrop-blur-sm rounded-lg">
-            <span className="text-sm font-medium text-gray-600">From</span>
+            <span className="text-sm font-medium text-gray-600">{t("apartments.from")}</span>
             <span className="block text-lg font-bold text-gray-900">
-              €{apartment.price}/night
+              €{apartment.price}{t("booking.perNight")}
             </span>
           </div>
         </div>
@@ -178,7 +178,7 @@ const ApartmentCard = ({
           </h3>
           
           <p className="text-gray-600 mb-4 line-clamp-2">
-            {apartment.detail}
+            {t(`apartments.a${apartment.link.replace('apartment_', '')}Info`)}
           </p>
 
           {/* Features */}
@@ -202,13 +202,13 @@ const ApartmentCard = ({
           {/* CTA */}
           <div className="flex items-center justify-between">
             <span className="text-sm text-gray-500">
-              Available now
+              {t("apartments.availableNow")}
             </span>
             <motion.span
               className="flex items-center space-x-2 text-blue-600 font-medium"
               whileHover={{ x: 5 }}
             >
-              <span>View Details</span>
+              <span>{t("apartments.viewDetails")}</span>
               <ArrowRight className="w-4 h-4" />
             </motion.span>
           </div>
@@ -343,7 +343,7 @@ function Apartments() {
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
-                  placeholder="Search apartments..."
+                  placeholder={t("apartments.searchPlaceholder")}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 rounded-2xl text-gray-900 placeholder-gray-500 bg-white shadow-xl focus:outline-none focus:ring-4 focus:ring-white/30"
@@ -351,19 +351,6 @@ function Apartments() {
               </div>
             </div>
           </motion.div>
-        </div>
-        {/* Wave Divider */}
-        <div className="absolute bottom-0 left-0 right-0 h-16 overflow-hidden">
-          <svg 
-            className="absolute bottom-0 w-full h-full" 
-            viewBox="0 0 1440 48" 
-            preserveAspectRatio="none"
-          >
-            <path 
-              d="M0,48L60,42.7C120,37,240,27,360,26.7C480,27,600,37,720,40C840,43,960,37,1080,32C1200,27,1320,21,1380,18.7L1440,16L1440,48L1380,48C1320,48,1200,48,1080,48C960,48,840,48,720,48C600,48,480,48,360,48C240,48,120,48,60,48L0,48Z" 
-              fill="#f9fafb"
-            />
-          </svg>
         </div>
       </section>
 
@@ -376,7 +363,7 @@ function Apartments() {
               <p className="text-gray-600">
                 <span className="font-semibold text-gray-900">
                   {filteredApartments.length}
-                </span> apartments available
+                </span> {t("apartments.countLabel")}
               </p>
             </div>
             
@@ -388,9 +375,9 @@ function Apartments() {
                   onChange={(e) => setSortBy(e.target.value)}
                   className="appearance-none bg-gray-100 hover:bg-gray-200 px-4 py-2 pr-10 rounded-lg font-medium text-gray-700 cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
-                  <option value="featured">Featured</option>
-                  <option value="priceLow">Price: Low to High</option>
-                  <option value="priceHigh">Price: High to Low</option>
+                  <option value="featured">{t("apartments.sortFeatured")}</option>
+                  <option value="priceLow">{t("apartments.sortPriceLow")}</option>
+                  <option value="priceHigh">{t("apartments.sortPriceHigh")}</option>
                 </select>
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-600 pointer-events-none" />
               </div>

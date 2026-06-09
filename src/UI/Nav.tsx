@@ -40,17 +40,14 @@ function Nav() {
         }`}
       >
         <div className={`mx-4 lg:mx-8 rounded-2xl backdrop-blur-md transition-all duration-300 ${
-          scrolled 
-            ? 'bg-white/90 shadow-lg' 
+          scrolled
+            ? 'bg-white/90 shadow-lg'
             : 'bg-white/70'
         }`}>
           <div className="flex items-center justify-between px-6 py-4">
             {/* Logo */}
-            <NavLink to="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-xl">V</span>
-              </div>
-              <span className="font-display text-xl text-gray-900">Villa Prgić</span>
+            <NavLink to="/">
+              <span className="font-lux text-3xl text-blue-600">Villa Prgić</span>
             </NavLink>
 
             {/* Desktop Navigation */}

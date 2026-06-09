@@ -10,6 +10,8 @@ import NoPage from "./UI/NoPage";
 import Footer from "./UI/Footer";
 import Faq from "./UI/Faq";
 import Impressum from "./UI/Impressum";
+import PrivacyPolicy from "./UI/PrivacyPolicy";
+import TermsOfService from "./UI/TermsOfService";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Route path="/region" element={<Region />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/impressum" element={<Impressum />}></Route>
+        <Route path="/privacy" element={<PrivacyPolicy />}></Route>
+        <Route path="/terms" element={<TermsOfService />}></Route>
         <Route path="/faq" element={<Faq />}></Route>
         <Route path="*" element={<NoPage />}></Route>
       </Routes>

@@ -1,4 +1,5 @@
 // pages/Region.tsx - FIXED VERSION
+import regionHeroImg from "../assets/home_hero_picture.jpg";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -144,7 +145,7 @@ function Region() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1555990538-1e6c79410b03?q=80&w=2070"
+            src={regionHeroImg}
             alt="Croatian Coast"
             className="w-full h-full object-cover"
           />
@@ -345,7 +346,7 @@ function Region() {
 
                 {/* Image Gallery */}
                 <div className="space-y-6">
-                  <div className="relative h-96 rounded-3xl overflow-hidden shadow-xl">
+                  <div className="relative h-96 overflow-hidden shadow-xl">
                     <img
                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Split_080620-133710-IMG_0968x.jpg/1920px-Split_080620-133710-IMG_0968x.jpg"
                       alt="Split"
@@ -357,15 +358,15 @@ function Region() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="relative h-48 rounded-2xl overflow-hidden shadow-lg">
+                  <div className="grid grid-cols-2 gap-1">
+                    <div className="relative h-48 overflow-hidden shadow-lg">
                       <img
                         src="https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?q=80&w=2073"
                         alt="Diocletian's Palace"
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="relative h-48 rounded-2xl overflow-hidden shadow-lg">
+                    <div className="relative h-48 overflow-hidden shadow-lg">
                       <img
                         src="https://images.unsplash.com/photo-1593351415075-3bac9f45c877?q=80&w=2071"
                         alt="Riva Promenade"
@@ -387,7 +388,7 @@ function Region() {
               {/* Rogoznica Content */}
               <div className="grid lg:grid-cols-2 gap-12 mb-16">
                 <div className="order-2 lg:order-1">
-                  <div className="relative h-96 rounded-3xl overflow-hidden shadow-xl mb-6">
+                  <div className="relative h-96 overflow-hidden shadow-xl mb-1">
                     <img
                       src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=2096"
                       alt="Rogoznica"
@@ -399,15 +400,15 @@ function Region() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="relative h-48 rounded-2xl overflow-hidden shadow-lg">
+                  <div className="grid grid-cols-2 gap-1">
+                    <div className="relative h-48 overflow-hidden shadow-lg">
                       <img
                         src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070"
                         alt="Dragon's Eye Lake"
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="relative h-48 rounded-2xl overflow-hidden shadow-lg">
+                    <div className="relative h-48 overflow-hidden shadow-lg">
                       <img
                         src="https://images.unsplash.com/photo-1514649923863-ceaf75b7ec40?q=80&w=1974"
                         alt="Marina"

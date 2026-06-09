@@ -113,7 +113,7 @@ const ModernImageGallery = ({ images }: { images: string[] }) => {
       <div className="relative">
         {/* Mobile Gallery */}
         <div className="lg:hidden">
-          <div className="relative aspect-[16/10] overflow-hidden rounded-2xl">
+          <div className="relative aspect-[16/10] overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.img
                 key={selectedImage}
@@ -153,7 +153,7 @@ const ModernImageGallery = ({ images }: { images: string[] }) => {
               <button
                 key={index}
                 onClick={() => setSelectedImage(index)}
-                className={`relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden transition-all ${
+                className={`relative flex-shrink-0 w-20 h-20 overflow-hidden transition-all ${
                   selectedImage === index ? 'ring-2 ring-blue-500' : ''
                 }`}
               >
@@ -172,12 +172,12 @@ const ModernImageGallery = ({ images }: { images: string[] }) => {
 
         {/* Desktop Gallery Grid */}
         <div className="hidden lg:block">
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-4 gap-1">
             {/* Main Large Image */}
             <div className="col-span-2 row-span-2">
               <button
                 onClick={() => setIsFullscreen(true)}
-                className="relative aspect-square overflow-hidden rounded-2xl group cursor-pointer"
+                className="relative aspect-square overflow-hidden group cursor-pointer"
               >
                 <img
                   src={images[0]}
@@ -201,7 +201,7 @@ const ModernImageGallery = ({ images }: { images: string[] }) => {
                   setSelectedImage(index + 1);
                   setIsFullscreen(true);
                 }}
-                className="relative aspect-square overflow-hidden rounded-2xl group cursor-pointer"
+                className="relative aspect-square overflow-hidden group cursor-pointer"
               >
                 <img
                   src={image}
@@ -281,7 +281,7 @@ const ModernImageGallery = ({ images }: { images: string[] }) => {
                     <button
                       key={index}
                       onClick={() => setSelectedImage(index)}
-                      className={`relative flex-shrink-0 w-24 h-24 rounded-lg overflow-hidden transition-all ${
+                      className={`relative flex-shrink-0 w-24 h-24 overflow-hidden transition-all ${
                         selectedImage === index ? 'ring-2 ring-white' : 'opacity-60 hover:opacity-100'
                       }`}
                     >
@@ -303,12 +303,10 @@ const ModernImageGallery = ({ images }: { images: string[] }) => {
 };
 
 // Enhanced Booking Form Component - FIXED FOR MOBILE
-const EnhancedBookingForm = ({ 
-  apartmentName, 
-  range, 
-  onSubmit 
-}: { 
-  apartmentName: string;
+const EnhancedBookingForm = ({
+  range,
+  onSubmit
+}: {
   range: any[];
   onSubmit: (formData: any) => void;
 }) => {
@@ -330,7 +328,7 @@ const EnhancedBookingForm = ({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await onSubmit(formData);
+    onSubmit(formData);
     setIsSubmitting(false);
   };
 
@@ -342,10 +340,10 @@ const EnhancedBookingForm = ({
     <form onSubmit={handleSubmit} className="space-y-4 w-full">
       <div>
         <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-2">
-          Book Your Stay
+          {t("booking.title")}
         </h3>
         <p className="text-sm lg:text-base text-gray-600">
-          Fill in your details to reserve
+          {t("booking.subtitle")}
         </p>
       </div>
 
@@ -353,22 +351,22 @@ const EnhancedBookingForm = ({
       <div className="bg-blue-50 rounded-xl p-3 lg:p-4">
         <div className="flex items-center justify-between mb-2 lg:mb-3">
           <div>
-            <p className="text-xs lg:text-sm text-gray-600">Check-in</p>
+            <p className="text-xs lg:text-sm text-gray-600">{t("booking.checkIn")}</p>
             <p className="text-sm lg:text-base font-semibold text-gray-900">
               {range[0].startDate.toLocaleDateString()}
             </p>
           </div>
           <div className="text-gray-400 px-2">→</div>
           <div>
-            <p className="text-xs lg:text-sm text-gray-600">Check-out</p>
+            <p className="text-xs lg:text-sm text-gray-600">{t("booking.checkOut")}</p>
             <p className="text-sm lg:text-base font-semibold text-gray-900">
               {range[0].endDate.toLocaleDateString()}
             </p>
           </div>
         </div>
         <div className="pt-2 lg:pt-3 border-t">
-          <p className="text-xs lg:text-sm text-gray-600">Total nights</p>
-          <p className="text-lg lg:text-xl font-bold text-gray-900">{nights} {nights === 1 ? 'night' : 'nights'}</p>
+          <p className="text-xs lg:text-sm text-gray-600">{t("booking.totalNights")}</p>
+          <p className="text-lg lg:text-xl font-bold text-gray-900">{nights} {nights === 1 ? t("booking.night") : t("booking.nights")}</p>
         </div>
       </div>
 
@@ -377,7 +375,7 @@ const EnhancedBookingForm = ({
         <div>
           <label className="flex items-center space-x-2 text-xs lg:text-sm font-medium text-gray-700 mb-1 lg:mb-2">
             <User className="w-3 h-3 lg:w-4 lg:h-4" />
-            <span>Full Name *</span>
+            <span>{t("booking.fullName")}</span>
           </label>
           <input
             type="text"
@@ -394,7 +392,7 @@ const EnhancedBookingForm = ({
           <div>
             <label className="flex items-center space-x-2 text-xs lg:text-sm font-medium text-gray-700 mb-1 lg:mb-2">
               <Mail className="w-3 h-3 lg:w-4 lg:h-4" />
-              <span>Email *</span>
+              <span>{t("booking.email")}</span>
             </label>
             <input
               type="email"
@@ -410,7 +408,7 @@ const EnhancedBookingForm = ({
           <div>
             <label className="flex items-center space-x-2 text-xs lg:text-sm font-medium text-gray-700 mb-1 lg:mb-2">
               <Phone className="w-3 h-3 lg:w-4 lg:h-4" />
-              <span>Phone</span>
+              <span>{t("booking.phone")}</span>
             </label>
             <input
               type="tel"
@@ -426,7 +424,7 @@ const EnhancedBookingForm = ({
         <div>
           <label className="flex items-center space-x-2 text-xs lg:text-sm font-medium text-gray-700 mb-1 lg:mb-2">
             <Users className="w-3 h-3 lg:w-4 lg:h-4" />
-            <span>Number of Guests</span>
+            <span>{t("booking.guestsLabel")}</span>
           </label>
           <select
             name="guests"
@@ -435,7 +433,7 @@ const EnhancedBookingForm = ({
             className="w-full px-3 py-2 lg:px-4 lg:py-3 text-sm lg:text-base border border-gray-200 rounded-lg lg:rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
           >
             {[1, 2, 3, 4, 5, 6].map((num) => (
-              <option key={num} value={num}>{num} {num === 1 ? 'Guest' : 'Guests'}</option>
+              <option key={num} value={num}>{num} {num === 1 ? t("booking.guest") : t("booking.guestsPlural")}</option>
             ))}
           </select>
         </div>
@@ -443,7 +441,7 @@ const EnhancedBookingForm = ({
         <div>
           <label className="flex items-center space-x-2 text-xs lg:text-sm font-medium text-gray-700 mb-1 lg:mb-2">
             <MessageSquare className="w-3 h-3 lg:w-4 lg:h-4" />
-            <span>Special Requests</span>
+            <span>{t("booking.specialRequests")}</span>
           </label>
           <textarea
             name="message"
@@ -451,7 +449,7 @@ const EnhancedBookingForm = ({
             value={formData.message}
             onChange={handleChange}
             className="w-full px-3 py-2 lg:px-4 lg:py-3 text-sm lg:text-base border border-gray-200 rounded-lg lg:rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
-            placeholder="Any special requests..."
+            placeholder={t("booking.specialRequestsPlaceholder")}
           />
         </div>
       </div>
@@ -474,12 +472,12 @@ const EnhancedBookingForm = ({
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
             </svg>
-            <span>Sending...</span>
+            <span>{t("booking.sending")}</span>
           </>
         ) : (
           <>
             <Send className="w-4 h-4 lg:w-5 lg:h-5" />
-            <span>Send Request</span>
+            <span>{t("booking.sendRequest")}</span>
           </>
         )}
       </motion.button>
@@ -579,7 +577,7 @@ function ApartmentDetails() {
     ) {
       setNotification({
         type: 'error',
-        message: 'Please select valid check-in and check-out dates'
+        message: t("booking.validDatesError")
       });
       setTimeout(() => setNotification({ type: null, message: '' }), 3000);
       return;
@@ -601,13 +599,13 @@ function ApartmentDetails() {
 
       setNotification({
         type: 'success',
-        message: 'Booking request sent successfully! We\'ll contact you within 24 hours.'
+        message: t("booking.successMsg")
       });
     } catch (error) {
       console.error("Error sending email:", error);
       setNotification({
         type: 'error',
-        message: 'Failed to send booking request. Please try again.'
+        message: t("booking.errorMsg")
       });
     }
 
@@ -617,27 +615,22 @@ function ApartmentDetails() {
   // Amenities configuration
   const amenities = [
     {
-      category: "Location",
+      category: t("booking.locationCategory"),
       icon: MapPin,
-      items: [
-        "5 min to beach",
-        "10 min to Rogoznica",
-        "45 min to Split",
-        "35 min to airport"
-      ]
+      items: t("booking.near", { returnObjects: true }) as string[]
     },
     {
-      category: "Bedroom",
+      category: t("apartments.details.bedroom"),
       icon: Bed,
       items: t("apartments.details.bedroomInfo", { returnObjects: true }) as string[]
     },
     {
-      category: "Bathroom",
+      category: t("apartments.details.bath"),
       icon: Bath,
       items: t("apartments.details.bathroom", { returnObjects: true }) as string[]
     },
     {
-      category: "Kitchen",
+      category: t("apartments.details.kitchen"),
       icon: Utensils,
       items: t("apartments.details.kitchenInfo", { returnObjects: true }) as string[]
     }
@@ -647,12 +640,12 @@ function ApartmentDetails() {
     return (
       <div className="min-h-screen flex items-center justify-center p-4">
         <div className="text-center">
-          <p className="text-gray-600 mb-4">No apartment data available</p>
+          <p className="text-gray-600 mb-4">{t("booking.noDataMsg")}</p>
           <button
             onClick={() => navigate('/apartments')}
             className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
           >
-            Back to Apartments
+            {t("booking.backToApts")}
           </button>
         </div>
       </div>
@@ -696,7 +689,7 @@ function ApartmentDetails() {
               className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
             >
               <ChevronLeft className="w-5 h-5" />
-              <span>Back</span>
+              <span>{t("booking.back")}</span>
             </button>
             
             <div className="flex items-center space-x-3">
@@ -729,7 +722,7 @@ function ApartmentDetails() {
               <div className="flex items-center space-x-1">
                 <Star className="w-4 h-4 lg:w-5 lg:h-5 text-yellow-500 fill-current" />
                 <span className="font-semibold">4.9</span>
-                <span className="hidden sm:inline">(42 reviews)</span>
+                <span className="hidden sm:inline">({t("booking.reviews")})</span>
               </div>
               <span className="hidden sm:inline">•</span>
               <div className="flex items-center space-x-1">
@@ -739,12 +732,12 @@ function ApartmentDetails() {
               <span>•</span>
               <div className="flex items-center space-x-1">
                 <Users className="w-3 h-3 lg:w-4 lg:h-4" />
-                <span>{capacity} guests</span>
+                <span>{capacity} {t("booking.guests")}</span>
               </div>
               <span>•</span>
               <div className="flex items-center space-x-1">
                 <Bed className="w-3 h-3 lg:w-4 lg:h-4" />
-                <span>{bedrooms} {bedrooms === 1 ? 'bedroom' : 'bedrooms'}</span>
+                <span>{bedrooms} {bedrooms === 1 ? t("booking.bedroom") : t("booking.bedrooms")}</span>
               </div>
             </div>
           </div>
@@ -761,17 +754,15 @@ function ApartmentDetails() {
           <div className="lg:col-span-2 space-y-8 lg:space-y-12">
             {/* Description */}
             <div>
-              <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3 lg:mb-4">About this place</h2>
+              <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3 lg:mb-4">{t("booking.aboutPlace")}</h2>
               <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
-                {detail} This beautiful apartment offers a perfect blend of comfort and Croatian coastal charm. 
-                Located in the peaceful village of Kanica, just minutes from pristine beaches and the charming 
-                town of Rogoznica.
+                {t(`apartments.a${name?.match(/\d+/)?.[0]}Info`)} {t("apartments.aboutDesc")}
               </p>
             </div>
 
             {/* Amenities */}
             <div>
-              <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6">What this place offers</h2>
+              <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6">{t("booking.whatOffers")}</h2>
               <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
                 {amenities.map((category) => (
                   <div key={category.category}>
@@ -796,10 +787,10 @@ function ApartmentDetails() {
               {/* Special Features */}
               <div className="mt-6 lg:mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 lg:gap-4">
                 {[
-                  { icon: Wifi, label: "Free WiFi" },
-                  { icon: Waves, label: "Pool" },
-                  { icon: Car, label: "Parking" },
-                  { icon: Coffee, label: "Coffee" }
+                  { icon: Wifi, label: t("booking.freeWifi") },
+                  { icon: Waves, label: t("booking.pool") },
+                  { icon: Car, label: t("booking.parking") },
+                  { icon: Coffee, label: t("booking.coffee") }
                 ].map((feature) => (
                   <div key={feature.label} className="bg-gray-50 rounded-lg lg:rounded-xl p-3 lg:p-4 text-center">
                     <feature.icon className="w-6 h-6 lg:w-8 lg:h-8 text-blue-600 mx-auto mb-1 lg:mb-2" />
@@ -818,20 +809,20 @@ function ApartmentDetails() {
                 <div className="flex items-end justify-between mb-4 lg:mb-6">
                   <div>
                     <span className="text-2xl lg:text-3xl font-bold text-gray-900">€{price}</span>
-                    <span className="text-sm lg:text-base text-gray-600"> / night</span>
+                    <span className="text-sm lg:text-base text-gray-600"> {t("booking.perNight")}</span>
                   </div>
                   <div className="text-right">
                     <div className="flex items-center space-x-1 text-xs lg:text-sm">
                       <Star className="w-3 h-3 lg:w-4 lg:h-4 text-yellow-500 fill-current" />
                       <span className="font-semibold">4.9</span>
                     </div>
-                    <span className="text-xs text-gray-500">42 reviews</span>
+                    <span className="text-xs text-gray-500">{t("booking.reviews")}</span>
                   </div>
                 </div>
 
                 {/* Calendar - FIXED */}
                 <div className="mb-4 lg:mb-6">
-                  <h3 className="text-sm lg:text-base font-semibold text-gray-900 mb-3 lg:mb-4">Select Dates</h3>
+                  <h3 className="text-sm lg:text-base font-semibold text-gray-900 mb-3 lg:mb-4">{t("booking.selectDates")}</h3>
                   <div className="calendar-container border rounded-lg lg:rounded-xl overflow-hidden">
                     <DateRangePicker
                       ranges={range}
@@ -850,7 +841,6 @@ function ApartmentDetails() {
 
                 {/* Booking Form */}
                 <EnhancedBookingForm
-                  apartmentName={name}
                   range={range}
                   onSubmit={handleBookingSubmit}
                 />
@@ -858,7 +848,7 @@ function ApartmentDetails() {
 
               {/* Quick Contact - Hidden on mobile for space */}
               <div className="hidden lg:block bg-gray-50 rounded-2xl p-6">
-                <h3 className="font-semibold text-gray-900 mb-4">Need Help?</h3>
+                <h3 className="font-semibold text-gray-900 mb-4">{t("booking.needHelp")}</h3>
                 <div className="space-y-3">
                   <a
                     href="tel:+385958203771"

@@ -21,10 +21,10 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { path: "/", label: "Home" },
-    { path: "/apartments", label: "Apartments" },
-    { path: "/region", label: "Explore Region" },
-    { path: "/contact", label: "Contact" }
+    { path: "/", label: t("navigation.home") },
+    { path: "/apartments", label: t("navigation.apartments") },
+    { path: "/region", label: t("footer.exploreRegion") },
+    { path: "/contact", label: t("navigation.contact") }
   ];
 
   const legalLinks = [
@@ -61,13 +61,13 @@ function Footer() {
         <div className="max-w-7xl mx-auto px-6 py-12">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             <div>
-              <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
-              <p className="text-gray-400">Get exclusive offers and travel tips</p>
+              <h3 className="text-2xl font-bold mb-2">{t("footer.stayUpdated")}</h3>
+              <p className="text-gray-400">{t("footer.offerSubtitle")}</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
               <input
                 type="email"
-                placeholder="Your email address"
+                placeholder={t("footer.emailPlaceholder")}
                 className="px-6 py-3 bg-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-1 lg:w-80"
               />
               <motion.button
@@ -75,7 +75,7 @@ function Footer() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-200"
               >
-                Subscribe
+                {t("footer.subscribe")}
               </motion.button>
             </div>
           </div>
@@ -88,18 +88,11 @@ function Footer() {
           {/* Company Info */}
           <div>
             <Link to="/" className="inline-block mb-6">
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">V</span>
-                </div>
-                <div>
-                  <h2 className="text-2xl font-bold">Villa Prgić</h2>
-                  <p className="text-xs text-gray-400">Your home in Croatia</p>
-                </div>
-              </div>
+              <h2 className="font-lux text-4xl text-white">Villa Prgić</h2>
+              <p className="text-xs text-gray-400 mt-1">{t("footer.tagline")}</p>
             </Link>
             <p className="text-gray-400 mb-6">
-              Experience the perfect blend of comfort and Croatian coastal charm at our beautiful apartments in Kanica.
+              {t("footer.description")}
             </p>
             
             {/* Trust Badges */}
@@ -110,18 +103,18 @@ function Footer() {
               </div>
               <div className="flex items-center space-x-1">
                 <Shield className="w-4 h-4 text-green-500" />
-                <span className="text-sm text-gray-400">Verified</span>
+                <span className="text-sm text-gray-400">{t("footer.verified")}</span>
               </div>
               <div className="flex items-center space-x-1">
                 <Calendar className="w-4 h-4 text-blue-500" />
-                <span className="text-sm text-gray-400">Since 2015</span>
+                <span className="text-sm text-gray-400">{t("footer.since")}</span>
               </div>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-6">{t("footer.quickLinks")}</h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.path}>
@@ -143,7 +136,7 @@ function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
+            <h3 className="text-lg font-semibold mb-6">{t("footer.contactUs")}</h3>
             <ul className="space-y-4">
               <li>
                 <a 
@@ -183,7 +176,7 @@ function Footer() {
 
           {/* Social & Legal */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Follow Us</h3>
+            <h3 className="text-lg font-semibold mb-6">{t("footer.followUs")}</h3>
             
             {/* Social Icons */}
             <div className="flex space-x-3 mb-8">
@@ -205,7 +198,7 @@ function Footer() {
 
             {/* Legal Links */}
             <div>
-              <h4 className="text-sm font-semibold text-gray-500 mb-3">Legal</h4>
+              <h4 className="text-sm font-semibold text-gray-500 mb-3">{t("footer.legal")}</h4>
               <ul className="space-y-2">
                 {legalLinks.map((link) => (
                   <li key={link.path}>
@@ -234,7 +227,7 @@ function Footer() {
             {/* Language Selector */}
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-sm">
-                <span className="text-gray-500">Language:</span>
+                <span className="text-gray-500">{t("footer.language")}</span>
                 <select className="bg-transparent text-gray-400 focus:outline-none cursor-pointer hover:text-white transition-colors">
                   <option value="en">English</option>
                   <option value="hr">Hrvatski</option>
@@ -243,21 +236,15 @@ function Footer() {
               </div>
               
               <div className="flex items-center space-x-2 text-sm text-gray-400">
-                <span>Made with</span>
+                <span>{t("footer.madeWith")}</span>
                 <Heart className="w-4 h-4 text-red-500 fill-current animate-pulse" />
-                <span>in Croatia</span>
+                <span>{t("footer.inCroatia")}</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Decorative Wave Top */}
-      <div className="absolute top-0 left-0 right-0 pointer-events-none">
-        <svg className="w-full h-8 fill-gray-50" viewBox="0 0 1440 48" preserveAspectRatio="none">
-          <path d="M0,0L60,5.3C120,11,240,21,360,21.3C480,21,600,11,720,8C840,5,960,11,1080,16C1200,21,1320,27,1380,29.3L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z" />
-        </svg>
-      </div>
     </footer>
   );
 }

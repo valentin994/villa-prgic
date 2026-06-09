@@ -1,6 +1,7 @@
 // Components/HeroSection.tsx
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import heroImage from "../assets/home_hero_picture.jpg";
 
 function Home() {
   const { t } = useTranslation();
@@ -10,7 +11,7 @@ function Home() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
-          src="your-hero-image.jpg"
+          src={heroImage}
           alt=""
           className="w-full h-full object-cover"
         />
