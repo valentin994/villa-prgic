@@ -1,6 +1,7 @@
 // pages/Region.tsx - FIXED VERSION
 import regionHeroImg from "../assets/home_hero_picture.jpg";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useInView } from "react-intersection-observer";
@@ -16,6 +17,8 @@ import {
   Fish,
   Sailboat,
   TreePine,
+  Landmark,
+  Trees,
   ChevronRight,
   Clock,
   Car,
@@ -80,6 +83,30 @@ function Region() {
       distance: "50 km",
       duration: "45 min",
       highlights: ["Art gallery", "Sculpture garden", "Sea views"]
+    },
+    {
+      name: t("region.sibenik"),
+      description: t("region.sibenikInfo"),
+      icon: Landmark,
+      distance: "30 km",
+      duration: "30 min",
+      highlights: ["St. James Cathedral (UNESCO)", "Fortress views", "Old Town"]
+    },
+    {
+      name: t("region.krka"),
+      description: t("region.krkaInfo"),
+      icon: Trees,
+      distance: "40 km",
+      duration: "40 min",
+      highlights: ["Waterfalls", "National park trails", "Swimming spots"]
+    },
+    {
+      name: t("region.klis"),
+      description: t("region.klisInfo"),
+      icon: Castle,
+      distance: "42 km",
+      duration: "38 min",
+      highlights: ["Medieval fortress", "Panoramic views", "Game of Thrones filming location"]
     }
   ];
 
@@ -127,12 +154,14 @@ function Region() {
   ];
 
   const activities = [
-    { icon: Waves, name: "Swimming & Beaches", count: "15+ beaches" },
-    { icon: Sailboat, name: "Boat Tours", count: "Daily trips" },
-    { icon: Fish, name: "Fresh Seafood", count: "20+ restaurants" },
-    { icon: Mountain, name: "Hiking Trails", count: "10+ routes" },
-    { icon: Camera, name: "Photo Spots", count: "30+ locations" },
-    { icon: Coffee, name: "Local Cafes", count: "50+ options" }
+    { icon: Waves, name: t("region.swimmingBeaches"), count: t("region.swimmingBeachesCount") },
+    { icon: Sailboat, name: t("region.boatTours"), count: t("region.boatToursCount") },
+    { icon: Fish, name: t("region.freshSeafood"), count: t("region.freshSeafoodCount") },
+    { icon: Mountain, name: t("region.hikingTrails"), count: t("region.hikingTrailsCount") },
+    { icon: Camera, name: t("region.photoSpots"), count: t("region.photoSpotsCount") },
+    { icon: Coffee, name: t("region.localCafes"), count: t("region.localCafesCount") },
+    { icon: Sailboat, name: t("region.shipTourism"), count: t("region.shipTourismCount") },
+    { icon: Mountain, name: t("region.activeTourism"), count: t("region.activeTourismCount") }
   ];
 
   return (
@@ -548,13 +577,15 @@ function Region() {
           <p className="text-xl mb-8 text-white/90">
             Book your stay with us and discover all these amazing places
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold text-lg shadow-xl hover:shadow-2xl transition-all"
-          >
-            Check Availability
-          </motion.button>
+          <Link to="/apartments">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold text-lg shadow-xl hover:shadow-2xl transition-all"
+            >
+              Check Availability
+            </motion.button>
+          </Link>
         </div>
       </section>
     </div>

@@ -14,7 +14,7 @@ function Impressum() {
             <h2 className="text-xl font-semibold text-gray-900 mb-3">{t("impressum.operatorHeading")}</h2>
             <p>
               Villa Prgić<br />
-              Kanica 44<br />
+              Kanica 265<br />
               22010 Primošten<br />
               Croatia
             </p>

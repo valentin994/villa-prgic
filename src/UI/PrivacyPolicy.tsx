@@ -15,7 +15,7 @@ function PrivacyPolicy() {
           <section>
             <h2 className="text-xl font-semibold text-gray-900 mb-3">{t("privacy.controllerHeading")}</h2>
             <p>
-              Villa Prgić, Kanica 44, 22010 Primošten, Croatia.<br />
+              Villa Prgić, Kanica 265, 22010 Primošten, Croatia.<br />
               <a href="mailto:info@villaprgic.com" className="text-blue-600 hover:underline">info@villaprgic.com</a>
               {" · "}
               <a href="tel:+385958203771" className="text-blue-600 hover:underline">+385 95 820 3771</a>

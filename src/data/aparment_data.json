@@ -2,7 +2,7 @@
   {
     "name": "Apartman 1",
     "link": "apartment_1",
-    "detail": "A three bedroom apartment for six people.",
+    "detail": "A one bedroom apartment for four people.",
     "features": ["Kitchen", "Pool", "Coffee Maker"],
     "price": 200,
     "imageLink": "https://woop14abphufecql.public.blob.vercel-storage.com/apartman_1-WCXsNwvMXYQIV9fQv7DrebUUm27i7Z.jpg",
@@ -24,7 +24,7 @@
   {
     "name": "Apartman 2",
     "link": "apartment_2",
-    "detail": "A two bedroom apartment for four people.",
+    "detail": "A three bedroom apartment for six people.",
     "features": ["Kitchen", "Pool", "Coffee Maker"],
     "price": 200,
     "imageLink": "https://woop14abphufecql.public.blob.vercel-storage.com/rooms-np3C9gmuZJsbyyTP35YwyR7KO9luvy.jpg",

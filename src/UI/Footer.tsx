@@ -1,7 +1,8 @@
 // Components/Footer.tsx
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   MapPin,
   Phone,
@@ -17,8 +18,23 @@ import {
 } from "lucide-react";
 
 function Footer() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const currentYear = new Date().getFullYear();
+
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [newsletterMessage, setNewsletterMessage] = useState("");
+
+  // No email-list backend exists yet; this only validates and gives feedback locally.
+  const handleNewsletterSubmit = () => {
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(newsletterEmail);
+    if (!isValidEmail) {
+      setNewsletterMessage(t("footer.invalidEmail"));
+    } else {
+      setNewsletterMessage(t("footer.subscribeSuccess"));
+      setNewsletterEmail("");
+    }
+    setTimeout(() => setNewsletterMessage(""), 4000);
+  };
 
   const quickLinks = [
     { path: "/", label: t("navigation.home") },
@@ -64,19 +80,36 @@ function Footer() {
               <h3 className="text-2xl font-bold mb-2">{t("footer.stayUpdated")}</h3>
               <p className="text-gray-400">{t("footer.offerSubtitle")}</p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
-              <input
-                type="email"
-                placeholder={t("footer.emailPlaceholder")}
-                className="px-6 py-3 bg-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-1 lg:w-80"
-              />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-200"
-              >
-                {t("footer.subscribe")}
-              </motion.button>
+            <div className="flex flex-col gap-2 w-full lg:w-auto">
+              <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+                <input
+                  type="email"
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
+                  placeholder={t("footer.emailPlaceholder")}
+                  className="px-6 py-3 bg-gray-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-1 lg:w-80"
+                />
+                <motion.button
+                  onClick={handleNewsletterSubmit}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-200"
+                >
+                  {t("footer.subscribe")}
+                </motion.button>
+              </div>
+              <AnimatePresence>
+                {newsletterMessage && (
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="text-sm text-gray-300"
+                  >
+                    {newsletterMessage}
+                  </motion.p>
+                )}
+              </AnimatePresence>
             </div>
           </div>
         </div>
@@ -140,15 +173,15 @@ function Footer() {
             <ul className="space-y-4">
               <li>
                 <a 
-                  href="https://maps.google.com/?q=Kanica+44,+10294,+Primosten"
+                  href="https://maps.google.com/?q=Kanica+265,+22010,+Primosten"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start space-x-3 text-gray-400 hover:text-white transition-colors"
                 >
                   <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
                   <span>
-                    Kanica 44<br />
-                    10294 Primošten<br />
+                    Kanica 265<br />
+                    22010 Primošten<br />
                     Croatia
                   </span>
                 </a>
@@ -228,7 +261,11 @@ function Footer() {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-sm">
                 <span className="text-gray-500">{t("footer.language")}</span>
-                <select className="bg-transparent text-gray-400 focus:outline-none cursor-pointer hover:text-white transition-colors">
+                <select
+                  value={i18n.resolvedLanguage}
+                  onChange={(e) => i18n.changeLanguage(e.target.value)}
+                  className="bg-transparent text-gray-400 focus:outline-none cursor-pointer hover:text-white transition-colors"
+                >
                   <option value="en">English</option>
                   <option value="hr">Hrvatski</option>
                   <option value="de">Deutsch</option>

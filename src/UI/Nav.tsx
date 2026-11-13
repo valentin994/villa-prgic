@@ -1,6 +1,6 @@
 // Components/Navigation.tsx
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -8,6 +8,7 @@ function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,14 +37,12 @@ function Nav() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? 'py-2' : 'py-4'
+          isMenuOpen ? 'py-0' : scrolled ? 'py-2' : 'py-4'
         }`}
       >
-        <div className={`mx-4 lg:mx-8 rounded-2xl backdrop-blur-md transition-all duration-300 ${
-          scrolled
-            ? 'bg-white/90 shadow-lg'
-            : 'bg-white/70'
-        }`}>
+        <div className={`bg-white transition-all duration-300 ${
+          isMenuOpen ? 'rounded-none mx-0' : 'mx-4 lg:mx-8 rounded-2xl'
+        } ${scrolled ? 'shadow-lg' : 'shadow-md'}`}>
           <div className="flex items-center justify-between px-6 py-4">
             {/* Logo */}
             <NavLink to="/">
@@ -88,7 +87,10 @@ function Nav() {
               </div>
 
               {/* CTA Button */}
-              <button className="px-6 py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg font-medium text-sm hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg">
+              <button
+                onClick={() => navigate('/contact')}
+                className="px-6 py-2.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg font-medium text-sm hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-md hover:shadow-lg"
+              >
                 {t('navigation.book')}
               </button>
             </div>
@@ -137,10 +139,10 @@ function Nav() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-              className="absolute right-0 top-0 h-full w-full max-w-sm bg-white shadow-2xl"
+              className="absolute right-0 top-0 h-full w-full sm:max-w-sm bg-white shadow-2xl"
             >
-              <div className="flex flex-col h-full pt-20 px-6">
-                <nav className="flex-1">
+              <div className="flex flex-col h-full pt-24 px-6 overflow-y-auto">
+                <nav className="flex-1 flex flex-col justify-center gap-1">
                   {navLinks.map((link, index) => (
                     <motion.div
                       key={link.path}
@@ -152,7 +154,7 @@ function Nav() {
                         to={link.path}
                         onClick={() => setIsMenuOpen(false)}
                         className={({ isActive }) =>
-                          `block py-3 text-lg font-medium ${
+                          `block py-3 text-lg font-medium border-b border-gray-100 ${
                             isActive ? 'text-blue-600' : 'text-gray-900'
                           }`
                         }
@@ -182,7 +184,13 @@ function Nav() {
                       </button>
                     ))}
                   </div>
-                  <button className="w-full py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg font-medium hover:from-blue-600 hover:to-blue-700 transition-all duration-200">
+                  <button
+                    onClick={() => {
+                      navigate('/contact');
+                      setIsMenuOpen(false);
+                    }}
+                    className="w-full py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg font-medium hover:from-blue-600 hover:to-blue-700 transition-all duration-200"
+                  >
                     {t('navigation.book')}
                   </button>
                 </div>

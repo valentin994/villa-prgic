@@ -107,6 +107,15 @@ const ModernImageGallery = ({ images }: { images: string[] }) => {
     setSelectedImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
+  useEffect(() => {
+    if (!isFullscreen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsFullscreen(false);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isFullscreen]);
+
   return (
     <>
       {/* Main Gallery */}
@@ -232,7 +241,7 @@ const ModernImageGallery = ({ images }: { images: string[] }) => {
           >
             <div className="relative h-full flex flex-col">
               {/* Header */}
-              <div className="flex items-center justify-between p-4 bg-gradient-to-b from-black/50 to-transparent absolute top-0 left-0 right-0 z-10">
+              <div className="flex items-center justify-between p-4 lg:p-8 bg-gradient-to-b from-black/50 to-transparent absolute top-0 left-0 right-0 z-10">
                 <span className="text-white font-medium">
                   {selectedImage + 1} / {images.length}
                 </span>
@@ -245,7 +254,7 @@ const ModernImageGallery = ({ images }: { images: string[] }) => {
               </div>
 
               {/* Main Image */}
-              <div className="flex-1 flex items-center justify-center p-4">
+              <div className="relative flex-1 flex items-center justify-center p-4 lg:p-8">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={selectedImage}
@@ -258,24 +267,24 @@ const ModernImageGallery = ({ images }: { images: string[] }) => {
                     className="max-w-full max-h-full object-contain"
                   />
                 </AnimatePresence>
+
+                {/* Navigation */}
+                <button
+                  onClick={handlePrevious}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all"
+                >
+                  <ChevronLeft className="w-6 h-6 text-white" />
+                </button>
+                <button
+                  onClick={handleNext}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all"
+                >
+                  <ChevronRight className="w-6 h-6 text-white" />
+                </button>
               </div>
 
-              {/* Navigation */}
-              <button
-                onClick={handlePrevious}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all"
-              >
-                <ChevronLeft className="w-6 h-6 text-white" />
-              </button>
-              <button
-                onClick={handleNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all"
-              >
-                <ChevronRight className="w-6 h-6 text-white" />
-              </button>
-
               {/* Thumbnail Strip */}
-              <div className="bg-black/80 backdrop-blur-sm p-4">
+              <div className="bg-black/80 backdrop-blur-sm p-4 lg:p-8">
                 <div className="flex gap-2 justify-center overflow-x-auto">
                   {images.map((image, index) => (
                     <button

@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
+import ScrollToTop from "./Components/ScrollToTop";
 import Nav from "./UI/Nav";
 import Home from "./UI/Home";
 import Apartments from "./UI/Apartments";
@@ -12,10 +13,12 @@ import Faq from "./UI/Faq";
 import Impressum from "./UI/Impressum";
 import PrivacyPolicy from "./UI/PrivacyPolicy";
 import TermsOfService from "./UI/TermsOfService";
+import Admin from "./UI/Admin";
 
 function App() {
   return (
     <div className="App flex flex-col font-roboto bg-gray-50">
+      <ScrollToTop />
       <Nav />
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -30,6 +33,7 @@ function App() {
         <Route path="/privacy" element={<PrivacyPolicy />}></Route>
         <Route path="/terms" element={<TermsOfService />}></Route>
         <Route path="/faq" element={<Faq />}></Route>
+        <Route path="/admin" element={<Admin />}></Route>
         <Route path="*" element={<NoPage />}></Route>
       </Routes>
       <Footer />

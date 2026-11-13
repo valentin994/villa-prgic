@@ -11,25 +11,22 @@ i18n
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
-resources: {
+    resources: {
       en: {
         translation: {
-          navigation: { home: "Home", apartments: "Apartments", region: "Region", contact: "Contact", book: "Book" },
-          desc: [
-            "A one bedroom apartment for two plus two people",
-            "A three bedroom apartment for six people",
-            "A one bedroom apartment for two people",
-          ],
-          summary: [
-            "This spacious 3-bedroom apartment offers comfortable living with a well-equipped kitchen, a private balcony for outdoor relaxation, and access to a refreshing pool for leisure. Additionally, it includes a modern bathroom for convenience, making it an ideal choice for those seeking a comfortable and enjoyable living space.",
-            "This inviting two-bedroom apartment provides a cozy living space with a functional kitchen, a private balcony for outdoor enjoyment, and access to a communal pool for recreation. With two comfortable bedrooms, it's perfect for a small family or roommates seeking a convenient and comfortable place to call home.",
-            "This charming one-bedroom apartment offers a cozy living environment with a well-appointed kitchen, a private balcony for personal relaxation, and access to communal amenities like a pool. Ideal for singles or couples, it provides a convenient and comfortable living space for those looking for a smaller, more intimate home.",
-          ],
+          navigation: {
+            home: "Home",
+            apartments: "Apartments",
+            region: "Region",
+            contact: "Contact",
+            book: "Book",
+          },
           hero: {
             part1: "Find your ideal stay",
             part2: "Ideal stay",
             title: "Find Your Ideal Stay",
-            subtitle: "Comfortable apartments in Kanica, Croatia — steps from the sea",
+            subtitle:
+              "Comfortable apartments in Kanica, Croatia — steps from the sea",
             exploreApartments: "Explore Apartments",
             checkAvailability: "Check Availability",
           },
@@ -55,7 +52,8 @@ resources: {
             welcome: "Welcome",
             welcomeInfo:
               "Our charming house offers three comfortable apartments, each thoughtfully designed to feel like home. Whether you’re looking for a one-bedroom retreat or more space to share, you’ll find an apartment that fits your needs.",
-            a1Info: "A one bedroom apartment for two plus two people.",
+            a1Info:
+              "A one bedroom apartment for two adults and two children (up to 12 years).",
             a2Info: "A three bedroom apartment for six people.",
             a3Info: "A one bedroom apartment for two people.",
             from: "From",
@@ -66,7 +64,8 @@ resources: {
             sortPriceLow: "Price: Low to High",
             sortPriceHigh: "Price: High to Low",
             countLabel: "apartments available",
-            aboutDesc: "This beautiful apartment offers a perfect blend of comfort and Croatian coastal charm. Located in the peaceful village of Kanica, just minutes from pristine beaches and the charming town of Rogoznica.",
+            aboutDesc:
+              "This beautiful apartment offers a perfect blend of comfort and Croatian coastal charm. Located in the peaceful village of Kanica, just minutes from pristine beaches and the charming town of Rogoznica.",
             details: {
               nearby: "Nearby",
               near: [
@@ -146,6 +145,31 @@ resources: {
             planka: "Cape Planka 🌅",
             plankaInfo:
               "The southernmost point of Rogoznica, Cape Planka, is where winds and sea currents collide, creating dramatic waves and stunning views. It’s a historical place, mentioned in ancient maritime records.",
+            sibenik: "Šibenik 🏰",
+            sibenikInfo:
+              "A historic coastal town with the UNESCO-listed St. James Cathedral and a fortress-crowned old town overlooking the Adriatic.",
+            krka: "Krka National Park 💧",
+            krkaInfo:
+              "Famous for its cascading waterfalls, turquoise pools, and scenic walking trails through Mediterranean forest.",
+            klis: "Klis Fortress 🏯",
+            klisInfo:
+              "A dramatic hilltop fortress with centuries of military history and sweeping views over Split and the surrounding valley.",
+            swimmingBeaches: "Swimming & Beaches",
+            swimmingBeachesCount: "15+ beaches",
+            boatTours: "Boat Tours",
+            boatToursCount: "Daily trips",
+            freshSeafood: "Fresh Seafood",
+            freshSeafoodCount: "20+ restaurants",
+            hikingTrails: "Hiking Trails",
+            hikingTrailsCount: "10+ routes",
+            photoSpots: "Photo Spots",
+            photoSpotsCount: "30+ locations",
+            localCafes: "Local Cafes",
+            localCafesCount: "50+ options",
+            shipTourism: "Ship & Boat Tourism",
+            shipTourismCount: "Marinas & excursions",
+            activeTourism: "Active Tourism",
+            activeTourismCount: "Cycling, diving & more",
           },
           impressum: {
             title: "Impressum",
@@ -155,11 +179,14 @@ resources: {
             responsibleHeading: "Responsible for Content",
             responsibleText: "Ante Prgić, at the address above.",
             disputeHeading: "Dispute Resolution",
-            disputeText: "The European Commission provides an online dispute-resolution platform. We are not obliged to participate in a dispute-resolution procedure before a consumer arbitration board, but we are willing to do so.",
+            disputeText:
+              "The European Commission provides an online dispute-resolution platform. We are not obliged to participate in a dispute-resolution procedure before a consumer arbitration board, but we are willing to do so.",
             liabilityHeading: "Liability for Content",
-            liabilityText: "The content of this website has been created with the utmost care. However, we cannot guarantee the accuracy, completeness, or timeliness of the information provided.",
+            liabilityText:
+              "The content of this website has been created with the utmost care. However, we cannot guarantee the accuracy, completeness, or timeliness of the information provided.",
             copyrightHeading: "Copyright",
-            copyrightText: "All content and works on this website are subject to Croatian copyright law. Reproduction, processing, distribution, or any form of commercialisation beyond the scope of copyright law requires the prior written consent of Villa Prgić.",
+            copyrightText:
+              "All content and works on this website are subject to Croatian copyright law. Reproduction, processing, distribution, or any form of commercialisation beyond the scope of copyright law requires the prior written consent of Villa Prgić.",
           },
           privacy: {
             title: "Privacy Policy",
@@ -167,52 +194,89 @@ resources: {
             controllerHeading: "1. Data Controller",
             dataHeading: "2. Data We Collect",
             dataIntro: "When you submit a booking inquiry we collect:",
-            dataItems: ["Full name", "Email address", "Phone number (optional)", "Preferred dates and number of guests", "Any message you voluntarily include"],
+            dataItems: [
+              "Full name",
+              "Email address",
+              "Phone number (optional)",
+              "Preferred dates and number of guests",
+              "Any message you voluntarily include",
+            ],
             purposeHeading: "3. Purpose of Processing",
-            purposeText: "Your data is used solely to respond to your inquiry and, if you proceed to book, to manage your reservation. We do not use your data for automated profiling or sell it to third parties.",
+            purposeText:
+              "Your data is used solely to respond to your inquiry and, if you proceed to book, to manage your reservation. We do not use your data for automated profiling or sell it to third parties.",
             legalHeading: "4. Legal Basis",
-            legalText: "Processing is based on your consent (Article 6(1)(a) GDPR) when you submit the contact form, and on the performance of a contract (Article 6(1)(b) GDPR) when a booking is made.",
+            legalText:
+              "Processing is based on your consent (Article 6(1)(a) GDPR) when you submit the contact form, and on the performance of a contract (Article 6(1)(b) GDPR) when a booking is made.",
             retentionHeading: "5. Data Retention",
-            retentionText: "Inquiry data is retained for up to 12 months. Booking-related data is kept for 7 years to comply with Croatian accounting and tax regulations.",
+            retentionText:
+              "Inquiry data is retained for up to 12 months. Booking-related data is kept for 7 years to comply with Croatian accounting and tax regulations.",
             rightsHeading: "6. Your Rights",
             rightsIntro: "Under the GDPR you have the right to:",
-            rightsItems: ["Access the personal data we hold about you", "Request correction of inaccurate data", "Request deletion of your data", "Object to or restrict processing", "Lodge a complaint with the Croatian Personal Data Protection Agency (AZOP)"],
-            rightsContact: "To exercise any right, contact us at info@villaprgic.com.",
+            rightsItems: [
+              "Access the personal data we hold about you",
+              "Request correction of inaccurate data",
+              "Request deletion of your data",
+              "Object to or restrict processing",
+              "Lodge a complaint with the Croatian Personal Data Protection Agency (AZOP)",
+            ],
+            rightsContact:
+              "To exercise any right, contact us at info@villaprgic.com.",
             cookiesHeading: "7. Cookies",
-            cookiesText: "This website uses only technically necessary cookies required for basic functionality. No tracking or advertising cookies are used.",
+            cookiesText:
+              "This website uses only technically necessary cookies required for basic functionality. No tracking or advertising cookies are used.",
           },
           terms: {
             title: "Terms & Conditions",
             updated: "Last updated: June 2025",
             scopeHeading: "1. Scope",
-            scopeText: "These Terms & Conditions govern the rental of apartments at Villa Prgić, Kanica 44, 22010 Primošten, Croatia. By submitting a booking inquiry or confirming a reservation you agree to these terms.",
+            scopeText:
+              "These Terms & Conditions govern the rental of apartments at Villa Prgić, Kanica 265, 22010 Primošten, Croatia. By submitting a booking inquiry or confirming a reservation you agree to these terms.",
             reservationsHeading: "2. Reservations",
-            reservationsText: "A reservation is confirmed only after you receive a written confirmation from Villa Prgić and the agreed deposit has been received.",
+            reservationsText:
+              "A reservation is confirmed only after you receive a written confirmation from Villa Prgić and the agreed deposit has been received.",
             paymentHeading: "3. Payment",
-            paymentText: "A deposit of 30% of the total rental price is required to confirm the reservation. The remaining balance is due no later than 14 days before arrival.",
+            paymentText:
+              "A deposit of 30% of the total rental price is required to confirm the reservation. The remaining balance is due no later than 14 days before arrival.",
             cancellationHeading: "4. Cancellation Policy",
-            cancellationItems: ["Cancellation more than 30 days before arrival: full deposit refund.", "Cancellation 15–30 days before arrival: 50% of the deposit is retained.", "Cancellation fewer than 15 days before arrival: no refund."],
-            cancellationNote: "We strongly recommend travel insurance to cover unforeseen cancellations.",
+            cancellationItems: [
+              "Cancellation more than 30 days before arrival: full deposit refund.",
+              "Cancellation 15–30 days before arrival: 50% of the deposit is retained.",
+              "Cancellation fewer than 15 days before arrival: no refund.",
+            ],
+            cancellationNote:
+              "We strongly recommend travel insurance to cover unforeseen cancellations.",
             checkinHeading: "5. Check-in & Check-out",
-            checkinText: "Check-in is from 15:00 and check-out is by 10:00. Early check-in or late check-out may be arranged subject to availability and an additional fee.",
+            checkinText:
+              "Check-in is from 15:00 and check-out is by 10:00. Early check-in or late check-out may be arranged subject to availability and an additional fee.",
             obligationsHeading: "6. Guest Obligations",
-            obligationsItems: ["Guests must treat the property and its contents with care.", "Smoking inside apartments is strictly prohibited.", "Quiet hours are from 22:00 to 08:00.", "The number of occupants may not exceed the stated apartment capacity.", "Pets are not permitted without prior written consent."],
+            obligationsItems: [
+              "Guests must treat the property and its contents with care.",
+              "Smoking inside apartments is strictly prohibited.",
+              "Quiet hours are from 22:00 to 08:00.",
+              "The number of occupants may not exceed the stated apartment capacity.",
+              "Pets are not permitted without prior written consent.",
+            ],
             liabilityHeading: "7. Liability",
-            liabilityText: "Villa Prgić is not liable for loss, theft, or damage to guests’ personal belongings. Guests are liable for any damage caused to the property during their stay.",
+            liabilityText:
+              "Villa Prgić is not liable for loss, theft, or damage to guests’ personal belongings. Guests are liable for any damage caused to the property during their stay.",
             governingHeading: "8. Governing Law",
-            governingText: "These terms are governed by the laws of the Republic of Croatia. Any disputes shall be subject to the exclusive jurisdiction of the courts in Šibenik, Croatia.",
+            governingText:
+              "These terms are governed by the laws of the Republic of Croatia. Any disputes shall be subject to the exclusive jurisdiction of the courts in Šibenik, Croatia.",
             contactHeading: "9. Contact",
-            contactText: "For questions regarding these terms contact us at info@villaprgic.com or +385 95 820 3771.",
+            contactText:
+              "For questions regarding these terms contact us at info@villaprgic.com or +385 95 820 3771.",
           },
           contact: {
             title: "Get in Touch",
-            subtitle: "We're here to help you plan your perfect Croatian getaway. Reach out to us anytime!",
+            subtitle:
+              "We're here to help you plan your perfect Croatian getaway. Reach out to us anytime!",
             phone: "Phone",
             whatsapp: "WhatsApp",
             location: "Location",
             quickResponse: "Quick Response",
             sendMessage: "Send us a Message",
-            formSubtitle: "Fill out the form below and we'll get back to you as soon as possible.",
+            formSubtitle:
+              "Fill out the form below and we'll get back to you as soon as possible.",
             yourName: "Your Name",
             emailAddress: "Email Address",
             checkIn: "Check-in Date",
@@ -223,7 +287,8 @@ resources: {
             apt2: "Apartment 2 – 4 guests",
             apt3: "Apartment 3 – 2 guests",
             yourMessage: "Your Message",
-            messagePlaceholder: "Tell us about your travel plans, special requests, or any questions...",
+            messagePlaceholder:
+              "Tell us about your travel plans, special requests, or any questions...",
             sending: "Sending...",
             sendBtn: "Send Message",
             officeHours: "Office Hours",
@@ -231,12 +296,15 @@ resources: {
             monFri: "Monday – Friday",
             saturday: "Saturday",
             sunday: "Sunday",
-            whatsappNote: "We respond to WhatsApp messages within 2 hours during office hours.",
+            whatsappNote:
+              "We respond to WhatsApp messages within 2 hours during office hours.",
             findUs: "Find Us",
             getDirections: "Get Directions",
             connectWith: "Connect With Us",
-            successMsg: "Message sent successfully! We'll get back to you within 24 hours.",
-            errorMsg: "Something went wrong. Please try again or contact us directly.",
+            successMsg:
+              "Message sent successfully! We'll get back to you within 24 hours.",
+            errorMsg:
+              "Something went wrong. Please try again or contact us directly.",
           },
           booking: {
             title: "Book Your Stay",
@@ -268,12 +336,18 @@ resources: {
             parking: "Parking",
             coffee: "Coffee",
             locationCategory: "Location",
-            near: ["5 min to beach", "10 min to Rogoznica", "45 min to Split", "35 min to airport"],
+            near: [
+              "5 min to beach",
+              "10 min to Rogoznica",
+              "45 min to Split",
+              "35 min to airport",
+            ],
             guests: "guests",
             bedroom: "bedroom",
             bedrooms: "bedrooms",
             validDatesError: "Please select valid check-in and check-out dates",
-            successMsg: "Booking request sent successfully! We'll contact you within 24 hours.",
+            successMsg:
+              "Booking request sent successfully! We'll contact you within 24 hours.",
             errorMsg: "Failed to send booking request. Please try again.",
             noDataMsg: "No apartment data available",
             backToApts: "Back to Apartments",
@@ -288,34 +362,34 @@ resources: {
             followUs: "Follow Us",
             legal: "Legal",
             tagline: "Your home in Croatia",
-            description: "Experience the perfect blend of comfort and Croatian coastal charm at our beautiful apartments in Kanica.",
+            description:
+              "Experience the perfect blend of comfort and Croatian coastal charm at our beautiful apartments in Kanica.",
             verified: "Verified",
-            since: "Since 2015",
+            since: "Since 2022",
             madeWith: "Made with",
             inCroatia: "in Croatia",
             language: "Language:",
             exploreRegion: "Explore Region",
+            subscribeSuccess: "Thanks for subscribing!",
+            invalidEmail: "Please enter a valid email address.",
           },
         },
       },
       de: {
         translation: {
-          navigation: { home: "Startseite", apartments: "Apartments", region: "Region", contact: "Kontakt", book: "Buchen" },
-          desc: [
-            "Eine Zwei-Zimmer-Apartment für zwei plus zwei Personen",
-            "Eine Drei-Zimmer-Apartment für sechs Personen",
-            "Eine Ein-Zimmer-Apartment für zwei Personen",
-          ],
-          summary: [
-            "Diese einladende ein-Zimmer-Apartment bietet einen gemütlichen Wohnraum mit einer funktionalen Küche, einem privaten Balkon zum Genießen im Freien und Zugang zu einem Gemeinschaftspool zur Erholung. Mit eine komfortablen Schlafzimmern ist sie perfekt für eine kleine Familie mit 2 Kindern bis 12 Jahre, die ein praktisches und bequemes Zuhause suchen.",
-            "Diese geräumige drei-Zimmer-Apartment bietet komfortables Wohnen mit einer gut ausgestatteten Küche, einem privaten Balkon zur Entspannung im Freien und Zugang zu einem erfrischenden Pool zur Freizeitgestaltung. Zusätzlich verfügt sie über ein modernes Badezimmer für Bequemlichkeit – ideal für alle, die ein angenehmes und komfortables Zuhause suchen.",
-            "Diese charmante ein-Zimmer-Apartment bietet ein gemütliches Wohnumfeld mit einer gut ausgestatteten Küche, einem privaten Balkon zur persönlichen Entspannung und Zugang zu gemeinschaftlichen Annehmlichkeiten wie einem Pool. Ideal für Singles oder Paare, bietet sie ein praktisches und komfortables Zuhause für alle, die ein kleineres, intimeres Heim suchen.",
-          ],
+          navigation: {
+            home: "Startseite",
+            apartments: "Apartments",
+            region: "Region",
+            contact: "Kontakt",
+            book: "Buchen",
+          },
           hero: {
             part1: "Finden Sie Ihren idealen Aufenthalt",
             part2: "idealen Aufenthalt",
             title: "Finden Sie Ihren idealen Aufenthalt",
-            subtitle: "Gemütliche Apartments in Kanica, Kroatien – direkt am Meer",
+            subtitle:
+              "Gemütliche Apartments in Kanica, Kroatien – direkt am Meer",
             exploreApartments: "Apartments erkunden",
             checkAvailability: "Verfügbarkeit prüfen",
           },
@@ -341,7 +415,8 @@ resources: {
             welcome: "Willkommen",
             welcomeInfo:
               "Unser charmantes Haus bietet drei komfortable Apartments, die alle mit viel Liebe zum Detail gestaltet wurden, damit Sie sich wie zu Hause fühlen. Ob Sie eine Einzimmer-Oase oder mehr Platz zum Teilen suchen – hier finden Sie die passende Unterkunft für Ihre Bedürfnisse.",
-            a1Info: "Ein Apartment mit ein Schlafzimmern für zwei plus zwei Personen.",
+            a1Info:
+              "Ein Apartment mit einem Schlafzimmer für zwei Erwachsene und zwei Kinder (bis 12 Jahre).",
             a2Info: "Ein Apartment mit drei Schlafzimmern für sechs Personen",
             a3Info: "Ein Apartment mit einem Schlafzimmern für zwei Personen",
             from: "Ab",
@@ -352,7 +427,8 @@ resources: {
             sortPriceLow: "Preis: Aufsteigend",
             sortPriceHigh: "Preis: Absteigend",
             countLabel: "Apartments verfügbar",
-            aboutDesc: "Dieses schöne Apartment bietet eine perfekte Mischung aus Komfort und kroatischem Küstencharme. Gelegen im ruhigen Dorf Kanica, nur wenige Minuten von unberührten Stränden und dem charmanten Städtchen Rogoznica entfernt.",
+            aboutDesc:
+              "Dieses schöne Apartment bietet eine perfekte Mischung aus Komfort und kroatischem Küstencharme. Gelegen im ruhigen Dorf Kanica, nur wenige Minuten von unberührten Stränden und dem charmanten Städtchen Rogoznica entfernt.",
             details: {
               nearby: "In der Nähe",
               near: [
@@ -433,6 +509,31 @@ resources: {
             planka: "Kap Planka 🌅",
             plankaInfo:
               "Der südlichste Punkt von Rogoznica, bekannt für seine dramatischen Wellen und geschichtliche Bedeutung in alten Seefahrtsberichten.",
+            sibenik: "Šibenik 🏰",
+            sibenikInfo:
+              "Eine historische Küstenstadt mit der UNESCO-gelisteten Kathedrale St. Jakob und einer von einer Festung gekrönten Altstadt mit Blick auf die Adria.",
+            krka: "Nationalpark Krka 💧",
+            krkaInfo:
+              "Berühmt für seine kaskadenartigen Wasserfälle, türkisfarbenen Becken und malerischen Wanderwege durch mediterranen Wald.",
+            klis: "Festung Klis 🏯",
+            klisInfo:
+              "Eine dramatische Festung auf einem Hügel mit jahrhundertelanger Militärgeschichte und weitem Blick über Split und das umliegende Tal.",
+            swimmingBeaches: "Schwimmen & Strände",
+            swimmingBeachesCount: "15+ Strände",
+            boatTours: "Bootstouren",
+            boatToursCount: "Tägliche Ausflüge",
+            freshSeafood: "Frische Meeresfrüchte",
+            freshSeafoodCount: "20+ Restaurants",
+            hikingTrails: "Wanderwege",
+            hikingTrailsCount: "10+ Routen",
+            photoSpots: "Fotospots",
+            photoSpotsCount: "30+ Orte",
+            localCafes: "Lokale Cafés",
+            localCafesCount: "50+ Optionen",
+            shipTourism: "Schiffs- & Bootstourismus",
+            shipTourismCount: "Marinas & Ausflüge",
+            activeTourism: "Aktivtourismus",
+            activeTourismCount: "Radfahren, Tauchen & mehr",
           },
           impressum: {
             title: "Impressum",
@@ -442,11 +543,14 @@ resources: {
             responsibleHeading: "Verantwortlich für den Inhalt",
             responsibleText: "Ante Prgić, unter der oben genannten Adresse.",
             disputeHeading: "Streitschlichtung",
-            disputeText: "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit. Wir sind nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen, sind jedoch dazu bereit.",
+            disputeText:
+              "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit. Wir sind nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen, sind jedoch dazu bereit.",
             liabilityHeading: "Haftung für Inhalte",
-            liabilityText: "Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.",
+            liabilityText:
+              "Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.",
             copyrightHeading: "Urheberrecht",
-            copyrightText: "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem kroatischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung von Villa Prgić.",
+            copyrightText:
+              "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem kroatischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung von Villa Prgić.",
           },
           privacy: {
             title: "Datenschutzerklärung",
@@ -454,52 +558,89 @@ resources: {
             controllerHeading: "1. Verantwortlicher",
             dataHeading: "2. Erhobene Daten",
             dataIntro: "Bei der Buchungsanfrage erheben wir folgende Daten:",
-            dataItems: ["Vollständiger Name", "E-Mail-Adresse", "Telefonnummer (optional)", "Gewünschte Daten und Personenanzahl", "Etwaige freiwillige Nachricht"],
+            dataItems: [
+              "Vollständiger Name",
+              "E-Mail-Adresse",
+              "Telefonnummer (optional)",
+              "Gewünschte Daten und Personenanzahl",
+              "Etwaige freiwillige Nachricht",
+            ],
             purposeHeading: "3. Zweck der Verarbeitung",
-            purposeText: "Ihre Daten werden ausschließlich zur Beantwortung Ihrer Anfrage und – bei Buchungsabschluss – zur Verwaltung Ihrer Reservierung verwendet. Wir geben Ihre Daten nicht an Dritte weiter und nutzen sie nicht für automatisiertes Profiling.",
+            purposeText:
+              "Ihre Daten werden ausschließlich zur Beantwortung Ihrer Anfrage und – bei Buchungsabschluss – zur Verwaltung Ihrer Reservierung verwendet. Wir geben Ihre Daten nicht an Dritte weiter und nutzen sie nicht für automatisiertes Profiling.",
             legalHeading: "4. Rechtsgrundlage",
-            legalText: "Die Verarbeitung erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) bei Einreichung des Kontaktformulars sowie zur Erfüllung eines Vertrags (Art. 6 Abs. 1 lit. b DSGVO) bei einer Buchung.",
+            legalText:
+              "Die Verarbeitung erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) bei Einreichung des Kontaktformulars sowie zur Erfüllung eines Vertrags (Art. 6 Abs. 1 lit. b DSGVO) bei einer Buchung.",
             retentionHeading: "5. Datenspeicherung",
-            retentionText: "Anfragedaten werden bis zu 12 Monate gespeichert. Buchungsdaten werden 7 Jahre aufbewahrt, um kroatischen Buchhaltungs- und Steuervorschriften zu entsprechen.",
+            retentionText:
+              "Anfragedaten werden bis zu 12 Monate gespeichert. Buchungsdaten werden 7 Jahre aufbewahrt, um kroatischen Buchhaltungs- und Steuervorschriften zu entsprechen.",
             rightsHeading: "6. Ihre Rechte",
             rightsIntro: "Nach der DSGVO haben Sie das Recht auf:",
-            rightsItems: ["Auskunft über Ihre gespeicherten personenbezogenen Daten", "Berichtigung unrichtiger Daten", "Löschung Ihrer Daten", "Widerspruch gegen oder Einschränkung der Verarbeitung", "Beschwerde bei der kroatischen Datenschutzbehörde (AZOP)"],
-            rightsContact: "Zur Ausübung Ihrer Rechte kontaktieren Sie uns unter info@villaprgic.com.",
+            rightsItems: [
+              "Auskunft über Ihre gespeicherten personenbezogenen Daten",
+              "Berichtigung unrichtiger Daten",
+              "Löschung Ihrer Daten",
+              "Widerspruch gegen oder Einschränkung der Verarbeitung",
+              "Beschwerde bei der kroatischen Datenschutzbehörde (AZOP)",
+            ],
+            rightsContact:
+              "Zur Ausübung Ihrer Rechte kontaktieren Sie uns unter info@villaprgic.com.",
             cookiesHeading: "7. Cookies",
-            cookiesText: "Diese Website verwendet nur technisch notwendige Cookies für die grundlegende Funktionalität. Es werden keine Tracking- oder Werbe-Cookies eingesetzt.",
+            cookiesText:
+              "Diese Website verwendet nur technisch notwendige Cookies für die grundlegende Funktionalität. Es werden keine Tracking- oder Werbe-Cookies eingesetzt.",
           },
           terms: {
             title: "Allgemeine Geschäftsbedingungen",
             updated: "Zuletzt aktualisiert: Juni 2025",
             scopeHeading: "1. Geltungsbereich",
-            scopeText: "Diese AGB regeln die Vermietung von Apartments in der Villa Prgić, Kanica 44, 22010 Primošten, Kroatien. Mit der Einreichung einer Buchungsanfrage oder der Bestätigung einer Reservierung stimmen Sie diesen Bedingungen zu.",
+            scopeText:
+              "Diese AGB regeln die Vermietung von Apartments in der Villa Prgić, Kanica 265, 22010 Primošten, Kroatien. Mit der Einreichung einer Buchungsanfrage oder der Bestätigung einer Reservierung stimmen Sie diesen Bedingungen zu.",
             reservationsHeading: "2. Reservierungen",
-            reservationsText: "Eine Reservierung gilt erst als bestätigt, wenn Sie eine schriftliche Bestätigung von Villa Prgić erhalten haben und die vereinbarte Anzahlung eingegangen ist.",
+            reservationsText:
+              "Eine Reservierung gilt erst als bestätigt, wenn Sie eine schriftliche Bestätigung von Villa Prgić erhalten haben und die vereinbarte Anzahlung eingegangen ist.",
             paymentHeading: "3. Zahlung",
-            paymentText: "Eine Anzahlung von 30 % des Gesamtmietpreises ist zur Bestätigung der Reservierung erforderlich. Der Restbetrag ist spätestens 14 Tage vor Anreise fällig.",
+            paymentText:
+              "Eine Anzahlung von 30 % des Gesamtmietpreises ist zur Bestätigung der Reservierung erforderlich. Der Restbetrag ist spätestens 14 Tage vor Anreise fällig.",
             cancellationHeading: "4. Stornierungsbedingungen",
-            cancellationItems: ["Stornierung mehr als 30 Tage vor Anreise: vollständige Rückerstattung der Anzahlung.", "Stornierung 15–30 Tage vor Anreise: 50 % der Anzahlung wird einbehalten.", "Stornierung weniger als 15 Tage vor Anreise: keine Rückerstattung."],
-            cancellationNote: "Wir empfehlen dringend den Abschluss einer Reiseversicherung.",
+            cancellationItems: [
+              "Stornierung mehr als 30 Tage vor Anreise: vollständige Rückerstattung der Anzahlung.",
+              "Stornierung 15–30 Tage vor Anreise: 50 % der Anzahlung wird einbehalten.",
+              "Stornierung weniger als 15 Tage vor Anreise: keine Rückerstattung.",
+            ],
+            cancellationNote:
+              "Wir empfehlen dringend den Abschluss einer Reiseversicherung.",
             checkinHeading: "5. An- und Abreise",
-            checkinText: "Check-in ab 15:00 Uhr, Check-out bis 10:00 Uhr. Früh-Check-in oder später Check-out kann nach Verfügbarkeit gegen Aufpreis vereinbart werden.",
+            checkinText:
+              "Check-in ab 15:00 Uhr, Check-out bis 10:00 Uhr. Früh-Check-in oder später Check-out kann nach Verfügbarkeit gegen Aufpreis vereinbart werden.",
             obligationsHeading: "6. Gästepflichten",
-            obligationsItems: ["Gäste müssen das Objekt und sein Inventar sorgsam behandeln.", "Rauchen in den Apartments ist streng verboten.", "Ruhezeiten: 22:00–08:00 Uhr.", "Die Belegung darf die angegebene Kapazität nicht überschreiten.", "Haustiere sind ohne vorherige schriftliche Zustimmung nicht erlaubt."],
+            obligationsItems: [
+              "Gäste müssen das Objekt und sein Inventar sorgsam behandeln.",
+              "Rauchen in den Apartments ist streng verboten.",
+              "Ruhezeiten: 22:00–08:00 Uhr.",
+              "Die Belegung darf die angegebene Kapazität nicht überschreiten.",
+              "Haustiere sind ohne vorherige schriftliche Zustimmung nicht erlaubt.",
+            ],
             liabilityHeading: "7. Haftung",
-            liabilityText: "Villa Prgić haftet nicht für Verlust, Diebstahl oder Schäden am persönlichen Eigentum der Gäste. Gäste haften für während ihres Aufenthalts am Objekt verursachte Schäden.",
+            liabilityText:
+              "Villa Prgić haftet nicht für Verlust, Diebstahl oder Schäden am persönlichen Eigentum der Gäste. Gäste haften für während ihres Aufenthalts am Objekt verursachte Schäden.",
             governingHeading: "8. Anwendbares Recht",
-            governingText: "Es gilt kroatisches Recht. Gerichtsstand ist Šibenik, Kroatien.",
+            governingText:
+              "Es gilt kroatisches Recht. Gerichtsstand ist Šibenik, Kroatien.",
             contactHeading: "9. Kontakt",
-            contactText: "Bei Fragen wenden Sie sich an info@villaprgic.com oder +385 95 820 3771.",
+            contactText:
+              "Bei Fragen wenden Sie sich an info@villaprgic.com oder +385 95 820 3771.",
           },
           contact: {
             title: "Kontaktieren Sie uns",
-            subtitle: "Wir helfen Ihnen gerne dabei, Ihren perfekten Kroatien-Urlaub zu planen. Schreiben Sie uns jederzeit!",
+            subtitle:
+              "Wir helfen Ihnen gerne dabei, Ihren perfekten Kroatien-Urlaub zu planen. Schreiben Sie uns jederzeit!",
             phone: "Telefon",
             whatsapp: "WhatsApp",
             location: "Standort",
             quickResponse: "Schnelle Antwort",
             sendMessage: "Senden Sie uns eine Nachricht",
-            formSubtitle: "Füllen Sie das Formular aus und wir melden uns so schnell wie möglich.",
+            formSubtitle:
+              "Füllen Sie das Formular aus und wir melden uns so schnell wie möglich.",
             yourName: "Ihr Name",
             emailAddress: "E-Mail-Adresse",
             checkIn: "Anreisedatum",
@@ -510,7 +651,8 @@ resources: {
             apt2: "Apartment 2 – 4 Gäste",
             apt3: "Apartment 3 – 2 Gäste",
             yourMessage: "Ihre Nachricht",
-            messagePlaceholder: "Erzählen Sie uns von Ihren Reiseplänen, Sonderwünschen oder Fragen...",
+            messagePlaceholder:
+              "Erzählen Sie uns von Ihren Reiseplänen, Sonderwünschen oder Fragen...",
             sending: "Wird gesendet...",
             sendBtn: "Nachricht senden",
             officeHours: "Öffnungszeiten",
@@ -518,12 +660,15 @@ resources: {
             monFri: "Montag – Freitag",
             saturday: "Samstag",
             sunday: "Sonntag",
-            whatsappNote: "Wir antworten auf WhatsApp-Nachrichten innerhalb von 2 Stunden während der Öffnungszeiten.",
+            whatsappNote:
+              "Wir antworten auf WhatsApp-Nachrichten innerhalb von 2 Stunden während der Öffnungszeiten.",
             findUs: "Finden Sie uns",
             getDirections: "Route anzeigen",
             connectWith: "Verbinden Sie sich mit uns",
-            successMsg: "Nachricht erfolgreich gesendet! Wir melden uns innerhalb von 24 Stunden.",
-            errorMsg: "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
+            successMsg:
+              "Nachricht erfolgreich gesendet! Wir melden uns innerhalb von 24 Stunden.",
+            errorMsg:
+              "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
           },
           booking: {
             title: "Buchen Sie Ihren Aufenthalt",
@@ -555,13 +700,20 @@ resources: {
             parking: "Parkplatz",
             coffee: "Kaffee",
             locationCategory: "Lage",
-            near: ["5 Min. zum Strand", "10 Min. nach Rogoznica", "45 Min. nach Split", "35 Min. zum Flughafen"],
+            near: [
+              "5 Min. zum Strand",
+              "10 Min. nach Rogoznica",
+              "45 Min. nach Split",
+              "35 Min. zum Flughafen",
+            ],
             guests: "Gäste",
             bedroom: "Schlafzimmer",
             bedrooms: "Schlafzimmer",
             validDatesError: "Bitte wählen Sie gültige An- und Abreisedaten",
-            successMsg: "Buchungsanfrage erfolgreich gesendet! Wir melden uns innerhalb von 24 Stunden.",
-            errorMsg: "Buchungsanfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+            successMsg:
+              "Buchungsanfrage erfolgreich gesendet! Wir melden uns innerhalb von 24 Stunden.",
+            errorMsg:
+              "Buchungsanfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
             noDataMsg: "Keine Apartmentdaten verfügbar",
             backToApts: "Zurück zu den Apartments",
           },
@@ -575,29 +727,28 @@ resources: {
             followUs: "Folgen Sie uns",
             legal: "Rechtliches",
             tagline: "Ihr Zuhause in Kroatien",
-            description: "Erleben Sie die perfekte Mischung aus Komfort und kroatischem Küstencharme in unseren schönen Apartments in Kanica.",
+            description:
+              "Erleben Sie die perfekte Mischung aus Komfort und kroatischem Küstencharme in unseren schönen Apartments in Kanica.",
             verified: "Verifiziert",
-            since: "Seit 2015",
+            since: "Seit 2022",
             madeWith: "Gemacht mit",
             inCroatia: "in Kroatien",
             language: "Sprache:",
             exploreRegion: "Region erkunden",
+            subscribeSuccess: "Danke für Ihre Anmeldung!",
+            invalidEmail: "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
           },
         },
       },
       hr: {
         translation: {
-          navigation: { home: "Početna", apartments: "Apartmani", region: "Regija", contact: "Kontakt", book: "Rezerviraj" },
-          desc: [
-            "Jednosoban apartman za dvije plus dvije osobe",
-            "Trosoban apartman za šest osoba",
-            "Jednosoban apartman za dvije osobe",
-          ],
-          summary: [
-            "Ovaj ugodan jednosobni stan pruža topao životni prostor s funkcionalnom kuhinjom, privatnim balkonom za uživanje na otvorenom i pristupom zajedničkom bazenu za rekreaciju. S jednom udobnom spavaćom sobom, savršen je za manju obitelj sa dvoje djece do 12 godina, koji traže praktičan i ugodan dom.",
-            "Ovaj prostrani trosobni stan nudi udoban život za šest osoba s dobro opremljenom kuhinjom, privatnim balkonom za opuštanje na otvorenom i pristupom osvježavajućem bazenu za razonodu. Također uključuje moderno kupatilo za dodatnu udobnost, što ga čini idealnim izborom za one koji traže ugodan i udoban dom.",
-            "Ovaj šarmantni jednosobni stan nudi ugodno životno okruženje s dobro opremljenom kuhinjom, privatnim balkonom za osobno opuštanje i pristupom zajedničkim sadržajima poput bazena. Idealan za samce ili parove, pruža praktičan i udoban životni prostor za one koji traže manji i intimniji dom.",
-          ],
+          navigation: {
+            home: "Početna",
+            apartments: "Apartmani",
+            region: "Regija",
+            contact: "Kontakt",
+            book: "Rezerviraj",
+          },
           hero: {
             part1: "Za vaš odmor iz snova",
             part2: "idealni smještaj",
@@ -628,8 +779,9 @@ resources: {
             welcome: "Dobrodošli",
             welcomeInfo:
               "Naša šarmantna kuća nudi tri udobna apartmana, svaki pažljivo dizajniran da se osjećate kao kod kuće. Bilo da tražite jednosobno utočište ili više prostora za dijeljenje, pronaći ćete apartman koji odgovara vašim potrebama.",
-            a1Info: "Apartman sa 3 spavaće sobe za šest osoba",
-            a2Info: "Apartman sa jednom spavaćom sobom za dvije plus dvije osobe",
+            a1Info:
+              "Apartman sa jednom spavaćom sobom za dvoje odraslih i dvoje djece (do 12 godina).",
+            a2Info: "Apartman sa 3 spavaće sobe za šest osoba",
             a3Info: "Apartman sa jednom spavaćom sobom za dvoje ljudi",
             from: "Od",
             availableNow: "Dostupno sada",
@@ -639,7 +791,8 @@ resources: {
             sortPriceLow: "Cijena: Rastuće",
             sortPriceHigh: "Cijena: Padajuće",
             countLabel: "apartmana dostupno",
-            aboutDesc: "Ovaj prekrasan apartman nudi savršenu kombinaciju udobnosti i hrvatskog obalnog šarma. Smješten u mirnom selu Kanica, samo nekoliko minuta od netaknutih plaža i šarmantnog gradića Rogoznice.",
+            aboutDesc:
+              "Ovaj prekrasan apartman nudi savršenu kombinaciju udobnosti i hrvatskog obalnog šarma. Smješten u mirnom selu Kanica, samo nekoliko minuta od netaknutih plaža i šarmantnog gradića Rogoznice.",
             details: {
               nearby: "U blizini",
               near: [
@@ -679,7 +832,6 @@ resources: {
               ],
             },
           },
-
 
           region: {
             heading: "Otkrijte Hrvatsku",
@@ -721,6 +873,31 @@ resources: {
             planka: "Rt Planka 🌅",
             plankaInfo:
               "Najjužnija točka Rogoznice, gdje se susreću vjetrovi i morski struje. Mjesto s bogatom pomorskom poviješću i spektakularnim pogledima.",
+            sibenik: "Šibenik 🏰",
+            sibenikInfo:
+              "Povijesni primorski grad s katedralom sv. Jakova pod zaštitom UNESCO-a i starim gradom okovanim utvrdama s pogledom na Jadran.",
+            krka: "Nacionalni park Krka 💧",
+            krkaInfo:
+              "Poznat po svojim slapovima, tirkiznim jezercima i slikovitim pješačkim stazama kroz mediteransku šumu.",
+            klis: "Klis tvrđava 🏯",
+            klisInfo:
+              "Impresivna utvrda na brdu s dugom vojnom povijesti i širokim pogledom na Split i okolnu dolinu.",
+            swimmingBeaches: "Plivanje i plaže",
+            swimmingBeachesCount: "15+ plaža",
+            boatTours: "Izleti brodom",
+            boatToursCount: "Dnevni izleti",
+            freshSeafood: "Svježi plodovi mora",
+            freshSeafoodCount: "20+ restorana",
+            hikingTrails: "Pješačke staze",
+            hikingTrailsCount: "10+ staza",
+            photoSpots: "Fotogenične lokacije",
+            photoSpotsCount: "30+ lokacija",
+            localCafes: "Lokalni kafići",
+            localCafesCount: "50+ opcija",
+            shipTourism: "Brodski i nautički turizam",
+            shipTourismCount: "Marine i izleti",
+            activeTourism: "Aktivni turizam",
+            activeTourismCount: "Biciklizam, ronjenje i više",
           },
           impressum: {
             title: "Impressum",
@@ -730,11 +907,14 @@ resources: {
             responsibleHeading: "Odgovoran za sadržaj",
             responsibleText: "Ante Prgić, na gornjoj adresi.",
             disputeHeading: "Rješavanje sporova",
-            disputeText: "Europska komisija pruža platformu za online rješavanje sporova. Nismo obvezni sudjelovati u postupku rješavanja sporova pred potrošačkim arbitražnim tijelom, ali smo na to voljni.",
+            disputeText:
+              "Europska komisija pruža platformu za online rješavanje sporova. Nismo obvezni sudjelovati u postupku rješavanja sporova pred potrošačkim arbitražnim tijelom, ali smo na to voljni.",
             liabilityHeading: "Odgovornost za sadržaj",
-            liabilityText: "Sadržaj ove stranice izrađen je s najvećom pažnjom. Ne možemo jamčiti točnost, potpunost ni ažurnost informacija.",
+            liabilityText:
+              "Sadržaj ove stranice izrađen je s najvećom pažnjom. Ne možemo jamčiti točnost, potpunost ni ažurnost informacija.",
             copyrightHeading: "Autorska prava",
-            copyrightText: "Svi sadržaji i radovi na ovoj web-stranici podliježu hrvatskom autorskom pravu. Reprodukcija, obrada, distribucija ili bilo koji oblik komercijalizacije materijala izvan okvira autorskog prava zahtijeva prethodnu pisanu suglasnost Villa Prgić.",
+            copyrightText:
+              "Svi sadržaji i radovi na ovoj web-stranici podliježu hrvatskom autorskom pravu. Reprodukcija, obrada, distribucija ili bilo koji oblik komercijalizacije materijala izvan okvira autorskog prava zahtijeva prethodnu pisanu suglasnost Villa Prgić.",
           },
           privacy: {
             title: "Politika privatnosti",
@@ -742,52 +922,88 @@ resources: {
             controllerHeading: "1. Voditelj obrade",
             dataHeading: "2. Podaci koje prikupljamo",
             dataIntro: "Kada pošaljete upit za rezervaciju, prikupljamo:",
-            dataItems: ["Puno ime", "Adresa e-pošte", "Broj telefona (neobavezno)", "Željeni datumi i broj gostiju", "Poruka koju dobrovoljno uključite"],
+            dataItems: [
+              "Puno ime",
+              "Adresa e-pošte",
+              "Broj telefona (neobavezno)",
+              "Željeni datumi i broj gostiju",
+              "Poruka koju dobrovoljno uključite",
+            ],
             purposeHeading: "3. Svrha obrade",
-            purposeText: "Vaši podaci koriste se isključivo za odgovor na vaš upit i, ako dođe do rezervacije, za upravljanje njome. Ne koristimo vaše podatke za automatizirano profiliranje niti ih prodajemo trećim stranama.",
+            purposeText:
+              "Vaši podaci koriste se isključivo za odgovor na vaš upit i, ako dođe do rezervacije, za upravljanje njome. Ne koristimo vaše podatke za automatizirano profiliranje niti ih prodajemo trećim stranama.",
             legalHeading: "4. Pravna osnova",
-            legalText: "Obrada se temelji na vašoj suglasnosti (čl. 6. st. 1. t. a) OUZP-a) pri slanju kontakt-obrasca te na izvršavanju ugovora (čl. 6. st. 1. t. b) OUZP-a) pri izvršenoj rezervaciji.",
+            legalText:
+              "Obrada se temelji na vašoj suglasnosti (čl. 6. st. 1. t. a) OUZP-a) pri slanju kontakt-obrasca te na izvršavanju ugovora (čl. 6. st. 1. t. b) OUZP-a) pri izvršenoj rezervaciji.",
             retentionHeading: "5. Čuvanje podataka",
-            retentionText: "Podaci o upitima čuvaju se do 12 mjeseci. Podaci vezani uz rezervacije čuvaju se 7 godina sukladno hrvatskim računovodstvenim i poreznim propisima.",
+            retentionText:
+              "Podaci o upitima čuvaju se do 12 mjeseci. Podaci vezani uz rezervacije čuvaju se 7 godina sukladno hrvatskim računovodstvenim i poreznim propisima.",
             rightsHeading: "6. Vaša prava",
             rightsIntro: "Sukladno OUZP-u imate pravo na:",
-            rightsItems: ["Pristup osobnim podacima koje o vama čuvamo", "Ispravak netočnih podataka", "Brisanje vaših podataka", "Prigovor ili ograničenje obrade", "Pritužbu Agenciji za zaštitu osobnih podataka (AZOP)"],
-            rightsContact: "Za ostvarivanje prava kontaktirajte nas na info@villaprgic.com.",
+            rightsItems: [
+              "Pristup osobnim podacima koje o vama čuvamo",
+              "Ispravak netočnih podataka",
+              "Brisanje vaših podataka",
+              "Prigovor ili ograničenje obrade",
+              "Pritužbu Agenciji za zaštitu osobnih podataka (AZOP)",
+            ],
+            rightsContact:
+              "Za ostvarivanje prava kontaktirajte nas na info@villaprgic.com.",
             cookiesHeading: "7. Kolačići",
-            cookiesText: "Ova web-stranica koristi isključivo tehnički neophodne kolačiće za osnovnu funkcionalnost. Ne koristimo kolačiće za praćenje ni oglašavanje.",
+            cookiesText:
+              "Ova web-stranica koristi isključivo tehnički neophodne kolačiće za osnovnu funkcionalnost. Ne koristimo kolačiće za praćenje ni oglašavanje.",
           },
           terms: {
             title: "Uvjeti korištenja",
             updated: "Zadnje ažuriranje: lipanj 2025.",
             scopeHeading: "1. Primjena",
-            scopeText: "Ovi uvjeti uređuju iznajmljivanje apartmana u Villa Prgić, Kanica 44, 22010 Primošten, Hrvatska. Slanjem upita za rezervaciju ili potvrdom rezervacije prihvaćate ove uvjete.",
+            scopeText:
+              "Ovi uvjeti uređuju iznajmljivanje apartmana u Villa Prgić, Kanica 265, 22010 Primošten, Hrvatska. Slanjem upita za rezervaciju ili potvrdom rezervacije prihvaćate ove uvjete.",
             reservationsHeading: "2. Rezervacije",
-            reservationsText: "Rezervacija se smatra potvrđenom tek po primitku pisane potvrde od Villa Prgić i uplaćenog dogovorenog predujma.",
+            reservationsText:
+              "Rezervacija se smatra potvrđenom tek po primitku pisane potvrde od Villa Prgić i uplaćenog dogovorenog predujma.",
             paymentHeading: "3. Plaćanje",
-            paymentText: "Za potvrdu rezervacije potreban je predujam od 30 % ukupne cijene najma. Preostali iznos dospijeva najkasnije 14 dana prije dolaska.",
+            paymentText:
+              "Za potvrdu rezervacije potreban je predujam od 30 % ukupne cijene najma. Preostali iznos dospijeva najkasnije 14 dana prije dolaska.",
             cancellationHeading: "4. Uvjeti otkazivanja",
-            cancellationItems: ["Otkazivanje više od 30 dana prije dolaska: povrat cjelokupnog predujma.", "Otkazivanje 15–30 dana prije dolaska: zadržava se 50 % predujma.", "Otkazivanje manje od 15 dana prije dolaska: bez povrata."],
+            cancellationItems: [
+              "Otkazivanje više od 30 dana prije dolaska: povrat cjelokupnog predujma.",
+              "Otkazivanje 15–30 dana prije dolaska: zadržava se 50 % predujma.",
+              "Otkazivanje manje od 15 dana prije dolaska: bez povrata.",
+            ],
             cancellationNote: "Toplo preporučujemo putno osiguranje.",
             checkinHeading: "5. Prijava i odjava",
-            checkinText: "Prijava od 15:00, odjava do 10:00. Ranija prijava ili kasnija odjava mogu se dogovoriti uz doplatu, ovisno o dostupnosti.",
+            checkinText:
+              "Prijava od 15:00, odjava do 10:00. Ranija prijava ili kasnija odjava mogu se dogovoriti uz doplatu, ovisno o dostupnosti.",
             obligationsHeading: "6. Obveze gostiju",
-            obligationsItems: ["Gosti moraju pažljivo koristiti nekretninu i njezin inventar.", "Pušenje unutar apartmana strogo je zabranjeno.", "Vremena tišine: 22:00–08:00.", "Broj gostiju ne smije prelaziti navedeni kapacitet apartmana.", "Kućni ljubimci nisu dopušteni bez prethodne pisane suglasnosti."],
+            obligationsItems: [
+              "Gosti moraju pažljivo koristiti nekretninu i njezin inventar.",
+              "Pušenje unutar apartmana strogo je zabranjeno.",
+              "Vremena tišine: 22:00–08:00.",
+              "Broj gostiju ne smije prelaziti navedeni kapacitet apartmana.",
+              "Kućni ljubimci nisu dopušteni bez prethodne pisane suglasnosti.",
+            ],
             liabilityHeading: "7. Odgovornost",
-            liabilityText: "Villa Prgić ne odgovara za gubitak, krađu ili oštećenje osobne imovine gostiju. Gosti odgovaraju za štete nastale na nekretnini tijekom boravka.",
+            liabilityText:
+              "Villa Prgić ne odgovara za gubitak, krađu ili oštećenje osobne imovine gostiju. Gosti odgovaraju za štete nastale na nekretnini tijekom boravka.",
             governingHeading: "8. Mjerodavno pravo",
-            governingText: "Primjenjuje se pravo Republike Hrvatske. Nadležan je sud u Šibeniku.",
+            governingText:
+              "Primjenjuje se pravo Republike Hrvatske. Nadležan je sud u Šibeniku.",
             contactHeading: "9. Kontakt",
-            contactText: "Za pitanja kontaktirajte nas na info@villaprgic.com ili +385 95 820 3771.",
+            contactText:
+              "Za pitanja kontaktirajte nas na info@villaprgic.com ili +385 95 820 3771.",
           },
           contact: {
             title: "Kontaktirajte nas",
-            subtitle: "Ovdje smo da vam pomognemo planirati savršen odmor u Hrvatskoj. Javite nam se u bilo kojem trenutku!",
+            subtitle:
+              "Ovdje smo da vam pomognemo planirati savršen odmor u Hrvatskoj. Javite nam se u bilo kojem trenutku!",
             phone: "Telefon",
             whatsapp: "WhatsApp",
             location: "Lokacija",
             quickResponse: "Brzi odgovor",
             sendMessage: "Pošaljite nam poruku",
-            formSubtitle: "Ispunite obrazac i javit ćemo vam se što je prije moguće.",
+            formSubtitle:
+              "Ispunite obrazac i javit ćemo vam se što je prije moguće.",
             yourName: "Vaše ime",
             emailAddress: "Adresa e-pošte",
             checkIn: "Datum prijave",
@@ -798,7 +1014,8 @@ resources: {
             apt2: "Apartman 2 – 4 gosta",
             apt3: "Apartman 3 – 2 gosta",
             yourMessage: "Vaša poruka",
-            messagePlaceholder: "Opišite nam svoje planove, posebne zahtjeve ili pitanja...",
+            messagePlaceholder:
+              "Opišite nam svoje planove, posebne zahtjeve ili pitanja...",
             sending: "Slanje...",
             sendBtn: "Pošalji poruku",
             officeHours: "Radno vrijeme",
@@ -806,12 +1023,15 @@ resources: {
             monFri: "Ponedjeljak – Petak",
             saturday: "Subota",
             sunday: "Nedjelja",
-            whatsappNote: "Odgovaramo na WhatsApp poruke unutar 2 sata za vrijeme radnog vremena.",
+            whatsappNote:
+              "Odgovaramo na WhatsApp poruke unutar 2 sata za vrijeme radnog vremena.",
             findUs: "Pronađite nas",
             getDirections: "Prikaži put",
             connectWith: "Povežite se s nama",
-            successMsg: "Poruka uspješno poslana! Javit ćemo vam se unutar 24 sata.",
-            errorMsg: "Nešto je pošlo po krivu. Pokušajte ponovo ili nam se obratite izravno.",
+            successMsg:
+              "Poruka uspješno poslana! Javit ćemo vam se unutar 24 sata.",
+            errorMsg:
+              "Nešto je pošlo po krivu. Pokušajte ponovo ili nam se obratite izravno.",
           },
           booking: {
             title: "Rezervirajte boravak",
@@ -843,12 +1063,19 @@ resources: {
             parking: "Parking",
             coffee: "Kava",
             locationCategory: "Lokacija",
-            near: ["5 min do plaže", "10 min do Rogoznice", "45 min do Splita", "35 min do aerodroma"],
+            near: [
+              "5 min do plaže",
+              "10 min do Rogoznice",
+              "45 min do Splita",
+              "35 min do aerodroma",
+            ],
             guests: "gostiju",
             bedroom: "spavaća soba",
             bedrooms: "spavaće sobe",
-            validDatesError: "Molimo odaberite ispravne datume prijave i odjave",
-            successMsg: "Zahtjev za rezervaciju uspješno poslan! Javit ćemo vam se unutar 24 sata.",
+            validDatesError:
+              "Molimo odaberite ispravne datume prijave i odjave",
+            successMsg:
+              "Zahtjev za rezervaciju uspješno poslan! Javit ćemo vam se unutar 24 sata.",
             errorMsg: "Slanje zahtjeva nije uspjelo. Pokušajte ponovo.",
             noDataMsg: "Nema dostupnih podataka o apartmanu",
             backToApts: "Povratak na apartmane",
@@ -863,17 +1090,20 @@ resources: {
             followUs: "Pratite nas",
             legal: "Pravne informacije",
             tagline: "Vaš dom u Hrvatskoj",
-            description: "Doživite savršenu kombinaciju udobnosti i hrvatskog obalnog šarma u našim prekrasnim apartmanima u Kanici.",
+            description:
+              "Doživite savršenu kombinaciju udobnosti i hrvatskog obalnog šarma u našim prekrasnim apartmanima u Kanici.",
             verified: "Verificirano",
-            since: "Od 2015.",
+            since: "Od 2022.",
             madeWith: "Napravljeno s",
             inCroatia: "u Hrvatskoj",
             language: "Jezik:",
             exploreRegion: "Istraži regiju",
+            subscribeSuccess: "Hvala na pretplati!",
+            invalidEmail: "Unesite valjanu adresu e-pošte.",
           },
         },
       },
-    }
+    },
   });
 
 export default i18n;
