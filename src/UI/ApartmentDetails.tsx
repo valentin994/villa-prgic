@@ -25,57 +25,74 @@ import {
   Mail,
   MessageSquare,
   Phone,
-  Share2,
-  Heart,
   Grid,
 } from "lucide-react";
 
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
+import Lightbox from "../Components/Lightbox";
 
 // Add custom calendar styles
 const calendarStyles = `
   .calendar-container {
     width: 100%;
+    max-width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
   }
-  
+
   .calendar-container .rdrCalendarWrapper {
     background: transparent;
     color: #000;
     font-size: 14px;
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
-  
+
   .calendar-container .rdrDateRangePickerWrapper {
     display: flex;
     justify-content: center;
+    width: 100%;
+    max-width: 100%;
   }
-  
+
+  .calendar-container .rdrMonths {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .calendar-container .rdrMonth {
     width: 100%;
     max-width: 320px;
     padding: 0;
+    box-sizing: border-box;
   }
-  
+
   .calendar-container .rdrMonthAndYearWrapper {
     padding: 0 0 10px 0;
+    width: 100%;
+    box-sizing: border-box;
   }
-  
+
+  .calendar-container .rdrMonthAndYearPickers select {
+    max-width: 100%;
+  }
+
   .calendar-container .rdrDay {
     height: 2.5em;
   }
-  
+
   .calendar-container .rdrDayNumber span {
     font-size: 14px;
   }
-  
+
   @media (max-width: 640px) {
     .calendar-container .rdrMonth {
       max-width: 100%;
     }
-    
+
     .calendar-container .rdrDay {
       height: 2.2em;
     }
@@ -88,10 +105,7 @@ interface ApartmentState {
   detail: string;
   price: number;
   features?: string[];
-  firstImage: string;
-  firstGridImageList: string[];
-  secondImage: string;
-  secondGridImageList: string[];
+  images: string[];
 }
 
 // Modern Image Gallery Component (same as before, keeping it)
@@ -106,15 +120,6 @@ const ModernImageGallery = ({ images }: { images: string[] }) => {
   const handleNext = () => {
     setSelectedImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
-
-  useEffect(() => {
-    if (!isFullscreen) return;
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setIsFullscreen(false);
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isFullscreen]);
 
   return (
     <>
@@ -230,81 +235,15 @@ const ModernImageGallery = ({ images }: { images: string[] }) => {
         </div>
       </div>
 
-      {/* Fullscreen Gallery Modal */}
+      {/* Fullscreen Gallery Lightbox */}
       <AnimatePresence>
         {isFullscreen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black"
-          >
-            <div className="relative h-full flex flex-col">
-              {/* Header */}
-              <div className="flex items-center justify-between p-4 lg:p-8 bg-gradient-to-b from-black/50 to-transparent absolute top-0 left-0 right-0 z-10">
-                <span className="text-white font-medium">
-                  {selectedImage + 1} / {images.length}
-                </span>
-                <button
-                  onClick={() => setIsFullscreen(false)}
-                  className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all"
-                >
-                  <X className="w-5 h-5 text-white" />
-                </button>
-              </div>
-
-              {/* Main Image */}
-              <div className="relative flex-1 flex items-center justify-center p-4 lg:p-8">
-                <AnimatePresence mode="wait">
-                  <motion.img
-                    key={selectedImage}
-                    src={images[selectedImage]}
-                    alt={`Apartment view ${selectedImage + 1}`}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.3 }}
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </AnimatePresence>
-
-                {/* Navigation */}
-                <button
-                  onClick={handlePrevious}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all"
-                >
-                  <ChevronLeft className="w-6 h-6 text-white" />
-                </button>
-                <button
-                  onClick={handleNext}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all"
-                >
-                  <ChevronRight className="w-6 h-6 text-white" />
-                </button>
-              </div>
-
-              {/* Thumbnail Strip */}
-              <div className="bg-black/80 backdrop-blur-sm p-4 lg:p-8">
-                <div className="flex gap-2 justify-center overflow-x-auto">
-                  {images.map((image, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setSelectedImage(index)}
-                      className={`relative flex-shrink-0 w-24 h-24 overflow-hidden transition-all ${
-                        selectedImage === index ? 'ring-2 ring-white' : 'opacity-60 hover:opacity-100'
-                      }`}
-                    >
-                      <img
-                        src={image}
-                        alt={`Thumbnail ${index + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </motion.div>
+          <Lightbox
+            images={images}
+            initialIndex={selectedImage}
+            onClose={() => setIsFullscreen(false)}
+            altPrefix="Apartment view"
+          />
         )}
       </AnimatePresence>
     </>
@@ -511,24 +450,10 @@ function ApartmentDetails() {
     type: 'success' | 'error' | null;
     message: string;
   }>({ type: null, message: '' });
-  const [savedToWishlist, setSavedToWishlist] = useState(false);
 
-  const {
-    name,
-    detail,
-    price = 200,
-    firstImage,
-    firstGridImageList,
-    secondImage,
-    secondGridImageList,
-  } = state || {};
+  const { name, detail, price = 200, images = [] } = state || {};
 
-  const allImages = [
-    firstImage,
-    ...firstGridImageList,
-    secondImage,
-    ...secondGridImageList,
-  ].filter(Boolean);
+  const allImages = images.filter(Boolean);
 
   // Parse apartment details
   const getApartmentInfo = (detail: string) => {
@@ -662,7 +587,7 @@ function ApartmentDetails() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pt-[104px]">
       {/* Add custom styles */}
       <style>{calendarStyles}</style>
 
@@ -688,39 +613,6 @@ function ApartmentDetails() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Header */}
-      <div className="bg-white border-b sticky top-20 mb-20 z-20">
-        <div className="max-w-7xl mx-auto px-4 lg:px-6 py-3 lg:py-4">
-          <div className="flex items-center justify-between">
-            <button
-              onClick={() => navigate(-1)}
-              className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
-            >
-              <ChevronLeft className="w-5 h-5" />
-              <span>{t("booking.back")}</span>
-            </button>
-            
-            <div className="flex items-center space-x-3">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => setSavedToWishlist(!savedToWishlist)}
-                className="w-9 h-9 lg:w-10 lg:h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
-              >
-                <Heart className={`w-4 h-4 lg:w-5 lg:h-5 ${savedToWishlist ? 'fill-red-500 text-red-500' : 'text-gray-600'}`} />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="w-9 h-9 lg:w-10 lg:h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
-              >
-                <Share2 className="w-4 h-4 lg:w-5 lg:h-5 text-gray-600" />
-              </motion.button>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Hero Section */}
       <section className="bg-white">
@@ -760,7 +652,7 @@ function ApartmentDetails() {
       <section className="max-w-7xl mx-auto px-4 lg:px-6 py-6 lg:py-12">
         <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Left Column - Details */}
-          <div className="lg:col-span-2 space-y-8 lg:space-y-12">
+          <div className="lg:col-span-2 min-w-0 space-y-8 lg:space-y-12">
             {/* Description */}
             <div>
               <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3 lg:mb-4">{t("booking.aboutPlace")}</h2>
@@ -811,7 +703,7 @@ function ApartmentDetails() {
           </div>
 
           {/* Right Column - Booking - FIXED */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 min-w-0">
             <div className="sticky top-32">
               {/* Price Card */}
               <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg lg:shadow-xl p-4 lg:p-6 mb-4 lg:mb-6">

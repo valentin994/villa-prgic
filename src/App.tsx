@@ -6,6 +6,7 @@ import Home from "./UI/Home";
 import Apartments from "./UI/Apartments";
 import AparmentDetails from "./UI/ApartmentDetails";
 import Region from "./UI/Region";
+import Gallery from "./UI/Gallery";
 import Contact from "./UI/Contact";
 import NoPage from "./UI/NoPage";
 import Footer from "./UI/Footer";
@@ -28,6 +29,7 @@ function App() {
           element={<AparmentDetails />}
         ></Route>
         <Route path="/region" element={<Region />}></Route>
+        <Route path="/gallery" element={<Gallery />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/impressum" element={<Impressum />}></Route>
         <Route path="/privacy" element={<PrivacyPolicy />}></Route>

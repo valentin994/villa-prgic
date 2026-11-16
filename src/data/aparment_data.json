@@ -5,20 +5,21 @@
     "detail": "A one bedroom apartment for four people.",
     "features": ["Kitchen", "Pool", "Coffee Maker"],
     "price": 200,
-    "imageLink": "https://woop14abphufecql.public.blob.vercel-storage.com/apartman_1-WCXsNwvMXYQIV9fQv7DrebUUm27i7Z.jpg",
-    "firstImage": "https://woop14abphufecql.public.blob.vercel-storage.com/apartments-FZ3rsKJMYR9dq9IkFJugsYMk1TilBf.jpg",
-    "firstGridImageList": [
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_001-yAbXV6SbPhdCJXtoNsQGTA7F4qhtwY.jpg",
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_002-QBcwrJTBjdChHH8ddDyjtmpWRoI3Rq.jpg",
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_003-Jey2TPxkZHlXCVahFbWr15KUVkPRdP.jpg",
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_004-CiTAmS9Tqa41fxHiJX7CE2uREfheti.jpg"
-    ],
-    "secondImage": "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_013-QRkIFIk4lODf5QULMtILkmo04DNtlD.jpg",
-    "secondGridImageList": [
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_005-lWWUaM5qgJZrnpRoldPXKNDemj0LI6.jpg",
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_006-C2HtAOmry489U5FXxVpYCGjRzctIVA.jpg",
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_007-M20spfDKkVPTDbd8Ixsd3tlOJHl4pm.jpg",
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a1/WEB_Prgic_Appartement_1_008-FgcHZNMSTNIIUGMQIr4OuUbqIAl8U8.jpg"
+    "imageLink": "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/4_WEB%20Appartement%201_Relaxterrasse/WEB_Prgic_Appartement_1_001.jpg",
+    "images": [
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/4_WEB%20Appartement%201_Relaxterrasse/WEB_Prgic_Appartement_1_001.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/4_WEB%20Appartement%201_Relaxterrasse/WEB_Prgic_Appartement_1_002.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/4_WEB%20Appartement%201_Relaxterrasse/WEB_Prgic_Appartement_1_003.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/4_WEB%20Appartement%201_Relaxterrasse/WEB_Prgic_Appartement_1_004.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/4_WEB%20Appartement%201_Relaxterrasse/WEB_Prgic_Appartement_1_005.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/4_WEB%20Appartement%201_Relaxterrasse/WEB_Prgic_Appartement_1_006.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/4_WEB%20Appartement%201_Relaxterrasse/WEB_Prgic_Appartement_1_007.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/4_WEB%20Appartement%201_Relaxterrasse/WEB_Prgic_Appartement_1_008.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/4_WEB%20Appartement%201_Relaxterrasse/WEB_Prgic_Appartement_1_009.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/4_WEB%20Appartement%201_Relaxterrasse/WEB_Prgic_Appartement_1_010.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/4_WEB%20Appartement%201_Relaxterrasse/WEB_Prgic_Appartement_1_011.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/4_WEB%20Appartement%201_Relaxterrasse/WEB_Prgic_Appartement_1_012.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/4_WEB%20Appartement%201_Relaxterrasse/WEB_Prgic_Appartement_1_013.jpg"
     ]
   },
   {
@@ -27,20 +28,24 @@
     "detail": "A three bedroom apartment for six people.",
     "features": ["Kitchen", "Pool", "Coffee Maker"],
     "price": 200,
-    "imageLink": "https://woop14abphufecql.public.blob.vercel-storage.com/rooms-np3C9gmuZJsbyyTP35YwyR7KO9luvy.jpg",
-    "firstImage": "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_006%281%29-loa3Mtwsg0Algdr5HxRQSTLOp7lpVp.jpg",
-    "firstGridImageList": [
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_005-JbctP0D64Dj7OQQoTHobXBBaupSLkM.jpg",
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_009-RyLilykdOLklYvLeZr5AoFP8kZfvAx.jpg",
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_010-0BO9Ty5xMcFGar5tJLM07EXL9ldwxd.jpg",
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_011-Rd9cMQvS82GDmUGQmr5QE17ifRBJgn.jpg"
-    ],
-    "secondImage": "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_017-Wnv5o1alxSCkVvUSDb7ihlTUEa6Mpj.jpg",
-    "secondGridImageList": [
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_014-fOoig61GMR60FPC1ywrdljzEkt9Z4e.jpg",
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_013-xsWZn9ai3BwiQBnkBrPX2W64ufSYeh.jpg",
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_018-gvioVDV1ADjxFZAJvcgDQeo9rZD8SN.jpg",
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a2/WEB_Prgic_Appartement_2_020-xxzUcPMG4l40V05vFbWEY25XdzkJnE.jpg"
+    "imageLink": "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/5_WEB%20Appartement%202_Meerblick/WEB_Prgic_Appartement_2_005.jpg",
+    "images": [
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/5_WEB%20Appartement%202_Meerblick/WEB_Prgic_Appartement_2_001.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/5_WEB%20Appartement%202_Meerblick/WEB_Prgic_Appartement_2_002.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/5_WEB%20Appartement%202_Meerblick/WEB_Prgic_Appartement_2_003.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/5_WEB%20Appartement%202_Meerblick/WEB_Prgic_Appartement_2_004.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/5_WEB%20Appartement%202_Meerblick/WEB_Prgic_Appartement_2_005.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/5_WEB%20Appartement%202_Meerblick/WEB_Prgic_Appartement_2_006.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/5_WEB%20Appartement%202_Meerblick/WEB_Prgic_Appartement_2_007.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/5_WEB%20Appartement%202_Meerblick/WEB_Prgic_Appartement_2_008.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/5_WEB%20Appartement%202_Meerblick/WEB_Prgic_Appartement_2_009.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/5_WEB%20Appartement%202_Meerblick/WEB_Prgic_Appartement_2_010.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/5_WEB%20Appartement%202_Meerblick/WEB_Prgic_Appartement_2_011.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/5_WEB%20Appartement%202_Meerblick/WEB_Prgic_Appartement_2_012.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/5_WEB%20Appartement%202_Meerblick/WEB_Prgic_Appartement_2_013.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/5_WEB%20Appartement%202_Meerblick/WEB_Prgic_Appartement_2_014.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/5_WEB%20Appartement%202_Meerblick/WEB_Prgic_Appartement_2_015.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/5_WEB%20Appartement%202_Meerblick/WEB_Prgic_Appartement_2_016.jpg"
     ]
   },
   {
@@ -49,20 +54,27 @@
     "detail": "A one bedroom apartment for two people.",
     "features": ["Kitchen", "Pool", "Coffee Maker"],
     "price": 200,
-    "imageLink": "https://woop14abphufecql.public.blob.vercel-storage.com/apartman_3-T2Zpas2OxGzLth8cMrgCpGFwTKxoCS.jpg",
-    "firstImage": "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a3/WEB_Prgic_Appartement_3_001-qsS56ScgXasFn7yFukE6xmja9i6Rzk.jpg",
-    "firstGridImageList": [
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a3/WEB_Prgic_Appartement_3_002-pJUSf7JEvE6b3ZZQtE6CkoEW6y43FD.jpg",
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a3/WEB_Prgic_Appartement_3_003-xBLJvi8KIBG88BkKAsddBlBBMRa0dp.jpg",
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a3/WEB_Prgic_Appartement_3_004-b0M91eY7RfIKXj5Hb3bCPWEXKjAVkC.jpg",
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a3/WEB_Prgic_Appartement_3_005-YtXXd30uDf6QQwezbwX60FkmR0beuo.jpg"
-    ],
-    "secondImage": "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a3/WEB_Prgic_Appartement_3_016-7c1w0VcAGLGy3hkBRIL94vHBAEqWQP.jpg",
-    "secondGridImageList": [
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a3/WEB_Prgic_Appartement_3_018-Ayb2vhYm9E4toXzljwbLaK1D9A3rkI.jpg",
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a3/WEB_Prgic_Appartement_3_008-QQdqOqibY5aGhYjRQzil8TWPF0gqPr.jpg",
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a3/WEB_Prgic_Appartement_3_007-wnDjI1F5EXhEyk9N11wXt2Yi3Ia8gj.jpg",
-      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani/a3/WEB_Prgic_Appartement_3_019-WKGChJaRrNlBpqvksweu8ugrmvcWj6.jpg"
+    "imageLink": "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_001.jpg",
+    "images": [
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_001.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_002.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_003.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_004.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_005.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_006.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_007.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_008.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_009.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_010.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_011.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_012.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_013.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_014.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_015.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_016.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_017.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_018.jpg",
+      "https://woop14abphufecql.public.blob.vercel-storage.com/apartmani_prgic_latest/6_WEB%20Appartement%203_%20Poolblick/WEB_Prgic_Appartement_3_019.jpg"
     ]
   }
 ]

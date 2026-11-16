@@ -18,8 +18,19 @@ i18n
             home: "Home",
             apartments: "Apartments",
             region: "Region",
+            gallery: "Gallery",
             contact: "Contact",
             book: "Book",
+          },
+          gallery: {
+            heading: "Gallery",
+            subheading:
+              "A closer look at Villa Prgić — the grounds, our traditional peka evenings, and the nearby beaches.",
+            categories: {
+              exterior: "Outside the House",
+              peka: "Traditional Peka",
+              beach: "Beach & Sea",
+            },
           },
           hero: {
             part1: "Find your ideal stay",
@@ -381,8 +392,19 @@ i18n
             home: "Startseite",
             apartments: "Apartments",
             region: "Region",
+            gallery: "Galerie",
             contact: "Kontakt",
             book: "Buchen",
+          },
+          gallery: {
+            heading: "Galerie",
+            subheading:
+              "Ein genauerer Blick auf die Villa Prgić – das Grundstück, unsere traditionellen Peka-Abende und die nahen Strände.",
+            categories: {
+              exterior: "Außenbereich",
+              peka: "Traditionelle Peka",
+              beach: "Strand & Meer",
+            },
           },
           hero: {
             part1: "Finden Sie Ihren idealen Aufenthalt",
@@ -746,8 +768,19 @@ i18n
             home: "Početna",
             apartments: "Apartmani",
             region: "Regija",
+            gallery: "Galerija",
             contact: "Kontakt",
             book: "Rezerviraj",
+          },
+          gallery: {
+            heading: "Galerija",
+            subheading:
+              "Pogledajte izbliže Villu Prgić – okućnicu, tradicionalne večeri uz peku i blizinu plaža.",
+            categories: {
+              exterior: "Okućnica",
+              peka: "Tradicionalna Peka",
+              beach: "Plaža i more",
+            },
           },
           hero: {
             part1: "Za vaš odmor iz snova",

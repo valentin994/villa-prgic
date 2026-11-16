@@ -22,6 +22,7 @@ function Nav() {
     { path: "/", label: "home" },
     { path: "/apartments", label: "apartments" },
     { path: "/region", label: "region" },
+    { path: "/gallery", label: "gallery" },
     { path: "/contact", label: "contact" }
   ];
 
