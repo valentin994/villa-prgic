@@ -59,6 +59,10 @@ const calendarStyles = `
     max-width: 100%;
   }
 
+  .calendar-container .rdrDefinedRangesWrapper {
+    display: none;
+  }
+
   .calendar-container .rdrMonths {
     width: 100%;
     max-width: 100%;
