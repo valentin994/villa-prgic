@@ -26,6 +26,7 @@ import {
   MessageSquare,
   Phone,
   Grid,
+  Sun,
 } from "lucide-react";
 
 import "react-date-range/dist/styles.css";
@@ -476,6 +477,11 @@ function ApartmentDetails() {
 
   const { capacity, bedrooms } = getApartmentInfo(detail);
 
+  const apartmentNumber = name?.match(/\d+/)?.[0];
+  const bedConfig = apartmentNumber
+    ? t(`apartments.a${apartmentNumber}BedConfig`)
+    : null;
+
   // Fetch disabled dates
   useEffect(() => {
     if (name) {
@@ -556,7 +562,10 @@ function ApartmentDetails() {
     {
       category: t("apartments.details.bedroom"),
       icon: Bed,
-      items: t("apartments.details.bedroomInfo", { returnObjects: true }) as string[]
+      items: [
+        ...(bedConfig ? [bedConfig] : []),
+        ...(t("apartments.details.bedroomInfo", { returnObjects: true }) as string[])
+      ]
     },
     {
       category: t("apartments.details.bath"),
@@ -686,16 +695,20 @@ function ApartmentDetails() {
               </div>
 
               {/* Special Features */}
-              <div className="mt-6 lg:mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 lg:gap-4">
+              <div className="mt-6 lg:mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 lg:gap-4">
                 {[
                   { icon: Wifi, label: t("booking.freeWifi") },
-                  { icon: Waves, label: t("booking.pool") },
+                  { icon: Waves, label: t("booking.pool"), sublabel: t("booking.poolHours") },
                   { icon: Car, label: t("booking.parking") },
-                  { icon: Coffee, label: t("booking.coffee") }
+                  { icon: Coffee, label: t("booking.coffee") },
+                  { icon: Sun, label: t("booking.terrace") }
                 ].map((feature) => (
                   <div key={feature.label} className="bg-gray-50 rounded-lg lg:rounded-xl p-3 lg:p-4 text-center">
                     <feature.icon className="w-6 h-6 lg:w-8 lg:h-8 text-blue-600 mx-auto mb-1 lg:mb-2" />
-                    <span className="text-xs lg:text-sm font-medium text-gray-900">{feature.label}</span>
+                    <span className="text-xs lg:text-sm font-medium text-gray-900 block">{feature.label}</span>
+                    {feature.sublabel && (
+                      <span className="text-xs text-gray-500 block mt-0.5">{feature.sublabel}</span>
+                    )}
                   </div>
                 ))}
               </div>
