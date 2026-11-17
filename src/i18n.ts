@@ -121,6 +121,8 @@ i18n
           },
           region: {
             heading: "Discover Croatia",
+            heroSubtitle:
+              "From historic Split to charming Rogoznica, discover the treasures of the Dalmatian coast",
             dSplit: "Discover Split: The Heart of the Dalmatian Coast",
             splitInfo:
               "Nestled on Croatia’s stunning Dalmatian coast, Split is a city where ancient history meets modern Mediterranean life. As the country’s second-largest city, it boasts a perfect blend of culture, history, and vibrant seaside charm. With its UNESCO-listed Old Town, crystal-clear Adriatic waters, and lively atmosphere, Split is a must-visit destination. Top Attractions in Split",
@@ -159,15 +161,54 @@ i18n
             planka: "Cape Planka 🌅",
             plankaInfo:
               "The southernmost point of Rogoznica, Cape Planka, is where winds and sea currents collide, creating dramatic waves and stunning views. It’s a historical place, mentioned in ancient maritime records.",
+            dSibenik: "Discover Šibenik: The Cathedral City",
             sibenik: "Šibenik 🏰",
             sibenikInfo:
-              "A historic coastal town with the UNESCO-listed St. James Cathedral and a fortress-crowned old town overlooking the Adriatic.",
+              "Just a short drive from Villa Prgić, Šibenik is one of the best-preserved historic towns on the Adriatic. Its stone-paved Old Town climbs steeply from the harbor to four medieval fortresses, with the UNESCO-listed St. James Cathedral at its heart. Šibenik is also the gateway to the Kornati Islands and Krka National Park, making it a perfect base for a day of exploring.",
+            sAttractions: "Top Attractions in Šibenik",
+            stJames: "St. James Cathedral ⛪",
+            stJamesInfo:
+              "A UNESCO World Heritage masterpiece built entirely from stone without wooden supports — a unique 15th-century engineering achievement by local architects Juraj Dalmatinac and Nikola Firentinac.",
+            stMichael: "St. Michael's Fortress 🏰",
+            stMichaelInfo:
+              "Perched above the Old Town, this medieval fortress offers sweeping views over the Adriatic and the surrounding islands, and hosts open-air concerts during the summer months.",
+            stNicholas: "St. Nicholas Fortress 🌊",
+            stNicholasInfo:
+              "Guarding the narrow channel at the harbor entrance, this UNESCO-listed Renaissance fortress is reachable only by boat and remains remarkably well preserved.",
+            sibenikOldTown: "Šibenik Old Town 🏘",
+            sibenikOldTownInfo:
+              "A maze of steep stone stairways, hidden squares, and centuries-old houses climbing from the harbor to St. Michael's Fortress — one of the best-preserved medieval old towns on the Adriatic coast.",
+            regionalHeading: "Beyond the Coast",
+            regionalSubheading:
+              "A handful of bigger day trips, grouped by what kind of traveller you are.",
             krka: "Krka National Park 💧",
             krkaInfo:
               "Famous for its cascading waterfalls, turquoise pools, and scenic walking trails through Mediterranean forest.",
+            krkaType: "National Park",
             klis: "Klis Fortress 🏯",
             klisInfo:
               "A dramatic hilltop fortress with centuries of military history and sweeping views over Split and the surrounding valley.",
+            klisType: "Historic Fortress",
+            biokovo: "Biokovo Nature Park ⛰️",
+            biokovoInfo:
+              "Croatia's second-highest mountain range towers above the Makarska Riviera. Wind up the hairpin mountain road for panoramic hiking trails and the Biokovo Skywalk, a glass viewing platform suspended above a 1,200-metre drop.",
+            biokovoType: "Mountain & Nature Park",
+            travelInfo: "Travel Information",
+            byCar: "By Car",
+            bestTime: "Best Time",
+            minutesSuffix: "minutes",
+            morning: "Morning",
+            sunset: "Sunset",
+            afternoon: "Afternoon",
+            distanceToRogoznica: "Distance to Rogoznica",
+            distanceToSibenik: "Distance to Šibenik",
+            distanceToSplit: "Distance to Split",
+            nearestBeach: "Nearest Beach",
+            airport: "Airport",
+            thingsToDo: "Things to Do in the Area",
+            readyToExplore: "Ready to Explore?",
+            bookCta: "Book your stay with us and discover all these amazing places",
+            checkAvailability: "Check Availability",
             swimmingBeaches: "Swimming & Beaches",
             swimmingBeachesCount: "15+ beaches",
             boatTours: "Boat Tours",
@@ -500,6 +541,8 @@ i18n
           },
           region: {
             heading: "Entdecke Kroatien",
+            heroSubtitle:
+              "Von historischem Split bis zum charmanten Rogoznica – entdecken Sie die Schätze der dalmatinischen Küste",
             dSplit: "Entdecke Split: Das Herz der dalmatinischen Küste",
             splitInfo:
               "Eingebettet an Kroatiens atemberaubender dalmatinischer Küste ist Split eine Stadt, in der antike Geschichte auf modernes mediterranes Leben trifft. Als zweitgrößte Stadt des Landes bietet sie eine perfekte Mischung aus Kultur, Geschichte und lebendigem Küstencharme. Mit ihrer zum UNESCO-Weltkulturerbe gehörenden Altstadt, dem kristallklaren Adriatischen Meer und ihrer lebhaften Atmosphäre ist Split ein absolutes Muss für jeden Besucher.",
@@ -539,15 +582,55 @@ i18n
             planka: "Kap Planka 🌅",
             plankaInfo:
               "Der südlichste Punkt von Rogoznica, bekannt für seine dramatischen Wellen und geschichtliche Bedeutung in alten Seefahrtsberichten.",
+            dSibenik: "Entdecken Sie Šibenik: Die Kathedralenstadt",
             sibenik: "Šibenik 🏰",
             sibenikInfo:
-              "Eine historische Küstenstadt mit der UNESCO-gelisteten Kathedrale St. Jakob und einer von einer Festung gekrönten Altstadt mit Blick auf die Adria.",
+              "Nur eine kurze Fahrt von der Villa Prgić entfernt liegt Šibenik, eine der besterhaltenen historischen Städte an der Adria. Die steinerne Altstadt steigt steil vom Hafen zu vier mittelalterlichen Festungen an, mit der UNESCO-gelisteten Kathedrale des Heiligen Jakobus im Herzen. Šibenik ist zudem das Tor zu den Kornaten-Inseln und zum Nationalpark Krka und damit ein perfekter Ausgangspunkt für Tagesausflüge.",
+            sAttractions: "Top-Attraktionen in Šibenik",
+            stJames: "Kathedrale des Heiligen Jakobus ⛪",
+            stJamesInfo:
+              "Ein UNESCO-Weltkulturerbe, vollständig aus Stein ohne Holzstützen errichtet – eine einzigartige ingenieurtechnische Leistung des 15. Jahrhunderts der einheimischen Architekten Juraj Dalmatinac und Nikola Firentinac.",
+            stMichael: "Festung St. Michael 🏰",
+            stMichaelInfo:
+              "Hoch über der Altstadt gelegen, bietet diese mittelalterliche Festung einen weiten Blick über die Adria und die umliegenden Inseln und ist im Sommer Schauplatz von Open-Air-Konzerten.",
+            stNicholas: "Festung St. Nikolaus 🌊",
+            stNicholasInfo:
+              "Diese UNESCO-gelistete Renaissance-Festung bewacht die enge Hafeneinfahrt, ist nur mit dem Boot erreichbar und bemerkenswert gut erhalten.",
+            sibenikOldTown: "Altstadt von Šibenik 🏘",
+            sibenikOldTownInfo:
+              "Ein Labyrinth aus steilen Steintreppen, verborgenen Plätzen und jahrhundertealten Häusern, das sich vom Hafen bis zur Festung St. Michael hinaufzieht – eine der besterhaltenen mittelalterlichen Altstädte an der Adriaküste.",
+            regionalHeading: "Jenseits der Küste",
+            regionalSubheading:
+              "Ein paar größere Tagesausflüge, geordnet nach Interessensgebiet.",
             krka: "Nationalpark Krka 💧",
             krkaInfo:
               "Berühmt für seine kaskadenartigen Wasserfälle, türkisfarbenen Becken und malerischen Wanderwege durch mediterranen Wald.",
+            krkaType: "Nationalpark",
             klis: "Festung Klis 🏯",
             klisInfo:
               "Eine dramatische Festung auf einem Hügel mit jahrhundertelanger Militärgeschichte und weitem Blick über Split und das umliegende Tal.",
+            klisType: "Historische Festung",
+            biokovo: "Naturpark Biokovo ⛰️",
+            biokovoInfo:
+              "Das zweithöchste Gebirge Kroatiens erhebt sich dramatisch über der Makarska-Riviera. Die kurvenreiche Bergstraße führt zu Panoramawanderwegen und dem Biokovo Skywalk, einer gläsernen Aussichtsplattform über einem 1.200 Meter tiefen Abgrund.",
+            biokovoType: "Berg- und Naturpark",
+            travelInfo: "Reiseinformationen",
+            byCar: "Mit dem Auto",
+            bestTime: "Beste Zeit",
+            minutesSuffix: "Minuten",
+            morning: "Morgens",
+            sunset: "Sonnenuntergang",
+            afternoon: "Nachmittags",
+            distanceToRogoznica: "Entfernung zu Rogoznica",
+            distanceToSibenik: "Entfernung zu Šibenik",
+            distanceToSplit: "Entfernung zu Split",
+            nearestBeach: "Nächster Strand",
+            airport: "Flughafen",
+            thingsToDo: "Aktivitäten in der Umgebung",
+            readyToExplore: "Bereit zum Entdecken?",
+            bookCta:
+              "Buchen Sie Ihren Aufenthalt bei uns und entdecken Sie all diese wunderbaren Orte",
+            checkAvailability: "Verfügbarkeit prüfen",
             swimmingBeaches: "Schwimmen & Strände",
             swimmingBeachesCount: "15+ Strände",
             boatTours: "Bootstouren",
@@ -881,6 +964,8 @@ i18n
 
           region: {
             heading: "Otkrijte Hrvatsku",
+            heroSubtitle:
+              "Od povijesnog Splita do šarmantne Rogoznice, otkrijte blago dalmatinske obale",
             dSplit: "Otkrijte Split: Srce Dalmacije",
             splitInfo:
               "Smješten na zadivljujućoj dalmatinskoj obali, Split je grad u kojem se drevna povijest susreće s modernim mediteranskim životom. Kao drugi najveći grad u Hrvatskoj, nudi savršen spoj kulture, povijesti i živahnog obalnog šarma. S povijesnom jezgrom pod zaštitom UNESCO-a, kristalno čistim Jadranskim morem i živopisnom atmosferom, Split je destinacija koju morate posjetiti.",
@@ -919,15 +1004,54 @@ i18n
             planka: "Rt Planka 🌅",
             plankaInfo:
               "Najjužnija točka Rogoznice, gdje se susreću vjetrovi i morski struje. Mjesto s bogatom pomorskom poviješću i spektakularnim pogledima.",
+            dSibenik: "Otkrijte Šibenik: Grad katedrale",
             sibenik: "Šibenik 🏰",
             sibenikInfo:
-              "Povijesni primorski grad s katedralom sv. Jakova pod zaštitom UNESCO-a i starim gradom okovanim utvrdama s pogledom na Jadran.",
+              "Samo kratku vožnju od Ville Prgić udaljen je Šibenik, jedan od najbolje očuvanih povijesnih gradova na Jadranu. Kamena starogradska jezgra penje se od luke do četiri srednjovjekovne utvrde, a u njezinu srcu stoji katedrala sv. Jakova, upisana na UNESCO-ov popis. Šibenik je i vrata prema Kornatima i Nacionalnom parku Krka, pa je idealna baza za jednodnevne izlete.",
+            sAttractions: "Top atrakcije u Šibeniku",
+            stJames: "Katedrala sv. Jakova ⛪",
+            stJamesInfo:
+              "Spomenik svjetske baštine UNESCO-a, u cijelosti izgrađen od kamena bez drvenih potpora – jedinstveno inženjersko postignuće 15. stoljeća domaćih graditelja Jurja Dalmatinca i Nikole Firentinca.",
+            stMichael: "Utvrda sv. Mihovila 🏰",
+            stMichaelInfo:
+              "Utvrda iznad starog grada nudi pogled na Jadran i okolne otoke, a ljeti je domaćin koncerata na otvorenom.",
+            stNicholas: "Utvrda sv. Nikole 🌊",
+            stNicholasInfo:
+              "Ova renesansna utvrda pod UNESCO-ovom zaštitom čuva uski ulaz u luku, dostupna je samo brodom i iznimno je dobro očuvana.",
+            sibenikOldTown: "Stari grad Šibenik 🏘",
+            sibenikOldTownInfo:
+              "Labirint uzbrdnih kamenih stubišta, skrivenih trgova i stoljetnih kuća koje se penju od luke do utvrde sv. Mihovila – jedna od najbolje očuvanih srednjovjekovnih starih gradskih jezgri na Jadranu.",
+            regionalHeading: "Izvan obale",
+            regionalSubheading:
+              "Nekoliko većih izleta, podijeljenih prema vrsti doživljaja.",
             krka: "Nacionalni park Krka 💧",
             krkaInfo:
               "Poznat po svojim slapovima, tirkiznim jezercima i slikovitim pješačkim stazama kroz mediteransku šumu.",
+            krkaType: "Nacionalni park",
             klis: "Klis tvrđava 🏯",
             klisInfo:
               "Impresivna utvrda na brdu s dugom vojnom povijesti i širokim pogledom na Split i okolnu dolinu.",
+            klisType: "Povijesna utvrda",
+            biokovo: "Park prirode Biokovo ⛰️",
+            biokovoInfo:
+              "Druga najviša gorska skupina u Hrvatskoj uzdiže se dramatično iznad Makarske rivijere. Serpentinska planinska cesta vodi do panoramskih pješačkih staza i Biokovo Skywalka, staklene vidikovačke platforme iznad ponora od 1.200 metara.",
+            biokovoType: "Planina i prirodni park",
+            travelInfo: "Informacije o putovanju",
+            byCar: "Automobilom",
+            bestTime: "Najbolje vrijeme",
+            minutesSuffix: "minuta",
+            morning: "Ujutro",
+            sunset: "Zalazak sunca",
+            afternoon: "Popodne",
+            distanceToRogoznica: "Udaljenost do Rogoznice",
+            distanceToSibenik: "Udaljenost do Šibenika",
+            distanceToSplit: "Udaljenost do Splita",
+            nearestBeach: "Najbliža plaža",
+            airport: "Zračna luka",
+            thingsToDo: "Aktivnosti u okolici",
+            readyToExplore: "Spremni za istraživanje?",
+            bookCta: "Rezervirajte boravak kod nas i otkrijte sva ova prekrasna mjesta",
+            checkAvailability: "Provjeri dostupnost",
             swimmingBeaches: "Plivanje i plaže",
             swimmingBeachesCount: "15+ plaža",
             boatTours: "Izleti brodom",
