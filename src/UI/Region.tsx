@@ -732,7 +732,7 @@ function Region() {
                     </div>
                     <div className="relative h-48 overflow-hidden shadow-lg">
                       <img
-                        src="https://images.unsplash.com/photo-1514649923863-ceaf75b7ec40?q=80&w=1974"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Rogoznica_%26_Marina_Frapa_%2833523246200%29.jpg/1280px-Rogoznica_%26_Marina_Frapa_%2833523246200%29.jpg"
                         alt="Marina"
                         className="w-full h-full object-cover"
                       />

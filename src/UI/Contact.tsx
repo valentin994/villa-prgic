@@ -35,6 +35,7 @@ function Contact() {
     name: "",
     email: "",
     phone: "",
+    address: "",
     checkIn: "",
     checkOut: "",
     apartments: "",
@@ -96,6 +97,7 @@ function Contact() {
         name: "",
         email: "",
         phone: "",
+        address: "",
         checkIn: "",
         checkOut: "",
         apartments: "",
@@ -240,6 +242,21 @@ function Contact() {
                       placeholder="john@example.com"
                     />
                   </div>
+                </div>
+
+                <div>
+                  <label className="flex items-center space-x-2 text-sm font-medium text-gray-700 mb-2">
+                    <MapPin className="w-4 h-4" />
+                    <span>{t("contact.yourAddress")}</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="address"
+                    value={formData.address}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    placeholder={t("contact.addressPlaceholder")}
+                  />
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">

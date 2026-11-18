@@ -268,6 +268,7 @@ const EnhancedBookingForm = ({
     name: "",
     email: "",
     phone: "",
+    address: "",
     guests: "2",
     message: ""
   });
@@ -372,6 +373,21 @@ const EnhancedBookingForm = ({
               placeholder="+385 91 234 5678"
             />
           </div>
+        </div>
+
+        <div>
+          <label className="flex items-center space-x-2 text-xs lg:text-sm font-medium text-gray-700 mb-1 lg:mb-2">
+            <MapPin className="w-3 h-3 lg:w-4 lg:h-4" />
+            <span>{t("booking.address")}</span>
+          </label>
+          <input
+            type="text"
+            name="address"
+            value={formData.address}
+            onChange={handleChange}
+            className="w-full px-3 py-2 lg:px-4 lg:py-3 text-sm lg:text-base border border-gray-200 rounded-lg lg:rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+            placeholder={t("booking.addressPlaceholder")}
+          />
         </div>
 
         <div>
@@ -537,6 +553,7 @@ function ApartmentDetails() {
         endDate: range[0].endDate.toLocaleDateString(),
         email: formData.email,
         phone: formData.phone,
+        address: formData.address,
         guests: formData.guests,
         message: formData.message,
       });
