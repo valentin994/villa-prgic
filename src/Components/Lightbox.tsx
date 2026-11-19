@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
@@ -18,13 +18,13 @@ function Lightbox({
   const [selectedImage, setSelectedImage] = useState(initialIndex);
   const activeThumbRef = useRef<HTMLButtonElement>(null);
 
-  const handlePrevious = () => {
+  const handlePrevious = useCallback(() => {
     setSelectedImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  };
+  }, [images.length]);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setSelectedImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  };
+  }, [images.length]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -34,7 +34,7 @@ function Lightbox({
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
+  }, [onClose, handlePrevious, handleNext]);
 
   useEffect(() => {
     activeThumbRef.current?.scrollIntoView({
