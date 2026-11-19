@@ -225,7 +225,8 @@ i18n
             airport: "Airport",
             thingsToDo: "Things to Do in the Area",
             readyToExplore: "Ready to Explore?",
-            bookCta: "Book your stay with us and discover all these amazing places",
+            bookCta:
+              "Book your stay with us and discover all these amazing places",
             checkAvailability: "Check Availability",
             swimmingBeaches: "Swimming & Beaches",
             swimmingBeachesCount: "15+ beaches",
@@ -337,7 +338,7 @@ i18n
               "These terms are governed by the laws of the Republic of Croatia. Any disputes shall be subject to the exclusive jurisdiction of the courts in Šibenik, Croatia.",
             contactHeading: "9. Contact",
             contactText:
-              "For questions regarding these terms contact us at info@villaprgic.com or +385 95 820 3771.",
+              "For questions regarding these terms contact us at info@villaprgic.com or +43 664 5231425.",
           },
           contact: {
             title: "Get in Touch",
@@ -781,7 +782,7 @@ i18n
               "Es gilt kroatisches Recht. Gerichtsstand ist Šibenik, Kroatien.",
             contactHeading: "9. Kontakt",
             contactText:
-              "Bei Fragen wenden Sie sich an info@villaprgic.com oder +385 95 820 3771.",
+              "Bei Fragen wenden Sie sich an info@villaprgic.com oder +43 664 5231425.",
           },
           contact: {
             title: "Kontaktieren Sie uns",
@@ -1112,7 +1113,8 @@ i18n
             airport: "Zračna luka",
             thingsToDo: "Aktivnosti u okolici",
             readyToExplore: "Spremni za istraživanje?",
-            bookCta: "Rezervirajte boravak kod nas i otkrijte sva ova prekrasna mjesta",
+            bookCta:
+              "Rezervirajte boravak kod nas i otkrijte sva ova prekrasna mjesta",
             checkAvailability: "Provjeri dostupnost",
             swimmingBeaches: "Plivanje i plaže",
             swimmingBeachesCount: "15+ plaža",
@@ -1223,7 +1225,7 @@ i18n
               "Primjenjuje se pravo Republike Hrvatske. Nadležan je sud u Šibeniku.",
             contactHeading: "9. Kontakt",
             contactText:
-              "Za pitanja kontaktirajte nas na info@villaprgic.com ili +385 95 820 3771.",
+              "Za pitanja kontaktirajte nas na info@villaprgic.com ili +43 664 5231425.",
           },
           contact: {
             title: "Kontaktirajte nas",

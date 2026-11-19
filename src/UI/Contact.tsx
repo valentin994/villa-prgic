@@ -52,8 +52,8 @@ function Contact() {
     {
       icon: Phone,
       title: t("contact.phone"),
-      value: "+385 95 820 3771",
-      link: "tel:+385958203771",
+      value: "+43 664 5231425",
+      link: "tel:+436645231425",
       color: "blue",
     },
     {
@@ -67,7 +67,7 @@ function Contact() {
       icon: WhatsAppIcon,
       title: t("contact.whatsapp"),
       value: t("contact.quickResponse"),
-      link: "https://wa.me/00385958203771",
+      link: "https://wa.me/00436645231425",
       color: "green",
     },
     {
@@ -479,7 +479,7 @@ function Contact() {
                   <Instagram className="w-6 h-6" />
                 </motion.a>
                 <motion.a
-                  href="https://wa.me/00385958203771"
+                  href="https://wa.me/00436645231425"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}

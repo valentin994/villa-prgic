@@ -146,7 +146,7 @@ const ModernImageGallery = ({ images }: { images: string[] }) => {
                 className="w-full h-full object-cover"
               />
             </AnimatePresence>
-            
+
             {/* Navigation Buttons */}
             <button
               onClick={handlePrevious}
@@ -174,7 +174,7 @@ const ModernImageGallery = ({ images }: { images: string[] }) => {
                 key={index}
                 onClick={() => setSelectedImage(index)}
                 className={`relative flex-shrink-0 w-20 h-20 overflow-hidden transition-all ${
-                  selectedImage === index ? 'ring-2 ring-blue-500' : ''
+                  selectedImage === index ? "ring-2 ring-blue-500" : ""
                 }`}
               >
                 <img
@@ -259,7 +259,7 @@ const ModernImageGallery = ({ images }: { images: string[] }) => {
 // Enhanced Booking Form Component - FIXED FOR MOBILE
 const EnhancedBookingForm = ({
   range,
-  onSubmit
+  onSubmit,
 }: {
   range: any[];
   onSubmit: (formData: any) => void;
@@ -271,11 +271,15 @@ const EnhancedBookingForm = ({
     phone: "",
     address: "",
     guests: "2",
-    message: ""
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
@@ -288,7 +292,8 @@ const EnhancedBookingForm = ({
   };
 
   const nights = Math.ceil(
-    (range[0].endDate.getTime() - range[0].startDate.getTime()) / (1000 * 60 * 60 * 24)
+    (range[0].endDate.getTime() - range[0].startDate.getTime()) /
+      (1000 * 60 * 60 * 24),
   );
 
   return (
@@ -306,22 +311,30 @@ const EnhancedBookingForm = ({
       <div className="bg-blue-50 rounded-xl p-3 lg:p-4">
         <div className="flex items-center justify-between mb-2 lg:mb-3">
           <div>
-            <p className="text-xs lg:text-sm text-gray-600">{t("booking.checkIn")}</p>
+            <p className="text-xs lg:text-sm text-gray-600">
+              {t("booking.checkIn")}
+            </p>
             <p className="text-sm lg:text-base font-semibold text-gray-900">
               {range[0].startDate.toLocaleDateString()}
             </p>
           </div>
           <div className="text-gray-400 px-2">→</div>
           <div>
-            <p className="text-xs lg:text-sm text-gray-600">{t("booking.checkOut")}</p>
+            <p className="text-xs lg:text-sm text-gray-600">
+              {t("booking.checkOut")}
+            </p>
             <p className="text-sm lg:text-base font-semibold text-gray-900">
               {range[0].endDate.toLocaleDateString()}
             </p>
           </div>
         </div>
         <div className="pt-2 lg:pt-3 border-t">
-          <p className="text-xs lg:text-sm text-gray-600">{t("booking.totalNights")}</p>
-          <p className="text-lg lg:text-xl font-bold text-gray-900">{nights} {nights === 1 ? t("booking.night") : t("booking.nights")}</p>
+          <p className="text-xs lg:text-sm text-gray-600">
+            {t("booking.totalNights")}
+          </p>
+          <p className="text-lg lg:text-xl font-bold text-gray-900">
+            {nights} {nights === 1 ? t("booking.night") : t("booking.nights")}
+          </p>
         </div>
       </div>
 
@@ -403,7 +416,10 @@ const EnhancedBookingForm = ({
             className="w-full px-3 py-2 lg:px-4 lg:py-3 text-sm lg:text-base border border-gray-200 rounded-lg lg:rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
           >
             {[1, 2, 3, 4, 5, 6].map((num) => (
-              <option key={num} value={num}>{num} {num === 1 ? t("booking.guest") : t("booking.guestsPlural")}</option>
+              <option key={num} value={num}>
+                {num}{" "}
+                {num === 1 ? t("booking.guest") : t("booking.guestsPlural")}
+              </option>
             ))}
           </select>
         </div>
@@ -431,16 +447,31 @@ const EnhancedBookingForm = ({
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
         className={`w-full py-3 lg:py-4 rounded-lg lg:rounded-xl text-sm lg:text-base font-semibold text-white transition-all flex items-center justify-center space-x-2 ${
-          isSubmitting 
-            ? 'bg-gray-400 cursor-not-allowed' 
-            : 'bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 shadow-lg hover:shadow-xl'
+          isSubmitting
+            ? "bg-gray-400 cursor-not-allowed"
+            : "bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 shadow-lg hover:shadow-xl"
         }`}
       >
         {isSubmitting ? (
           <>
-            <svg className="animate-spin h-4 w-4 lg:h-5 lg:w-5" viewBox="0 0 24 24">
-              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+            <svg
+              className="animate-spin h-4 w-4 lg:h-5 lg:w-5"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                className="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+                fill="none"
+              />
+              <path
+                className="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+              />
             </svg>
             <span>{t("booking.sending")}</span>
           </>
@@ -469,9 +500,9 @@ function ApartmentDetails() {
     },
   ]);
   const [notification, setNotification] = useState<{
-    type: 'success' | 'error' | null;
+    type: "success" | "error" | null;
     message: string;
-  }>({ type: null, message: '' });
+  }>({ type: null, message: "" });
 
   const { name, detail, price = 200, images = [] } = state || {};
 
@@ -481,18 +512,24 @@ function ApartmentDetails() {
   const getApartmentInfo = (detail: string) => {
     const capacityMatch = detail?.match(/for (\w+) people/);
     const bedroomMatch = detail?.match(/(\w+) bedroom/);
-    
+
     const capacityWords: { [key: string]: number } = {
-      'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6
+      two: 2,
+      three: 3,
+      four: 4,
+      five: 5,
+      six: 6,
     };
-    
+
     const bedroomWords: { [key: string]: number } = {
-      'one': 1, 'two': 2, 'three': 3
+      one: 1,
+      two: 2,
+      three: 3,
     };
-    
+
     return {
       capacity: capacityMatch ? capacityWords[capacityMatch[1]] || 2 : 2,
-      bedrooms: bedroomMatch ? bedroomWords[bedroomMatch[1]] || 1 : 1
+      bedrooms: bedroomMatch ? bedroomWords[bedroomMatch[1]] || 1 : 1,
     };
   };
 
@@ -527,20 +564,18 @@ function ApartmentDetails() {
   }
 
   const disabledDates = dateRange.flatMap((range) =>
-    getDatesInRange(range.start_date, range.end_date)
+    getDatesInRange(range.start_date, range.end_date),
   );
 
   // Handle form submission
   const handleBookingSubmit = async (formData: any) => {
     // Validate dates
-    if (
-      range[0].startDate.getTime() === range[0].endDate.getTime()
-    ) {
+    if (range[0].startDate.getTime() === range[0].endDate.getTime()) {
       setNotification({
-        type: 'error',
-        message: t("booking.validDatesError")
+        type: "error",
+        message: t("booking.validDatesError"),
       });
-      setTimeout(() => setNotification({ type: null, message: '' }), 3000);
+      setTimeout(() => setNotification({ type: null, message: "" }), 3000);
       return;
     }
 
@@ -560,18 +595,18 @@ function ApartmentDetails() {
       });
 
       setNotification({
-        type: 'success',
-        message: t("booking.successMsg")
+        type: "success",
+        message: t("booking.successMsg"),
       });
     } catch (error) {
       console.error("Error sending email:", error);
       setNotification({
-        type: 'error',
-        message: t("booking.errorMsg")
+        type: "error",
+        message: t("booking.errorMsg"),
       });
     }
 
-    setTimeout(() => setNotification({ type: null, message: '' }), 5000);
+    setTimeout(() => setNotification({ type: null, message: "" }), 5000);
   };
 
   // Amenities configuration
@@ -579,26 +614,32 @@ function ApartmentDetails() {
     {
       category: t("booking.locationCategory"),
       icon: MapPin,
-      items: t("booking.near", { returnObjects: true }) as string[]
+      items: t("booking.near", { returnObjects: true }) as string[],
     },
     {
       category: t("apartments.details.bedroom"),
       icon: Bed,
       items: [
         ...(bedConfig ? [bedConfig] : []),
-        ...(t("apartments.details.bedroomInfo", { returnObjects: true }) as string[])
-      ]
+        ...(t("apartments.details.bedroomInfo", {
+          returnObjects: true,
+        }) as string[]),
+      ],
     },
     {
       category: t("apartments.details.bath"),
       icon: Bath,
-      items: t("apartments.details.bathroom", { returnObjects: true }) as string[]
+      items: t("apartments.details.bathroom", {
+        returnObjects: true,
+      }) as string[],
     },
     {
       category: t("apartments.details.kitchen"),
       icon: Utensils,
-      items: t("apartments.details.kitchenInfo", { returnObjects: true }) as string[]
-    }
+      items: t("apartments.details.kitchenInfo", {
+        returnObjects: true,
+      }) as string[],
+    },
   ];
 
   if (!state) {
@@ -607,7 +648,7 @@ function ApartmentDetails() {
         <div className="text-center">
           <p className="text-gray-600 mb-4">{t("booking.noDataMsg")}</p>
           <button
-            onClick={() => navigate('/apartments')}
+            onClick={() => navigate("/apartments")}
             className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
           >
             {t("booking.backToApts")}
@@ -626,16 +667,16 @@ function ApartmentDetails() {
       <AnimatePresence>
         {notification.type && (
           <motion.div
-            initial={{ opacity: 0, y: -20, x: '-50%' }}
-            animate={{ opacity: 1, y: 0, x: '-50%' }}
-            exit={{ opacity: 0, y: -20, x: '-50%' }}
+            initial={{ opacity: 0, y: -20, x: "-50%" }}
+            animate={{ opacity: 1, y: 0, x: "-50%" }}
+            exit={{ opacity: 0, y: -20, x: "-50%" }}
             className={`fixed top-24 left-1/2 z-50 px-4 py-3 rounded-xl shadow-lg flex items-center space-x-3 max-w-sm ${
-              notification.type === 'success' 
-                ? 'bg-green-500 text-white' 
-                : 'bg-red-500 text-white'
+              notification.type === "success"
+                ? "bg-green-500 text-white"
+                : "bg-red-500 text-white"
             }`}
           >
-            {notification.type === 'success' ? (
+            {notification.type === "success" ? (
               <Check className="w-5 h-5 flex-shrink-0" />
             ) : (
               <X className="w-5 h-5 flex-shrink-0" />
@@ -649,7 +690,9 @@ function ApartmentDetails() {
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 lg:px-6 py-4 lg:py-8">
           <div className="mb-4 lg:mb-6">
-            <h1 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-2">{name}</h1>
+            <h1 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-2">
+              {name}
+            </h1>
             <div className="flex flex-wrap items-center gap-2 lg:gap-4 text-sm lg:text-base text-gray-600">
               <RatingBadge platform="google" rating={ratings.google} />
               {ratings.booking && (
@@ -663,12 +706,19 @@ function ApartmentDetails() {
               <span>•</span>
               <div className="flex items-center space-x-1">
                 <Users className="w-3 h-3 lg:w-4 lg:h-4" />
-                <span>{capacity} {t("booking.guests")}</span>
+                <span>
+                  {capacity} {t("booking.guests")}
+                </span>
               </div>
               <span>•</span>
               <div className="flex items-center space-x-1">
                 <Bed className="w-3 h-3 lg:w-4 lg:h-4" />
-                <span>{bedrooms} {bedrooms === 1 ? t("booking.bedroom") : t("booking.bedrooms")}</span>
+                <span>
+                  {bedrooms}{" "}
+                  {bedrooms === 1
+                    ? t("booking.bedroom")
+                    : t("booking.bedrooms")}
+                </span>
               </div>
             </div>
           </div>
@@ -685,15 +735,20 @@ function ApartmentDetails() {
           <div className="lg:col-span-2 min-w-0 space-y-8 lg:space-y-12">
             {/* Description */}
             <div>
-              <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3 lg:mb-4">{t("booking.aboutPlace")}</h2>
+              <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3 lg:mb-4">
+                {t("booking.aboutPlace")}
+              </h2>
               <p className="text-sm lg:text-base text-gray-600 leading-relaxed">
-                {t(`apartments.a${name?.match(/\d+/)?.[0]}Info`)} {t("apartments.aboutDesc")}
+                {t(`apartments.a${name?.match(/\d+/)?.[0]}Info`)}{" "}
+                {t("apartments.aboutDesc")}
               </p>
             </div>
 
             {/* Amenities */}
             <div>
-              <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6">{t("booking.whatOffers")}</h2>
+              <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6">
+                {t("booking.whatOffers")}
+              </h2>
               <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
                 {amenities.map((category) => (
                   <div key={category.category}>
@@ -701,11 +756,16 @@ function ApartmentDetails() {
                       <div className="w-9 h-9 lg:w-10 lg:h-10 bg-blue-100 rounded-lg flex items-center justify-center">
                         <category.icon className="w-4 h-4 lg:w-5 lg:h-5 text-blue-600" />
                       </div>
-                      <h3 className="text-sm lg:text-base font-semibold text-gray-900">{category.category}</h3>
+                      <h3 className="text-sm lg:text-base font-semibold text-gray-900">
+                        {category.category}
+                      </h3>
                     </div>
                     <ul className="space-y-2 ml-12 lg:ml-13">
                       {category.items.map((item, index) => (
-                        <li key={index} className="flex items-start space-x-2 text-gray-600">
+                        <li
+                          key={index}
+                          className="flex items-start space-x-2 text-gray-600"
+                        >
                           <Check className="w-3 h-3 lg:w-4 lg:h-4 text-green-500 mt-0.5 flex-shrink-0" />
                           <span className="text-xs lg:text-sm">{item}</span>
                         </li>
@@ -719,16 +779,27 @@ function ApartmentDetails() {
               <div className="mt-6 lg:mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 lg:gap-4">
                 {[
                   { icon: Wifi, label: t("booking.freeWifi") },
-                  { icon: Waves, label: t("booking.pool"), sublabel: t("booking.poolHours") },
+                  {
+                    icon: Waves,
+                    label: t("booking.pool"),
+                    sublabel: t("booking.poolHours"),
+                  },
                   { icon: Car, label: t("booking.parking") },
                   { icon: Coffee, label: t("booking.coffee") },
-                  { icon: Sun, label: t("booking.terrace") }
+                  { icon: Sun, label: t("booking.terrace") },
                 ].map((feature) => (
-                  <div key={feature.label} className="bg-gray-50 rounded-lg lg:rounded-xl p-3 lg:p-4 text-center">
+                  <div
+                    key={feature.label}
+                    className="bg-gray-50 rounded-lg lg:rounded-xl p-3 lg:p-4 text-center"
+                  >
                     <feature.icon className="w-6 h-6 lg:w-8 lg:h-8 text-blue-600 mx-auto mb-1 lg:mb-2" />
-                    <span className="text-xs lg:text-sm font-medium text-gray-900 block">{feature.label}</span>
+                    <span className="text-xs lg:text-sm font-medium text-gray-900 block">
+                      {feature.label}
+                    </span>
                     {feature.sublabel && (
-                      <span className="text-xs text-gray-500 block mt-0.5">{feature.sublabel}</span>
+                      <span className="text-xs text-gray-500 block mt-0.5">
+                        {feature.sublabel}
+                      </span>
                     )}
                   </div>
                 ))}
@@ -743,8 +814,13 @@ function ApartmentDetails() {
               <div className="bg-white rounded-xl lg:rounded-2xl shadow-lg lg:shadow-xl p-4 lg:p-6 mb-4 lg:mb-6">
                 <div className="flex items-end justify-between mb-4 lg:mb-6">
                   <div>
-                    <span className="text-2xl lg:text-3xl font-bold text-gray-900">€{price}</span>
-                    <span className="text-sm lg:text-base text-gray-600"> {t("booking.perNight")}</span>
+                    <span className="text-2xl lg:text-3xl font-bold text-gray-900">
+                      €{price}
+                    </span>
+                    <span className="text-sm lg:text-base text-gray-600">
+                      {" "}
+                      {t("booking.perNight")}
+                    </span>
                   </div>
                   <div className="text-right">
                     <RatingBadge
@@ -753,20 +829,24 @@ function ApartmentDetails() {
                       showLabel={false}
                       className="text-xs lg:text-sm"
                     />
-                    <span className="block text-xs text-gray-500">{t("booking.reviews")}</span>
+                    <span className="block text-xs text-gray-500">
+                      {t("booking.reviews")}
+                    </span>
                   </div>
                 </div>
 
                 {/* Calendar - FIXED */}
                 <div className="mb-4 lg:mb-6">
-                  <h3 className="text-sm lg:text-base font-semibold text-gray-900 mb-3 lg:mb-4">{t("booking.selectDates")}</h3>
+                  <h3 className="text-sm lg:text-base font-semibold text-gray-900 mb-3 lg:mb-4">
+                    {t("booking.selectDates")}
+                  </h3>
                   <div className="calendar-container border rounded-lg lg:rounded-xl overflow-hidden">
                     <DateRangePicker
                       ranges={range}
                       onChange={(item: any) => setRange([item.selection])}
                       disabledDates={disabledDates}
                       minDate={new Date()}
-                      rangeColors={['#3b82f6']}
+                      rangeColors={["#3b82f6"]}
                       showDateDisplay={false}
                       months={1}
                       direction="horizontal"
@@ -785,17 +865,19 @@ function ApartmentDetails() {
 
               {/* Quick Contact - Hidden on mobile for space */}
               <div className="hidden lg:block bg-gray-50 rounded-2xl p-6">
-                <h3 className="font-semibold text-gray-900 mb-4">{t("booking.needHelp")}</h3>
+                <h3 className="font-semibold text-gray-900 mb-4">
+                  {t("booking.needHelp")}
+                </h3>
                 <div className="space-y-3">
                   <a
-                    href="tel:+385958203771"
+                    href="tel:+436645231425"
                     className="flex items-center space-x-3 text-gray-600 hover:text-blue-600 transition-colors"
                   >
                     <Phone className="w-5 h-5" />
-                    <span>+385 95 820 3771</span>
+                    <span>+43 664 5231425</span>
                   </a>
                   <a
-                    href="https://wa.me/00385958203771"
+                    href="https://wa.me/00436645231425"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-3 text-gray-600 hover:text-green-600 transition-colors"
