@@ -273,7 +273,17 @@ function Footer() {
             <p className="text-sm text-gray-400 text-center md:text-left">
               © {currentYear} Villa Prgić. All rights reserved.
             </p>
-
+            <div className="flex gap-2">
+              <p className="text-sm text-gray-400">made by </p>
+              <a
+                href="https://terroq.com"
+                rel="noreferrer"
+                target="_blank"
+                className="text-sm text-gray-300 font-bold"
+              >
+                terroq
+              </a>
+            </div>
             {/* Language Selector */}
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-sm">
