@@ -41,6 +41,24 @@ i18n
             exploreApartments: "Explore Apartments",
             checkAvailability: "Check Availability",
           },
+          reviews: {
+            heading: "What Our Guests Say",
+            subheading: "Real reviews from real guests",
+            list: [
+              {
+                name: "Mladen Goreta",
+                text: "A pleasant place to spend your holiday — a flawless five out of five.",
+              },
+              {
+                name: "Ivana Tanjga",
+                text: "A perfect five out of five, everything is flawless! Highly recommend 🤗",
+              },
+              {
+                name: "Manuel Siegwart",
+                text: "We've been there twice already. I highly recommend it. The peace and quiet are simply indescribable.\n\nThe apartments and the pool are very well maintained, which makes a longer stay easy. Mirjana also prepares a fantastic breakfast. She's very easy to talk to and takes wonderful care of everything. Thank you so much, dear Mirjana! We would love to come back again.",
+              },
+            ],
+          },
           apartman: "Apartment",
           istrazi: "Explore",
           cta: {
@@ -340,8 +358,8 @@ i18n
             checkOut: "Check-out Date",
             preferredApt: "Preferred Apartment",
             selectApt: "Select an apartment",
-            apt1: "Apartment 1 – 6 guests",
-            apt2: "Apartment 2 – 4 guests",
+            apt1: "Apartment 1 – 2 adults + 2 children",
+            apt2: "Apartment 2 – 6 guests",
             apt3: "Apartment 3 – 2 guests",
             yourMessage: "Your Message",
             messagePlaceholder:
@@ -464,6 +482,24 @@ i18n
               "Gemütliche Apartments in Kanica, Kroatien – direkt am Meer",
             exploreApartments: "Apartments erkunden",
             checkAvailability: "Verfügbarkeit prüfen",
+          },
+          reviews: {
+            heading: "Das sagen unsere Gäste",
+            subheading: "Echte Bewertungen von echten Gästen",
+            list: [
+              {
+                name: "Mladen Goreta",
+                text: "Ein angenehmer Ort für den Jahresurlaub – eine makellose Fünf von fünf.",
+              },
+              {
+                name: "Ivana Tanjga",
+                text: "Eine makellose Fünf, alles ist perfekt! Ich empfehle es sehr 🤗",
+              },
+              {
+                name: "Manuel Siegwart",
+                text: "Wir waren schon zweimal dort. Ich kann es nur wärmstens empfehlen. Die Ruhe und Stille sind einfach unbeschreiblich.\n\nDie Apartments und der Pool werden sehr gut gepflegt, was einen längeren Aufenthalt angenehm macht. Mirjana bereitet außerdem ein fantastisches Frühstück zu. Mit ihr lässt sich sehr leicht reden und sie kümmert sich wirklich wunderbar um alles. Vielen lieben Dank, liebe Mirjana! Wir würden gerne wieder zurückkommen.",
+              },
+            ],
           },
           apartman: "Apartment",
           istrazi: "Erkunde",
@@ -766,8 +802,8 @@ i18n
             checkOut: "Abreisedatum",
             preferredApt: "Bevorzugtes Apartment",
             selectApt: "Apartment auswählen",
-            apt1: "Apartment 1 – 6 Gäste",
-            apt2: "Apartment 2 – 4 Gäste",
+            apt1: "Apartment 1 – 2 Erwachsene + 2 Kinder",
+            apt2: "Apartment 2 – 6 Gäste",
             apt3: "Apartment 3 – 2 Gäste",
             yourMessage: "Ihre Nachricht",
             messagePlaceholder:
@@ -890,6 +926,24 @@ i18n
             subtitle: "Udobni apartmani u Kanici, Hrvatska – korak od mora",
             exploreApartments: "Istraži apartmane",
             checkAvailability: "Provjeri dostupnost",
+          },
+          reviews: {
+            heading: "Što kažu naši gosti",
+            subheading: "Stvarne recenzije stvarnih gostiju",
+            list: [
+              {
+                name: "Mladen Goreta",
+                text: "Ugodno mjesto za provesti godišnji odmor, savršeno čista petica.",
+              },
+              {
+                name: "Ivana Tanjga",
+                text: "Čista petica, sve je savršeno!\nPreporučam 🤗",
+              },
+              {
+                name: "Manuel Siegwart",
+                text: "Bili smo tamo već dva puta. Toplo preporučujem. Mir i tišina su jednostavno neopisivi.\n\nApartmani i bazen su vrlo dobro održavani, što olakšava duži boravak. Mirjana također priprema fantastičan doručak. S njom je vrlo lako razgovarati i stvarno se divno brine o svemu. Puno ti hvala, draga Mirjana! Voljeli bismo se ponovno vratiti.",
+              },
+            ],
           },
           apartman: "Apartman",
           istrazi: "Istraži",
@@ -1190,8 +1244,8 @@ i18n
             checkOut: "Datum odjave",
             preferredApt: "Željeni apartman",
             selectApt: "Odaberite apartman",
-            apt1: "Apartman 1 – 6 gostiju",
-            apt2: "Apartman 2 – 4 gosta",
+            apt1: "Apartman 1 – 2 odrasle osobe + 2 djece",
+            apt2: "Apartman 2 – 6 gostiju",
             apt3: "Apartman 3 – 2 gosta",
             yourMessage: "Vaša poruka",
             messagePlaceholder:

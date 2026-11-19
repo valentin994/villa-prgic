@@ -2,11 +2,19 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import RatingBadge from "../Components/RatingBadge";
+import ReviewsCarousel from "../Components/ReviewsCarousel";
+import { ratings } from "../data/ratings";
 
 function Home() {
   const { t } = useTranslation();
+  const reviews = t("reviews.list", { returnObjects: true }) as {
+    name: string;
+    text: string;
+  }[];
 
   return (
+    <>
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
@@ -55,6 +63,21 @@ function Home() {
         </motion.div>
       </div>
     </section>
+
+    {/* Reviews Section */}
+    <section className="bg-white py-20">
+      <div className="max-w-4xl mx-auto px-6 text-center">
+        <div className="flex justify-center mb-3">
+          <RatingBadge platform="google" rating={ratings.google} />
+        </div>
+        <h2 className="text-3xl font-bold text-gray-900 mb-2">
+          {t("reviews.heading")}
+        </h2>
+        <p className="text-gray-600 mb-10">{t("reviews.subheading")}</p>
+        <ReviewsCarousel reviews={reviews} />
+      </div>
+    </section>
+    </>
   );
 }
 export default Home;
