@@ -4,7 +4,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { DateRangePicker } from "react-date-range";
 import { useTranslation } from "react-i18next";
-import emailjs from "@emailjs/browser";
 import {
   MapPin,
   Wifi,
@@ -637,20 +636,33 @@ function ApartmentDetails() {
       return;
     }
 
+    const nights = Math.ceil(
+      (range[0].endDate.getTime() - range[0].startDate.getTime()) /
+        (1000 * 60 * 60 * 24),
+    );
+
     try {
-      emailjs.init({ publicKey: "WdsWSiOZO0oOhp7nl" });
-      await emailjs.send("service_daxmzoo", "template_l03vwdg", {
-        name: formData.name,
-        time: new Date().toISOString(),
-        title: name,
-        startDate: range[0].startDate.toLocaleDateString(),
-        endDate: range[0].endDate.toLocaleDateString(),
-        email: formData.email,
-        phone: formData.phone,
-        address: formData.address,
-        guests: formData.guests,
-        message: formData.message,
+      const response = await fetch("/api/send_booking_email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          address: formData.address,
+          guests: formData.guests,
+          message: formData.message,
+          apartmentName: name,
+          startDate: range[0].startDate.toLocaleDateString(),
+          endDate: range[0].endDate.toLocaleDateString(),
+          nights,
+          totalPrice: Math.max(nights, 0) * price,
+        }),
       });
+
+      if (!response.ok) {
+        throw new Error("Failed to send booking email");
+      }
 
       setNotification({
         type: "success",

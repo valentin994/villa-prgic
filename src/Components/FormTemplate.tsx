@@ -3,7 +3,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, User, Mail, MessageSquare, Check, X } from "lucide-react";
 import { DateRangePicker } from "react-date-range";
-import emailjs from "@emailjs/browser";
 
 interface BookingFormProps {
   apartmentName: string;
