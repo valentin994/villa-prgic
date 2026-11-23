@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import apartmentData from "../data/aparment_data.json";
 import { Link } from "react-router-dom";
+import { getApartmentPrices } from "../../api/_lib/apartments";
 
 // Helper function to extract capacity and bedrooms from detail string
 const parseApartmentDetails = (detail: string) => {
@@ -255,17 +256,32 @@ function Apartments() {
   const [isLoading, setIsLoading] = useState(true);
   const [sortBy, setSortBy] = useState("featured");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
+  const [apartments, setApartments] = useState(apartmentData);
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 1000);
   }, []);
 
+  useEffect(() => {
+    getApartmentPrices()
+      .then((prices) => {
+        setApartments((prev) =>
+          prev.map((apt, i) =>
+            typeof prices[i] === "number" ? { ...apt, price: prices[i] } : apt
+          )
+        );
+      })
+      .catch(() => {
+        // Keep the static prices if the backend is unreachable.
+      });
+  }, []);
+
   const filteredApartments = useMemo(() => {
-    const sorted = [...apartmentData];
+    const sorted = [...apartments];
     if (sortBy === "priceLow") sorted.sort((a, b) => a.price - b.price);
     else if (sortBy === "priceHigh") sorted.sort((a, b) => b.price - a.price);
     return sorted;
-  }, [sortBy]);
+  }, [apartments, sortBy]);
 
   // Loading skeleton component
   const ApartmentSkeleton = () => (
