@@ -433,6 +433,50 @@ i18n
             noDataMsg: "No apartment data available",
             backToApts: "Back to Apartments",
           },
+          houseRules: {
+            title: "House Rules",
+            accept: "I have read and accept the House Rules",
+            view: "View House Rules",
+            close: "Close",
+            required: "Please accept the house rules to continue.",
+            sections: [
+              {
+                heading: "Events & Guests",
+                text:
+                  "No parties, weddings or other events are allowed. To comply with the host regulations, no more guests than those who booked the accommodation are permitted to stay overnight or remain on the property during your stay. Additional guests, friends, etc. are not allowed to stay or visit.",
+              },
+              {
+                heading: "Conduct & Noise",
+                text:
+                  "Drug use and prostitution will not be tolerated. No nudity. No filming or recording of adult material. Loud music is not allowed at any time, including noise, animal imitations, or similar sounds. We reserve the right to ask any guest who uses foul language, disturbs the peace of neighbors, or breaks any of these rules to leave without a refund and without return of the security deposit.",
+              },
+              {
+                heading: "Property Care & Registration",
+                text:
+                  "Please respect our property, equipment, and furnishings. All electrical appliances (air conditioning, TV, etc.) and lights must be turned off when you are not at home. Before leaving the apartment, please close all doors and windows. Loud noise is not allowed between 2 pm–4 pm and 10 pm–8 am. The pool is open from 8 am to 8 pm. No glass or fragile objects are allowed near the pool. In accordance with Croatian law, every guest must provide a photo ID or passport for registration. All facilities and equipment, inside and outside the apartment, are used at your own risk.",
+              },
+              {
+                heading: "Liability",
+                text:
+                  "The owner cannot be held liable for any injury or damage resulting from improper use of the apartment's contents or facilities. The apartment is located in a quiet, peaceful neighborhood; however, we are not responsible for noise caused by construction work or other activity in the surrounding area.",
+              },
+              {
+                heading: "Pool Rules",
+                text:
+                  "The following are strictly forbidden: jumping or splashing in the pool, repeatedly entering and exiting the pool, showering continuously in the outdoor shower, using shampoo in the pool or outdoor shower, entering the pool while wearing sun protection (even waterproof products), and leaving the air conditioning or other devices running when you are not in the apartment.",
+              },
+              {
+                heading: "Grill Use",
+                text:
+                  "The grill may be used between 11 am and 8 pm. Anyone using the grill is required to clean it immediately afterward.",
+              },
+              {
+                heading: "Breach of Rules",
+                text:
+                  "Breaking the house rules will result in cancellation of the reservation without any refund, as that would be your own decision.",
+              },
+            ],
+          },
           footer: {
             stayUpdated: "Stay Updated",
             offerSubtitle: "Get exclusive offers and travel tips",
@@ -879,6 +923,50 @@ i18n
             noDataMsg: "Keine Apartmentdaten verfügbar",
             backToApts: "Zurück zu den Apartments",
           },
+          houseRules: {
+            title: "Hausordnung",
+            accept: "Ich habe die Hausordnung gelesen und akzeptiere sie",
+            view: "Hausordnung ansehen",
+            close: "Schließen",
+            required: "Bitte akzeptieren Sie die Hausordnung, um fortzufahren.",
+            sections: [
+              {
+                heading: "Veranstaltungen & Gäste",
+                text:
+                  "Partys, Hochzeiten oder andere Veranstaltungen sind nicht erlaubt. Gemäß den Vorgaben des Vermieters dürfen nur die Personen, die die Unterkunft gebucht haben, über Nacht bleiben oder sich während Ihres Aufenthalts auf dem Grundstück aufhalten. Zusätzliche Gäste, Freunde usw. dürfen nicht übernachten oder zu Besuch kommen.",
+              },
+              {
+                heading: "Verhalten & Lärm",
+                text:
+                  "Drogenkonsum und Prostitution werden nicht toleriert. Nacktheit ist nicht erlaubt. Das Filmen oder Aufnehmen von Erwachseneninhalten ist verboten. Laute Musik ist zu keiner Zeit erlaubt, ebenso wie Lärm, Tierimitationen oder ähnliche Geräusche. Wir behalten uns das Recht vor, Gäste, die sich unangemessen äußern, die Nachbarn stören oder gegen eine dieser Regeln verstoßen, ohne Rückerstattung und ohne Rückgabe der Kaution zum Verlassen der Unterkunft aufzufordern.",
+              },
+              {
+                heading: "Pflege des Eigentums & Anmeldung",
+                text:
+                  "Bitte behandeln Sie unser Eigentum, die Geräte und die Einrichtung mit Respekt. Alle elektrischen Geräte (Klimaanlage, Fernseher usw.) und Lichter müssen ausgeschaltet werden, wenn Sie nicht zu Hause sind. Bevor Sie die Wohnung verlassen, schließen Sie bitte alle Türen und Fenster. Lärm ist zwischen 14 und 16 Uhr sowie zwischen 22 und 8 Uhr nicht erlaubt. Der Pool ist von 8 bis 20 Uhr geöffnet. Glas oder zerbrechliche Gegenstände sind in der Nähe des Pools nicht erlaubt. Gemäß kroatischem Recht muss jeder Gast zur Anmeldung einen Lichtbildausweis oder Reisepass vorlegen. Alle Einrichtungen und Geräte, innen und außen, werden auf eigene Verantwortung genutzt.",
+              },
+              {
+                heading: "Haftung",
+                text:
+                  "Der Eigentümer haftet nicht für Verletzungen oder Schäden, die durch unsachgemäße Nutzung der Einrichtung oder Ausstattung entstehen. Die Wohnung liegt in einer ruhigen, friedlichen Umgebung; wir übernehmen jedoch keine Verantwortung für Lärm durch Bauarbeiten oder andere Aktivitäten in der Nachbarschaft.",
+              },
+              {
+                heading: "Poolregeln",
+                text:
+                  "Folgendes ist strengstens verboten: Springen oder Planschen im Pool, ständiges Ein- und Aussteigen aus dem Pool, dauerhaftes Duschen unter der Außendusche, die Verwendung von Shampoo im Pool oder unter der Außendusche, das Betreten des Pools mit Sonnenschutzmitteln (auch wasserfesten), sowie das Laufenlassen der Klimaanlage oder anderer Geräte, wenn Sie sich nicht in der Wohnung befinden.",
+              },
+              {
+                heading: "Grillnutzung",
+                text:
+                  "Der Grill darf zwischen 11 und 20 Uhr genutzt werden. Wer den Grill benutzt, ist verpflichtet, ihn unmittelbar danach zu reinigen.",
+              },
+              {
+                heading: "Verstoß gegen die Regeln",
+                text:
+                  "Ein Verstoß gegen die Hausordnung führt zur Stornierung der Reservierung ohne Rückerstattung, da dies Ihre eigene Entscheidung wäre.",
+              },
+            ],
+          },
           footer: {
             stayUpdated: "Bleiben Sie informiert",
             offerSubtitle: "Exklusive Angebote und Reisetipps erhalten",
@@ -1322,6 +1410,50 @@ i18n
             errorMsg: "Slanje zahtjeva nije uspjelo. Pokušajte ponovo.",
             noDataMsg: "Nema dostupnih podataka o apartmanu",
             backToApts: "Povratak na apartmane",
+          },
+          houseRules: {
+            title: "Kućni red",
+            accept: "Pročitao/la sam i prihvaćam Kućni red",
+            view: "Pogledaj kućni red",
+            close: "Zatvori",
+            required: "Molimo prihvatite kućni red za nastavak.",
+            sections: [
+              {
+                heading: "Događaji i gosti",
+                text:
+                  "Zabave, vjenčanja i druga događanja nisu dopušteni. Sukladno pravilima vlasnika, u smještaju tijekom noći ili na posjedu tijekom vašeg boravka ne može ostati više gostiju od broja prijavljenog prilikom rezervacije. Dodatni gosti, prijatelji i slično ne mogu ostati preko noći niti posjećivati smještaj.",
+              },
+              {
+                heading: "Ponašanje i buka",
+                text:
+                  "Konzumacija droga i prostitucija se ne toleriraju. Golotinja nije dopuštena. Snimanje ili fotografiranje sadržaja za odrasle nije dopušteno. Glasna glazba nije dopuštena u bilo kojem trenutku, kao ni buka, imitiranje životinjskih zvukova ili slični zvukovi. Zadržavamo pravo zatražiti od gosta koji koristi uvredljiv jezik, remeti mir susjeda ili krši bilo koje od ovih pravila da napusti smještaj bez povrata novca i bez povrata pologa.",
+              },
+              {
+                heading: "Briga o imovini i prijava",
+                text:
+                  "Molimo da s poštovanjem postupate s našom imovinom, opremom i namještajem. Svi električni uređaji (klima uređaj, TV itd.) i svjetla moraju biti isključeni kada niste u apartmanu. Prije napuštanja apartmana, molimo zatvorite sva vrata i prozore. Buka nije dopuštena između 14 i 16 sati te između 22 i 8 sati. Bazen je otvoren od 8 do 20 sati. Staklo ili lomljivi predmeti nisu dopušteni u blizini bazena. Sukladno hrvatskom zakonu, svaki gost mora predočiti osobnu iskaznicu ili putovnicu radi prijave. Svi sadržaji i oprema, unutar i izvan apartmana, koriste se na vlastitu odgovornost.",
+              },
+              {
+                heading: "Odgovornost",
+                text:
+                  "Vlasnik ne odgovara za bilo kakvu ozljedu ili štetu nastalu neispravnim korištenjem sadržaja ili opreme apartmana. Apartman se nalazi u mirnom, tihom susjedstvu; međutim, ne odgovaramo za buku uzrokovanu građevinskim radovima ili drugim aktivnostima u okolici.",
+              },
+              {
+                heading: "Pravila bazena",
+                text:
+                  "Strogo je zabranjeno: skakanje ili prskanje u bazenu, ponovljeno izlaženje i ulaženje u bazen, dugotrajno tuširanje u vanjskoj tuš kabini, korištenje šampona u bazenu ili vanjskoj tuš kabini, ulazak u bazen s nanesenom zaštitom od sunca (uključujući vodootporne proizvode) te ostavljanje klima uređaja ili drugih uređaja uključenim kada niste u apartmanu.",
+              },
+              {
+                heading: "Korištenje grila",
+                text:
+                  "Gril se može koristiti između 11 i 20 sati. Svatko tko koristi gril dužan je odmah ga očistiti nakon upotrebe.",
+              },
+              {
+                heading: "Kršenje pravila",
+                text:
+                  "Kršenje kućnog reda rezultirat će otkazivanjem rezervacije bez povrata novca, jer bi to bila vaša vlastita odluka.",
+              },
+            ],
           },
           footer: {
             stayUpdated: "Ostanite informirani",

@@ -32,6 +32,7 @@ import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import Lightbox from "../Components/Lightbox";
 import RatingBadge from "../Components/RatingBadge";
+import HouseRulesModal from "../Components/HouseRulesModal";
 import { ratings } from "../data/ratings";
 
 // Add custom calendar styles
@@ -276,6 +277,9 @@ const EnhancedBookingForm = ({
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [acceptedRules, setAcceptedRules] = useState(false);
+  const [showRulesModal, setShowRulesModal] = useState(false);
+  const [rulesError, setRulesError] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -288,6 +292,11 @@ const EnhancedBookingForm = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!acceptedRules) {
+      setRulesError(true);
+      return;
+    }
+    setRulesError(false);
     setIsSubmitting(true);
     onSubmit(formData);
     setIsSubmitting(false);
@@ -452,6 +461,42 @@ const EnhancedBookingForm = ({
           />
         </div>
       </div>
+
+      {/* House Rules Acceptance */}
+      <div>
+        <label className="flex items-start space-x-2 text-xs lg:text-sm text-gray-700">
+          <input
+            type="checkbox"
+            checked={acceptedRules}
+            onChange={(e) => {
+              setAcceptedRules(e.target.checked);
+              if (e.target.checked) setRulesError(false);
+            }}
+            className="mt-0.5 w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+          />
+          <span>
+            {t("houseRules.accept")}{" "}
+            <button
+              type="button"
+              onClick={() => setShowRulesModal(true)}
+              className="text-blue-600 underline hover:text-blue-700"
+            >
+              ({t("houseRules.view")})
+            </button>
+          </span>
+        </label>
+        {rulesError && (
+          <p className="mt-1 text-xs text-red-600">
+            {t("houseRules.required")}
+          </p>
+        )}
+      </div>
+
+      <AnimatePresence>
+        {showRulesModal && (
+          <HouseRulesModal onClose={() => setShowRulesModal(false)} />
+        )}
+      </AnimatePresence>
 
       {/* Submit Button */}
       <motion.button
