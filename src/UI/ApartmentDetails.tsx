@@ -1,5 +1,5 @@
 // pages/ApartmentDetails.tsx - FIXED VERSION
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { DateRangePicker } from "react-date-range";
@@ -596,16 +596,6 @@ function ApartmentDetails() {
   const bedConfig = apartmentNumber
     ? t(`apartments.a${apartmentNumber}BedConfig`)
     : null;
-
-  // Fetch disabled dates
-  useEffect(() => {
-    if (name) {
-      fetch(`/api/get_dates?id=${name.split(" ")[1]}`)
-        .then((response) => response.json())
-        .then((data) => setDateRange(data))
-        .catch((error) => console.error("Error fetching dates:", error));
-    }
-  }, [name]);
 
   function getDatesInRange(start: string, end: string): Date[] {
     const dates = [];
