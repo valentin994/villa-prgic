@@ -259,9 +259,11 @@ const ModernImageGallery = ({ images }: { images: string[] }) => {
 // Enhanced Booking Form Component - FIXED FOR MOBILE
 const EnhancedBookingForm = ({
   range,
+  price,
   onSubmit,
 }: {
   range: any[];
+  price: number;
   onSubmit: (formData: any) => void;
 }) => {
   const { t } = useTranslation();
@@ -328,13 +330,24 @@ const EnhancedBookingForm = ({
             </p>
           </div>
         </div>
-        <div className="pt-2 lg:pt-3 border-t">
-          <p className="text-xs lg:text-sm text-gray-600">
-            {t("booking.totalNights")}
-          </p>
-          <p className="text-lg lg:text-xl font-bold text-gray-900">
-            {nights} {nights === 1 ? t("booking.night") : t("booking.nights")}
-          </p>
+        <div className="pt-2 lg:pt-3 border-t flex items-center justify-between">
+          <div>
+            <p className="text-xs lg:text-sm text-gray-600">
+              {t("booking.totalNights")}
+            </p>
+            <p className="text-lg lg:text-xl font-bold text-gray-900">
+              {nights}{" "}
+              {nights === 1 ? t("booking.night") : t("booking.nights")}
+            </p>
+          </div>
+          <div className="text-right">
+            <p className="text-xs lg:text-sm text-gray-600">
+              {t("booking.totalPrice")}
+            </p>
+            <p className="text-lg lg:text-xl font-bold text-gray-900">
+              €{Math.max(nights, 0) * price}
+            </p>
+          </div>
         </div>
       </div>
 
@@ -859,6 +872,7 @@ function ApartmentDetails() {
                 {/* Booking Form */}
                 <EnhancedBookingForm
                   range={range}
+                  price={price}
                   onSubmit={handleBookingSubmit}
                 />
               </div>

@@ -32,10 +32,10 @@ function AdminLogin({ onUnlock }: { onUnlock: () => void }) {
         sessionStorage.setItem(SESSION_KEY, "true");
         onUnlock();
       } else {
-        setError("Invalid username or password.");
+        setError("Neispravno korisničko ime ili lozinka.");
       }
     } catch {
-      setError("Unable to reach the server. Please try again.");
+      setError("Nije moguće povezati se s poslužiteljem. Pokušajte ponovno.");
     } finally {
       setLoading(false);
     }
@@ -47,7 +47,9 @@ function AdminLogin({ onUnlock }: { onUnlock: () => void }) {
         onSubmit={handleSubmit}
         className="bg-white rounded-2xl shadow-md p-8 w-full max-w-sm"
       >
-        <h1 className="text-xl font-semibold text-gray-900 mb-6">Admin Access</h1>
+        <h1 className="text-xl font-semibold text-gray-900 mb-6">
+          Administratorski pristup
+        </h1>
         <input
           type="text"
           value={username}
@@ -55,7 +57,7 @@ function AdminLogin({ onUnlock }: { onUnlock: () => void }) {
             setUsername(e.target.value);
             setError(null);
           }}
-          placeholder="Username"
+          placeholder="Korisničko ime"
           autoComplete="username"
           className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3"
         />
@@ -66,7 +68,7 @@ function AdminLogin({ onUnlock }: { onUnlock: () => void }) {
             setPassword(e.target.value);
             setError(null);
           }}
-          placeholder="Password"
+          placeholder="Lozinka"
           autoComplete="current-password"
           className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3"
         />
@@ -76,7 +78,7 @@ function AdminLogin({ onUnlock }: { onUnlock: () => void }) {
           disabled={loading}
           className="w-full py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:opacity-60"
         >
-          {loading ? "Signing in..." : "Sign in"}
+          {loading ? "Prijava u tijeku..." : "Prijava"}
         </button>
       </form>
     </div>
@@ -170,13 +172,13 @@ function AdminPanel({ onLogout }: { onLogout: () => void }) {
     <div className="min-h-screen bg-gray-50 px-6 pt-32 pb-12">
       <div className="max-w-3xl mx-auto">
         <div className="flex items-center justify-between mb-2">
-          <h1 className="text-2xl font-bold text-gray-900">Apartment Prices</h1>
+          <h1 className="text-2xl font-bold text-gray-900">Cijene apartmana</h1>
           <button
             onClick={handleLogout}
             disabled={loggingOut}
             className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-60"
           >
-            {loggingOut ? "Signing out..." : "Sign out"}
+            {loggingOut ? "Odjava u tijeku..." : "Odjava"}
           </button>
         </div>
 
@@ -199,7 +201,7 @@ function AdminPanel({ onLogout }: { onLogout: () => void }) {
                   onChange={(e) => handlePriceChange(apt.link, e.target.value)}
                   className="w-24 px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-                <span className="text-sm text-gray-500">/ night</span>
+                <span className="text-sm text-gray-500">/ noć</span>
               </div>
             </div>
           ))}
@@ -211,12 +213,14 @@ function AdminPanel({ onLogout }: { onLogout: () => void }) {
             disabled={saving}
             className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:opacity-60"
           >
-            {saving ? "Saving..." : "Save All"}
+            {saving ? "Spremanje..." : "Spremi sve"}
           </button>
-          {saved && <span className="text-sm text-green-600">Prices updated.</span>}
+          {saved && (
+            <span className="text-sm text-green-600">Cijene su ažurirane.</span>
+          )}
           {failedNames.length > 0 && (
             <span className="text-sm text-red-600">
-              Failed to update: {failedNames.join(", ")}
+              Neuspjelo ažuriranje: {failedNames.join(", ")}
             </span>
           )}
         </div>
