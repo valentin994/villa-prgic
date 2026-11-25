@@ -33,6 +33,14 @@ import Lightbox from "../Components/Lightbox";
 import RatingBadge from "../Components/RatingBadge";
 import HouseRulesModal from "../Components/HouseRulesModal";
 import { ratings } from "../data/ratings";
+import { createReservation } from "../../api/_lib/reservations";
+
+const formatDateISO = (date: Date): string => {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+};
 
 // Add custom calendar styles
 const calendarStyles = `
@@ -632,6 +640,17 @@ function ApartmentDetails() {
     );
 
     try {
+      await createReservation({
+        apartment_id: Number(apartmentNumber),
+        guest_name: formData.name,
+        guest_email: formData.email,
+        guest_phone_number: formData.phone,
+        guest_address: formData.address,
+        start_date: formatDateISO(range[0].startDate),
+        end_date: formatDateISO(range[0].endDate),
+        note: formData.message,
+      });
+
       const response = await fetch("/api/send_booking_email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -659,7 +678,7 @@ function ApartmentDetails() {
         message: t("booking.successMsg"),
       });
     } catch (error) {
-      console.error("Error sending email:", error);
+      console.error("Error submitting booking request:", error);
       setNotification({
         type: "error",
         message: t("booking.errorMsg"),
